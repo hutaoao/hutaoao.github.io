@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,Data,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="我整理这些知识点是在2019年6月6号，为以下数据作为参考！  获取时间getFullYear()从 Date 对象返回一个表示年份的 4 位数字。 123let d = new Date();let n = d.getFullYear();//返回年份console.log(n);//2019 getMonth()从 Date 对象返回表示月份的数字。返回值是 0（一月） 到 11（十二月）">
+<meta name="keywords" content="JavaScript,Data">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Data对象方法整理">
+<meta property="og:url" content="https://hutaoao.github.io/date-methods/index.html">
+<meta property="og:site_name" content="海盗船长の博客">
+<meta property="og:description" content="我整理这些知识点是在2019年6月6号，为以下数据作为参考！  获取时间getFullYear()从 Date 对象返回一个表示年份的 4 位数字。 123let d = new Date();let n = d.getFullYear();//返回年份console.log(n);//2019 getMonth()从 Date 对象返回表示月份的数字。返回值是 0（一月） 到 11（十二月）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-26T07:18:45.935Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript Data对象方法整理">
+<meta name="twitter:description" content="我整理这些知识点是在2019年6月6号，为以下数据作为参考！  获取时间getFullYear()从 Date 对象返回一个表示年份的 4 位数字。 123let d = new Date();let n = d.getFullYear();//返回年份console.log(n);//2019 getMonth()从 Date 对象返回表示月份的数字。返回值是 0（一月） 到 11（十二月）">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hutaoao.github.io/date-methods/">
+
+
+
+
+
+  <title>JavaScript Data对象方法整理 | 海盗船长の博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">海盗船长の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">记录学习的技能和遇到的问题</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hutaoao.github.io/date-methods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="海盗船长">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/captain.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海盗船长の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">JavaScript Data对象方法整理</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T00:00:00+08:00">
+                2017-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/date-methods/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/date-methods/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/date-methods/" class="leancloud_visitors" data-flag-title="JavaScript Data对象方法整理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>我整理这些知识点是在2019年6月6号，为以下数据作为参考！</p>
+</blockquote>
+<h2 id="获取时间"><a href="#获取时间" class="headerlink" title="获取时间"></a>获取时间</h2><h3 id="getFullYear"><a href="#getFullYear" class="headerlink" title="getFullYear()"></a>getFullYear()</h3><p>从 Date 对象返回一个表示年份的 4 位数字。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getFullYear();<span class="comment">//返回年份</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2019</span></span><br></pre></td></tr></table></figure>
+<h3 id="getMonth"><a href="#getMonth" class="headerlink" title="getMonth()"></a>getMonth()</h3><p>从 Date 对象返回表示月份的数字。返回值是 0（一月） 到 11（十二月） 之间的一个整数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getMonth();<span class="comment">//返回月份</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+<h3 id="getDate"><a href="#getDate" class="headerlink" title="getDate()"></a>getDate()</h3><p>从 Date 对象返回一个月中 (1 ~ 31) 的某一天的数字。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getDate();<span class="comment">//返回月份的某一天</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Thu Dec 06 2018 10:26:48 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay()"></a>getDay()</h3><p>从 Date 对象返回一周中 (0 ~ 6) 的某一天的数字。</p>
+<ul>
+<li>注意： 星期天为 0, 星期一为 1, 以此类推。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getDay();<span class="comment">//返回星期几</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<h3 id="getHours"><a href="#getHours" class="headerlink" title="getHours()"></a>getHours()</h3><p>返回 Date 对象的小时 (0 ~ 23)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getHours();<span class="comment">//返回小时</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//10 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getMinutes"><a href="#getMinutes" class="headerlink" title="getMinutes()"></a>getMinutes()</h3><p>返回 Date 对象的分钟 (0 ~ 59)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getMinutes();<span class="comment">//返回分钟</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getSeconds"><a href="#getSeconds" class="headerlink" title="getSeconds()"></a>getSeconds()</h3><p>返回 Date 对象的秒数 (0 ~ 59)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getSeconds();<span class="comment">//返回秒数</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//11 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getMilliseconds"><a href="#getMilliseconds" class="headerlink" title="getMilliseconds()"></a>getMilliseconds()</h3><p>返回 Date 对象的毫秒(0 ~ 999)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getMilliseconds();<span class="comment">//返回毫秒数</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//100 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getTime"><a href="#getTime" class="headerlink" title="getTime()"></a>getTime()</h3><p>返回 1970 年 1 月 1 日至今的毫秒数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getTime();<span class="comment">//返回距 1970 年 1 月 1 日之间的毫秒数</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1559786854978 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="parse-string"><a href="#parse-string" class="headerlink" title="parse(string)"></a>parse(string)</h3><p>返回1970年1月1日午夜到指定日期（字符串）的毫秒数。</p>
+<ul>
+<li>唯一一个参数（必选）表示日期和时间的字符串。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> n = <span class="built_in">Date</span>.parse(<span class="string">"March 21, 2012"</span>);<span class="comment">//返回1970/01/01至2012/3/21之间的毫秒数</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1332259200000</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCFullYear"><a href="#getUTCFullYear" class="headerlink" title="getUTCFullYear()"></a>getUTCFullYear()</h3><p>根据世界时从 Date 对象返回四位数的年份。</p>
+<ul>
+<li><p>协调世界时 (UTC) 是以原子时秒长为基础，在时刻上尽量接近于世界时的一种时间计量系统。</p>
+</li>
+<li><p>协调世界时，又称世界统一时间，世界标准时间，国际协调时间，简称UTC（ Universal Coordinated Time ) 。</p>
+</li>
+<li><p>UTC 时间类似于 GMT 时间；UTC 时间即是 GMT（格林尼治） 时间。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCFullYear();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2019</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCMonth"><a href="#getUTCMonth" class="headerlink" title="getUTCMonth()"></a>getUTCMonth()</h3><p>根据世界时从 Date 对象返回月份 (0 ~ 11)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCMonth();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCDate"><a href="#getUTCDate" class="headerlink" title="getUTCDate()"></a>getUTCDate()</h3><p>根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCDate();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//6</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCDay"><a href="#getUTCDay" class="headerlink" title="getUTCDay()"></a>getUTCDay()</h3><p>根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCDay();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCHours"><a href="#getUTCHours" class="headerlink" title="getUTCHours()"></a>getUTCHours()</h3><p>根据世界时返回 Date 对象的小时 (0 ~ 23)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCHours();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCMinutes"><a href="#getUTCMinutes" class="headerlink" title="getUTCMinutes()"></a>getUTCMinutes()</h3><p>根据世界时返回 Date 对象的分钟 (0 ~ 59)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCMinutes();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//22 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCSeconds"><a href="#getUTCSeconds" class="headerlink" title="getUTCSeconds()"></a>getUTCSeconds()</h3><p>根据世界时返回 Date 对象的秒钟 (0 ~ 59)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCSeconds();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//26 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h3 id="getUTCMilliseconds"><a href="#getUTCMilliseconds" class="headerlink" title="getUTCMilliseconds()"></a>getUTCMilliseconds()</h3><p>根据世界时返回 Date 对象的毫秒(0 ~ 999)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.getUTCMilliseconds();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//651 - 以当时整理时间为准的</span></span><br></pre></td></tr></table></figure>
+<h2 id="设置时间"><a href="#设置时间" class="headerlink" title="设置时间"></a>设置时间</h2><h3 id="setFullYear-year-month-day"><a href="#setFullYear-year-month-day" class="headerlink" title="setFullYear(year,month,day)"></a>setFullYear(year,month,day)</h3><p>设置 Date 对象中的年份（四位数字），返回1970年1月1日午夜至调整过日期的毫秒。</p>
+<ul>
+<li><p>第一个参数（必选）表示年份的四位整数。用本地时间表示。</p>
+</li>
+<li><p>第二个参数（可选）表示月份的数值，用本地时间表示。介于 0 ~ 11 之间：-1 为去年的最后一个月、12 为明年的第一个月、13 为明年的第二个月</p>
+</li>
+<li><p>第三个参数（可选）表示月中某一天的数值，用本地时间表示。介于 1 ~ 31 之间：0 为上个月最后一天、-1 为上个月最后一天之前的天数；如果当月有31天：32 为下个月的第一天；如果当月有30天：32 为下一个月的第二天。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.setFullYear(<span class="number">2020</span>);<span class="comment">//设置年份为 2020</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Sat Jun 06 2020 10:26:48 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1591410524248</span></span><br><span class="line"><span class="keyword">let</span> m = d.setFullYear(<span class="number">2020</span>, <span class="number">10</span>, <span class="number">3</span>);<span class="comment">//把日期设置为 November 3, 2020</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Tue Nov 03 2020 10:37:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//1557111215281</span></span><br></pre></td></tr></table></figure>
+<h3 id="setMonth-month-day"><a href="#setMonth-month-day" class="headerlink" title="setMonth(month,day)"></a>setMonth(month,day)</h3><p>设置 Date 对象中月份 (0 ~ 11)，返回1970年1月1日午夜至调整过日期的毫秒。</p>
+<ul>
+<li><p>第一个参数（必选）表示月份的数值，该值介于 0（一月） ~ 11（十二月） 之间：-1 为去年的最后一个月、12 为明年的第一个月、13 为明年的第二个月。</p>
+</li>
+<li><p>第二个参数（可选）表示月的某一天的数值，该值介于 1 ~ 31 之间（以本地时间计）:0 为上个月的最后一天、-1 为上个月的最后一天之前的一天；如果当月有31天：32 为下个月的第一天；如果当月有30天：32 为下个月的第二天。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.setMonth(<span class="number">4</span>);<span class="comment">//设置月份参数为 4 (5月份)</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Mon May 06 2019 10:57:03 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1557111698763</span></span><br><span class="line"><span class="keyword">let</span> m = d.setMonth(<span class="number">4</span>, <span class="number">20</span>);<span class="comment">//设置日期为4月20号</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Mon May 20 2019 10:57:03 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//1558321392217</span></span><br></pre></td></tr></table></figure>
+<h3 id="setDate-day"><a href="#setDate-day" class="headerlink" title="setDate(day)"></a>setDate(day)</h3><p>设置 Date 对象中月的某一天 (1 ~ 31)，返回1970年1月1日午夜至调整过日期的毫秒。</p>
+<ul>
+<li>唯一个一个（必选）参数表示一个月中的一天的一个数值（1 ~ 31）：0 为上一个月的最后一天、-1 为上一个月最后一天之前的一天；如果当月有 31 天：32 为下个月的第一天；如果当月有 30 天：32 为下一个月的第二天。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.setDate(<span class="number">15</span>);<span class="comment">//设置一个月的某一天</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Sat Jun 15 2019 11:04:36 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1560568199819</span></span><br></pre></td></tr></table></figure>
+<h3 id="setTime-millisec"><a href="#setTime-millisec" class="headerlink" title="setTime(millisec)"></a>setTime(millisec)</h3><p>以毫秒设置 Date 对象，返回参数 millisec。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.setTime(<span class="number">1332403882588</span>);<span class="comment">//将向 1970年01月01日 添加 1332403882588毫秒，并显示新的日期和时间</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//Thu Mar 22 2012 16:11:22 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1332403882588</span></span><br></pre></td></tr></table></figure>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">setHours() - 设置 <span class="built_in">Date</span> 对象中的小时 (<span class="number">0</span> ~ <span class="number">23</span>)。</span><br><span class="line">setMinutes() - 设置 <span class="built_in">Date</span> 对象中的分钟 (<span class="number">0</span> ~ <span class="number">59</span>)。</span><br><span class="line">setSeconds() - 设置 <span class="built_in">Date</span> 对象中的秒钟 (<span class="number">0</span> ~ <span class="number">59</span>)。</span><br><span class="line">setMilliseconds() - 设置 <span class="built_in">Date</span> 对象中的毫秒 (<span class="number">0</span> ~ <span class="number">999</span>)。</span><br><span class="line">setUTCFullYear() - 根据世界时设置 <span class="built_in">Date</span> 对象中的年份（四位数字）。</span><br><span class="line">setUTCMonth() - 根据世界时设置 <span class="built_in">Date</span> 对象中的月份 (<span class="number">0</span> ~ <span class="number">11</span>)。</span><br><span class="line">setUTCDate() - 根据世界时设置 <span class="built_in">Date</span> 对象中月份的一天 (<span class="number">1</span> ~ <span class="number">31</span>)。</span><br><span class="line">setUTCHours() - 根据世界时设置 <span class="built_in">Date</span> 对象中的小时 (<span class="number">0</span> ~ <span class="number">23</span>)。</span><br><span class="line">setUTCMinutes() - 根据世界时设置 <span class="built_in">Date</span> 对象中的分钟 (<span class="number">0</span> ~ <span class="number">59</span>)。</span><br><span class="line">setUTCSeconds() - 根据世界时 (UTC) 设置指定时间的秒字段。</span><br><span class="line">setUTCMilliseconds() - 根据世界时设置 <span class="built_in">Date</span> 对象中的毫秒 (<span class="number">0</span> ~ <span class="number">999</span>)。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>具体明细请看：<a href="https://www.runoob.com/jsref/jsref-obj-date.html" target="_blank" rel="noopener">https://www.runoob.com/jsref/jsref-obj-date.html</a></p>
+</blockquote>
+<h2 id="转换字符串"><a href="#转换字符串" class="headerlink" title="转换字符串"></a>转换字符串</h2><h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p>把 Date 对象转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Thu Jun 06 2019 13:46:18 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<h3 id="toDateString"><a href="#toDateString" class="headerlink" title="toDateString()"></a>toDateString()</h3><p>把 Date 对象的日期部分转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toDateString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Thu Jun 06 2019</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLocaleDateString"><a href="#toLocaleDateString" class="headerlink" title="toLocaleDateString()"></a>toLocaleDateString()</h3><p>根据本地时间格式，把 Date 对象的日期部分转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toLocaleDateString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2019-6-6</span></span><br></pre></td></tr></table></figure>
+<h3 id="toISOString"><a href="#toISOString" class="headerlink" title="toISOString()"></a>toISOString()</h3><p>使用 ISO 标准返回字符串的日期格式。</p>
+<ul>
+<li>该标准称为 ISO-8601 ，格式为: YYYY-MM-DDTHH:mm:ss.sssZ</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toISOString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2019-06-06T05:42:52.528Z</span></span><br></pre></td></tr></table></figure>
+<h3 id="toJSON"><a href="#toJSON" class="headerlink" title="toJSON()"></a>toJSON()</h3><p>以 JSON 数据格式返回日期字符串。</p>
+<ul>
+<li>JSON 数据用同样的格式就像x ISO-8601 标准: YYYY-MM-DDTHH:mm:ss.sssZ</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toJSON();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//2019-06-06T05:44:32.863Z</span></span><br></pre></td></tr></table></figure>
+<h3 id="toTimeString"><a href="#toTimeString" class="headerlink" title="toTimeString()"></a>toTimeString()</h3><p>把 Date 对象的时间部分转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toTimeString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//13:50:22 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLocaleTimeString"><a href="#toLocaleTimeString" class="headerlink" title="toLocaleTimeString()"></a>toLocaleTimeString()</h3><p>根据本地时间格式，把 Date 对象的时间部分转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toLocaleTimeString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//13:49:14</span></span><br></pre></td></tr></table></figure>
+<h3 id="toUTCString"><a href="#toUTCString" class="headerlink" title="toUTCString()"></a>toUTCString()</h3><p>根据世界时 (UTC) ，把 Date 对象转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.toUTCString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Thu, 06 Jun 2019 05:51:01 GMT</span></span><br></pre></td></tr></table></figure>
+<h3 id="UTC-year-month-day-hours-minutes-seconds-millisec"><a href="#UTC-year-month-day-hours-minutes-seconds-millisec" class="headerlink" title="UTC(year, month, day, hours, minutes, seconds, millisec)"></a>UTC(year, month, day, hours, minutes, seconds, millisec)</h3><p>根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</p>
+<ul>
+<li>year  必需。表示年份的四位数字。</li>
+<li>month 必需。表示月份的整数，介于 0 ~ 11。</li>
+<li>day   必需。表示日期的整数，介于 1 ~ 31。</li>
+<li>hours 可选。表示小时的整数，介于 0 ~ 23。</li>
+<li>minutes   可选。表示分钟的整数，介于 0 ~ 59。</li>
+<li>seconds   可选。表示秒的整数，介于 0 ~ 59。</li>
+<li>ms    可选。表示毫秒的整数，介于 0 ~ 999。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="built_in">Date</span>.UTC(<span class="number">2012</span>, <span class="number">2</span>, <span class="number">30</span>);</span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//1333065600000</span></span><br><span class="line"><span class="keyword">let</span> D = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2012</span>, <span class="number">2</span>, <span class="number">30</span>));</span><br><span class="line"><span class="built_in">console</span>.log(D);<span class="comment">//Fri Mar 30 2012 08:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p>返回 Date 对象的原始值，原始值返回1970年1月1日午夜以来的毫秒数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> n = d.valueOf();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//1559800584306</span></span><br></pre></td></tr></table></figure>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><blockquote>
+<p>Date() 和 new Date() 区别</p>
+</blockquote>
+<p><strong>当任意一个普通函数用于创建一类对象时，它就被称作构造函数，或构造器。</strong></p>
+<ul>
+<li><p>new操作符来调用一个构造函数时,创建一个空对象obj</p>
+</li>
+<li><p>将这个空对象的<strong>proto</strong>成员指向了构造函数对象的prototype成员对象</p>
+</li>
+<li><p>Date()就是一个静态方法、普通函数返回一个时间string作为普通函数的返回值</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="built_in">Number</span>(<span class="number">10</span>);<span class="comment">//number</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);<span class="comment">//object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Date</span>();<span class="comment">//string</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>();<span class="comment">//object</span></span><br><span class="line"><span class="keyword">let</span> d1 = <span class="built_in">Date</span>();<span class="comment">//返回一个字符串（string），没有getDate等日期对象方法，内容为当前时间</span></span><br><span class="line"><span class="keyword">let</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>();<span class="comment">//返回一日期对象，可以调用getDate()，内容为当前时间</span></span><br><span class="line"><span class="keyword">let</span> d3 = <span class="built_in">Date</span>(<span class="string">"2000-1-1"</span>);<span class="comment">//返回一个字符串（string），内容仍旧为当前时间，也就是不受参数影响</span></span><br><span class="line"><span class="keyword">let</span> d4 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2000-1-1"</span>);<span class="comment">//返回一日期对象，可以调用getDate()，内容为2000年元旦</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qrcode.jpg" alt="海盗船长 wechat" style="width: 200px; max-width: 100%;">
+    <div>扫码关注我的公众号哟</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/Data/" rel="tag"># Data</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/unit-css3/" rel="next" title="CSS3新单位vw、vh、vmin、vmax介绍">
+                <i class="fa fa-chevron-left"></i> CSS3新单位vw、vh、vmin、vmax介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/array-methods/" rel="prev" title="JavaScript数组方法整理 - 一看就懂">
+                JavaScript数组方法整理 - 一看就懂 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/captain.jpg" alt="海盗船长">
+            
+              <p class="site-author-name" itemprop="name">海盗船长</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hutaoao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:332413594@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                前端常用
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://es6.ruanyifeng.com/" title="ES6" target="_blank">ES6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/" title="Vue" target="_blank">Vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://react.docschina.org/" title="React" target="_blank">React</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.swiper.com.cn/" title="Swiper" target="_blank">Swiper</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://electronjs.org/" title="Electron" target="_blank">Electron</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iconfont.cn/" title="Iconfont" target="_blank">Iconfont</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank">Hexo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://element-cn.eleme.io/#/zh-CN" title="Element" target="_blank">Element</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取时间"><span class="nav-number">1.</span> <span class="nav-text">获取时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getFullYear"><span class="nav-number">1.1.</span> <span class="nav-text">getFullYear()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getMonth"><span class="nav-number">1.2.</span> <span class="nav-text">getMonth()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getDate"><span class="nav-number">1.3.</span> <span class="nav-text">getDate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getDay"><span class="nav-number">1.4.</span> <span class="nav-text">getDay()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getHours"><span class="nav-number">1.5.</span> <span class="nav-text">getHours()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getMinutes"><span class="nav-number">1.6.</span> <span class="nav-text">getMinutes()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getSeconds"><span class="nav-number">1.7.</span> <span class="nav-text">getSeconds()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getMilliseconds"><span class="nav-number">1.8.</span> <span class="nav-text">getMilliseconds()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getTime"><span class="nav-number">1.9.</span> <span class="nav-text">getTime()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#parse-string"><span class="nav-number">1.10.</span> <span class="nav-text">parse(string)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCFullYear"><span class="nav-number">1.11.</span> <span class="nav-text">getUTCFullYear()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCMonth"><span class="nav-number">1.12.</span> <span class="nav-text">getUTCMonth()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCDate"><span class="nav-number">1.13.</span> <span class="nav-text">getUTCDate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCDay"><span class="nav-number">1.14.</span> <span class="nav-text">getUTCDay()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCHours"><span class="nav-number">1.15.</span> <span class="nav-text">getUTCHours()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCMinutes"><span class="nav-number">1.16.</span> <span class="nav-text">getUTCMinutes()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCSeconds"><span class="nav-number">1.17.</span> <span class="nav-text">getUTCSeconds()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUTCMilliseconds"><span class="nav-number">1.18.</span> <span class="nav-text">getUTCMilliseconds()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置时间"><span class="nav-number">2.</span> <span class="nav-text">设置时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setFullYear-year-month-day"><span class="nav-number">2.1.</span> <span class="nav-text">setFullYear(year,month,day)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setMonth-month-day"><span class="nav-number">2.2.</span> <span class="nav-text">setMonth(month,day)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setDate-day"><span class="nav-number">2.3.</span> <span class="nav-text">setDate(day)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setTime-millisec"><span class="nav-number">2.4.</span> <span class="nav-text">setTime(millisec)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它"><span class="nav-number">2.5.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换字符串"><span class="nav-number">3.</span> <span class="nav-text">转换字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-NaN"><span class="nav-number">3.1.</span> <span class="nav-text">toString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toDateString"><span class="nav-number">3.2.</span> <span class="nav-text">toDateString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toLocaleDateString"><span class="nav-number">3.3.</span> <span class="nav-text">toLocaleDateString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toISOString"><span class="nav-number">3.4.</span> <span class="nav-text">toISOString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toJSON"><span class="nav-number">3.5.</span> <span class="nav-text">toJSON()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toTimeString"><span class="nav-number">3.6.</span> <span class="nav-text">toTimeString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toLocaleTimeString"><span class="nav-number">3.7.</span> <span class="nav-text">toLocaleTimeString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toUTCString"><span class="nav-number">3.8.</span> <span class="nav-text">toUTCString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UTC-year-month-day-hours-minutes-seconds-millisec"><span class="nav-number">3.9.</span> <span class="nav-text">UTC(year, month, day, hours, minutes, seconds, millisec)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valueOf-NaN"><span class="nav-number">3.10.</span> <span class="nav-text">valueOf()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展"><span class="nav-number">4.</span> <span class="nav-text">扩展</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">海盗船长</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">59.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz',
+        appKey: '1wa4Cc8N9PFLetS4NN6Mk7e9',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz", "1wa4Cc8N9PFLetS4NN6Mk7e9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

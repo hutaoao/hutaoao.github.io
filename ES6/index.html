@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,ES6,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。所以我们现在赶紧来一起学习吧。">
+<meta name="keywords" content="JavaScript,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转ES6">
+<meta property="og:url" content="https://hutaoao.github.io/ES6/index.html">
+<meta property="og:site_name" content="海盗船长の博客">
+<meta property="og:description" content="ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。所以我们现在赶紧来一起学习吧。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-26T07:18:45.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="玩转ES6">
+<meta name="twitter:description" content="ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。所以我们现在赶紧来一起学习吧。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hutaoao.github.io/ES6/">
+
+
+
+
+
+  <title>玩转ES6 | 海盗船长の博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">海盗船长の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">记录学习的技能和遇到的问题</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hutaoao.github.io/ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="海盗船长">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/captain.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海盗船长の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">玩转ES6</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T00:00:00+08:00">
+                2019-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript-6-0/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript 6.0</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/ES6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/ES6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/ES6/" class="leancloud_visitors" data-flag-title="玩转ES6">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  19
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>ECMAScript 6.0</strong>（以下简称 <strong>ES6</strong>）是 <strong>JavaScript</strong> 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 <strong>JavaScript</strong> 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。所以我们现在赶紧来一起学习吧。<br><a id="more"></a></p>
+<!-- 简介及开发环境 -->
+<h2 id="ES6-简介"><a href="#ES6-简介" class="headerlink" title="ES6 简介"></a>ES6 简介</h2><h3 id="ECMAScript-和-JavaScript-的关系"><a href="#ECMAScript-和-JavaScript-的关系" class="headerlink" title="ECMAScript 和 JavaScript 的关系"></a>ECMAScript 和 JavaScript 的关系</h3><p>一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？</p>
+<p>要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。</p>
+<p>该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。</p>
+<p>因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。</p>
+<h3 id="ES6-与-ECMAScript-2015-的关系"><a href="#ES6-与-ECMAScript-2015-的关系" class="headerlink" title="ES6 与 ECMAScript 2015 的关系"></a>ES6 与 ECMAScript 2015 的关系</h3><p>ECMAScript 2015（简称 ES2015）这个词，也是经常可以看到的。它与 ES6 是什么关系呢？</p>
+<p>2011 年，ECMAScript 5.1 版发布后，就开始制定 6.0 版了。因此，ES6 这个词的原意，就是指 JavaScript 语言的下一个版本。</p>
+<p>但是，因为这个版本引入的语法功能太多，而且制定过程当中，还有很多组织和个人不断提交新功能。事情很快就变得清楚了，不可能在一个版本里面包括所有将要引入的功能。常规的做法是先发布 6.0 版，过一段时间再发 6.1 版，然后是 6.2 版、6.3 版等等。</p>
+<p>但是，标准的制定者不想这样做。他们想让标准的升级成为常规流程：任何人在任何时候，都可以向标准委员会提交新语法的提案，然后标准委员会每个月开一次会，评估这些提案是否可以接受，需要哪些改进。如果经过多次会议以后，一个提案足够成熟了，就可以正式进入标准了。这就是说，标准的版本升级成为了一个不断滚动的流程，每个月都会有变动。</p>
+<p>标准委员会最终决定，标准在每年的 6 月份正式发布一次，作为当年的正式版本。接下来的时间，就在这个版本的基础上做改动，直到下一年的 6 月份，草案就自然变成了新一年的版本。这样一来，就不需要以前的版本号了，只要用年份标记就可以了。</p>
+<p>ES6 的第一个版本，就这样在 2015 年 6 月发布了，正式名称就是《ECMAScript 2015 标准》（简称 ES2015）。2016 年 6 月，小幅修订的《ECMAScript 2016 标准》（简称 ES2016）如期发布，这个版本可以看作是 ES6.1 版，因为两者的差异非常小（只新增了数组实例的includes方法和指数运算符），基本上是同一个标准。根据计划，2017 年 6 月发布 ES2017 标准。</p>
+<p>因此，ES6 既是一个历史名词，也是一个泛指，含义是 5.1 版以后的 JavaScript 的下一代标准，涵盖了 ES2015、ES2016、ES2017 等等，而 ES2015 则是正式名称，特指该年发布的正式版本的语言标准。本书中提到 ES6 的地方，一般是指 ES2015 标准，但有时也是泛指“下一代 JavaScript 语言”。</p>
+<h3 id="语法提案的批准流程"><a href="#语法提案的批准流程" class="headerlink" title="语法提案的批准流程"></a>语法提案的批准流程</h3><p>任何人都可以向标准委员会（又称 TC39 委员会）提案，要求修改语言标准。</p>
+<p>一种新的语法从提案到变成正式标准，需要经历五个阶段。每个阶段的变动都需要由 TC39 委员会批准。</p>
+<p>Stage 0 - Strawman（展示阶段）<br>Stage 1 - Proposal（征求意见阶段）<br>Stage 2 - Draft（草案阶段）<br>Stage 3 - Candidate（候选人阶段）<br>Stage 4 - Finished（定案阶段）<br>一个提案只要能进入 Stage 2，就差不多肯定会包括在以后的正式标准里面。ECMAScript 当前的所有提案，可以在 TC39 的官方网站GitHub.com/tc39/ecma262查看。</p>
+<p>本书的写作目标之一，是跟踪 ECMAScript 语言的最新进展，介绍 5.1 版本以后所有的新语法。对于那些明确或很有希望，将要列入标准的新语法，都将予以介绍。</p>
+<h3 id="ECMAScript-的历史"><a href="#ECMAScript-的历史" class="headerlink" title="ECMAScript 的历史"></a>ECMAScript 的历史</h3><p>ES6 从开始制定到最后发布，整整用了 15 年。</p>
+<p>前面提到，ECMAScript 1.0 是 1997 年发布的，接下来的两年，连续发布了 ECMAScript 2.0（1998 年 6 月）和 ECMAScript 3.0（1999 年 12 月）。3.0 版是一个巨大的成功，在业界得到广泛支持，成为通行标准，奠定了 JavaScript 语言的基本语法，以后的版本完全继承。直到今天，初学者一开始学习 JavaScript，其实就是在学 3.0 版的语法。</p>
+<p>2000 年，ECMAScript 4.0 开始酝酿。这个版本最后没有通过，但是它的大部分内容被 ES6 继承了。因此，ES6 制定的起点其实是 2000 年。</p>
+<p>为什么 ES4 没有通过呢？因为这个版本太激进了，对 ES3 做了彻底升级，导致标准委员会的一些成员不愿意接受。ECMA 的第 39 号技术专家委员会（Technical Committee 39，简称 TC39）负责制订 ECMAScript 标准，成员包括 Microsoft、Mozilla、Google 等大公司。</p>
+<p>2007 年 10 月，ECMAScript 4.0 版草案发布，本来预计次年 8 月发布正式版本。但是，各方对于是否通过这个标准，发生了严重分歧。以 Yahoo、Microsoft、Google 为首的大公司，反对 JavaScript 的大幅升级，主张小幅改动；以 JavaScript 创造者 Brendan Eich 为首的 Mozilla 公司，则坚持当前的草案。</p>
+<p>2008 年 7 月，由于对于下一个版本应该包括哪些功能，各方分歧太大，争论过于激烈，ECMA 开会决定，中止 ECMAScript 4.0 的开发，将其中涉及现有功能改善的一小部分，发布为 ECMAScript 3.1，而将其他激进的设想扩大范围，放入以后的版本，由于会议的气氛，该版本的项目代号起名为 Harmony（和谐）。会后不久，ECMAScript 3.1 就改名为 ECMAScript 5。</p>
+<p>2009 年 12 月，ECMAScript 5.0 版正式发布。Harmony 项目则一分为二，一些较为可行的设想定名为 JavaScript.next 继续开发，后来演变成 ECMAScript 6；一些不是很成熟的设想，则被视为 JavaScript.next.next，在更远的将来再考虑推出。TC39 委员会的总体考虑是，ES5 与 ES3 基本保持兼容，较大的语法修正和新功能加入，将由 JavaScript.next 完成。当时，JavaScript.next 指的是 ES6，第六版发布以后，就指 ES7。TC39 的判断是，ES5 会在 2013 年的年中成为 JavaScript 开发的主流标准，并在此后五年中一直保持这个位置。</p>
+<p>2011 年 6 月，ECMAScript 5.1 版发布，并且成为 ISO 国际标准（ISO/IEC 16262:2011）。</p>
+<p>2013 年 3 月，ECMAScript 6 草案冻结，不再添加新功能。新的功能设想将被放到 ECMAScript 7。</p>
+<p>2013 年 12 月，ECMAScript 6 草案发布。然后是 12 个月的讨论期，听取各方反馈。</p>
+<p>2015 年 6 月，ECMAScript 6 正式通过，成为国际标准。从 2000 年算起，这时已经过去了 15 年。</p>
+<h2 id="ES6的开发环境搭建"><a href="#ES6的开发环境搭建" class="headerlink" title="ES6的开发环境搭建"></a>ES6的开发环境搭建</h2><h3 id="建立工程目录"><a href="#建立工程目录" class="headerlink" title="建立工程目录"></a>建立工程目录</h3><p>先建立一个项目的工程目录，并在目录下边建立两个文件夹：src和dist</p>
+<ul>
+<li>src：书写ES6代码的文件夹，写的js程序都放在这里。</li>
+<li>dist：利用Babel编译成的ES5代码的文件夹，在HTML页面需要引入的时这里的js文件。</li>
+</ul>
+<h3 id="编写index-html"><a href="#编写index-html" class="headerlink" title="编写index.html"></a>编写index.html</h3><p>文件夹建立好后，我们新建一个index.html文件。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        Hello ECMA Script 6</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是在引入js文件时，引入的是dist目录下的文件。</p>
+<p><code>&lt;script src=&quot;./dist/index.js&quot;&gt;&lt;/script&gt;</code></p>
+<h3 id="编写index-js"><a href="#编写index-js" class="headerlink" title="编写index.js"></a>编写index.js</h3><p>在src目录下，新建index.js文件。这个文件很简单，我们只作一个a变量的声明，并用console.log()打印出来。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
+<p>我们用了<strong>let</strong>声明，这里let是ES6的一种声明方式，接下来我们需要把这个ES6的语法文件自动编程成ES5的语法文件。</p>
+<h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>在安装Babel之前，需要用<strong>npm init</strong>先初始化我们的项目。打开终端或者通过cmd打开命令行工具，进入项目目录，输入下边的命令：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+<p><strong>-y</strong>代表全部默认同意，就不用一次次按回车了。命令执行完成后，会在项目根目录下生产<strong>package.json</strong>文件。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"es6"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"keywords"</span>: [],</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以根据自己的需要进行修改，比如我们修改name的值。</p>
+<h3 id="全局安装Babel-cli"><a href="#全局安装Babel-cli" class="headerlink" title="全局安装Babel-cli"></a>全局安装Babel-cli</h3><p>在终端中输入以下命令,如果你安装很慢的话，可以使用淘宝镜像的<strong>cnpm</strong>来进行安装。安装cnpm的方法，大家自己百度吧。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g babel-cli</span><br></pre></td></tr></table></figure>
+<p>虽然已经安装了<strong>babel-cli</strong>，只是这样还不能成功进行转换，如果你不相信可以输入下边的命令试一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">babel src/index.js -o dist/index.js</span><br></pre></td></tr></table></figure>
+<p>你会发现，在dist目录下确实生产了index.js文件，但是文件并没有变化，还是使用了ES6的语法。因为我们还需要安装转换包才能成功转换，继续往下看吧。</p>
+<h3 id="本地安装babel-preset-es2015-和-babel-cli"><a href="#本地安装babel-preset-es2015-和-babel-cli" class="headerlink" title="本地安装babel-preset-es2015 和 babel-cli"></a>本地安装<strong>babel-preset-es2015</strong> 和 <strong>babel-cli</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev babel-preset-es2015 babel-cli</span><br></pre></td></tr></table></figure>
+<p>安装完成后，我们可以看一下我们的package.json文件，已经多了<strong>devDependencies</strong>选项。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"devDependencies": &#123;</span><br><span class="line">    "babel-cli": "^6.24.1",</span><br><span class="line">    "babel-preset-es2015": "^6.24.1"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="新建-babelrc新建-babelrc"><a href="#新建-babelrc新建-babelrc" class="headerlink" title="新建.babelrc新建.babelrc"></a>新建.babelrc新建.babelrc</h3><p>在根目录下新建<strong>.babelrc</strong>文件，并打开录入下面的代码</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"presets"</span>:[</span><br><span class="line">        <span class="string">"es2015"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"plugins"</span>:[]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个文件我们建立完成后，现在可以在终端输入的转换命令了，这次ES6成功转化为ES5的语法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">babel src/index.js -o dist/index.js</span><br></pre></td></tr></table></figure>
+<h3 id="简化转化命令"><a href="#简化转化命令" class="headerlink" title="简化转化命令"></a>简化转化命令</h3><p>在学习vue 的时候，可以使用npm run build 直接利用webpack进行打包，在这里也希望利用这种方式完成转换。打开package.json文件，把文件修改成下面的样子。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"es6"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"build"</span>: <span class="string">"babel src/index.js -o dist/index.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"keywords"</span>: [],</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="attr">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"babel-cli"</span>: <span class="string">"^6.24.1"</span>,</span><br><span class="line">    <span class="attr">"babel-preset-es2015"</span>: <span class="string">"^6.24.1"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改好后，以后我们就可以使用 <strong>npm run build</strong> 来进行转换了。</p>
+<!-- let 和 const 命令 -->
+<h2 id="let-和-const-命令"><a href="#let-和-const-命令" class="headerlink" title="let 和 const 命令"></a>let 和 const 命令</h2><p><strong>ES2015(ES6)</strong> 新增加了两个重要的 JavaScript 关键字: <strong>let</strong> 和 <strong>const</strong>。</p>
+<p><strong>let</strong> 声明的变量只在 <strong>let</strong> 命令所在的代码块内有效。</p>
+<p><strong>const</strong> 声明一个只读的<strong>常量</strong>，一旦声明，常量的值就不能改变。</p>
+<h3 id="let-命令"><a href="#let-命令" class="headerlink" title="let 命令"></a>let 命令</h3><h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法:"></a>基本用法:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">  a   <span class="comment">// 0</span></span><br><span class="line">&#125;</span><br><span class="line">a   <span class="comment">// 报错 ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure>
+<p>代码块内有效</p>
+<p><strong>let</strong> 是在<strong>代码块内</strong>有效，<strong>var</strong> 是在<strong>全局范围</strong>内有效:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">a  <span class="comment">// ReferenceError: a is not defined</span></span><br><span class="line">b  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>不能重复声明</p>
+<p><strong>let</strong> 只能声明<strong>一次</strong>， <strong>var</strong> 可以声明<strong>多次</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">4</span>;</span><br><span class="line">a  <span class="comment">// Identifier 'a' has already been declared</span></span><br><span class="line">b  <span class="comment">// 4</span></span><br><span class="line"><span class="keyword">for</span> 循环计数器很适合用 <span class="keyword">let</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出十个 10</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(j);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出 0123456789</span></span><br></pre></td></tr></table></figure>
+<p>变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i, 每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。</p>
+<p>变量 j 是用 let 声明的，当前的 i 只在本轮循环中有效，每次循环的 j 其实都是一个新的变量，所以 setTimeout 定时器里面的 j 其实是不同的变量，即最后输出0123456789。（若每次循环的变量 j 都是重新声明的，如何知道前一个循环的值？这是因为 JavaScript 引擎内部会记住前一个循环的值）。</p>
+<h4 id="不存在变量提升不存在变量提升"><a href="#不存在变量提升不存在变量提升" class="headerlink" title="不存在变量提升不存在变量提升"></a>不存在变量提升不存在变量提升</h4><p><strong>let 不存在变量提升</strong>，<strong>var 会变量提升</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//ReferenceError: a is not defined</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="string">"apple"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log(b);  <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="string">"banana"</span>;</span><br></pre></td></tr></table></figure>
+<p>变量 b 用 var 声明存在变量提升，所以当脚本开始运行的时候，b 已经存在了，但是还没有赋值，所以会输出 undefined。</p>
+<p>变量 a 用 let 声明不存在变量提升，在声明变量 a 之前，a 不存在，所以会报错。</p>
+<h3 id="const-命令"><a href="#const-命令" class="headerlink" title="const 命令"></a>const 命令</h3><p><strong>const </strong>声明一个<strong>只读变量</strong>，声明之后不允许改变。意味着，一但声明必须初始化，否则会报错。</p>
+<h4 id="基本用法-1"><a href="#基本用法-1" class="headerlink" title="基本用法:"></a>基本用法:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="string">"3.1415926"</span>;</span><br><span class="line">PI  <span class="comment">// 3.1415926</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MY_AGE;  <span class="comment">// SyntaxError: Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区:"></a>暂时性死区:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> PI = <span class="string">"a"</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(PI);  <span class="comment">// ReferenceError: PI is not defined</span></span><br><span class="line">  <span class="keyword">const</span> PI = <span class="string">"3.1415926"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ES6 明确规定，代码块内如果存在 <strong>let</strong> 或者 <strong>const</strong>，代码块会对这些命令声明的变量从块的开始就形成一个封闭作用域。代码块内，在声明变量 PI 之前使用它会报错。</p>
+<h4 id="注意要点"><a href="#注意要点" class="headerlink" title="注意要点"></a>注意要点</h4><p>const 如何做到变量在声明初始化之后不允许改变的？其实 const 其实保证的不是变量的值不变，而是保证变量指向的内存地址所保存的数据不允许改动。此时，你可能已经想到，简单类型和复合类型保存值的方式是不同的。是的，对于简单类型（数值 number、字符串 string 、布尔值 boolean）,值就保存在变量指向的那个内存地址，因此 const 声明的简单类型变量等同于常量。而复杂类型（对象 object，数组 array，函数 function），变量指向的内存地址其实是保存了一个指向实际数据的指针，所以 const 只能保证指针是固定的，至于指针指向的数据结构变不变就无法控制了，所以使用 const 声明复杂类型对象时要慎重。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 为 foo 添加一个属性，可以成功</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 foo 指向另一个对象，就会报错</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// TypeError: "foo" is read-only</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量foo储存的是一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本身是可变的，所以依然可以为其添加新属性。</p>
+<p>下面是另一个例子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">'Hello'</span>); <span class="comment">// 可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;    <span class="comment">// 可执行</span></span><br><span class="line">a = [<span class="string">'Dave'</span>];    <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量a是一个数组，这个数组本身是可写的，但是如果将另一个数组赋值给a，就会报错。</p>
+<p>如果真的想将对象冻结，应该使用<strong>Object.freeze</strong>方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 常规模式时，下面一行不起作用；</span></span><br><span class="line"><span class="comment">// 严格模式时，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量foo指向一个冻结的对象，所以添加新属性不起作用，严格模式时还会报错。</p>
+<p>除了将对象本身冻结，对象的属性也应该冻结。下面是一个将对象彻底冻结的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> constantize = <span class="function">(<span class="params">obj</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">Object</span>.freeze(obj);</span><br><span class="line">  <span class="built_in">Object</span>.keys(obj).forEach( <span class="function">(<span class="params">key, i</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> obj[key] === <span class="string">'object'</span> ) &#123;</span><br><span class="line">      constantize( obj[key] );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="ES6-声明变量的六种方法"><a href="#ES6-声明变量的六种方法" class="headerlink" title="ES6 声明变量的六种方法"></a>ES6 声明变量的六种方法</h3><p>ES5 只有两种声明变量的方法：<strong>var</strong>命令和<strong>function</strong>命令。ES6 除了添加<strong>let</strong>和<strong>const</strong>命令，后面章节还会提到，另外两种声明变量的方法：<strong>import</strong>命令和<strong>class</strong>命令。所以，ES6 一共有 <strong>6</strong> 种声明变量的方法。</p>
+<p>想了解更多ES6变量知识，可以阅读<a href="http://es6.ruanyifeng.com/#docs/let" title="这篇文章" target="_blank" rel="noopener">这篇文章</a></p>
+<!-- 变量的解构赋值 -->
+<h2 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>解构赋值是对赋值运算符的扩展。</p>
+<p>他是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。</p>
+<p>在代码书写上简洁且易读，语义更加清晰明了；也方便了复杂对象中数据字段获取。</p>
+<h3 id="解构模型"><a href="#解构模型" class="headerlink" title="解构模型"></a>解构模型</h3><p>在解构中，有下面两部分参与：</p>
+<p>解构的源，解构赋值表达式的右边部分。</p>
+<p>解构的目标，解构赋值表达式的左边部分。</p>
+<h3 id="数组模型的解构（Array）"><a href="#数组模型的解构（Array）" class="headerlink" title="数组模型的解构（Array）"></a>数组模型的解构（Array）</h3><h4 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// a = 1</span></span><br><span class="line"><span class="comment">// b = 2</span></span><br><span class="line"><span class="comment">// c = 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="可嵌套"><a href="#可嵌套" class="headerlink" title="可嵌套"></a>可嵌套</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, [[b], c]] = [<span class="number">1</span>, [[<span class="number">2</span>], <span class="number">3</span>]];</span><br><span class="line"><span class="comment">// a = 1</span></span><br><span class="line"><span class="comment">// b = 2</span></span><br><span class="line"><span class="comment">// c = 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="可忽略"><a href="#可忽略" class="headerlink" title="可忽略"></a>可忽略</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, , b] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">// a = 1</span></span><br><span class="line"><span class="comment">// b = 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="不完全解构"><a href="#不完全解构" class="headerlink" title="不完全解构"></a>不完全解构</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="number">1</span>, b] = []; <span class="comment">// a = 1, b = undefined</span></span><br></pre></td></tr></table></figure>
+<h4 id="剩余运算符"><a href="#剩余运算符" class="headerlink" title="剩余运算符"></a>剩余运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, ...b] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="comment">//a = 1</span></span><br><span class="line"><span class="comment">//b = [2, 3]</span></span><br></pre></td></tr></table></figure>
+<h4 id="字符串等"><a href="#字符串等" class="headerlink" title="字符串等"></a>字符串等</h4><p>在数组的解构中，解构的目标若为可遍历对象，皆可进行解构赋值。可遍历对象即实现 <strong>Iterator</strong> 接口的数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c, d, e] = <span class="string">'hello'</span>;</span><br><span class="line"><span class="comment">// a = 'h'</span></span><br><span class="line"><span class="comment">// b = 'e'</span></span><br><span class="line"><span class="comment">// c = 'l'</span></span><br><span class="line"><span class="comment">// d = 'l'</span></span><br><span class="line"><span class="comment">// e = 'o'</span></span><br></pre></td></tr></table></figure>
+<h4 id="解构默认值"><a href="#解构默认值" class="headerlink" title="解构默认值"></a>解构默认值</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="number">2</span>] = [<span class="literal">undefined</span>]; <span class="comment">// a = 2</span></span><br></pre></td></tr></table></figure>
+<p>当解构模式有匹配结果，且匹配结果是 <strong>undefined</strong> 时，会触发默认值作为返回结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="number">3</span>, b = a] = [];     <span class="comment">// a = 3, b = 3</span></span><br><span class="line"><span class="keyword">let</span> [a = <span class="number">3</span>, b = a] = [<span class="number">1</span>];    <span class="comment">// a = 1, b = 1</span></span><br><span class="line"><span class="keyword">let</span> [a = <span class="number">3</span>, b = a] = [<span class="number">1</span>, <span class="number">2</span>]; <span class="comment">// a = 1, b = 2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>a 与 b 匹配结果为 undefined ，触发默认值：a = 3; b = a =3</p>
+</li>
+<li><p>a 正常解构赋值，匹配结果：a = 1，b 匹配结果 undefined ，触发默认值：b = a =1</p>
+</li>
+<li><p>a 与 b 正常解构赋值，匹配结果：a = 1，b = 2</p>
+</li>
+</ul>
+<h3 id="对象模型的解构（Object）"><a href="#对象模型的解构（Object）" class="headerlink" title="对象模型的解构（Object）"></a>对象模型的解构（Object）</h3><h4 id="基本-1"><a href="#基本-1" class="headerlink" title="基本"></a>基本</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; foo, bar &#125; = &#123; <span class="attr">foo</span>: <span class="string">'aaa'</span>, <span class="attr">bar</span>: <span class="string">'bbb'</span> &#125;;</span><br><span class="line"><span class="comment">// foo = 'aaa'</span></span><br><span class="line"><span class="comment">// bar = 'bbb'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">baz</span> : foo &#125; = &#123; <span class="attr">baz</span> : <span class="string">'ddd'</span> &#125;;</span><br><span class="line"><span class="comment">// foo = 'ddd'</span></span><br></pre></td></tr></table></figure>
+<h4 id="可嵌套可忽略"><a href="#可嵌套可忽略" class="headerlink" title="可嵌套可忽略"></a>可嵌套可忽略</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">p</span>: [<span class="string">'hello'</span>, &#123;<span class="attr">y</span>: <span class="string">'world'</span>&#125;] &#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [x, &#123; y &#125;] &#125; = obj;</span><br><span class="line"><span class="comment">// x = 'hello'</span></span><br><span class="line"><span class="comment">// y = 'world'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">p</span>: [<span class="string">'hello'</span>, &#123;<span class="attr">y</span>: <span class="string">'world'</span>&#125;] &#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [x, &#123;  &#125;] &#125; = obj;</span><br><span class="line"><span class="comment">// x = 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="不完全解构-1"><a href="#不完全解构-1" class="headerlink" title="不完全解构"></a>不完全解构</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">p</span>: [&#123;<span class="attr">y</span>: <span class="string">'world'</span>&#125;] &#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">p</span>: [&#123; y &#125;, x ] &#125; = obj;</span><br><span class="line"><span class="comment">// x = undefined</span></span><br><span class="line"><span class="comment">// y = 'world'</span></span><br></pre></td></tr></table></figure>
+<h4 id="剩余运算符-1"><a href="#剩余运算符-1" class="headerlink" title="剩余运算符"></a>剩余运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;a, b, ...rest&#125; = &#123;<span class="attr">a</span>: <span class="number">10</span>, <span class="attr">b</span>: <span class="number">20</span>, <span class="attr">c</span>: <span class="number">30</span>, <span class="attr">d</span>: <span class="number">40</span>&#125;;</span><br><span class="line"><span class="comment">// a = 10</span></span><br><span class="line"><span class="comment">// b = 20</span></span><br><span class="line"><span class="comment">// rest = &#123;c: 30, d: 40&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="解构默认值-1"><a href="#解构默认值-1" class="headerlink" title="解构默认值"></a>解构默认值</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;a = <span class="number">10</span>, b = <span class="number">5</span>&#125; = &#123;<span class="attr">a</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="comment">// a = 3; b = 5;</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">a</span>: aa = <span class="number">10</span>, <span class="attr">b</span>: bb = <span class="number">5</span>&#125; = &#123;<span class="attr">a</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="comment">// aa = 3; bb = 5;</span></span><br></pre></td></tr></table></figure>
+<p>更新中……</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qrcode.jpg" alt="海盗船长 wechat" style="width: 200px; max-width: 100%;">
+    <div>扫码关注我的公众号哟</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Notification/" rel="next" title="H5的Notification特性 - Web的桌面通知功能">
+                <i class="fa fa-chevron-left"></i> H5的Notification特性 - Web的桌面通知功能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/get&post/" rel="prev" title="GET和POST请求方法的区别-没几个人知道的知识">
+                GET和POST请求方法的区别-没几个人知道的知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/captain.jpg" alt="海盗船长">
+            
+              <p class="site-author-name" itemprop="name">海盗船长</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hutaoao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:332413594@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                前端常用
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://es6.ruanyifeng.com/" title="ES6" target="_blank">ES6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/" title="Vue" target="_blank">Vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://react.docschina.org/" title="React" target="_blank">React</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.swiper.com.cn/" title="Swiper" target="_blank">Swiper</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://electronjs.org/" title="Electron" target="_blank">Electron</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iconfont.cn/" title="Iconfont" target="_blank">Iconfont</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank">Hexo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://element-cn.eleme.io/#/zh-CN" title="Element" target="_blank">Element</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-简介"><span class="nav-number">1.</span> <span class="nav-text">ES6 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript-和-JavaScript-的关系"><span class="nav-number">1.1.</span> <span class="nav-text">ECMAScript 和 JavaScript 的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-与-ECMAScript-2015-的关系"><span class="nav-number">1.2.</span> <span class="nav-text">ES6 与 ECMAScript 2015 的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法提案的批准流程"><span class="nav-number">1.3.</span> <span class="nav-text">语法提案的批准流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript-的历史"><span class="nav-number">1.4.</span> <span class="nav-text">ECMAScript 的历史</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6的开发环境搭建"><span class="nav-number">2.</span> <span class="nav-text">ES6的开发环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立工程目录"><span class="nav-number">2.1.</span> <span class="nav-text">建立工程目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写index-html"><span class="nav-number">2.2.</span> <span class="nav-text">编写index.html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写index-js"><span class="nav-number">2.3.</span> <span class="nav-text">编写index.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化项目"><span class="nav-number">2.4.</span> <span class="nav-text">初始化项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局安装Babel-cli"><span class="nav-number">2.5.</span> <span class="nav-text">全局安装Babel-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地安装babel-preset-es2015-和-babel-cli"><span class="nav-number">2.6.</span> <span class="nav-text">本地安装babel-preset-es2015 和 babel-cli</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建-babelrc新建-babelrc"><span class="nav-number">2.7.</span> <span class="nav-text">新建.babelrc新建.babelrc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简化转化命令"><span class="nav-number">2.8.</span> <span class="nav-text">简化转化命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let-和-const-命令"><span class="nav-number">3.</span> <span class="nav-text">let 和 const 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let-命令"><span class="nav-number">3.1.</span> <span class="nav-text">let 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本用法"><span class="nav-number">3.1.1.</span> <span class="nav-text">基本用法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不存在变量提升不存在变量提升"><span class="nav-number">3.1.2.</span> <span class="nav-text">不存在变量提升不存在变量提升</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const-命令"><span class="nav-number">3.2.</span> <span class="nav-text">const 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本用法-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">基本用法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#暂时性死区"><span class="nav-number">3.2.2.</span> <span class="nav-text">暂时性死区:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意要点"><span class="nav-number">3.2.3.</span> <span class="nav-text">注意要点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-声明变量的六种方法"><span class="nav-number">3.3.</span> <span class="nav-text">ES6 声明变量的六种方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的解构赋值"><span class="nav-number">4.</span> <span class="nav-text">变量的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">4.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解构模型"><span class="nav-number">4.2.</span> <span class="nav-text">解构模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组模型的解构（Array）"><span class="nav-number">4.3.</span> <span class="nav-text">数组模型的解构（Array）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本"><span class="nav-number">4.3.1.</span> <span class="nav-text">基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可嵌套"><span class="nav-number">4.3.2.</span> <span class="nav-text">可嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可忽略"><span class="nav-number">4.3.3.</span> <span class="nav-text">可忽略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不完全解构"><span class="nav-number">4.3.4.</span> <span class="nav-text">不完全解构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#剩余运算符"><span class="nav-number">4.3.5.</span> <span class="nav-text">剩余运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串等"><span class="nav-number">4.3.6.</span> <span class="nav-text">字符串等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解构默认值"><span class="nav-number">4.3.7.</span> <span class="nav-text">解构默认值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象模型的解构（Object）"><span class="nav-number">4.4.</span> <span class="nav-text">对象模型的解构（Object）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本-1"><span class="nav-number">4.4.1.</span> <span class="nav-text">基本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可嵌套可忽略"><span class="nav-number">4.4.2.</span> <span class="nav-text">可嵌套可忽略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不完全解构-1"><span class="nav-number">4.4.3.</span> <span class="nav-text">不完全解构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#剩余运算符-1"><span class="nav-number">4.4.4.</span> <span class="nav-text">剩余运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解构默认值-1"><span class="nav-number">4.4.5.</span> <span class="nav-text">解构默认值</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">海盗船长</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">59.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz',
+        appKey: '1wa4Cc8N9PFLetS4NN6Mk7e9',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz", "1wa4Cc8N9PFLetS4NN6Mk7e9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

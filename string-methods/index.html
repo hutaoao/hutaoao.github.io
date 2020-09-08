@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,String,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="charAt(index)返回在指定位置的字符（不改变原字符串）。 1234let str = &quot;HELLO WORLD&quot;;let n = str.charAt(2);//返回字符串中的第三个字符:console.log(str);//HELLO WORLDconsole.log(n);//L charCodeAt(index)返回在指定的位置的字符的 Unicode 编码（不改变原字符串）。 1">
+<meta name="keywords" content="JavaScript,String">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript字符串方法整理 - 最齐全的">
+<meta property="og:url" content="https://hutaoao.github.io/string-methods/index.html">
+<meta property="og:site_name" content="海盗船长の博客">
+<meta property="og:description" content="charAt(index)返回在指定位置的字符（不改变原字符串）。 1234let str = &quot;HELLO WORLD&quot;;let n = str.charAt(2);//返回字符串中的第三个字符:console.log(str);//HELLO WORLDconsole.log(n);//L charCodeAt(index)返回在指定的位置的字符的 Unicode 编码（不改变原字符串）。 1">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-26T07:18:45.967Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript字符串方法整理 - 最齐全的">
+<meta name="twitter:description" content="charAt(index)返回在指定位置的字符（不改变原字符串）。 1234let str = &quot;HELLO WORLD&quot;;let n = str.charAt(2);//返回字符串中的第三个字符:console.log(str);//HELLO WORLDconsole.log(n);//L charCodeAt(index)返回在指定的位置的字符的 Unicode 编码（不改变原字符串）。 1">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hutaoao.github.io/string-methods/">
+
+
+
+
+
+  <title>JavaScript字符串方法整理 - 最齐全的 | 海盗船长の博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">海盗船长の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">记录学习的技能和遇到的问题</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hutaoao.github.io/string-methods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="海盗船长">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/captain.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海盗船长の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">JavaScript字符串方法整理 - 最齐全的</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T00:00:00+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/string-methods/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/string-methods/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/string-methods/" class="leancloud_visitors" data-flag-title="JavaScript字符串方法整理 - 最齐全的">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  13
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="charAt-index"><a href="#charAt-index" class="headerlink" title="charAt(index)"></a>charAt(index)</h3><p>返回在指定位置的字符（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"HELLO WORLD"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.charAt(<span class="number">2</span>);<span class="comment">//返回字符串中的第三个字符:</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//HELLO WORLD</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//L</span></span><br></pre></td></tr></table></figure>
+<h3 id="charCodeAt-index"><a href="#charCodeAt-index" class="headerlink" title="charCodeAt(index)"></a>charCodeAt(index)</h3><p>返回在指定的位置的字符的 Unicode 编码（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"HELLO WORLD"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.charCodeAt(<span class="number">0</span>);<span class="comment">//返回字符串第一个字符的 Unicode 编码</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//HELLO WORLD</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//72</span></span><br></pre></td></tr></table></figure>
+<h3 id="concat-string1-string2-…-stringX"><a href="#concat-string1-string2-…-stringX" class="headerlink" title="concat(string1, string2, …, stringX)"></a>concat(string1, string2, …, stringX)</h3><p>连接两个或更多字符串，并返回新的字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">"Hello "</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = <span class="string">"world!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str1.concat(str2);<span class="comment">//连接两个字符串</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Hello world!</span></span><br></pre></td></tr></table></figure>
+<h3 id="fromCharCode-code1-code2-…-codeX"><a href="#fromCharCode-code1-code2-…-codeX" class="headerlink" title="fromCharCode(code1, code2, …, codeX)"></a>fromCharCode(code1, code2, …, codeX)</h3><p>将 Unicode 编码转为字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> n = <span class="built_in">String</span>.fromCharCode(<span class="number">65</span>);</span><br><span class="line"><span class="keyword">let</span> m = <span class="built_in">String</span>.fromCharCode(<span class="number">65</span>, <span class="number">66</span>, <span class="number">67</span>);</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//A</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//ABC</span></span><br></pre></td></tr></table></figure>
+<h3 id="includes-searchString-start"><a href="#includes-searchString-start" class="headerlink" title="includes(searchString, start)"></a>includes(searchString, start)</h3><p>查找字符串中是否包含指定的子字符串，如果找到匹配的字符串则返回 true，否则返回 false。</p>
+<p>第一个参数（必选）是要查找的字符串，第二个参数（可选）设置从那个位置开始查找，默认为 0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world, welcome to the universe."</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.includes(<span class="string">"world"</span>);<span class="comment">//查找字符串是否包含 "world"</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//true</span></span><br><span class="line"><span class="keyword">let</span> m = str.includes(<span class="string">"world"</span>, <span class="number">12</span>);<span class="comment">//从第 12 个索引位置开始查找字符串</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h3 id="indexOf-searchString-start"><a href="#indexOf-searchString-start" class="headerlink" title="indexOf(searchString, start)"></a>indexOf(searchString, start)</h3><p>返回某个指定的字符串值在字符串中首次出现的位置，如果没有找到匹配的字符串则返回 -1（不改变原字符串）。</p>
+<p>第一个参数（必选）规定检索的字符串值；</p>
+<p>第二个参数（可选）的整数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world, welcome to the universe."</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.indexOf(<span class="string">"welcome"</span>);<span class="comment">//查找字符串 "welcome"</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Hello world, welcome to the universe.</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//13</span></span><br><span class="line"><span class="keyword">let</span> m = str.indexOf(<span class="string">"e"</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//14</span></span><br></pre></td></tr></table></figure>
+<h3 id="lastIndexOf-searchString-start"><a href="#lastIndexOf-searchString-start" class="headerlink" title="lastIndexOf(searchString, start)"></a>lastIndexOf(searchString, start)</h3><p>从后向前搜索字符串，并从起始位置（0）开始计算返回字符串最后出现的位置，如果没有找到匹配字符串则返回 -1 。</p>
+<p>第一个参数（必选）规定检索的字符串值；</p>
+<p>第二个参数（可选）整数，规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"I am from runoob，welcome to runoob site."</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.lastIndexOf(<span class="string">"runoob"</span>);<span class="comment">//查找字符串 "runoob" 最后出现的位置</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//28</span></span><br><span class="line"><span class="keyword">let</span> m = str.lastIndexOf(<span class="string">"runoob"</span>, <span class="number">20</span>);<span class="comment">//从第 20 个字符开始查找字符串 "runoob" 最后出现的位置</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//10</span></span><br><span class="line"><span class="keyword">let</span> k = str.lastIndexOf(<span class="string">"runoob"</span>, <span class="number">9</span>);<span class="comment">//从第 10 个字符开始从后向前查找字符串 "runoob" 最后出现的位置</span></span><br><span class="line"><span class="built_in">console</span>.log(k);<span class="comment">//-1</span></span><br></pre></td></tr></table></figure>
+<h3 id="match-regexp"><a href="#match-regexp" class="headerlink" title="match(regexp)"></a>match(regexp)</h3><p>查找找到一个或多个正则表达式的匹配。</p>
+<p>这个方法的行为在很大程度上有赖于 regexp 是否具有标志 g。如果 regexp 没有标志 g，那么 match() 方法就只能在 stringObject 中执行一次匹配。如果没有找到任何匹配的文本， match() 将返回 null。否则，它将返回一个数组，其中存放了与它找到的匹配文本有关的信息。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"The rain in SPAIN stays mainly in the plain"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.match(<span class="regexp">/ain/g</span>);<span class="comment">//在字符串中查找 "ain"</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//[ 'ain', 'ain', 'ain' ]</span></span><br><span class="line"><span class="keyword">let</span> m = str.match(<span class="regexp">/ain/gi</span>);<span class="comment">//全局查找字符串 "ain"，且不区分大小写\</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//[ 'ain', 'AIN', 'ain', 'ain' ]</span></span><br></pre></td></tr></table></figure>
+<h3 id="repeat-count"><a href="#repeat-count" class="headerlink" title="repeat(count)"></a>repeat(count)</h3><p>复制字符串指定次数，并将它们连接在一起返回（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.repeat(<span class="number">2</span>);<span class="comment">//复制字符串 "Runoob" 两次</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Runoob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//RunoobRunoob</span></span><br></pre></td></tr></table></figure>
+<h3 id="replace-searchString-newvalue"><a href="#replace-searchString-newvalue" class="headerlink" title="replace(searchString, newvalue)"></a>replace(searchString, newvalue)</h3><p>用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串，返回一个新的字符串。（不改变原字符串）。</p>
+<p>第一个参数（必选）规定子字符串或要替换的模式的 RegExp 对象。请注意，如果该值是一个字符串，则将它作为要检索的直接量文本模式，而不是首先被转换为 RegExp 对象；</p>
+<p>第二个参数（必选）一个字符串值。规定了替换文本或生成替换文本的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Visit Microsoft! Visit Microsoft!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.replace(<span class="string">"Microsoft"</span>, <span class="string">"Runoob"</span>);<span class="comment">//在本例中，我们将执行一次替换，当第一个 "Microsoft" 被找到，它就被替换为 "Runoob"</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Visit Microsoft! Visit Microsoft!</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Visit Runoob! Visit Microsoft!</span></span><br><span class="line"><span class="keyword">let</span> str2=<span class="string">"Mr Blue has a blue house and a blue car"</span>;</span><br><span class="line"><span class="keyword">let</span> m=str2.replace(<span class="regexp">/blue/g</span>,<span class="string">"red"</span>);<span class="comment">//执行一个全局替换</span></span><br><span class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//Mr Blue has a blue house and a blue car</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//Mr Blue has a red house and a red car</span></span><br><span class="line"><span class="keyword">let</span> k=str2.replace(<span class="regexp">/blue/gi</span>,<span class="string">"red"</span>);<span class="comment">//执行一个全局替换</span></span><br><span class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//Mr Blue has a blue house and a blue car</span></span><br><span class="line"><span class="built_in">console</span>.log(k);<span class="comment">//Mr red has a red house and a red car</span></span><br></pre></td></tr></table></figure>
+<h3 id="search-searchString"><a href="#search-searchString" class="headerlink" title="search(searchString)"></a>search(searchString)</h3><p>检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，返回与指定查找的字符串或者正则表达式相匹配的 String 对象起始位置。如果没有找到任何匹配的子串，则返回 -1。（不改变原字符串）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Visit Runoob!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.search(<span class="string">"Runoob"</span>);<span class="comment">//查找 "Runoob"</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Visit Runoob!</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//6</span></span><br><span class="line"><span class="keyword">let</span> str2=<span class="string">"Mr. Blue has a blue house"</span>;</span><br><span class="line"><span class="keyword">let</span> m = str2.search(<span class="string">"blue"</span>);<span class="comment">//执行一次对大小写敏感的查找</span></span><br><span class="line"><span class="built_in">console</span>.log(str2);<span class="comment">//Mr. Blue has a blue house</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//15</span></span><br><span class="line"><span class="keyword">let</span> k = str2.search(<span class="regexp">/blue/i</span>);<span class="comment">//执行一次忽略大小写的检索</span></span><br><span class="line"><span class="built_in">console</span>.log(k);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<h3 id="slice-start-end"><a href="#slice-start-end" class="headerlink" title="slice(start, end)"></a>slice(start, end)</h3><p>提取字符串的片断，并在新的字符串中返回被提取的部分。</p>
+<p>使用 start（包含） 和 end（不包含） 参数来指定字符串提取的部分。</p>
+<p>第一个参数（必选）要抽取的片断的起始下标；</p>
+<p>第二个参数（可选）紧接着要截取的片段结尾的下标。若未指定此参数，则要提取的子串包括 start 到原字符串结尾的字符串。如果该参数是负数，那么它规定的是从字符串的尾部开始算起的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.slice(<span class="number">3</span>);<span class="comment">//从字符串的第3个位置提取字符串片段</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Hello world!</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//lo world!</span></span><br><span class="line"><span class="keyword">let</span> m=str.slice(<span class="number">3</span>,<span class="number">8</span>);<span class="comment">//从字符串的第3个位置到第8个位置直接的字符串片段</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//lo wo</span></span><br><span class="line"><span class="keyword">let</span> k = str.slice(<span class="number">-1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(k);<span class="comment">//!</span></span><br><span class="line"><span class="keyword">let</span> l = str.slice(<span class="number">-3</span>,<span class="number">-1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(l);<span class="comment">//ld</span></span><br></pre></td></tr></table></figure>
+<h3 id="split-separator-limit"><a href="#split-separator-limit" class="headerlink" title="split(separator, limit)"></a>split(separator, limit)</h3><p>把字符串分割为字符串数组（不改变原始字符串）。</p>
+<p>注意：如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</p>
+<p>第一个参数（可选）字符串或正则表达式，从该参数指定的地方分割 string Object；</p>
+<p>第二个参数（可选）该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"How are you doing today?"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.split(<span class="string">" "</span>);<span class="comment">//把一个字符串分割成字符串数组</span></span><br><span class="line"><span class="keyword">let</span> m = str.split(<span class="string">""</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//How are you doing today?</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//[ 'How', 'are', 'you', 'doing', 'today?' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//[ 'H','o','w', ' ','a','r','e',' ','y','o','u',' ','d','o','i','n','g',' ','t','o','d','a','y','?' ]</span></span><br><span class="line"><span class="keyword">let</span> k = str.split();<span class="comment">//省略分割参数</span></span><br><span class="line"><span class="built_in">console</span>.log(k);<span class="comment">//[ 'How are you doing today?' ]</span></span><br><span class="line"><span class="keyword">let</span> l=str.split(<span class="string">" "</span>,<span class="number">3</span>);<span class="comment">//使用 limit 参数</span></span><br><span class="line"><span class="built_in">console</span>.log(l);<span class="comment">//[ 'How', 'are', 'you' ]</span></span><br><span class="line"><span class="keyword">let</span> j = str.split(<span class="string">"o"</span>);<span class="comment">//使用一个字符作为分隔符</span></span><br><span class="line"><span class="built_in">console</span>.log(j);<span class="comment">//[ 'H', 'w are y', 'u d', 'ing t', 'day?' ]</span></span><br></pre></td></tr></table></figure>
+<h3 id="startsWith-searchString-start"><a href="#startsWith-searchString-start" class="headerlink" title="startsWith(searchString, start)"></a>startsWith(searchString, start)</h3><p>查看字符串是否以指定的子字符串开头，如果是以指定的子字符串开头返回 true，否则 false。</p>
+<p>startsWith() 方法对大小写敏感。</p>
+<p>第一个参数（必选）要查找的字符串；第二个参数（可选）查找的开始位置，默认是0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world, welcome to the Runoob."</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.startsWith(<span class="string">"Hello"</span>);<span class="comment">//查看字符串是否为 "Hello" 开头</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//true</span></span><br><span class="line"><span class="keyword">let</span> m = str.startsWith(<span class="string">"world"</span>, <span class="number">6</span>);</span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h3 id="substr-start-length"><a href="#substr-start-length" class="headerlink" title="substr(start, length)"></a>substr(start, length)</h3><p>从起始索引号提取字符串中指定数目的字符（不改变原字符串）。</p>
+<p>第一个参数（必选）要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推；</p>
+<p>第二个参数（可选）字符串中的字符数。必须是数值。如果省略了该参数，那么返回从 stringObject 的开始位置到结尾的字串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.substr(<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//抽取指定数目的字符</span></span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Hello world!</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//llo</span></span><br><span class="line"><span class="keyword">let</span> m = str.substr(<span class="number">2</span>);<span class="comment">//从字符串第二个位置中提取一些字符</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//llo world!</span></span><br></pre></td></tr></table></figure>
+<h3 id="substring-from-to"><a href="#substring-from-to" class="headerlink" title="substring(from, to)"></a>substring(from, to)</h3><p>提取字符串中两个指定的索引号之间的字符，返回的子串包括 开始 处的字符，但不包括 结束 处的字符。</p>
+<p>第一个参数（必选）一个非负的整数，规定要提取的子串的第一个字符在 string Object 中的位置；</p>
+<p>第二个参数（可选）一个非负的整数，比要提取的子串的最后一个字符在 string Object 中的位置多 1。如果省略该参数，那么返回的子串会一直到字符串的结尾。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.substring(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">let</span> m = str.substring(<span class="number">3</span>,<span class="number">7</span>);</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//lo world!</span></span><br><span class="line"><span class="built_in">console</span>.log(m);<span class="comment">//lo w</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase()"></a>toLowerCase()</h3><p>把字符串转换为小写（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.toLowerCase();</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Runoob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//runoob</span></span><br></pre></td></tr></table></figure>
+<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase()"></a>toUpperCase()</h3><p>把字符串转换为大写（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.toUpperCase();</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Runoob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//RUNOOB</span></span><br></pre></td></tr></table></figure>
+<h3 id="trim"><a href="#trim" class="headerlink" title="trim()"></a>trim()</h3><p>去除字符串两边的空白，用于删除字符串的头尾空格（不改变原字符串）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"       Run  oob        "</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.trim();</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//       Run  oob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Run  oob</span></span><br></pre></td></tr></table></figure>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p>返回一个字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.toString();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Runoob</span></span><br></pre></td></tr></table></figure>
+<h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p>返回某个字符串对象的原始值，通常由 JavaScript 在后台自动进行调用，而不是显式地处于代码中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Hello world!"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.valueOf();</span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//Hello world!</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLocaleLowerCase"><a href="#toLocaleLowerCase" class="headerlink" title="toLocaleLowerCase()"></a>toLocaleLowerCase()</h3><p>根据本地主机的语言环境把字符串转换为小写（不改变原字符串）。</p>
+<p>通常，该方法与 toLowerCase() 方法返回的结果相同，只有几种语言（如土耳其语）具有地方特有的大小写映射。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.toLocaleLowerCase();</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Runoob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//runoob</span></span><br></pre></td></tr></table></figure>
+<h3 id="toLocaleUpperCase"><a href="#toLocaleUpperCase" class="headerlink" title="toLocaleUpperCase()"></a>toLocaleUpperCase()</h3><p>根据本地主机的语言环境把字符串转换为大写（不改变原字符串）。</p>
+<p>通常，该方法与 toUpperCase() 方法返回的结果相同，只有几种语言（如土耳其语）具有地方特有的大小写映射。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"Runoob"</span>;</span><br><span class="line"><span class="keyword">let</span> n = str.toLocaleUpperCase();</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//Runoob</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//RUNOOB</span></span><br></pre></td></tr></table></figure>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><ol>
+<li>big()    用大号字体显示字符串。</li>
+<li>blink()  显示闪动字符串。</li>
+<li>bold()   使用粗体显示字符串。</li>
+<li>fixed()  以打字机文本显示字符串。</li>
+<li>fontcolor()  使用指定的颜色来显示字符串。</li>
+<li>fontsize()   使用指定的尺寸来显示字符串。</li>
+<li>italics()    使用斜体显示字符串。</li>
+<li>link()   将字符串显示为链接。</li>
+<li>small()  使用小字号来显示字符串。</li>
+<li>strike()    用于显示加删除线的字符串。</li>
+<li>sub()   把字符串显示为下标。</li>
+<li>sup()   把字符串显示为上标。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>菜鸟教程(runoob.com)<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> txt = <span class="string">"Hello World!"</span>;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;字体变大: "</span> + txt.big() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;字体缩小: "</span> + txt.small() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;字体加粗: "</span> + txt.bold() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;斜体: "</span> + txt.italics() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;固定定位: "</span> + txt.fixed() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;加删除线: "</span> + txt.strike() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;字体颜色: "</span> + txt.fontcolor(<span class="string">"green"</span>) + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;字体大小: "</span> + txt.fontsize(<span class="number">6</span>) + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;下标: "</span> + txt.sub() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;上标: "</span> + txt.sup() + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;链接: "</span> + txt.link(<span class="string">"http://www.w3cschool.cc"</span>) + <span class="string">"&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;闪动文本: "</span> + txt.blink() + <span class="string">" (不能用于IE,Chrome,或者Safari)&lt;/p&gt;"</span>);</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/qrcode.jpg" alt="海盗船长 wechat" style="width: 200px; max-width: 100%;">
+    <div>扫码关注我的公众号哟</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/String/" rel="tag"># String</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/javascript-data-type/" rel="next" title="Javascript数据类型及检测方法">
+                <i class="fa fa-chevron-left"></i> Javascript数据类型及检测方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/reg-exp/" rel="prev" title="JavaScript中RegExp对象整理">
+                JavaScript中RegExp对象整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/captain.jpg" alt="海盗船长">
+            
+              <p class="site-author-name" itemprop="name">海盗船长</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hutaoao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:332413594@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                前端常用
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://es6.ruanyifeng.com/" title="ES6" target="_blank">ES6</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/" title="Vue" target="_blank">Vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://react.docschina.org/" title="React" target="_blank">React</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.swiper.com.cn/" title="Swiper" target="_blank">Swiper</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://electronjs.org/" title="Electron" target="_blank">Electron</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iconfont.cn/" title="Iconfont" target="_blank">Iconfont</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank">Hexo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://element-cn.eleme.io/#/zh-CN" title="Element" target="_blank">Element</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#charAt-index"><span class="nav-number">1.</span> <span class="nav-text">charAt(index)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#charCodeAt-index"><span class="nav-number">2.</span> <span class="nav-text">charCodeAt(index)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#concat-string1-string2-…-stringX"><span class="nav-number">3.</span> <span class="nav-text">concat(string1, string2, …, stringX)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fromCharCode-code1-code2-…-codeX"><span class="nav-number">4.</span> <span class="nav-text">fromCharCode(code1, code2, …, codeX)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#includes-searchString-start"><span class="nav-number">5.</span> <span class="nav-text">includes(searchString, start)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf-searchString-start"><span class="nav-number">6.</span> <span class="nav-text">indexOf(searchString, start)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lastIndexOf-searchString-start"><span class="nav-number">7.</span> <span class="nav-text">lastIndexOf(searchString, start)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#match-regexp"><span class="nav-number">8.</span> <span class="nav-text">match(regexp)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#repeat-count"><span class="nav-number">9.</span> <span class="nav-text">repeat(count)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#replace-searchString-newvalue"><span class="nav-number">10.</span> <span class="nav-text">replace(searchString, newvalue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search-searchString"><span class="nav-number">11.</span> <span class="nav-text">search(searchString)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice-start-end"><span class="nav-number">12.</span> <span class="nav-text">slice(start, end)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split-separator-limit"><span class="nav-number">13.</span> <span class="nav-text">split(separator, limit)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#startsWith-searchString-start"><span class="nav-number">14.</span> <span class="nav-text">startsWith(searchString, start)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substr-start-length"><span class="nav-number">15.</span> <span class="nav-text">substr(start, length)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substring-from-to"><span class="nav-number">16.</span> <span class="nav-text">substring(from, to)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toLowerCase"><span class="nav-number">17.</span> <span class="nav-text">toLowerCase()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toUpperCase"><span class="nav-number">18.</span> <span class="nav-text">toUpperCase()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trim"><span class="nav-number">19.</span> <span class="nav-text">trim()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-NaN"><span class="nav-number">20.</span> <span class="nav-text">toString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#valueOf-NaN"><span class="nav-number">21.</span> <span class="nav-text">valueOf()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toLocaleLowerCase"><span class="nav-number">22.</span> <span class="nav-text">toLocaleLowerCase()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toLocaleUpperCase"><span class="nav-number">23.</span> <span class="nav-text">toLocaleUpperCase()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">24.</span> <span class="nav-text">扩展</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">海盗船长</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">59.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz',
+        appKey: '1wa4Cc8N9PFLetS4NN6Mk7e9',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("ssDU2FKxAGGEwiRvjHjJDhg8-gzGzoHsz", "1wa4Cc8N9PFLetS4NN6Mk7e9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

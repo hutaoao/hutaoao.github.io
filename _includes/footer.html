@@ -46,4 +46,7 @@
 
     {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
   </p>
+
+  <!-- 👇 在这里添加不蒜子统计 -->
+  {% include busuanzi.html %}
 </footer>

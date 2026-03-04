@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 贝加尔🌞胡 # the main title
+title: 独行的风 # the main title
 
 tagline: 独行的风 · 踩坑与填坑 # it will display as the subtitle
 
@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 贝加尔🌞胡
+  name: 独行的风
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link

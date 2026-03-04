@@ -1,8 +1,8 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
+icon: fas fa-smoking
 order: 4
-title: 关于
+title: 关于我
 ---
 
 <!-- 动态打字效果 -->

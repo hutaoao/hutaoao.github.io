@@ -1,6 +1,6 @@
 ---
 title: HarmonyOS NEXT 应用上架流程
-date: 2025-03-04
+date: 2025-02-15 10:00:00 +0800
 description: 详细介绍HarmonyOS NEXT应用上架的完整流程,包括生成密钥、申请证书、配置项目、打包上传等
 tags: [HarmonyOS, 应用上架, AppGallery Connect]
 categories: [HarmonyOS]

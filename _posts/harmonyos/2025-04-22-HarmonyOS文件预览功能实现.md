@@ -1,6 +1,6 @@
 ---
 title: HarmonyOS 文件预览功能实现
-date: 2025-03-04
+date: 2025-04-22
 description: 介绍HarmonyOS中filePreview文件预览功能的使用方法,包括文件下载、转换沙盒路径、预览等
 tags: [HarmonyOS, 文件预览, filePreview]
 categories: [HarmonyOS]

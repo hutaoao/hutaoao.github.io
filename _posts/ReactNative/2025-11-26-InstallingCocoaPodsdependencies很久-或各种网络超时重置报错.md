@@ -97,5 +97,3 @@ git config --global https.proxy '10.12.1.16:3128'
 ![1654567546282-af98a402-689c-4125-a648-e370f56df7fd.png](/assets/img/posts/ReactNative/1654567546282-af98a402-689c-4125-a648-e370f56df7fd-113551.png)
 
 
-> 更新: 2026-03-06 11:42:14  
-> 原文: <https://www.yuque.com/hutaoao/blog/zfyhlp>

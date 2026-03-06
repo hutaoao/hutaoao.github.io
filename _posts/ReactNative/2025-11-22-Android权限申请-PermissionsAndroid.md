@@ -137,5 +137,3 @@ async requestAllPermissions() {
 <font style="color:rgb(77, 77, 77);">可以看到，确实获取了多个权限。</font>\ <font style="color:rgb(77, 77, 77);">可以把请求权限的方法放在项目初次进入或者放在需要使用权限的地方</font>
 
 
-> 更新: 2023-08-24 10:11:58  
-> 原文: <https://www.yuque.com/hutaoao/blog/gwp4vucl3mza2z4o>

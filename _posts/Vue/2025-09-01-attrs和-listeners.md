@@ -32,5 +32,3 @@ categories: [Vue]
 >  所谓的$listeners其实就相当于一个中间件，当出现多级组件嵌套时，孙组件想传递数据给爷组件，那么就需要在父组件中给孙组件设置 v-on="$listeners" ，然后爷组件通过@键 的方式监听孙组件传递过来的数据
 
 
-> 更新: 2022-11-16 16:03:34  
-> 原文: <https://www.yuque.com/hutaoao/blog/ofux7fdzir3gzc37>

@@ -35,7 +35,6 @@ var patt=/pattern/modifiers;
 
 
 > 注意：当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 \）。比如，以下是等价的：
->
 
 
 
@@ -137,7 +136,6 @@ var re = /\w+/;
 
 
 > 语法：RegExpObject.exec(string)
->
 
 
 
@@ -163,7 +161,6 @@ console.log(result);//null
 
 
 > 语法：RegExpObject.test(string)
->
 
 
 
@@ -212,5 +209,3 @@ console.log(res);///RUNOOB/g
 
 
 
-> 更新: 2019-11-25 09:37:33  
-> 原文: <https://www.yuque.com/hutaoao/blog/vos66z>

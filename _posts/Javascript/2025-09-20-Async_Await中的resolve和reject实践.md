@@ -262,5 +262,3 @@ categories: [Javascript]
 没有报错，会阻塞 `func2()`。
 
 
-> 更新: 2021-11-17 11:23:18  
-> 原文: <https://www.yuque.com/hutaoao/blog/prdvzq>

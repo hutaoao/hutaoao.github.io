@@ -636,5 +636,3 @@ class _MyWidgetState extends State<MyWidget> {
 <font style="color:rgb(15, 17, 21);">通过合理使用下划线，可以创建出封装良好、易于维护、API 清晰的 Flutter 应用。记住：</font>**<font style="color:rgb(15, 17, 21);">好的封装是良好软件设计的基石</font>**<font style="color:rgb(15, 17, 21);">。</font>
 
 
-> 更新: 2026-02-05 10:53:35  
-> 原文: <https://www.yuque.com/hutaoao/blog/aovv5bb9ix2vw7vp>

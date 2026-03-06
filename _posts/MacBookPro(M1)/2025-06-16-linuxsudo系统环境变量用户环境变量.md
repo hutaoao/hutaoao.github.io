@@ -19,9 +19,6 @@ categories: [MacBookPro(M1)]
 
 
 > M1 终端用的 zsh ,所以用户环境变量文件为 <font style="color:#F5222D;">~/.zshrc</font>
->
 
 
 
-> 更新: 2021-09-16 10:38:44  
-> 原文: <https://www.yuque.com/hutaoao/blog/cgqchr>

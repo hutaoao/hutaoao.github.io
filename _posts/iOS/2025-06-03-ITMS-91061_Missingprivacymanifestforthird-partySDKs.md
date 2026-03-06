@@ -81,5 +81,3 @@ $PROJECT_DIR：当前包含.xcodeproj文件的目录
 <font style="color:rgb(77, 77, 77);">6、编译打包后验证结果：可以直接解开打包产物IPA包，在Frameworks文件夹中找到对应的三方SDK文件夹，其中就包含对应的隐私清单文件。</font>
 
 
-> 更新: 2025-05-28 10:20:09  
-> 原文: <https://www.yuque.com/hutaoao/blog/qo4ih5egetbiorml>

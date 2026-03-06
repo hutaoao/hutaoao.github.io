@@ -12,9 +12,7 @@ categories: [ReactNative]
 本人环境：react-native：0.59.8
 
 > If you are using <font style="color:#E8323C;">react-native >= 0.60.0</font> please use <font style="color:#E8323C;">react-native-share >= 2.0.0</font>
->
 > If you are using r<font style="color:#E8323C;">eact-native <= 0.59.10</font> please use <font style="color:#E8323C;">react-native-share <= 1.2.1</font>
->
 > <font style="color:#E8323C;">node 版本也有要求 本人 v14.19.1</font>
 
 <font style="color:#E8323C;"></font>
@@ -120,5 +118,3 @@ static BOOL RCTParseUnused(const char **input)
 ```
 
 
-> 更新: 2026-03-06 11:42:02  
-> 原文: <https://www.yuque.com/hutaoao/blog/ph0f44>

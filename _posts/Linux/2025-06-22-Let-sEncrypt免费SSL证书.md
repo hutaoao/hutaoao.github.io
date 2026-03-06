@@ -55,17 +55,11 @@ $ sudo certbot certonly --nginx
 ```
 
 > 中间可能提示找不到Nginx，此时需要设置Nginx软链
->
 > ln -s /usr/local/webserver/nginx/sbin/nginx /usr/bin/nginx
->
 > ln -s /usr/local/webserver/nginx/conf/ /etc/nginx
->
 > 
->
 > 验证下
->
 > which nginx   》  /usr/bin/nginx
->
 
 
 
@@ -77,9 +71,6 @@ $ sudo certbot renew --dry-run
 
 
 > <font style="color:#E8323C;">注意： 一般国内 域名需备案后才能使用HTTPS</font>
->
 
 
 
-> 更新: 2022-04-19 11:36:11  
-> 原文: <https://www.yuque.com/hutaoao/blog/gzl0oq>

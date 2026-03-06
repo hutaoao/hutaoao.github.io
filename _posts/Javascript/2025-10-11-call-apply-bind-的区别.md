@@ -155,5 +155,3 @@ Function.prototype.myBind = function (context) {
 ```
 
 
-> 更新: 2024-01-10 17:45:30  
-> 原文: <https://www.yuque.com/hutaoao/blog/vyz4zv>

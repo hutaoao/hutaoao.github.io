@@ -71,7 +71,6 @@ this.props.location.state
 > **<font style="color:#DF2A3F;">特点：</font>**  
 1、BrowserRouter(history)模式下，刷新页面参数不消失，参数不会在地址栏显示，因为state保存在history对象中  
 2、HashRouter(hash)模式下，刷新页面参数消失！！！参数不会在地址栏显示
->
 
 ### 路由传值的三种方式（v6.x）
 #### 1.params参数
@@ -157,9 +156,6 @@ const { state } = useLocation();
 > **<font style="color:#DF2A3F;">特点：</font>**  
 1、BrowserRouter(history)模式下，刷新页面参数不消失，参数不会在地址栏显示，因为state保存在history对象中  
 2、HashRouter(hash)模式下，刷新页面参数消失！！！参数不会在地址栏显示
->
 
 
 
-> 更新: 2023-09-25 15:39:42  
-> 原文: <https://www.yuque.com/hutaoao/blog/dwl29k>

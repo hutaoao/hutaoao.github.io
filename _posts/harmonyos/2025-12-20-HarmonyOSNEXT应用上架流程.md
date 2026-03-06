@@ -56,11 +56,8 @@ categories: [HarmonyOS]
 <font style="color:rgb(77, 77, 77);"></font>
 
 > <font style="color:rgb(77, 77, 77);">注册调试设备（真机）</font>
->
 > <https://developer.huawei.com/consumer/cn/doc/app/agc-help-add-device-0000001946142249#section67331926102911>
->
 > 获取UUID：
->
 > <code><font style="color:#000000;">/Volumes/T7/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc shell bm get --udid</font></code>
 
 ### <font style="color:rgb(79, 79, 79);">配置项目</font>
@@ -76,7 +73,6 @@ categories: [HarmonyOS]
 ![1736735440240-39247552-2271-4524-921e-676340bd3aed.png](/assets/img/posts/harmonyos/1736735440240-39247552-2271-4524-921e-676340bd3aed-618416.png)
 
 > 真机调试
->
 > <https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-run-device-V5>
 
 ### 软件包上传
@@ -84,5 +80,3 @@ categories: [HarmonyOS]
 ![1736735524993-990892eb-ef77-4935-a895-77701f00d057.png](/assets/img/posts/harmonyos/1736735524993-990892eb-ef77-4935-a895-77701f00d057-585535.png)
 
 
-> 更新: 2025-01-17 11:10:11  
-> 原文: <https://www.yuque.com/hutaoao/blog/kfl7r1ke5prku6re>

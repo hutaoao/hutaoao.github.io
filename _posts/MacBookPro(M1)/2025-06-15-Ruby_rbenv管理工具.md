@@ -53,5 +53,3 @@ Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <https:
 * `rbenv versions`			<font style="color:rgb(51, 51, 51);">列出 rbenv 已知的所有 Ruby 版本，并在当前活动版本旁边显示一个星号</font>
 
 
-> 更新: 2024-07-24 10:05:53  
-> 原文: <https://www.yuque.com/hutaoao/blog/pggph3a6w3t3v5hl>

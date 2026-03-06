@@ -96,5 +96,3 @@ app.listen(3000, function() {
 在这个示例中，创建了一个Express应用，并通过路由"/events"来处理EventSource请求。其中，将响应的Content-Type设置为text/event-stream，表示返回的数据格式为EventStream。同时，通过设置Cache-Control和Connection实现长连接的功能。在每秒钟向客户端推送一个带时间戳的事件。
 
 
-> 更新: 2023-09-06 10:09:02  
-> 原文: <https://www.yuque.com/hutaoao/blog/pxy791b6fi92mf28>

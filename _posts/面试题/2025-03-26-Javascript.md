@@ -16,9 +16,7 @@ categories: [面试题]
 \*\*其它应用类型：\*\*Date、RegExp、Map、Set 等
 
 > `Symbol` 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。
->
 > 应用场景：
->
 > 1. **创建唯一的对象属性**：定义特定用途的内部属性或库的私有属性时特别有用；
 > 2. **作为对象的私有属性**：Symbol属性不会被常规的枚举方法如for...in循环或Object.keys()所包含；
 
@@ -131,7 +129,6 @@ string、boolean、number、undefined、function、object、symbol
 隐式：==、 ===、<font style="color:rgb(71, 101, 130);">+</font><font style="color:rgb(44, 62, 80);">、</font><font style="color:rgb(71, 101, 130);">-</font><font style="color:rgb(44, 62, 80);">、</font><font style="color:rgb(71, 101, 130);">\*</font><font style="color:rgb(44, 62, 80);">、</font><font style="color:rgb(71, 101, 130);">/</font><font style="color:rgb(44, 62, 80);">、</font><font style="color:rgb(71, 101, 130);">%</font>
 
 > 1=="1"     //true
->
 > null==undefined     //true
 
 ***
@@ -199,7 +196,6 @@ IE：ev.cancelBubble = true；非IE：ev.stopPropagation();
 <font style="color:#212529;">说明：</font>
 
 > <font style="color:#212529;">闭包的定义是能够读取其它函数内部变量的函数，其实</font>就是将函数内部和函数外部连接的一座桥梁；
->
 > 闭包另一个作用就是**避免全局变量的污染**，**让这些变量的值始终保持在内存中**，同时副作用就是容易造成**内存泄漏**；
 
 **闭包的经典问题**
@@ -290,11 +286,8 @@ for(var i = 0; i < 3; i++) {
 | 修改 | 声明的是常量不可以修改 | 声明赋值后变量值还可以修改 | |
 
 > 浏览器的全局对象是**window**，Node的全局对象是**global**
->
 > \*\*暂时性死区（TDZ）：\*\*在使用let、const命令声明变量之前，该变量都是不可用的（报错），var 可以使用 打印出来 undefined
->
 > **变量提升**：即变量可以在声明之前使用
->
 > **块级作用域**（Block Scope）：指通过大括号（{}）包裹的代码块的作用域
 
 ```javascript
@@ -413,7 +406,6 @@ console.log(sumToN(100)); // 输出5050
 * **<font style="color:#F5222D;">currentTarget</font>** <font style="color:rgb(30, 31, 36);">属性表示当前正在处理事件的元素，这可能是事件的源头，也可能不是</font>；在事件流的捕获、目标及冒泡阶段；<font style="color:rgb(30, 31, 36);">可能会随着事件在DOM树中的传递而改变。</font>
 
 > <font style="color:rgb(30, 31, 36);">如果你只关心事件最初发生的元素，可以使用target；</font>
->
 > <font style="color:rgb(30, 31, 36);">如果你需要跟踪事件在整个DOM树中的传递过程，可以使用currentTarget。</font>
 
 ***
@@ -586,9 +578,7 @@ Content-Type：只有三个值 text/plain、multipart/form-data、application/x-
 ### http和https协议有什么区别
 
 > http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（`TCP`
->
 > ），用于从`WWW`服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少
->
 > https: 是以安全为目标的HTTP通道，简单讲是 `HTTP` 的安全版，即 `HTTP` 下加入 `SSL` 层，`HTTPS` 的安全基础是 `SSL` ，因此加密的详细内容就需要 `SSL`
 
 * <code><font style="color:#F5222D;">http</font></code> 是<font style="color:#F5222D;">超文本传输协议</font>，信息是<font style="color:#F5222D;">明文传输</font>，<code><font style="color:#F5222D;">https</font></code> 则是<font style="color:#F5222D;">具有安全性的 </font><code><font style="color:#F5222D;">ssl</font></code><font style="color:#F5222D;"> 加密传输协议</font>
@@ -698,7 +688,6 @@ thisObj：call 和apply <font style="color:#F5222D;">第一个参数都是 this 
 * <font style="background-color:#F8FAFC;">bind 则是返回改变了上下文后的函数,</font>**<font style="background-color:#F8FAFC;">不执行该函数</font>**
 
 > 三者的参数不限定是 string 类型，允许是各种类型，包括函数 、 object 等等！
->
 > 注意：调用 call / apply / bind 的必须是个函数<font style="color:#1C1F21;background-color:#F8FAFC;"></font>
 
 ***
@@ -1006,7 +995,6 @@ JS 特点是单线程（同一时间只能做同一件事）
 * <code><font style="color:#222222;">Bubbling</font>:<font style="color:#DF2A3F;">冒泡阶段</font></code><font style="color:rgba(0, 0, 0, 0.75);"> — 事件冒泡：从事件目标的父级元素回到 window</font>
 
 > 停止事件传播：<code>event.<font style="color:#DF2A3F;">stopPropagation</font>()</code>
->
 > <font style="color:rgba(0, 0, 0, 0.75);">阻止默认事件传播：</font><code><font style="color:rgba(0, 0, 0, 0.75);">event.</font><font style="color:#DF2A3F;">preventDefault</font><font style="color:rgba(0, 0, 0, 0.75);">()</font></code><font style="color:rgba(0, 0, 0, 0.75);"> 》 - 阻止浏览器默认行为</font>
 
 ```html
@@ -1478,9 +1466,7 @@ new Fun()
 上面就是函数的两层意思：在过去的 JS 中没有做区分（设计缺陷），看到一个函数时 不知如何调用 》 二义性
 
 > ES6中的重要理念：消除函数二义性，引入了 **class** 和 **箭头函数：**
->
 > `class` 不能使用直接调用，而尖头函数也不能用 `new` 来调用
->
 > 箭头函数（无this本质）代表的是指令序列，它跟实例无关，跟面向对象无关，this 来源于面向对象的概念
 
 ***
@@ -1770,7 +1756,6 @@ console.log(a, b);
 **<font style="color:rgb(25, 27, 31);">pushState 和 replaceState</font>**
 
 > <font style="color:rgb(83, 88, 97);">h</font>istory 提供了两个方法，能够无刷新的修改用户的浏览记录；
->
 > pushState 在用户访问页面后面添加一个访问记录， replaceState 则是直接替换了当前访问记录
 
 1. **<font style="color:rgb(79, 79, 79);">通过 hash(#) 哈希实现 - </font>\*\*\*\*<font style="color:#DF2A3F;">hashchange</font>**
@@ -1924,5 +1909,3 @@ $(document).ready(function() {
 ***
 
 
-> 更新: 2024-07-11 14:47:10  
-> 原文: <https://www.yuque.com/hutaoao/blog/dxbhti>

@@ -392,5 +392,3 @@ reduce是从左到右处理（从第一个成员到最后一个成员），reduc
 他们都是遍历对象的属性，也是接受一个对象作为参数，返回一个数组，包含了该对象自身的所有属性名。但Object.keys不能返回不可枚举的属性；Object.getOwnPropertyNames能返回不可枚举的属性。
 
 
-> 更新: 2024-01-17 10:16:01  
-> 原文: <https://www.yuque.com/hutaoao/blog/ymeoe3>

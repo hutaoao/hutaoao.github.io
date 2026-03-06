@@ -133,5 +133,3 @@ Padding(
 **<font style="color:rgb(15, 17, 21);">最终结论：优先选择意图清晰的 </font>**<code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">Padding</font>**</code>**<font style="color:rgb(15, 17, 21);">，但在需要多功能组合时，毫不犹豫地使用 </font>**<code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">Container</font>**</code>**<font style="color:rgb(15, 17, 21);"> 来简化代码。</font>**<font style="color:rgb(15, 17, 21);"> 这个原则也体现了 Flutter 的设计哲学：提供一系列单一功能的小 Widget，同时提供一些便利的复合 Widget 来提高开发效率。</font>
 
 
-> 更新: 2025-09-11 17:34:47  
-> 原文: <https://www.yuque.com/hutaoao/blog/uqanbyypiez53psi>

@@ -178,5 +178,3 @@ const menuItems = computed(() => {
 通过以上方案，即可在Vue3项目中灵活切换不同布局，满足多菜单结构的业务需求。
 
 
-> 更新: 2025-03-25 11:58:20  
-> 原文: <https://www.yuque.com/hutaoao/blog/ybuo9a4ppt5fzc1d>

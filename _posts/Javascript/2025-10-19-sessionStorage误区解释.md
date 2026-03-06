@@ -40,5 +40,3 @@ categories: [Javascript]
 总之，在处理sessionStorage时，只要打开新窗口就要特别注意了，新旧窗口数据不会互相同步。
 
 
-> 更新: 2026-03-06 11:36:09  
-> 原文: <https://www.yuque.com/hutaoao/blog/ax5nfm>

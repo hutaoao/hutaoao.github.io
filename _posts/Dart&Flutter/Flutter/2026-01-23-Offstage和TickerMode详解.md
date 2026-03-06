@@ -234,5 +234,3 @@ class _TabControllerState extends State<TabController> {
 **<font style="color:rgb(15, 17, 21);">Offstage + TickerMode</font>**<font style="color:rgb(15, 17, 21);"> 在状态保持和性能之间提供了最佳平衡。</font>
 
 
-> 更新: 2025-09-18 15:56:09  
-> 原文: <https://www.yuque.com/hutaoao/blog/nacx13aumf558qn7>

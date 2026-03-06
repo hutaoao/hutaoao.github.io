@@ -247,14 +247,11 @@ hexo s
 
 
 > 根据我的经验，除了第一次部署的时候，我们会重点用到**hexo init**这个命令外，在平时写博客和发布过程中最常用的就是：
->
 > + hexo n  新建文章
 > + hexo s 启动服务器，在本地查看内容
 > + hexo g 生成静态页面
 > + hexo deploy 部署到网站
->
 > 以上四个步骤。
->
 
 
 
@@ -807,5 +804,3 @@ post_wordcount:
 
 
 
-> 更新: 2026-03-06 11:30:51  
-> 原文: <https://www.yuque.com/hutaoao/blog/fa3eid>

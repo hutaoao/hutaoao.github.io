@@ -230,5 +230,3 @@ Text(
 <code><font style="color:rgb(15, 17, 21);">height</font></code><font style="color:rgb(15, 17, 21);"> 属性是控制文本垂直布局的重要工具，合理使用可以显著改善应用的视觉效果和用户体验。</font>
 
 
-> 更新: 2025-09-12 15:28:17  
-> 原文: <https://www.yuque.com/hutaoao/blog/mx3i046yw1ora73b>

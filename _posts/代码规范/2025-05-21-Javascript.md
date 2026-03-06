@@ -392,5 +392,3 @@ const sum = 1 + 2
 Unicode 字节顺序标记 (BOM) 用来指定代码单元是高字节序还是低字节序。也就是说，是高位在前还是低位在前。UTF-8 不需要 BOM 来表明字节顺序，因为单个字节并不影响字节顺序。
 
 
-> 更新: 2021-06-17 14:57:11  
-> 原文: <https://www.yuque.com/hutaoao/blog/defdza>

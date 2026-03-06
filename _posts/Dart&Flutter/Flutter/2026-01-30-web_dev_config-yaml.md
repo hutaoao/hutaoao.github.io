@@ -99,5 +99,3 @@ server:
 * **<font style="color:rgb(15, 17, 21);">功能定位</font>**<font style="color:rgb(15, 17, 21);">：此配置主要服务于</font>**<font style="color:rgb(15, 17, 21);">开发阶段</font>**<font style="color:rgb(15, 17, 21);">。它的代理功能是为了方便你与本地的后端服务联调，解决的是开发时的跨域问题，并非用于生产环境。</font>
 
 
-> 更新: 2025-11-13 09:52:10  
-> 原文: <https://www.yuque.com/hutaoao/blog/kve9gsumn5lg0bk8>

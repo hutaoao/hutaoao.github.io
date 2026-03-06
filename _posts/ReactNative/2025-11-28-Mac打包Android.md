@@ -16,7 +16,6 @@ $ keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -al
 ![1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed.png](/assets/img/posts/ReactNative/1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed-722697.png)
 
 > 密钥库文件位置：用户主目录（即 cd）
->
 > 密钥库口令：至少六位数
 
 ### 设置 gradle 变量
@@ -85,5 +84,3 @@ $ ./gradlew assembleRelease
 2. 删除之前打包生成的文件 android/app/build 和 /android/.gradle （有时node\_modules也需删除），重新使用 `./gradlew assembleRelease` 打包 <font style="color:#F5222D;">【推荐】</font>
 
 
-> 更新: 2026-03-06 11:41:41  
-> 原文: <https://www.yuque.com/hutaoao/blog/iqczgd>

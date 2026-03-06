@@ -38,5 +38,3 @@ render() {
 <https://www.npmjs.com/package/react-native-qrcode-svg>
 
 
-> 更新: 2022-07-22 11:47:55  
-> 原文: <https://www.yuque.com/hutaoao/blog/gqrggo>

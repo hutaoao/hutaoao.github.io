@@ -26,14 +26,10 @@ https://www.huiyi.com/.well-known/apple-app-site-association 或
 https://www.huiyi.com/apple-app-site-association则：
 
 > 必须https
->
 > 使用https://huiyi.com/apple-app-site-association或者https://huiyi.com/.well-known/apple-app-site-association能够访问到（能够下载或者返回文件内容即可）
->
 
   
 微信开放平台的Universal Link填写是：https://www.huiyi.com/app/
 
 
 
-> 更新: 2024-07-04 09:19:28  
-> 原文: <https://www.yuque.com/hutaoao/blog/ky080girgatl7fbv>

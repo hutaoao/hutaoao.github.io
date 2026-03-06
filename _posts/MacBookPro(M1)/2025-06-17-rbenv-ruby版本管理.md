@@ -25,11 +25,8 @@ categories: [MacBookPro(M1)]
 ### 环境变量
 
 > export PATH="/Users/hutao/.rbenv/shims:$PATH"
->
 > export PATH="/Users/hutao/.rbenv/bin:$PATH"
 
 source .zshrc
 
 
-> 更新: 2024-07-24 10:08:23  
-> 原文: <https://www.yuque.com/hutaoao/blog/ex0sf7d7mblwqhs5>

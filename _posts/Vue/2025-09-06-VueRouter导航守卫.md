@@ -169,5 +169,3 @@ beforeRouteLeave (to, from, next) {
 12. 调用 `beforeRouteEnter` 守卫中传给 `next` 的回调函数，创建好的组件实例会作为回调函数的参数传入。
 
 
-> 更新: 2021-03-19 15:11:29  
-> 原文: <https://www.yuque.com/hutaoao/blog/glenh2>

@@ -56,7 +56,6 @@ console.log(arr)  // [ undefined, undefined, undefined, undefined ]
 2. 该类数组对象的属性名必须为数值型或字符串型的数字
 
 > ps: 该类数组对象的属性名可以加引号，也可以不加引号
->
 
 
 
@@ -96,5 +95,3 @@ console.log(Array.from([12,45,47,56,213,4654,154]))
 
 
 
-> 更新: 2021-04-08 14:32:21  
-> 原文: <https://www.yuque.com/hutaoao/blog/li0rgp>

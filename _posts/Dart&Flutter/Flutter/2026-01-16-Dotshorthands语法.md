@@ -120,5 +120,3 @@ var myWidget = Container(color: .red); // 可能无法编译
    * **<font style="color:rgb(15, 17, 21);">慎用</font>**<font style="color:rgb(15, 17, 21);">：在过于复杂或可能引起歧义的长链式表达中，使用完整的类型名称有时反而有助于代码的阅读和维护。建议在团队中形成统一的代码风格规范。</font>
 
 
-> 更新: 2025-11-13 10:13:59  
-> 原文: <https://www.yuque.com/hutaoao/blog/hogtronfzygrgptl>

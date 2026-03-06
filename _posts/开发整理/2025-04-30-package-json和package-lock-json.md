@@ -91,7 +91,6 @@ package-lock.json 的作用就是为了避免上述的 package.json 中的版本
 官方的解释是：
 
 > package-lock.json is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
->
 
 
 
@@ -122,5 +121,3 @@ package-lock.json 的作用就是为了避免上述的 package.json 中的版本
 
 
 
-> 更新: 2021-04-14 10:08:09  
-> 原文: <https://www.yuque.com/hutaoao/blog/za8uhf>

@@ -8,7 +8,6 @@ categories: [Dart&Flutter, Flutter]
 # shorebird（热更新）
 
 > ‼️目前不支持静态资源的更新
->
 
 
 
@@ -16,5 +15,3 @@ categories: [Dart&Flutter, Flutter]
 
 
 
-> 更新: 2024-09-29 09:27:46  
-> 原文: <https://www.yuque.com/hutaoao/blog/wtobi72dl349p7bl>

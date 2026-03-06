@@ -14,7 +14,6 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 由于M1 xcode 架构变化导致，需要软链一下 <code><font style="color:rgb(0, 0, 0);">watchman</font></code>
 
 > <font style="color:rgb(0, 0, 0);">cd /opt/homebrew/bin</font>
->
 > <font style="color:rgb(0, 0, 0);">sudo ln -s  /opt/homebrew/bin/watchman /usr/local/bin/watchman</font>
 
 ***
@@ -40,5 +39,3 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 ![1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df.png](/assets/img/posts/ReactNative/1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df-736490.png)
 
 
-> 更新: 2023-06-25 16:29:51  
-> 原文: <https://www.yuque.com/hutaoao/blog/zkyw3eb4yvg6x900>

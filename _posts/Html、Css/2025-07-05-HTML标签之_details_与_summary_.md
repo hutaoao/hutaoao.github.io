@@ -170,5 +170,3 @@ details.addEventListener("toggle", event => {
 还行，虽然 IE 还是全军覆没，但是在移动端还是可以很香地使用的
 
 
-> 更新: 2024-07-11 13:26:25  
-> 原文: <https://www.yuque.com/hutaoao/blog/oib70g>

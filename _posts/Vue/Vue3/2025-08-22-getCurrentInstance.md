@@ -35,7 +35,6 @@ const MyComponent = {
 **<font style="color:#DF2A3F;">getCurrentInstance 只能在 setup 或生命周期钩子中调用。</font>**
 
 > <font style="color:#DF2A3F;">如需在 setup 或生命周期钩子外使用，请先在 setup 中调用 getCurrentInstance() 获取该实例然后再使用。</font>
->
 
 <font style="color:#DF2A3F;"></font>
 
@@ -78,5 +77,3 @@ function useComponentId() {
 
 
 
-> 更新: 2022-11-28 10:12:10  
-> 原文: <https://www.yuque.com/hutaoao/blog/qzy81ne90es2guxs>

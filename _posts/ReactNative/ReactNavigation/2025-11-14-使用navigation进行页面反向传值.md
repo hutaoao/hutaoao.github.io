@@ -10,7 +10,6 @@ categories: [ReactNative, ReactNavigation]
 场景：A页面跳转到B页面进行一些新增/编辑操作，成功后返回到A页面进行刷新数据；但是A页面跳转到B页面查看详情时返回并不需要刷新数据。
 
 > 此处的B页面通常可做 新增/编辑/详情 公共页面
->
 
 
 
@@ -102,5 +101,3 @@ LogBox.ignoreLogs([
 
 
 
-> 更新: 2026-03-06 11:40:14  
-> 原文: <https://www.yuque.com/hutaoao/blog/mqypcgm952m9os18>

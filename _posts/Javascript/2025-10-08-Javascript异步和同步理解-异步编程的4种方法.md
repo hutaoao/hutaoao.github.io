@@ -76,7 +76,6 @@ categories: [Javascript]
 
 
 > Because even though setTimeout was called with a delay of zero, it's placed on a queue and scheduled to run at the next opportunity, not immediately. Currently executing code must complete before functions on the queue are executed, the resulting execution order may not be as expected.
->
 
 
 
@@ -331,5 +330,3 @@ f1().then(f2).fail(f3);
 
 
 
-> 更新: 2026-03-06 11:36:27  
-> 原文: <https://www.yuque.com/hutaoao/blog/ntr38g>

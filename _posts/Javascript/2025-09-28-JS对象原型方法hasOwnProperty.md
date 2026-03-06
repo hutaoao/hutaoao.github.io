@@ -89,5 +89,3 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 
 
-> 更新: 2021-10-20 15:22:16  
-> 原文: <https://www.yuque.com/hutaoao/blog/fzgqsa>

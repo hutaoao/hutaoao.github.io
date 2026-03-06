@@ -26,7 +26,6 @@ categories: [ReactNative]
 <font style="color:#1A1A1A;"></font>
 
 > <font style="color:#F5222D;">注意：</font><font style="color:#1A1A1A;">Node 的版本应大于等于 12</font>
->
 > <font style="color:#F5222D;">注意：</font><font style="color:#1A1A1A;background-color:transparent;">不要使用 cnpm！cnpm 安装的模块路径比较奇怪，packager 不能正常识别！</font>
 
 #### JDK（[下载地址](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)）
@@ -169,5 +168,3 @@ yarn react-native run-android
 #
 
 
-> 更新: 2024-06-04 14:09:36  
-> 原文: <https://www.yuque.com/hutaoao/blog/ighz4n>

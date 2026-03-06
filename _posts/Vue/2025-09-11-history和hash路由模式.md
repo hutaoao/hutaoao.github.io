@@ -174,5 +174,3 @@ window.addEventListener('popstate', function(e) {
 <font style="color:rgb(51, 51, 51);">浏览器地址没有#， 比如(http://localhost:3001/a); 它也一样不会刷新页面的。但是url地址会改变。</font>
 
 
-> 更新: 2026-03-06 11:33:58  
-> 原文: <https://www.yuque.com/hutaoao/blog/wr1y94>

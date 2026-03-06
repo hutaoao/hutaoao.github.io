@@ -57,7 +57,6 @@ for (let i = 1; i <= 10; i++) {
 
 
 > 总之：return false 只在当前函数有效，不会影响其他外部函数的执行。
->
 
 
 
@@ -148,5 +147,3 @@ function text() {
 
 
 
-> 更新: 2019-11-25 10:22:42  
-> 原文: <https://www.yuque.com/hutaoao/blog/raytpg>

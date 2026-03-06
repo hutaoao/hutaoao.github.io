@@ -45,7 +45,7 @@ categories: [React]
 
 <code><font style="color:rgb(35, 38, 59);">json-server --watch db.json </font></code>
 
-4. <font style="color:rgb(35, 38, 59);">浏览器访问 </font><http://localhost:3000/posts/1><font style="color:rgb(35, 38, 59);">，你会得到</font>
+4. 浏览器访问 `http://localhost:3000/posts/1`，你会得到
 
 <code><font style="color:rgb(35, 38, 59);">{ </font><font style="color:rgb(255, 0, 0);">"id"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(136, 0, 0);">1</font><font style="color:rgb(35, 38, 59);">, </font><font style="color:rgb(255, 0, 0);">"title"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(163, 21, 21);">"json-server"</font><font style="color:rgb(35, 38, 59);">, </font><font style="color:rgb(255, 0, 0);">"author"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(163, 21, 21);">"typicode"</font><font style="color:rgb(35, 38, 59);"> } </font></code>
 

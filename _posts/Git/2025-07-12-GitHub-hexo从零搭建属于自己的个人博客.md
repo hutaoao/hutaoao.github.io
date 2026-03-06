@@ -226,7 +226,7 @@ hexo publish <layout> <filename>
 
 
 
-启动服务器，默认情况下，访问网站为[_http://localhost:4000/_](http://localhost:4000/)
+启动服务器，默认情况下，访问网站为 `http://localhost:4000/`
 
 
 

@@ -9,7 +9,7 @@ categories: [MacBookPro(M1)]
 
 1. sudo 就是普通用户临时拥有root的权限。好处在于，大多数时候使用用户自定义的配置，少数情况可以通过sudo实现root权限做事。
 
-故而，需要注意的一点是，在你使用了sudo后，你临时不再是原先用户，不能使用属于自己的命令。举个例		  子：sudo source ... 该命令会执行失败，提示没有source命令。但你去掉sudo，又可以执行了。（从侧面可以 反映sudo不等于获得root所有权限。）<font style="color:#F5222D;">莫要滥用sudo</font>。
+故而，需要注意的一点是，在你使用了sudo后，你临时不再是原先用户，不能使用属于自己的命令。举个例		  子：sudo source ... 该命令会执行失败，提示没有source命令。但你去掉sudo，又可以执行了。（从侧面可以 反映sudo不等于获得root所有权限。）莫要滥用sudo。
 
 
 
@@ -18,7 +18,7 @@ categories: [MacBookPro(M1)]
 
 
 
-> M1 终端用的 zsh ,所以用户环境变量文件为 <font style="color:#F5222D;">~/.zshrc</font>
+> M1 终端用的 zsh ,所以用户环境变量文件为 ~/.zshrc
 
 
 

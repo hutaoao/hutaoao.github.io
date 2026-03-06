@@ -7,27 +7,27 @@ categories: [Dart&Flutter, Flutter]
 ---
 # TextStyle 的 height 属性
 
-<font style="color:rgb(15, 17, 21);">在 Flutter 中，</font><code><font style="color:rgb(15, 17, 21);">TextStyle</font></code><font style="color:rgb(15, 17, 21);"> 的 </font><code><font style="color:rgb(15, 17, 21);">height</font></code><font style="color:rgb(15, 17, 21);"> 属性用于控制文本的行高（line height），但它有一些特殊的行为需要注意。</font>
+在 Flutter 中，<code>TextStyle</code> 的 <code>height</code> 属性用于控制文本的行高（line height），但它有一些特殊的行为需要注意。
 
-## <font style="color:rgb(15, 17, 21);">height 属性介绍</font>
+## height 属性介绍
 
-**<font style="color:rgb(15, 17, 21);">定义：</font>**<font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">height</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">是一个</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">double</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">值，表示文本行高与字体大小的比例。</font>
+**定义：** <code>height</code> 是一个 <code>double</code> 值，表示文本行高与字体大小的比例。
 
-**<font style="color:rgb(15, 17, 21);">计算公式：</font>**
+**计算公式：**
 
 text
 
-<font style="color:rgb(15, 17, 21);">实际行高 = fontSize \* height</font>
+实际行高 = fontSize \* height
 
-**<font style="color:rgb(15, 17, 21);">重要特性：</font>**
+**重要特性：**
 
-* <code><font style="color:rgb(15, 17, 21);">height = 1.0</font></code><font style="color:rgb(15, 17, 21);">：行高等于字体大小</font>
-* <code><font style="color:rgb(15, 17, 21);">height = 1.5</font></code><font style="color:rgb(15, 17, 21);">：行高是字体大小的1.5倍</font>
-* <code><font style="color:rgb(15, 17, 21);">height = null</font></code><font style="color:rgb(15, 17, 21);">：使用默认的行高（通常由字体本身决定）（默认值）</font>
+* <code>height = 1.0</code>：行高等于字体大小
+* <code>height = 1.5</code>：行高是字体大小的1.5倍
+* <code>height = null</code>：使用默认的行高（通常由字体本身决定）（默认值）
 
-## <font style="color:rgb(15, 17, 21);">基本用法</font>
+## 基本用法
 
-### <font style="color:rgb(15, 17, 21);">1. 1.0倍行高</font>
+### 1. 1.0倍行高
 
 ```dart
 Text(
@@ -39,7 +39,7 @@ Text(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 1.5倍行高</font>
+### 2. 1.5倍行高
 
 ```dart
 Text(
@@ -51,7 +51,7 @@ Text(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 紧凑行高</font>
+### 3. 紧凑行高
 
 ```dart
 Text(
@@ -63,9 +63,9 @@ Text(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">实际应用示例</font>
+## 实际应用示例
 
-### <font style="color:rgb(15, 17, 21);">多行文本行间距控制</font>
+### 多行文本行间距控制
 
 ```dart
 Text(
@@ -80,7 +80,7 @@ Text(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">标题和正文字体搭配</font>
+### 标题和正文字体搭配
 
 ```dart
 Column(
@@ -107,7 +107,7 @@ Column(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">列表项文本</font>
+### 列表项文本
 
 ```dart
 ListView.builder(
@@ -135,9 +135,9 @@ ListView.builder(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">与 lineSpacing 的区别</font>
+## 与 lineSpacing 的区别
 
-<font style="color:rgb(15, 17, 21);">需要注意的是，</font><code><font style="color:rgb(15, 17, 21);">height</font></code><font style="color:rgb(15, 17, 21);"> 不是直接设置行间距，而是设置整个行高：</font>
+需要注意的是，<code>height</code> 不是直接设置行间距，而是设置整个行高：
 
 ```dart
 Text(
@@ -150,7 +150,7 @@ Text(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">响应式设计中的使用</font>
+## 响应式设计中的使用
 
 ```dart
 Text(
@@ -162,9 +162,9 @@ Text(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">注意事项</font>
+## 注意事项
 
-### <font style="color:rgb(15, 17, 21);">1. 单行文本的垂直居中</font>
+### 1. 单行文本的垂直居中
 
 ```dart
 // 如果文本在容器中不垂直居中，可以调整height
@@ -182,7 +182,7 @@ Container(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 与 fontWeight 的配合</font>
+### 2. 与 fontWeight 的配合
 
 ```dart
 Text(
@@ -195,7 +195,7 @@ Text(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 多语言文本考虑</font>
+### 3. 多语言文本考虑
 
 ```dart
 Text(
@@ -207,12 +207,12 @@ Text(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">推荐的最佳实践</font>
+## 推荐的最佳实践
 
-1. **<font style="color:rgb(15, 17, 21);">正文文本</font>**<font style="color:rgb(15, 17, 21);">：</font><code><font style="color:rgb(15, 17, 21);">height: 1.5 - 1.7</font></code>
-2. **<font style="color:rgb(15, 17, 21);">标题文本</font>**<font style="color:rgb(15, 17, 21);">：</font><code><font style="color:rgb(15, 17, 21);">height: 1.2 - 1.4</font></code>
-3. **<font style="color:rgb(15, 17, 21);">注释文本</font>**<font style="color:rgb(15, 17, 21);">：</font><code><font style="color:rgb(15, 17, 21);">height: 1.3 - 1.5</font></code>
-4. **<font style="color:rgb(15, 17, 21);">列表项</font>**<font style="color:rgb(15, 17, 21);">：</font><code><font style="color:rgb(15, 17, 21);">height: 1.3 - 1.6</font></code>
+1. **正文文本**：<code>height: 1.5 - 1.7</code>
+2. **标题文本**：<code>height: 1.2 - 1.4</code>
+3. **注释文本**：<code>height: 1.3 - 1.5</code>
+4. **列表项**：<code>height: 1.3 - 1.6</code>
 
 ```dart
 // 最佳实践示例
@@ -227,6 +227,6 @@ Text(
 )
 ```
 
-<code><font style="color:rgb(15, 17, 21);">height</font></code><font style="color:rgb(15, 17, 21);"> 属性是控制文本垂直布局的重要工具，合理使用可以显著改善应用的视觉效果和用户体验。</font>
+<code>height</code> 属性是控制文本垂直布局的重要工具，合理使用可以显著改善应用的视觉效果和用户体验。
 
 

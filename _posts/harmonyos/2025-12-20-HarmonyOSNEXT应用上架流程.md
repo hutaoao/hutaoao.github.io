@@ -9,7 +9,7 @@ categories: [HarmonyOS]
 
 ![1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888.png](/assets/img/posts/harmonyos/1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888-257284.png)
 
-### <font style="color:rgb(51, 51, 51);">生成密钥和证书请求文件（p12）</font>
+### 生成密钥和证书请求文件（p12）
 
 在主菜单栏单击Build > Generate Key and CSR
 
@@ -25,42 +25,42 @@ categories: [HarmonyOS]
 
 ![1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae.png](/assets/img/posts/harmonyos/1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae-655807.png)
 
-<font style="color:rgba(0, 0, 0, 0.75);">在Generate Key and CSR界面中，继续填写密钥信息后，单击Next。</font>
+在Generate Key and CSR界面中，继续填写密钥信息后，单击Next。
 
-* <font style="color:rgba(0, 0, 0, 0.75);">Alias：密钥的别名信息，用于标识密钥名称。请记住该别名，后续签名配置需要使用。</font>
-* <font style="color:rgba(0, 0, 0, 0.75);">Password：密钥对应的密码，与密钥库密码保持一致，无需手动输入。</font>
+* Alias：密钥的别名信息，用于标识密钥名称。请记住该别名，后续签名配置需要使用。
+* Password：密钥对应的密码，与密钥库密码保持一致，无需手动输入。
 
 ![1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92.png](/assets/img/posts/harmonyos/1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92-679849.png)
 
-<font style="color:rgb(77, 77, 77);">在Generate Key and CSR界面，设置CSR文件存储路径和CSR文件名。</font>![1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d.png](/assets/img/posts/harmonyos/1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d-241512.png)
+在Generate Key and CSR界面，设置CSR文件存储路径和CSR文件名。![1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d.png](/assets/img/posts/harmonyos/1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d-241512.png)
 
-<font style="color:rgb(77, 77, 77);">单击OK按钮，创建CSR文件成功，可以在存储路径下获取生成的密钥库文件（.p12）和证书请求文件（.csr）。</font>
+单击OK按钮，创建CSR文件成功，可以在存储路径下获取生成的密钥库文件（.p12）和证书请求文件（.csr）。
 
 ![1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56.png](/assets/img/posts/harmonyos/1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56-182405.png)
 
-### <font style="color:rgb(79, 79, 79);">申请发布证书（.cer）</font>
+### 申请发布证书（.cer）
 
-<font style="color:rgb(77, 77, 77);">登录AppGallery Connect，选择“证书、APP ID和Profile”</font>\ <font style="color:rgb(77, 77, 77);">在左侧导航栏选择“证书、APP ID和Profile > 证书”，进入“证书”页面，点击“新增证书”</font>\
+登录AppGallery Connect，选择“证书、APP ID和Profile”\ 在左侧导航栏选择“证书、APP ID和Profile > 证书”，进入“证书”页面，点击“新增证书”\
 ![1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f.png](/assets/img/posts/harmonyos/1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f-691562.png)
 
-<font style="color:rgb(77, 77, 77);"></font>
 
-### <font style="color:rgb(77, 77, 77);"></font><font style="color:rgb(51, 51, 51);">申请发布Profile</font>
 
-1. <font style="color:rgb(51, 51, 51);">登录</font>[<font style="color:rgb(51, 51, 51);">AppGallery Connect</font>](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)<font style="color:rgb(51, 51, 51);">，选择“我的项目”。</font>
-2. <font style="color:rgb(51, 51, 51);">找到对应项目，点击项目卡片中需要发布的元服务。</font>
-3. <font style="color:rgb(51, 51, 51);">导航选择“HarmonyOS应用 > HAP Provision Profile管理”，进入“管理HAP Provision Profile”页面，点击“添加”。</font>
+### 申请发布Profile
+
+1. 登录[AppGallery Connect](https://developer.huawei.com/consumer/cn/service/josp/agc/index.html)，选择“我的项目”。
+2. 找到对应项目，点击项目卡片中需要发布的元服务。
+3. 导航选择“HarmonyOS应用 > HAP Provision Profile管理”，进入“管理HAP Provision Profile”页面，点击“添加”。
 
 ![1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6.png](/assets/img/posts/harmonyos/1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6-572930.png)
 
-<font style="color:rgb(77, 77, 77);"></font>
 
-> <font style="color:rgb(77, 77, 77);">注册调试设备（真机）</font>
+
+> 注册调试设备（真机）
 > <https://developer.huawei.com/consumer/cn/doc/app/agc-help-add-device-0000001946142249#section67331926102911>
 > 获取UUID：
-> <code><font style="color:#000000;">/Volumes/T7/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc shell bm get --udid</font></code>
+> <code>/Volumes/T7/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc shell bm get --udid</code>
 
-### <font style="color:rgb(79, 79, 79);">配置项目</font>
+### 配置项目
 
 ![1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d.png](/assets/img/posts/harmonyos/1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d-471167.png)
 

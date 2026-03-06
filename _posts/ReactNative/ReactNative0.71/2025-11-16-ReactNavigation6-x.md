@@ -10,7 +10,7 @@ categories: [ReactNative, ReactNative0.71]
 
 :::
 
-<font style="color:rgb(28, 30, 33);">React Native 0.60 更高版本执行：</font>
+React Native 0.60 更高版本执行：
 
 :::success
 **npx pod-install ios**
@@ -19,12 +19,12 @@ categories: [ReactNative, ReactNative0.71]
 
 重新打包，尽情玩耍吧！！！
 
-> **<font style="color:#DF2A3F;">稍有不注意就有坑！！！</font>**
-> 使用<font style="color:#DF2A3F;"> </font>**<font style="color:#DF2A3F;">@react-navigation/drawer�</font>** 抽屉组件时需要注意：（我当时是最后单独安装的 \*\*@react-navigation/drawer�，\*\*可能一开始一起安装不会出现问题）
+> **稍有不注意就有坑！！！**
+> 使用 **@react-navigation/drawer�** 抽屉组件时需要注意：（我当时是最后单独安装的 \*\*@react-navigation/drawer�，\*\*可能一开始一起安装不会出现问题）
 > * 下载依赖  `npm install react-native-gesture-handler react-native-reanimated`
 > * 在 `index.js` or `App.js` 引用 `import 'react-native-gesture-handler'`
 > * 在 `babel.config.js` 添加 `plugins: ['react-native-reanimated/plugin']`
-> * 最后 <code><font style="color:rgb(57, 58, 52);background-color:rgb(246, 248, 250);">npx pod-install ios</font></code>
+> * 最后 <code>npx pod-install ios</code>
 > 过程中编译可能还会报错，可以尝试 `npm start --reset-cache`
 
 <details class="lake-collapse"><summary id="u2bf75247"><span class="ne-text" style="font-size: 16px">具体参考下面截图</span></summary><p id="udcaf3813" class="ne-p"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797203778-42e68bb3-a414-4dab-bf3e-2995b861dbbf.png" alt="1683797203778 42e68bb3 a414 4dab bf3e 2995b861dbbf" width="824" id="u89b5e636" class="ne-image" style="font-size: 16px"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797271782-71528f37-7a1b-41f8-9b59-5b99fa5a3fce.png" alt="1683797203778 42e68bb3 a414 4dab bf3e 2995b861dbbf" width="1972" id="u9cb16874" class="ne-image" style="font-size: 16px"></p></details>
@@ -86,9 +86,9 @@ navigation.setOptions({title: 'Updated!'})
 
 #### 调整头部样式
 
-* <code><font style="color:rgb(28, 30, 33);">headerStyle</font></code><font style="color:rgb(28, 30, 33);">: </font>包装页眉的视图的样式对象
-* <code><font style="color:rgb(28, 30, 33);">headerTintColor</font></code><font style="color:rgb(28, 30, 33);">: </font>后退按钮和标题都使用此属性作为颜色
-* <code><font style="color:rgb(28, 30, 33);">headerTitleStyle</font></code><font style="color:rgb(28, 30, 33);">: </font>自定义标题的fontFamily、fontWeight和其他Text样式的属性
+* <code>headerStyle</code>: 包装页眉的视图的样式对象
+* <code>headerTintColor</code>: 后退按钮和标题都使用此属性作为颜色
+* <code>headerTitleStyle</code>: 自定义标题的fontFamily、fontWeight和其他Text样式的属性
 
 function StackScreen() {
   return (

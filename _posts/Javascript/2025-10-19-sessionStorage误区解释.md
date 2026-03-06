@@ -7,15 +7,15 @@ categories: [Javascript]
 ---
 # sessionStorage误区解释
 
-# <font style="color:#FFFFFF;background-color:#3199E4;">1、前言</font>
+# 1、前言
 
 所有人都知道，`localStorage`和`sessionStorage`的最大区别是生命周期，一个永久，一个仅针对一个会话期间有效。那么，到底什么是一个会话？多个标签页之间的数据是否会共享呢？
 
-# <font style="color:#FFFFFF;background-color:#3199E4;">2、后台的session</font>
+# 2、后台的session
 
 我们对会话`session`的认识一般都是从后台的session开始的，比如Java的session，它是基于往cookie写入一个`JSESSIONID`来实现的，所以，只要你不是打开一个隐身窗口，无论你开多少个标签页，不同标签页之间都会被认为是一个session，你在这个标签页登录了，新开一个标签输入地址，仍然是登录状态。
 
-# <font style="color:#FFFFFF;background-color:#3199E4;">3、sessionStorage的session</font>
+# 3、sessionStorage的session
 
 但是直到今天才发现，HTML5中的这个`sessionStorage`和传统后台的`session`并不完全是同一个东西，主要是在多个标签页数据是否会共享的问题上的不同。
 
@@ -29,7 +29,7 @@ categories: [Javascript]
 
 ![1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf.gif](/assets/img/posts/Javascript/1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf-048708.gif)
 
-# <font style="background-color:#3199E4;">20180522更新</font>
+# 20180522更新
 
 今天又碰到有关sessionStorage的一个问题，发现之前理解的还是错误的，比如当我通过A标签打开新的窗口时，在新窗口删除同样的数据，旧窗口的却还在。
 

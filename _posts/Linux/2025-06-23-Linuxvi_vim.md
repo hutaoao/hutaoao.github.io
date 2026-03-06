@@ -85,7 +85,7 @@ vim 键盘图：
 ### 使用 vi/vim 进入一般模式
 如果你想要使用 vi 来建立一个名为 runoob.txt 的文件时，你可以这样做：
 
-<font style="color:#000000;">$ vim runoob</font><font style="color:#666600;">.</font><font style="color:#000000;">txt</font>
+$ vim runoob.txt
 
 直接输入** vi 文件名 **就能够进入 vi 的一般模式了。请注意，记得 vi 后面一定要加文件名，不管该文件存在与否！
 

@@ -80,7 +80,7 @@ $ ./gradlew assembleRelease
 
 解决方法：
 
-1. android目录下增加 `local.properties` 文件，加入代码：<font style="color:#808080;">sdk.dir=/Users/hutao/Library/Android/sdk</font>
-2. 删除之前打包生成的文件 android/app/build 和 /android/.gradle （有时node\_modules也需删除），重新使用 `./gradlew assembleRelease` 打包 <font style="color:#F5222D;">【推荐】</font>
+1. android目录下增加 `local.properties` 文件，加入代码：sdk.dir=/Users/hutao/Library/Android/sdk
+2. 删除之前打包生成的文件 android/app/build 和 /android/.gradle （有时node\_modules也需删除），重新使用 `./gradlew assembleRelease` 打包 【推荐】
 
 

@@ -7,11 +7,11 @@ categories: [Vue, Vue3]
 ---
 # getCurrentInstance
 
-getCurrentInstance 支持**<font style="color:#DF2A3F;">访问内部组件实例</font>**。
+getCurrentInstance 支持**访问内部组件实例**。
 
 
 
-<font style="color:#ECAA04;">!!!WARNING</font>
+!!!WARNING
 
 + getCurrentInstance 只暴露给高阶使用场景，典型的比如在库中。强烈反对在应用的代码中使用；
 + getCurrentInstance。请不要把它当作在组合式 API 中获取 this 的替代方案来使用。
@@ -32,11 +32,11 @@ const MyComponent = {
 
 
 
-**<font style="color:#DF2A3F;">getCurrentInstance 只能在 setup 或生命周期钩子中调用。</font>**
+**getCurrentInstance 只能在 setup 或生命周期钩子中调用。**
 
-> <font style="color:#DF2A3F;">如需在 setup 或生命周期钩子外使用，请先在 setup 中调用 getCurrentInstance() 获取该实例然后再使用。</font>
+> 如需在 setup 或生命周期钩子外使用，请先在 setup 中调用 getCurrentInstance() 获取该实例然后再使用。
 
-<font style="color:#DF2A3F;"></font>
+
 
 ```vue
 const MyComponent = {

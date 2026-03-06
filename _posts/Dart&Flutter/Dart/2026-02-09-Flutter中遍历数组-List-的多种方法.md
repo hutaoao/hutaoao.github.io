@@ -7,11 +7,11 @@ categories: [Dart&Flutter, Dart]
 ---
 # Flutter 中遍历数组（List）的多种方法
 
-<font style="color:rgb(15, 17, 21);">在 Flutter 中遍历数组（List）有多种方法，下面我为你详细介绍各种遍历方式及其使用场景：</font>
+在 Flutter 中遍历数组（List）有多种方法，下面我为你详细介绍各种遍历方式及其使用场景：
 
-## <font style="color:rgb(15, 17, 21);">1. for 循环 - 最基础的方式</font>
+## 1. for 循环 - 最基础的方式
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -22,9 +22,9 @@ for (int i = 0; i < fruits.length; i++) {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">2. for-in 循环 - 简洁的遍历</font>
+## 2. for-in 循环 - 简洁的遍历
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -35,9 +35,9 @@ for (String fruit in fruits) {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">3. forEach 方法 - 函数式编程风格</font>
+## 3. forEach 方法 - 函数式编程风格
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -51,9 +51,9 @@ fruits.forEach((fruit) {
 fruits.forEach((fruit) => print('Fruit: $fruit'));
 ```
 
-## <font style="color:rgb(15, 17, 21);">4. map 方法 - 转换数组元素</font>
+## 4. map 方法 - 转换数组元素
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -69,9 +69,9 @@ List<String> capitalizedFruits = fruits.map((fruit) => fruit.toUpperCase()).toLi
 print(capitalizedFruits); // [APPLE, BANANA, ORANGE]
 ```
 
-## <font style="color:rgb(15, 17, 21);">5. where 方法 - 过滤数组元素</font>
+## 5. where 方法 - 过滤数组元素
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<int> numbers = [1, 2, 3, 4, 5, 6];
@@ -81,9 +81,9 @@ List<int> evenNumbers = numbers.where((number) => number % 2 == 0).toList();
 print(evenNumbers); // [2, 4, 6]
 ```
 
-## <font style="color:rgb(15, 17, 21);">6. expand 方法 - 展开嵌套数组</font>
+## 6. expand 方法 - 展开嵌套数组
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<List<int>> nestedList = [
@@ -97,9 +97,9 @@ List<int> flatList = nestedList.expand((list) => list).toList();
 print(flatList); // [1, 2, 3, 4, 5, 6]
 ```
 
-## <font style="color:rgb(15, 17, 21);">7. 使用索引的 forEach</font>
+## 7. 使用索引的 forEach
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -110,9 +110,9 @@ fruits.asMap().forEach((index, fruit) {
 });
 ```
 
-## <font style="color:rgb(15, 17, 21);">8. 在 Flutter Widget 中的实际应用</font>
+## 8. 在 Flutter Widget 中的实际应用
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class FruitList extends StatelessWidget {
@@ -145,9 +145,9 @@ class FruitList extends StatelessWidget {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">9. 其他有用的遍历方法</font>
+## 9. 其他有用的遍历方法
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 List<int> numbers = [1, 2, 3, 4, 5];
@@ -169,12 +169,12 @@ bool allPositive = numbers.every((number) => number > 0);
 print(allPositive); // true
 ```
 
-## <font style="color:rgb(15, 17, 21);">使用建议</font>
+## 使用建议
 
-* **<font style="color:rgb(15, 17, 21);">基础遍历</font>**<font style="color:rgb(15, 17, 21);">：使用</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">for-in</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">或</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">forEach</font></code>
-* **<font style="color:rgb(15, 17, 21);">需要索引</font>**<font style="color:rgb(15, 17, 21);">：使用</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">for</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">循环或</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">asMap().forEach()</font></code>
-* **<font style="color:rgb(15, 17, 21);">转换数据</font>**<font style="color:rgb(15, 17, 21);">：使用</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">map</font></code>
-* **<font style="color:rgb(15, 17, 21);">过滤数据</font>**<font style="color:rgb(15, 17, 21);">：使用</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">where</font></code>
-* **<font style="color:rgb(15, 17, 21);">在 Widget 中</font>**<font style="color:rgb(15, 17, 21);">：推荐使用 </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">map</font></code><font style="color:rgb(15, 17, 21);"> 或 </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">for-in</font></code><font style="color:rgb(15, 17, 21);"> 在列表中使用展开运算符</font>
+* **基础遍历**：使用 <code>for-in</code> 或 <code>forEach</code>
+* **需要索引**：使用 <code>for</code> 循环或 <code>asMap().forEach()</code>
+* **转换数据**：使用 <code>map</code>
+* **过滤数据**：使用 <code>where</code>
+* **在 Widget 中**：推荐使用 <code>map</code> 或 <code>for-in</code> 在列表中使用展开运算符
 
 

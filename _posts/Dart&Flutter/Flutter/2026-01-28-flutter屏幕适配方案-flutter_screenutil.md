@@ -7,15 +7,15 @@ categories: [Dart&Flutter, Flutter]
 ---
 # flutter 屏幕适配方案-flutter_screenutil
 
-**<font style="color:rgb(31, 35, 40);">flutter 屏幕适配方案，用于调整屏幕和字体大小的flutter插件，让你的UI在不同尺寸的屏幕上都能显示合理的布局!</font>**
+**flutter 屏幕适配方案，用于调整屏幕和字体大小的flutter插件，让你的UI在不同尺寸的屏幕上都能显示合理的布局!**
 
-_<font style="color:rgb(31, 35, 40);">注意</font>_<font style="color:rgb(31, 35, 40);">：此插件仍处于开发阶段，某些API可能尚不可用。</font>
+_注意_：此插件仍处于开发阶段，某些API可能尚不可用。
 
 
 
-## <font style="color:rgb(31, 35, 40);">使用方法:</font>
-### <font style="color:rgb(31, 35, 40);">安装依赖：</font>
-<font style="color:rgb(31, 35, 40);">安装之前请查看最新版本 新版本如有问题请使用以前的版本</font>
+## 使用方法:
+### 安装依赖：
+安装之前请查看最新版本 新版本如有问题请使用以前的版本
 
 ```plain
 dependencies:
@@ -25,29 +25,29 @@ dependencies:
   flutter_screenutil: ^{latest version}
 ```
 
-### <font style="color:rgb(31, 35, 40);">在每个使用的地方导入包：</font>
-<font style="color:rgb(31, 35, 40);background-color:rgb(246, 248, 250);">import 'package:flutter_screenutil/flutter_screenutil.dart';</font>
+### 在每个使用的地方导入包：
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-### <font style="color:rgb(31, 35, 40);">属性</font>
-| **<font style="color:rgb(31, 35, 40);">属性</font>** | **<font style="color:rgb(31, 35, 40);">类型</font>** | **<font style="color:rgb(31, 35, 40);">默认值</font>** | **<font style="color:rgb(31, 35, 40);">描述</font>** |
+### 属性
+| **属性** | **类型** | **默认值** | **描述** |
 | --- | --- | --- | --- |
-| <font style="color:rgb(31, 35, 40);">designSize</font> | <font style="color:rgb(31, 35, 40);">Size</font> | <font style="color:rgb(31, 35, 40);">Size(360, 690)</font> | <font style="color:rgb(31, 35, 40);">设计稿中设备的尺寸(单位随意,建议dp,但在使用过程中必须保持一致)</font> |
-| <font style="color:rgb(31, 35, 40);">deviceSize</font> | <font style="color:rgb(31, 35, 40);">Size</font> | <font style="color:rgb(31, 35, 40);">null</font> | <font style="color:rgb(31, 35, 40);">物理设备的大小</font> |
-| <font style="color:rgb(31, 35, 40);">builder</font> | <font style="color:rgb(31, 35, 40);">Widget Function()</font> | <font style="color:rgb(31, 35, 40);">Container()</font> | <font style="color:rgb(31, 35, 40);">一般返回一个MaterialApp类型的Function()</font> |
-| <font style="color:rgb(31, 35, 40);">orientation</font> | <font style="color:rgb(31, 35, 40);">Orientation</font> | <font style="color:rgb(31, 35, 40);">portrait</font> | <font style="color:rgb(31, 35, 40);">屏幕方向</font> |
-| <font style="color:rgb(31, 35, 40);">splitScreenMode</font> | <font style="color:rgb(31, 35, 40);">bool</font> | <font style="color:rgb(31, 35, 40);">false</font> | <font style="color:rgb(31, 35, 40);">支持分屏尺寸</font> |
-| <font style="color:rgb(31, 35, 40);">minTextAdapt</font> | <font style="color:rgb(31, 35, 40);">bool</font> | <font style="color:rgb(31, 35, 40);">false</font> | <font style="color:rgb(31, 35, 40);">是否根据宽度/高度中的最小值适配文字</font> |
-| <font style="color:rgb(31, 35, 40);">context</font> | <font style="color:rgb(31, 35, 40);">BuildContext</font> | <font style="color:rgb(31, 35, 40);">null</font> | <font style="color:rgb(31, 35, 40);">传入context会更灵敏的根据屏幕变化而改变</font> |
-| <font style="color:rgb(31, 35, 40);">child</font> | <font style="color:rgb(31, 35, 40);">Widget</font> | <font style="color:rgb(31, 35, 40);">null</font> | <font style="color:rgb(31, 35, 40);">builder的一部分，其依赖项属性不使用该库</font> |
-| <font style="color:rgb(31, 35, 40);">rebuildFactor</font> | <font style="color:rgb(31, 35, 40);">Function</font> | _<font style="color:rgb(31, 35, 40);">default</font>_ | <font style="color:rgb(31, 35, 40);">返回屏幕指标更改时是否重建。</font> |
+| designSize | Size | Size(360, 690) | 设计稿中设备的尺寸(单位随意,建议dp,但在使用过程中必须保持一致) |
+| deviceSize | Size | null | 物理设备的大小 |
+| builder | Widget Function() | Container() | 一般返回一个MaterialApp类型的Function() |
+| orientation | Orientation | portrait | 屏幕方向 |
+| splitScreenMode | bool | false | 支持分屏尺寸 |
+| minTextAdapt | bool | false | 是否根据宽度/高度中的最小值适配文字 |
+| context | BuildContext | null | 传入context会更灵敏的根据屏幕变化而改变 |
+| child | Widget | null | builder的一部分，其依赖项属性不使用该库 |
+| rebuildFactor | Function | _default_ | 返回屏幕指标更改时是否重建。 |
 
 
-<font style="color:rgb(31, 35, 40);">注意：builder和child中必须填写至少一项</font>
+注意：builder和child中必须填写至少一项
 
-### <font style="color:rgb(31, 35, 40);">初始化并设置适配尺寸及字体大小是否根据系统的“字体大小”辅助选项来进行缩放</font>
-<font style="color:rgb(31, 35, 40);">在使用之前请设置好设计稿的宽度和高度，传入设计稿的宽度和高度(单位随意,但在使用过程中必须保持一致) 一定要进行初始化(只需设置一次),以保证在每次使用之前设置好了适配尺寸:</font>
+### 初始化并设置适配尺寸及字体大小是否根据系统的“字体大小”辅助选项来进行缩放
+在使用之前请设置好设计稿的宽度和高度，传入设计稿的宽度和高度(单位随意,但在使用过程中必须保持一致) 一定要进行初始化(只需设置一次),以保证在每次使用之前设置好了适配尺寸:
 
-#### <font style="color:rgb(31, 35, 40);">方式一（您必须在app中使用它一次）:</font>
+#### 方式一（您必须在app中使用它一次）:
 ```dart
 void main() => runApp(MyApp());
 
@@ -77,10 +77,10 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-#### <font style="color:rgb(31, 35, 40);">方式二: 你需要一个技巧来支持文字自适应主题</font>
-**<font style="color:rgb(31, 35, 40);">混合开发使用方式二</font>**
+#### 方式二: 你需要一个技巧来支持文字自适应主题
+**混合开发使用方式二**
 
-<font style="color:rgb(31, 35, 40);">不支持这样做：</font>
+不支持这样做：
 
 ```dart
 MaterialApp(
@@ -94,7 +94,7 @@ MaterialApp(
 )
 ```
 
-<font style="color:rgb(31, 35, 40);">正确的方法应当是这样：</font>
+正确的方法应当是这样：
 
 ```dart
 void main() async {
@@ -152,9 +152,9 @@ class _HomePageState extends State<HomePage> {
 }
 ```
 
-### <font style="color:rgb(31, 35, 40);">使用</font>
-### <font style="color:rgb(31, 35, 40);">API</font>
-#### <font style="color:rgb(31, 35, 40);">传入设计稿的dp尺寸</font>
+### 使用
+### API
+#### 传入设计稿的dp尺寸
 ```dart
 ScreenUtil().setWidth(540)  (dart sdk>=2.6 : 540.w)   //根据屏幕宽度适配尺寸
 ScreenUtil().setHeight(200) (dart sdk>=2.6 : 200.h)   //根据屏幕高度适配尺寸(一般根据宽度适配即可)
@@ -187,18 +187,18 @@ Radius.circular(16).w          //Radius.circular(16.w)
 BorderRadius.all(Radius.circular(16)).w
 ```
 
-#### <font style="color:rgb(31, 35, 40);">适配尺寸</font>
-<font style="color:rgb(31, 35, 40);">传入设计稿的尺寸(单位与初始化时的单位相同)：</font>
+#### 适配尺寸
+传入设计稿的尺寸(单位与初始化时的单位相同)：
 
-<font style="color:rgb(31, 35, 40);">根据屏幕宽度适配</font><font style="color:rgb(31, 35, 40);"> </font>`<font style="color:rgb(31, 35, 40);background-color:rgba(129, 139, 152, 0.12);">width: ScreenUtil().setWidth(540)</font>`<font style="color:rgb(31, 35, 40);">,</font>
+根据屏幕宽度适配 `width: ScreenUtil().setWidth(540)`,
 
-<font style="color:rgb(31, 35, 40);">根据屏幕高度适配</font><font style="color:rgb(31, 35, 40);"> </font>`<font style="color:rgb(31, 35, 40);background-color:rgba(129, 139, 152, 0.12);">height: ScreenUtil().setHeight(200)</font>`<font style="color:rgb(31, 35, 40);">, 一般来说，控件高度也根据宽度进行适配</font>
+根据屏幕高度适配 `height: ScreenUtil().setHeight(200)`, 一般来说，控件高度也根据宽度进行适配
 
-<font style="color:rgb(31, 35, 40);">如果您的 dart sdk>=2.6，则可以使用一些特殊的函数：</font>
+如果您的 dart sdk>=2.6，则可以使用一些特殊的函数：
 
-<font style="color:rgb(31, 35, 40);">例子：</font>
+例子：
 
-<font style="color:rgb(31, 35, 40);">你不应当这样做：</font>
+你不应当这样做：
 
 ```dart
 Container(
@@ -207,7 +207,7 @@ Container(
 )
 ```
 
-<font style="color:rgb(31, 35, 40);">正确的方法应当是这样使用：</font>
+正确的方法应当是这样使用：
 
 ```dart
 Container(
@@ -216,15 +216,15 @@ Container(
 )
 ```
 
-`<font style="color:rgb(31, 35, 40);background-color:rgba(129, 139, 152, 0.12);">注意</font>`
+`注意`
 
-<font style="color:rgb(31, 35, 40);">高度也根据setWidth来做适配可以保证不变形(当你想要一个正方形的时候)</font>
+高度也根据setWidth来做适配可以保证不变形(当你想要一个正方形的时候)
 
-<font style="color:rgb(31, 35, 40);">setHeight方法主要是在高度上进行适配, 在你想控制UI上一屏的高度与实际中显示一样时使用.</font>
+setHeight方法主要是在高度上进行适配, 在你想控制UI上一屏的高度与实际中显示一样时使用.
 
-<font style="color:rgb(31, 35, 40);">一般来说，50.w!=50.h</font>
+一般来说，50.w!=50.h
 
-<font style="color:rgb(31, 35, 40);">例如:</font>
+例如:
 
 ```dart
 //如果你想显示一个矩形:
@@ -252,7 +252,7 @@ Container(
 ),
 ```
 
-**<font style="color:rgb(31, 35, 40);">适配字体</font>**
+**适配字体**
 
 ```dart
 //输入字体大小（单位与初始化时的单位相同）
@@ -282,8 +282,8 @@ ScreenUtil().setSp(28)
 )
 ```
 
-#### <font style="color:rgb(31, 35, 40);">设置字体不随系统字体大小进行改变</font>
-<font style="color:rgb(31, 35, 40);">APP全局:</font>
+#### 设置字体不随系统字体大小进行改变
+APP全局:
 
 ```dart
 MaterialApp(
@@ -303,11 +303,11 @@ MaterialApp(
 ),
 ```
 
-<font style="color:rgb(31, 35, 40);">单独的Text:</font>
+单独的Text:
 
-<font style="color:rgb(31, 35, 40);background-color:rgb(246, 248, 250);">Text("text", textScaleFactor: 1.0)</font>
+Text("text", textScaleFactor: 1.0)
 
-<font style="color:rgb(31, 35, 40);">指定的小部件：</font>
+指定的小部件：
 
 ```dart
 MediaQuery(
@@ -317,18 +317,18 @@ MediaQuery(
 )
 ```
 
-[<font style="color:rgb(9, 105, 218);">小部件测试</font>](https://github.com/OpenFlutter/flutter_screenutil/issues/115)
+[小部件测试](https://github.com/OpenFlutter/flutter_screenutil/issues/115)
 
-### <font style="color:rgb(31, 35, 40);">使用示例:</font>
-[<font style="color:rgb(9, 105, 218);">示例演示</font>](https://github.com/OpenFlutter/flutter_ScreenUtil/blob/master/example/lib/main_zh.dart)
+### 使用示例:
+[示例演示](https://github.com/OpenFlutter/flutter_ScreenUtil/blob/master/example/lib/main_zh.dart)
 
-<font style="color:rgb(31, 35, 40);">要使用第二种方法，请运行：</font>`<font style="color:rgb(31, 35, 40);background-color:rgba(129, 139, 152, 0.12);">flutter run --dart-define=method=2</font>`
+要使用第二种方法，请运行：`flutter run --dart-define=method=2`
 
-<font style="color:rgb(31, 35, 40);">效果:</font>
+效果:
 
 ![demo zh png](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_zh.png)
 
-<font style="color:rgb(31, 35, 40);"> </font>![demo tablet zh png](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_tablet_zh.png)
+ ![demo tablet zh png](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_tablet_zh.png)
 
 
 

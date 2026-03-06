@@ -15,8 +15,8 @@ categories: [React]
 
 ### 传统写法：
 
-* <code><font style="color:#E8323C;"><Switch></font></code> 替换成了 <code><font style="color:#E8323C;"><Routes></font></code>
-* <code><font style="color:#E8323C;">Route</font></code> 中的 <code><font style="color:#E8323C;">component</font></code> 替换成了 <code><font style="color:#E8323C;">element</font></code>
+* <code><Switch></code> 替换成了 <code><Routes></code>
+* <code>Route</code> 中的 <code>component</code> 替换成了 <code>element</code>
 
 ```tsx
 import React from 'react';
@@ -58,7 +58,7 @@ const Index = () => {
 export default Index;
 ```
 
-* 新增\*\*<font style="color:#E8323C;"> </font>**<code>**<font style="color:#E8323C;"><Outlet /></font>**</code>**<font style="color:#E8323C;"> </font>\*\*视图窗口组件：
+* 新增\*\* **<code>**<Outlet />**</code>** \*\*视图窗口组件：
 
 ```tsx
 import React from 'react';

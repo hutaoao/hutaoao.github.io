@@ -7,21 +7,21 @@ categories: [HarmonyOS]
 ---
 # @Observed和@ObjectLink基本使用
 
-<font style="color:rgba(0, 0, 0, 0.9);">鸿蒙next中装饰器（包括</font>[<font style="color:rgb(10, 89, 247);">@State</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-state)<font style="color:rgba(0, 0, 0, 0.9);">、</font>[<font style="color:rgb(10, 89, 247);">@Prop</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-prop)<font style="color:rgba(0, 0, 0, 0.9);">、</font>[<font style="color:rgb(10, 89, 247);">@Link</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-link)<font style="color:rgba(0, 0, 0, 0.9);">、</font>[<font style="color:rgb(10, 89, 247);">@Provide和@Consume</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-provide-and-consume)<font style="color:rgba(0, 0, 0, 0.9);">装饰器）仅能观察到第一层的变化，但是在实际应用开发中，应用会根据开发需要，封装自己的数据模型。对于多层嵌套的情况，比如二维数组，或者数组项class，或者class的属性是class，他们的第二层的属性变化是无法观察到的。这就引出了@Observed/@ObjectLink装饰器。</font>
+鸿蒙next中装饰器（包括[@State](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-state)、[@Prop](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-prop)、[@Link](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-link)、[@Provide和@Consume](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-provide-and-consume)装饰器）仅能观察到第一层的变化，但是在实际应用开发中，应用会根据开发需要，封装自己的数据模型。对于多层嵌套的情况，比如二维数组，或者数组项class，或者class的属性是class，他们的第二层的属性变化是无法观察到的。这就引出了@Observed/@ObjectLink装饰器。
 
-<font style="color:rgba(0, 0, 0, 0.9);"></font>
 
-## <font style="color:rgba(0, 0, 0, 0.9);">概述</font>
 
-<font style="color:rgba(0, 0, 0, 0.9);">@ObjectLink和@Observed类装饰器用于在涉及嵌套对象或数组的场景中进行双向数据同步：</font>
+## 概述
 
-* <font style="color:rgb(36, 39, 40);">使用new创建被@Observed装饰的类，可以被观察到属性的变化。</font>
-* <font style="color:rgb(36, 39, 40);">子组件中@ObjectLink装饰器装饰的状态变量用于接收@Observed装饰的类的实例，和父组件中对应的状态变量建立双向数据绑定。这个实例可以是数组中的被@Observed装饰的项，或者是class object中的属性，这个属性同样也需要被@Observed装饰。</font>
-* <font style="color:rgb(36, 39, 40);">@Observed用于嵌套类场景中，观察对象类属性变化，要配合自定义组件使用（示例详见</font>[<font style="color:rgb(10, 89, 247);">嵌套对象</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-observed-and-objectlink#%E5%B5%8C%E5%A5%97%E5%AF%B9%E8%B1%A1)<font style="color:rgb(36, 39, 40);">），如果要做数据双/单向同步，需要搭配@ObjectLink或者@Prop使用（示例详见</font>[<font style="color:rgb(10, 89, 247);">@Prop与@ObjectLink的差异</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-observed-and-objectlink#prop%E4%B8%8Eobjectlink%E7%9A%84%E5%B7%AE%E5%BC%82)<font style="color:rgb(36, 39, 40);">）。</font>
+@ObjectLink和@Observed类装饰器用于在涉及嵌套对象或数组的场景中进行双向数据同步：
 
-<font style="color:rgb(36, 39, 40);"></font>
+* 使用new创建被@Observed装饰的类，可以被观察到属性的变化。
+* 子组件中@ObjectLink装饰器装饰的状态变量用于接收@Observed装饰的类的实例，和父组件中对应的状态变量建立双向数据绑定。这个实例可以是数组中的被@Observed装饰的项，或者是class object中的属性，这个属性同样也需要被@Observed装饰。
+* @Observed用于嵌套类场景中，观察对象类属性变化，要配合自定义组件使用（示例详见[嵌套对象](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-observed-and-objectlink#%E5%B5%8C%E5%A5%97%E5%AF%B9%E8%B1%A1)），如果要做数据双/单向同步，需要搭配@ObjectLink或者@Prop使用（示例详见[@Prop与@ObjectLink的差异](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-observed-and-objectlink#prop%E4%B8%8Eobjectlink%E7%9A%84%E5%B7%AE%E5%BC%82)）。
 
-## <font style="color:rgb(36, 39, 40);">简单示例</font>
+
+
+## 简单示例
 
 ```typescript
 @Observed
@@ -242,12 +242,12 @@ function title() {
 
 上面展示了 “<code>**age**</code>”属性的变化更新，不管几层嵌套 只要有`@ObjectLink `装饰器，都能观察到相关更新
 
-这\*\*<font style="color:#DF2A3F;">时候发现子组件修改状态只有它本身能观察到</font>\*\*
+这\*\*时候发现子组件修改状态只有它本身能观察到\*\*
 
-**<font style="color:#DF2A3F;">这里的</font>**<code>**<font style="color:#DF2A3F;">list</font>**</code>**<font style="color:#DF2A3F;">不能使用</font>**<code>**<font style="color:#DF2A3F;">push()</font>**</code>**<font style="color:#DF2A3F;">、</font>**<code>**<font style="color:#DF2A3F;">pop()</font>**</code>**<font style="color:#DF2A3F;">等方法，这些方法虽能修改数组本身，</font>\*\*\*\*<font style="color:#DF2A3F;">而不是创建一个新数组。数组的引用地址没有改变，因此ArkUI无法检测到变化。</font>**
+**这里的**<code>**list**</code>**不能使用**<code>**push()**</code>**、**<code>**pop()**</code>**等方法，这些方法虽能修改数组本身，\*\*\*\*而不是创建一个新数组。数组的引用地址没有改变，因此ArkUI无法检测到变化。**
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
-> **<u><font style="color:#DF2A3F;">⚠️⚠️⚠️</font></u>\*\*\*\*<u><font style="color:#DF2A3F;">数组的一定要加一个唯一值，保证唯一 不然会有很多奇奇怪怪的问题</font></u>**
+> **<u>⚠️⚠️⚠️</u>\*\*\*\*<u>数组的一定要加一个唯一值，保证唯一 不然会有很多奇奇怪怪的问题</u>**
 
 

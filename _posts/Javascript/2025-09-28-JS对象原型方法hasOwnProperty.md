@@ -7,9 +7,9 @@ categories: [Javascript]
 ---
 # JS对象原型方法 hasOwnProperty()
 
-**<font style="color:rgb(0, 0, 0);">Object的</font>****<font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">hasOwnProperty()</font>****<font style="color:rgb(0, 0, 0);">方法返回一个</font>****<font style="color:#F5222D;">布尔值</font>****<font style="color:rgb(0, 0, 0);">，判断对象是否包含特定的自身（</font>****<font style="color:#F5222D;">非继承</font>****<font style="color:rgb(0, 0, 0);">）属性。</font>**
+**Object的****hasOwnProperty()****方法返回一个****布尔值****，判断对象是否包含特定的自身（****非继承****）属性。**
 
-## <font style="color:rgb(0, 0, 0);">判断自身属性是否存在</font>
+## 判断自身属性是否存在
 ```javascript
 var o = new Object();
 o.prop = 'exists';
@@ -24,7 +24,7 @@ changeO();
 o.hasOwnProperty('prop');  // false
 ```
 
-## <font style="color:rgb(0, 0, 0);">判断自身属性与继承属性</font>
+## 判断自身属性与继承属性
 ```javascript
 function foo() {
   this.name = 'foo'
@@ -48,8 +48,8 @@ console.log(myPro.hasOwnProperty('sayGoodBy')) // false
 console.log('sayGoodBy' in myPro) // true
 ```
 
-## <font style="color:rgb(0, 0, 0);">遍历一个对象的所有自身属性</font>
-<font style="color:rgb(0, 0, 0);">在看开源项目的过程中，经常会看到类似如下的源码。</font><font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">for...in</font><font style="color:rgb(0, 0, 0);">循环对象的所有枚举属性，然后再使用</font><font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">hasOwnProperty()</font><font style="color:rgb(0, 0, 0);">方法来忽略继承属性。</font>
+## 遍历一个对象的所有自身属性
+在看开源项目的过程中，经常会看到类似如下的源码。for...in循环对象的所有枚举属性，然后再使用hasOwnProperty()方法来忽略继承属性。
 
 ```javascript
 var buz = {
@@ -66,8 +66,8 @@ for (var name in buz) {
 }
 ```
 
-## <font style="color:rgb(0, 0, 0);">注意</font><font style="color:rgb(0, 0, 0);"> </font><font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">hasOwnProperty</font><font style="color:rgb(0, 0, 0);"> </font><font style="color:rgb(0, 0, 0);">作为属性名</font>
-**<font style="color:rgb(0, 0, 0);">JavaScript 并没有保护 </font>****<font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">hasOwnProperty</font>****<font style="color:rgb(0, 0, 0);"> 属性名</font>**<font style="color:rgb(0, 0, 0);">，因此，可能存在于一个包含此属性名的对象，有必要使用一个可扩展的</font><font style="color:rgb(232, 62, 140);background-color:rgb(246, 246, 246);">hasOwnProperty</font><font style="color:rgb(0, 0, 0);">方法来获取正确的结果：</font>
+## 注意 hasOwnProperty 作为属性名
+**JavaScript 并没有保护 ****hasOwnProperty**** 属性名**，因此，可能存在于一个包含此属性名的对象，有必要使用一个可扩展的hasOwnProperty方法来获取正确的结果：
 
 ```javascript
 var foo = {

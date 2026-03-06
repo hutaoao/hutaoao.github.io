@@ -7,15 +7,15 @@ categories: [node_npm]
 ---
 # module.exports 和 export
 
-**<font style="color:rgb(51, 51, 51);">CommonJS模块规范 </font>**<font style="color:rgb(51, 51, 51);">和 </font>**<font style="color:rgb(51, 51, 51);">ES6模块规范 </font>**<font style="color:rgb(51, 51, 51);">完全是两种不同的概念</font>
+**CommonJS模块规范 **和 **ES6模块规范 **完全是两种不同的概念
 
-## <font style="color:rgb(51, 51, 51);">CommonJS模块规范</font>
+## CommonJS模块规范
 
-**<font style="color:rgb(51, 51, 51);">Node</font>**<font style="color:rgb(51, 51, 51);">应用由模块组成，采用CommonJS模块规范。</font>
+**Node**应用由模块组成，采用CommonJS模块规范。
 
-<font style="color:rgb(51, 51, 51);">CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。</font>
+CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。
 
-`module` 变量代表当前模块。<font style="color:#F5222D;">这个变量是一个对象，module对象会创建一个叫exports的属性，这个属性的默认值是一个空的对象：</font>
+`module` 变量代表当前模块。这个变量是一个对象，module对象会创建一个叫exports的属性，这个属性的默认值是一个空的对象：
 
 ```javascript
 module.exports = {};
@@ -38,9 +38,9 @@ module.exports.addX = addX;
 }
 ```
 
-<font style="color:rgb(51, 51, 51);">上面代码通过module.exports输出变量x和函数addX。</font>
+上面代码通过module.exports输出变量x和函数addX。
 
-<font style="color:rgb(51, 51, 51);">require方法用于加载模块。</font>
+require方法用于加载模块。
 
 ```javascript
 var example = require('./example.js');
@@ -49,7 +49,7 @@ console.log(example.x); // 5
 console.log(example.addX(1)); // 6
 ```
 
-### <font style="color:rgb(0, 0, 0);">exports 与 module.exports的关系</font>
+### exports 与 module.exports的关系
 
 Node为每个模块提供一个exports变量，指向module.exports。可以通俗的理解为：
 
@@ -72,19 +72,19 @@ exports = function(){        //这样写法是错误的
 }
 ```
 
-<font style="color:rgb(0, 0, 0);background-color:rgb(245, 245, 245);"></font>
 
-## <font style="color:rgb(51, 51, 51);">ES6模块规范</font>
 
-<font style="color:rgb(51, 51, 51);">不同于CommonJS，ES6使用 export 和 import 来导出、导入模块。</font>
+## ES6模块规范
 
-<font style="color:rgb(51, 51, 51);"></font>
+不同于CommonJS，ES6使用 export 和 import 来导出、导入模块。
+
+
 
 ### export和export default的区别
 
-* <font style="color:rgb(0, 0, 0);">export default在一个模块中只能有一个，当然也可以没有。export在一个模块中可以有多个。</font>
-* <font style="color:rgb(0, 0, 0);">export default的对象、变量、函数、类，可以没有名字。export的必须有名字。</font>
-* <font style="color:rgb(0, 0, 0);">export default对应的import和export有所区别</font>
+* export default在一个模块中只能有一个，当然也可以没有。export在一个模块中可以有多个。
+* export default的对象、变量、函数、类，可以没有名字。export的必须有名字。
+* export default对应的import和export有所区别
 
 ### export命令
 
@@ -108,7 +108,7 @@ export function data(){
 }
 ```
 
-<font style="color:rgb(51, 51, 51);">需要特别注意的是，export命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系。</font>
+需要特别注意的是，export命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系。
 
 ```javascript
 // 写法一
@@ -126,7 +126,7 @@ export {n as m};
 import {m} from 'profile.js';
 ```
 
-### <font style="color:rgb(51, 51, 51);">export default 命令</font>
+### export default 命令
 
 ```javascript
 // example.js

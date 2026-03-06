@@ -7,11 +7,11 @@ categories: [Javascript]
 ---
 # ES6之Array.from()方法
 
-<font style="color:#F5222D;">Array.from()方法就是将一个类数组对象或者可遍历对象转换成一个真正的数组。</font>
+Array.from()方法就是将一个类数组对象或者可遍历对象转换成一个真正的数组。
 
 
 
-那么什么是类数组对象呢？所谓类数组对象，最基本的要求就是<font style="color:#F5222D;">具有length属性的对象</font>。
+那么什么是类数组对象呢？所谓类数组对象，最基本的要求就是具有length属性的对象。
 
 
 
@@ -50,7 +50,7 @@ console.log(arr)  // [ undefined, undefined, undefined, undefined ]
 
 
 
-由此可见，要将一个类数组对象转换为一个真正的数组，<font style="color:#F5222D;">必须具备以下条件：</font>
+由此可见，要将一个类数组对象转换为一个真正的数组，必须具备以下条件：
 
 1. 该类数组对象必须具有length属性，用于指定数组的长度。如果没有length属性，那么转换后的数组是一个空数组。
 2. 该类数组对象的属性名必须为数值型或字符串型的数字

@@ -7,9 +7,9 @@ categories: [Dart&Flutter, Dart, List常用方法]
 ---
 # firstWhere
 
-<code><font style="color:rgb(15, 17, 21);">firstWhere</font></code><font style="color:rgb(15, 17, 21);"> 是 Dart 中 List 的一个非常实用的方法，用于查找列表中满足条件的第一个元素。</font>
+<code>firstWhere</code> 是 Dart 中 List 的一个非常实用的方法，用于查找列表中满足条件的第一个元素。
 
-## <font style="color:rgb(15, 17, 21);">方法定义</font>
+## 方法定义
 
 dart
 
@@ -20,14 +20,14 @@ E firstWhere(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">参数说明</font>
+## 参数说明
 
-* <code>**<font style="color:rgb(15, 17, 21);">test</font>**</code><font style="color:rgb(15, 17, 21);">：必需参数，一个返回 bool 的函数，用于测试每个元素</font>
-* <code>**<font style="color:rgb(15, 17, 21);">orElse</font>**</code><font style="color:rgb(15, 17, 21);">：可选参数，当没有元素满足条件时调用的函数，返回默认值</font>
+* <code>**test**</code>：必需参数，一个返回 bool 的函数，用于测试每个元素
+* <code>**orElse**</code>：可选参数，当没有元素满足条件时调用的函数，返回默认值
 
-## <font style="color:rgb(15, 17, 21);">基本用法</font>
+## 基本用法
 
-### <font style="color:rgb(15, 17, 21);">1. 基本查找</font>
+### 1. 基本查找
 
 dart
 
@@ -43,7 +43,7 @@ String result2 = names.firstWhere((name) => name.startsWith('C'));
 print(result2); // 输出: Charlie
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 使用 orElse（推荐）</font>
+### 2. 使用 orElse（推荐）
 
 dart
 
@@ -58,7 +58,7 @@ int result = numbers.firstWhere(
 print(result); // 输出: -1
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 不使用 orElse 的风险</font>
+### 3. 不使用 orElse 的风险
 
 dart
 
@@ -73,9 +73,9 @@ try {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">在实际项目中的应用</font>
+## 在实际项目中的应用
 
-### <font style="color:rgb(15, 17, 21);">1. 您的用例</font>
+### 1. 您的用例
 
 dart
 
@@ -88,7 +88,7 @@ setState(() {
 });
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 用户角色权限查找</font>
+### 2. 用户角色权限查找
 
 dart
 
@@ -113,7 +113,7 @@ User admin = users.firstWhere(
 );
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 产品库存查找</font>
+### 3. 产品库存查找
 
 dart
 
@@ -138,9 +138,9 @@ Product availableProduct = products.firstWhere(
 );
 ```
 
-## <font style="color:rgb(15, 17, 21);">高级用法</font>
+## 高级用法
 
-### <font style="color:rgb(15, 17, 21);">1. 复杂条件查找</font>
+### 1. 复杂条件查找
 
 dart
 
@@ -166,7 +166,7 @@ Person result = people.firstWhere(
 );
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 链式调用</font>
+### 2. 链式调用
 
 dart
 
@@ -182,7 +182,7 @@ String result = data
 );
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 与其他方法结合</font>
+### 3. 与其他方法结合
 
 dart
 
@@ -202,9 +202,9 @@ String userName = users
 )['name'];
 ```
 
-## <font style="color:rgb(15, 17, 21);">性能考虑</font>
+## 性能考虑
 
-<code><font style="color:rgb(15, 17, 21);">firstWhere</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">在找到第一个匹配元素后会立即返回，不会遍历整个列表，因此性能很好。</font>
+<code>firstWhere</code> 在找到第一个匹配元素后会立即返回，不会遍历整个列表，因此性能很好。
 
 dart
 
@@ -216,9 +216,9 @@ int result = numbers.firstWhere((n) => n > 2);
 print(result); // 输出: 3
 ```
 
-## <font style="color:rgb(15, 17, 21);">错误处理最佳实践</font>
+## 错误处理最佳实践
 
-**<font style="color:rgb(15, 17, 21);">推荐总是使用</font>\*\*\*\*<font style="color:rgb(15, 17, 21);"> </font>**<code>**<font style="color:rgb(15, 17, 21);">orElse</font>**</code><font style="color:rgb(15, 17, 21);">：</font>
+**推荐总是使用\*\*\*\* **<code>**orElse**</code>：
 
 dart
 
@@ -237,13 +237,13 @@ try {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">与其他查找方法对比</font>
+## 与其他查找方法对比
 
-| <font style="color:rgb(15, 17, 21);">方法</font> | <font style="color:rgb(15, 17, 21);">返回值</font> | <font style="color:rgb(15, 17, 21);">找不到时</font> | <font style="color:rgb(15, 17, 21);">用途</font> |
+| 方法 | 返回值 | 找不到时 | 用途 |
 | --- | --- | --- | --- |
-| <code><font style="color:rgb(15, 17, 21);">firstWhere</font></code> | <font style="color:rgb(15, 17, 21);">第一个匹配元素</font> | <font style="color:rgb(15, 17, 21);">抛出异常或orElse</font> | <font style="color:rgb(15, 17, 21);">条件查找</font> |
-| <code><font style="color:rgb(15, 17, 21);">first</font></code> | <font style="color:rgb(15, 17, 21);">第一个元素</font> | <font style="color:rgb(15, 17, 21);">抛出异常</font> | <font style="color:rgb(15, 17, 21);">获取第一个</font> |
-| <code><font style="color:rgb(15, 17, 21);">where</font></code> | <font style="color:rgb(15, 17, 21);">所有匹配元素</font> | <font style="color:rgb(15, 17, 21);">空列表</font> | <font style="color:rgb(15, 17, 21);">过滤</font> |
-| <code><font style="color:rgb(15, 17, 21);">singleWhere</font></code> | <font style="color:rgb(15, 17, 21);">唯一匹配元素</font> | <font style="color:rgb(15, 17, 21);">抛出异常</font> | <font style="color:rgb(15, 17, 21);">查找唯一元素</font> |
+| <code>firstWhere</code> | 第一个匹配元素 | 抛出异常或orElse | 条件查找 |
+| <code>first</code> | 第一个元素 | 抛出异常 | 获取第一个 |
+| <code>where</code> | 所有匹配元素 | 空列表 | 过滤 |
+| <code>singleWhere</code> | 唯一匹配元素 | 抛出异常 | 查找唯一元素 |
 
 

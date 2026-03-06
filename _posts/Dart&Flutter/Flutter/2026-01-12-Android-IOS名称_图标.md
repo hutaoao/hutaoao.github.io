@@ -11,7 +11,7 @@ categories: [Dart&Flutter, Flutter]
 
 ### 名称修改
 
-<font style="color:rgb(51, 51, 51);">编辑</font><code><font style="color:rgb(51, 51, 51);background-color:rgb(237, 238, 240);">android/app/src/main/AndroidManifest.xml</font></code><font style="color:rgb(51, 51, 51);">文件，并在相应的</font><code><font style="color:rgb(51, 51, 51);background-color:rgb(237, 238, 240);"><application></font></code><font style="color:rgb(51, 51, 51);">标签中设置</font><code><font style="color:rgb(51, 51, 51);background-color:rgb(237, 238, 240);">android:label</font></code><font style="color:rgb(51, 51, 51);">属性：</font>
+编辑<code>android/app/src/main/AndroidManifest.xml</code>文件，并在相应的<code><application></code>标签中设置<code>android:label</code>属性：
 
 ![1728702003737-a7824084-7822-40d2-9620-79aff0c959c0.png](/assets/img/posts/Dart&Flutter/1728702003737-a7824084-7822-40d2-9620-79aff0c959c0-864577.png)
 

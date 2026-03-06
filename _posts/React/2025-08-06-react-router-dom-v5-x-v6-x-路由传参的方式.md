@@ -68,7 +68,7 @@ this.props.location.search
 this.props.location.state
 ```
 
-> **<font style="color:#DF2A3F;">特点：</font>**  
+> **特点：**  
 1、BrowserRouter(history)模式下，刷新页面参数不消失，参数不会在地址栏显示，因为state保存在history对象中  
 2、HashRouter(hash)模式下，刷新页面参数消失！！！参数不会在地址栏显示
 
@@ -153,7 +153,7 @@ const { state } = useLocation();
 //state参数 => {id: 999, name: "我是梅琳"}
 ```
 
-> **<font style="color:#DF2A3F;">特点：</font>**  
+> **特点：**  
 1、BrowserRouter(history)模式下，刷新页面参数不消失，参数不会在地址栏显示，因为state保存在history对象中  
 2、HashRouter(hash)模式下，刷新页面参数消失！！！参数不会在地址栏显示
 

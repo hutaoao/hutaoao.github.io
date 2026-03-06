@@ -32,6 +32,6 @@ dependencies {
 
 ![1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200.png](/assets/img/posts/ReactNative/1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200-331525.png)
 
-> 据说应该是我这个\*\*<font style="color:#DF2A3F;">版本</font>\*\*的问题，更新版本就能解决问题
+> 据说应该是我这个\*\*版本\*\*的问题，更新版本就能解决问题
 
 

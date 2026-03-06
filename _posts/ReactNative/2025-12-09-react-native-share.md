@@ -7,27 +7,27 @@ categories: [ReactNative]
 ---
 # react-native-share
 
-<font style="color:rgb(51, 51, 51);">一个简单的分享消息和文件到其他应用的工具</font>
+一个简单的分享消息和文件到其他应用的工具
 
 本人环境：react-native：0.59.8
 
-> If you are using <font style="color:#E8323C;">react-native >= 0.60.0</font> please use <font style="color:#E8323C;">react-native-share >= 2.0.0</font>
-> If you are using r<font style="color:#E8323C;">eact-native <= 0.59.10</font> please use <font style="color:#E8323C;">react-native-share <= 1.2.1</font>
-> <font style="color:#E8323C;">node 版本也有要求 本人 v14.19.1</font>
+> If you are using react-native >= 0.60.0 please use react-native-share >= 2.0.0
+> If you are using react-native <= 0.59.10 please use react-native-share <= 1.2.1
+> node 版本也有要求 本人 v14.19.1
 
-<font style="color:#E8323C;"></font>
+
 
 ### 下载
 
-<code><font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">npm install react-native-share@1.2.1 --save</font></code>
+<code>npm install react-native-share@1.2.1 --save</code>
 
 ### IOS
 
-1. **<font style="color:rgb(51, 51, 51);">In XCode, in the project navigator, right click</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Libraries</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">➜</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Add Files to \[your project's name]</font>**
-2. **<font style="color:rgb(51, 51, 51);">Go to</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">node\_modules</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">➜</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">react-native-share</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">➜</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">ios</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">and add</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">RNShare.xcodeproj</font>**
-3. **<font style="color:rgb(51, 51, 51);">In XCode, in the project navigator, select your project. Add</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">libRNShare.a</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">to your project's</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Build Phases</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">➜</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Link Binary With Libraries</font>**
-4. **<font style="color:rgb(51, 51, 51);">In XCode, in the project navigator, select your project. Add</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Social.framework</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">and</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">MessageUI.framework</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">to your project's</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">General</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">➜</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Linked Frameworks and Libraries</font>**
-5. **<font style="color:rgb(51, 51, 51);">In iOS 9 or higher, You should add app list that you will share. If you want to share Whatsapp and Mailto, you should write</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">LSApplicationQueriesSchemes</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);">in info.plist</font>**
+1. **In XCode, in the project navigator, right click**** ****Libraries**** ****➜**** ****Add Files to \[your project's name]**
+2. **Go to**** ****node\_modules**** ****➜**** ****react-native-share**** ****➜**** ****ios**** ****and add**** ****RNShare.xcodeproj**
+3. **In XCode, in the project navigator, select your project. Add**** ****libRNShare.a**** ****to your project's**** ****Build Phases**** ****➜**** ****Link Binary With Libraries**
+4. **In XCode, in the project navigator, select your project. Add**** ****Social.framework**** ****and**** ****MessageUI.framework**** ****to your project's**** ****General**** ****➜**** ****Linked Frameworks and Libraries**
+5. **In iOS 9 or higher, You should add app list that you will share. If you want to share Whatsapp and Mailto, you should write**** ****LSApplicationQueriesSchemes**** ****in info.plist**
 
 ```xml
 <key>LSApplicationQueriesSchemes</key>
@@ -37,14 +37,14 @@ categories: [ReactNative]
 </array>
 ```
 
-6. **<font style="color:rgb(51, 51, 51);">(Optional) Also following lines allows users to save photos, add them in</font>****<font style="color:rgb(51, 51, 51);"> </font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">info.plist</font>**
+6. **(Optional) Also following lines allows users to save photos, add them in**** ****info.plist**
 
 ```xml
 <key>NSPhotoLibraryAddUsageDescription</key>
 <string>$(PRODUCT_NAME) wants to save photos</string>
 ```
 
-7. **<font style="color:rgb(51, 51, 51);">Run your project (</font>****<font style="color:rgb(51, 51, 51);background-color:rgb(247, 247, 247);">Cmd+R</font>****<font style="color:rgb(51, 51, 51);">)</font>**
+7. **Run your project (****Cmd+R****)**
 
 ### Android
 
@@ -65,11 +65,11 @@ try {
 }
 ```
 
-### <font style="color:#E8323C;">注意</font>
+### 注意
 
 1. **node 版本低会有奇怪报错**
 
-2. **<font style="color:rgb(77, 77, 77);">在调用 Share.open 的方法之后，app会闪退</font>**
+2. **在调用 Share.open 的方法之后，app会闪退**
 
 `Illegal callback invocation from native module. This callback type only perm`
 

@@ -296,19 +296,19 @@ public class AlicomCaptchaPackage implements ReactPackage {
 }
 ```
 
-## <font style="color:rgb(64, 64, 64);">一、基础语法与结构</font>
+## 一、基础语法与结构
 
-### <font style="color:rgb(64, 64, 64);">1. 包声明（Package Declaration）</font>
+### 1. 包声明（Package Declaration）
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
-<font style="color:rgb(73, 73, 73);background-color:rgb(250, 250, 250);">package com.xiaota.xtbp;</font>
+package com.xiaota.xtbp;
 
-* <font style="color:rgb(64, 64, 64);">定义类所在的包路径，必须是文件的第一行有效代码</font>
+* 定义类所在的包路径，必须是文件的第一行有效代码
 
-### <font style="color:rgb(64, 64, 64);">2. 导入语句（Import Statements）</font>
+### 2. 导入语句（Import Statements）
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 import android.app.Activity;
@@ -316,35 +316,35 @@ import android.util.Log;
 import com.facebook.react.bridge.*;
 ```
 
-* <font style="color:rgb(64, 64, 64);">用于引入其他包中的类</font>
-* <font style="color:rgb(64, 64, 64);">Android 系统包：</font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">android.*</font>**</code>
-* <font style="color:rgb(64, 64, 64);">React Native 包：</font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">com.facebook.react.bridge.*</font>**</code>
-* <font style="color:rgb(64, 64, 64);">第三方SDK包：</font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">com.alicom.gtcaptcha4.*</font>**</code>
+* 用于引入其他包中的类
+* Android 系统包：<code>**android.***</code>
+* React Native 包：<code>**com.facebook.react.bridge.***</code>
+* 第三方SDK包：<code>**com.alicom.gtcaptcha4.***</code>
 
-### <font style="color:rgb(64, 64, 64);">3. 类定义（Class Definition）</font>
+### 3. 类定义（Class Definition）
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
-<font style="color:rgb(73, 73, 73);background-color:rgb(250, 250, 250);">public class AlicomCaptchaModule extends ReactContextBaseJavaModule</font>
+public class AlicomCaptchaModule extends ReactContextBaseJavaModule
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">public</font>**</code><font style="color:rgb(64, 64, 64);">：访问修饰符，表示该类是公开的</font>
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">extends</font>**</code><font style="color:rgb(64, 64, 64);">：继承，表示该类继承自</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ReactContextBaseJavaModule</font>**</code>
+* <code>**public**</code>：访问修饰符，表示该类是公开的
+* <code>**extends**</code>：继承，表示该类继承自 <code>**ReactContextBaseJavaModule**</code>
 
-### <font style="color:rgb(64, 64, 64);">4. 常量定义</font>
+### 4. 常量定义
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 private static final String MODULE_NAME = "AlicomCaptchaModule";
 private static final String EVENT_VERIFY_RESULT = "onVerifyResult";
 ```
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">static final</font>**</code><font style="color:rgb(64, 64, 64);">：定义常量，值不可修改</font>
-* <font style="color:rgb(64, 64, 64);">命名规范：全大写，下划线分隔</font>
+* <code>**static final**</code>：定义常量，值不可修改
+* 命名规范：全大写，下划线分隔
 
-### <font style="color:rgb(64, 64, 64);">5. 成员变量（Instance Variables）</font>
+### 5. 成员变量（Instance Variables）
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 private final ReactApplicationContext reactContext;
@@ -353,16 +353,16 @@ private String verifyAPI;
 private boolean isInitialized = false;
 ```
 
-* <font style="color:rgb(64, 64, 64);">类的属性，用于存储对象状态</font>
-* <font style="color:rgb(64, 64, 64);">常用修饰符：</font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">private</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">protected</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">public</font>**</code>
+* 类的属性，用于存储对象状态
+* 常用修饰符：<code>**private**</code>, <code>**protected**</code>, <code>**public**</code>
 
 ***
 
-## <font style="color:rgb(64, 64, 64);">二、React Native 交互相关</font>
+## 二、React Native 交互相关
 
-### <font style="color:rgb(64, 64, 64);">1. 模块命名</font>
+### 1. 模块命名
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 @Override
@@ -371,11 +371,11 @@ public String getName() {
 }
 ```
 
-* <font style="color:rgb(64, 64, 64);">必须重写的方法，返回模块名（JS端调用的名称）</font>
+* 必须重写的方法，返回模块名（JS端调用的名称）
 
-### <font style="color:rgb(64, 64, 64);">2. 导出方法给 JS 调用</font>
+### 2. 导出方法给 JS 调用
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 @ReactMethod
@@ -384,13 +384,13 @@ public void init(ReadableMap config, Promise promise) {
 }
 ```
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">@ReactMethod</font>**</code><font style="color:rgb(64, 64, 64);">：注解，表示该方法可被 JS 端调用</font>
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ReadableMap</font>**</code><font style="color:rgb(64, 64, 64);">：从 JS 传递过来的对象（类似字典）</font>
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">Promise</font>**</code><font style="color:rgb(64, 64, 64);">：用于异步回调（resolve/reject）</font>
+* <code>**@ReactMethod**</code>：注解，表示该方法可被 JS 端调用
+* <code>**ReadableMap**</code>：从 JS 传递过来的对象（类似字典）
+* <code>**Promise**</code>：用于异步回调（resolve/reject）
 
-### <font style="color:rgb(64, 64, 64);">3. 向 JS 端发送事件</font>
+### 3. 向 JS 端发送事件
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 private void sendEvent(String eventName, WritableMap params) {
@@ -400,12 +400,12 @@ private void sendEvent(String eventName, WritableMap params) {
 }
 ```
 
-* <font style="color:rgb(64, 64, 64);">使用</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">RCTDeviceEventEmitter</font>**</code><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">发送事件到 JS</font>
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">WritableMap</font>**</code><font style="color:rgb(64, 64, 64);">：可写入的Map，用于构造要传递的数据</font>
+* 使用 <code>**RCTDeviceEventEmitter**</code> 发送事件到 JS
+* <code>**WritableMap**</code>：可写入的Map，用于构造要传递的数据
 
-### <font style="color:rgb(64, 64, 64);">4. 数据类型转换</font>
+### 4. 数据类型转换
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 // JS对象 → Java
@@ -418,16 +418,16 @@ resultParams.putBoolean("success", true);
 resultParams.putString("message", "成功");
 ```
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">Arguments.createMap()</font>**</code><font style="color:rgb(64, 64, 64);">：创建空的WritableMap</font>
-* <font style="color:rgb(64, 64, 64);">各种put方法：</font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">putString</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">putBoolean</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">putInt</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">putDouble</font>**</code><font style="color:rgb(64, 64, 64);">,</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">putMap</font>**</code>
+* <code>**Arguments.createMap()**</code>：创建空的WritableMap
+* 各种put方法：<code>**putString**</code>, <code>**putBoolean**</code>, <code>**putInt**</code>, <code>**putDouble**</code>, <code>**putMap**</code>
 
 ***
 
-## <font style="color:rgb(64, 64, 64);">三、Android 特有知识点</font>
+## 三、Android 特有知识点
 
-### <font style="color:rgb(64, 64, 64);">1. Activity 相关</font>
+### 1. Activity 相关
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 Activity currentActivity = getCurrentActivity();
@@ -437,12 +437,12 @@ if (currentActivity == null) {
 }
 ```
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">getCurrentActivity()</font>**</code><font style="color:rgb(64, 64, 64);">：获取当前React Native所在的Activity</font>
-* <font style="color:rgb(64, 64, 64);">所有UI操作必须在有Activity的情况下进行</font>
+* <code>**getCurrentActivity()**</code>：获取当前React Native所在的Activity
+* 所有UI操作必须在有Activity的情况下进行
 
-### <font style="color:rgb(64, 64, 64);">2. 主线程UI操作</font>
+### 2. 主线程UI操作
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 currentActivity.runOnUiThread(new Runnable() {
@@ -454,12 +454,12 @@ currentActivity.runOnUiThread(new Runnable() {
 });
 ```
 
-* <font style="color:rgb(64, 64, 64);">Android要求UI操作必须在主线程执行</font>
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">runOnUiThread()</font>**</code><font style="color:rgb(64, 64, 64);">：将代码抛到主线程执行</font>
+* Android要求UI操作必须在主线程执行
+* <code>**runOnUiThread()**</code>：将代码抛到主线程执行
 
-### <font style="color:rgb(64, 64, 64);">3. 日志打印</font>
+### 3. 日志打印
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 Log.d(TAG, "调试信息");    // Debug
@@ -467,12 +467,12 @@ Log.i(TAG, "普通信息");    // Info
 Log.e(TAG, "错误信息");    // Error
 ```
 
-* <font style="color:rgb(64, 64, 64);">用于调试和记录运行状态</font>
-* <font style="color:rgb(64, 64, 64);">不同级别：VERBOSE, DEBUG, INFO, WARN, ERROR</font>
+* 用于调试和记录运行状态
+* 不同级别：VERBOSE, DEBUG, INFO, WARN, ERROR
 
-### <font style="color:rgb(64, 64, 64);">4. 异常处理</font>
+### 4. 异常处理
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 try {
@@ -483,24 +483,24 @@ try {
 }
 ```
 
-* <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">try-catch</font>**</code><font style="color:rgb(64, 64, 64);">：捕获和处理异常</font>
-* <font style="color:rgb(64, 64, 64);">良好的异常处理是Android开发的必备技能</font>
+* <code>**try-catch**</code>：捕获和处理异常
+* 良好的异常处理是Android开发的必备技能
 
 ***
 
-## <font style="color:rgb(64, 64, 64);">四、React Package 注册</font>
+## 四、React Package 注册
 
-### <font style="color:rgb(64, 64, 64);">1. 实现 ReactPackage 接口</font>
+### 1. 实现 ReactPackage 接口
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
-<font style="color:rgb(73, 73, 73);background-color:rgb(250, 250, 250);">public class AlicomCaptchaPackage implements ReactPackage</font>
+public class AlicomCaptchaPackage implements ReactPackage
 
-* <font style="color:rgb(64, 64, 64);">必须实现</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ReactPackage</font>**</code><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">接口</font>
+* 必须实现 <code>**ReactPackage**</code> 接口
 
-### <font style="color:rgb(64, 64, 64);">2. 注册Native模块</font>
+### 2. 注册Native模块
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 @Override
@@ -511,12 +511,12 @@ public List<NativeModule> createNativeModules(ReactApplicationContext reactConte
 }
 ```
 
-* <font style="color:rgb(64, 64, 64);">在此处添加自定义的Native模块</font>
-* <font style="color:rgb(64, 64, 64);">React Native启动时会自动扫描并注册这些模块</font>
+* 在此处添加自定义的Native模块
+* React Native启动时会自动扫描并注册这些模块
 
-### <font style="color:rgb(64, 64, 64);">3. 空视图管理器</font>
+### 3. 空视图管理器
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 @Override
@@ -525,15 +525,15 @@ public List<ViewManager> createViewManagers(ReactApplicationContext reactContext
 }
 ```
 
-* <font style="color:rgb(64, 64, 64);">如果模块不包含自定义UI组件，返回空列表</font>
+* 如果模块不包含自定义UI组件，返回空列表
 
 ***
 
-## <font style="color:rgb(64, 64, 64);">五、常用工具类</font>
+## 五、常用工具类
 
-### <font style="color:rgb(64, 64, 64);">1. JSON 处理</font>
+### 1. JSON 处理
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 import org.json.JSONObject;
@@ -542,9 +542,9 @@ JSONObject responseJson = new JSONObject(response);
 String token = responseJson.getString("token");
 ```
 
-### <font style="color:rgb(64, 64, 64);">2. 集合类</font>
+### 2. 集合类
 
-<font style="color:rgb(82, 82, 82);background-color:rgb(250, 250, 250);">java</font>
+java
 
 ```plain
 import java.util.ArrayList;
@@ -556,20 +556,20 @@ List<NativeModule> modules = new ArrayList<>();
 
 ***
 
-## <font style="color:rgb(64, 64, 64);">六、代码结构总结</font>
+## 六、代码结构总结
 
-<font style="color:rgb(64, 64, 64);">一个典型的React Native Android Native模块包含：</font>
+一个典型的React Native Android Native模块包含：
 
-1. **<font style="color:rgb(64, 64, 64);">模块类</font>**<font style="color:rgb(64, 64, 64);">：继承</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ReactContextBaseJavaModule</font>**</code>
-   * <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">getName()</font>**</code><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">- 返回模块名</font>
-   * <code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">@ReactMethod</font>**</code><font style="color:rgb(64, 64, 64);"> </font><font style="color:rgb(64, 64, 64);">- 导出给JS调用的方法</font>
-   * <font style="color:rgb(64, 64, 64);">事件发送机制</font>
-2. **<font style="color:rgb(64, 64, 64);">Package类</font>**<font style="color:rgb(64, 64, 64);">：实现</font><font style="color:rgb(64, 64, 64);"> </font><code>**<font style="color:rgb(64, 64, 64);background-color:rgb(236, 236, 236);">ReactPackage</font>**</code>
-   * <font style="color:rgb(64, 64, 64);">注册模块到React Native</font>
-3. **<font style="color:rgb(64, 64, 64);">Android特性</font>**<font style="color:rgb(64, 64, 64);">：</font>
-   * <font style="color:rgb(64, 64, 64);">Activity生命周期感知</font>
-   * <font style="color:rgb(64, 64, 64);">主线程UI操作</font>
-   * <font style="color:rgb(64, 64, 64);">异常处理</font>
-   * <font style="color:rgb(64, 64, 64);">日志记录</font>
+1. **模块类**：继承 <code>**ReactContextBaseJavaModule**</code>
+   * <code>**getName()**</code> - 返回模块名
+   * <code>**@ReactMethod**</code> - 导出给JS调用的方法
+   * 事件发送机制
+2. **Package类**：实现 <code>**ReactPackage**</code>
+   * 注册模块到React Native
+3. **Android特性**：
+   * Activity生命周期感知
+   * 主线程UI操作
+   * 异常处理
+   * 日志记录
 
 

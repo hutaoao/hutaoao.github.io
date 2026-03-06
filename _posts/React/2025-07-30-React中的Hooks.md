@@ -7,12 +7,12 @@ categories: [React]
 ---
 # React 中的 Hooks
 
-#### <font style="color:rgb(53, 179, 120);">useState</font>
+#### useState
 
-1. <font style="color:rgb(1, 1, 1);">useState（initialState）有一个初始化值作为参数，initialState 可以是任意值</font>
-2. <font style="color:rgb(1, 1, 1);">返回包含两个值数组，第一个是值，第二个是 set 方法</font>
+1. useState（initialState）有一个初始化值作为参数，initialState 可以是任意值
+2. 返回包含两个值数组，第一个是值，第二个是 set 方法
 
-**<font style="color:black;">需要注意的一点，setCount 后，直接获取 count,count 的值是不变的，这是因为 useState 是一个异步操作，它并不会立即更新状态。当你在函数组件中调用 useState 更新状态时，React 会将新的状态安排进下一次渲染，并在之后的某个时候才会执行更新，这导致在更新状态后立即访问该状态可能会得到之前的值，而不是最新的值。</font>**
+**需要注意的一点，setCount 后，直接获取 count,count 的值是不变的，这是因为 useState 是一个异步操作，它并不会立即更新状态。当你在函数组件中调用 useState 更新状态时，React 会将新的状态安排进下一次渲染，并在之后的某个时候才会执行更新，这导致在更新状态后立即访问该状态可能会得到之前的值，而不是最新的值。**
 
 ```jsx
 //这是一个useState简单使用实例
@@ -31,9 +31,9 @@ function Plus() {
 }
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useEffect（执行副作用）</font>
+#### useEffect（执行副作用）
 
-**<font style="color:#DF2A3F;">副作用是指一段和当前执行结果无关的代码</font>**<font style="color:black;">，比如说要修改函数外部的某个变量，要发起一个请求有两个参数。useEffect 有两个参数第一个参数是 callback，第二个是个依赖数组，这个数组可以为空</font>
+**副作用是指一段和当前执行结果无关的代码**，比如说要修改函数外部的某个变量，要发起一个请求有两个参数。useEffect 有两个参数第一个参数是 callback，第二个是个依赖数组，这个数组可以为空
 
 ```jsx
 // 在这里count的值发生变化时，clikValue的值及跟着变化，在这个callback里也可以发起网络请求
@@ -60,9 +60,9 @@ function CountPlus() {
 export default CountPlus;
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useContext</font>
+#### useContext
 
-<font style="color:black;">可以</font>**<font style="color:black;">用来在组件树中传递数据</font>**
+可以**用来在组件树中传递数据**
 
 ```jsx
 //User：是消费提供的值的地方
@@ -113,9 +113,9 @@ function App() {
 export default App;
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useReducer</font>
+#### useReducer
 
-<font style="color:black;">用于在函数组件中处理复杂的状态逻辑。它通常用于管理具有复杂状态和行为的组件，尤其是涉及到多个状态转换的情况。useReducer 接受两个参数：一个是包含状态转换逻辑的函数（reducer），另一个是初始状态。它返回一个包含当前状态和 dispatch 函数的数组。</font>
+用于在函数组件中处理复杂的状态逻辑。它通常用于管理具有复杂状态和行为的组件，尤其是涉及到多个状态转换的情况。useReducer 接受两个参数：一个是包含状态转换逻辑的函数（reducer），另一个是初始状态。它返回一个包含当前状态和 dispatch 函数的数组。
 
 ```jsx
 import CountDis from "./componts/CountDis";
@@ -160,12 +160,12 @@ function CountDis({dispatch}) {
 export default CountDis;
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useRef</font>
+#### useRef
 
-<font style="color:black;">useRef 主要用于在函数组件中保存和访问可变的 ref 对象。useRef 返回一个包含 current 属性的对象，该属性被初始化为传入的参数（任意数据类型） 主要作用</font>
+useRef 主要用于在函数组件中保存和访问可变的 ref 对象。useRef 返回一个包含 current 属性的对象，该属性被初始化为传入的参数（任意数据类型） 主要作用
 
-* <font style="color:rgb(1, 1, 1);">访问 Dom 元素</font>
-* <font style="color:rgb(1, 1, 1);">保存变量、</font>
+* 访问 Dom 元素
+* 保存变量、
 
 ```jsx
 function CountRef() {
@@ -190,9 +190,9 @@ function CountRef() {
 export default CountRef;
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useCallback</font>
+#### useCallback
 
-<font style="color:black;">useCallback 的主要目的是性能优化 用于缓存回调函数，以便在依赖项变化时避免不必要的函数重新创建。在 React 中，每当函数组件重新渲染时，函数组件的所有局部变量都会重新初始化。如果将一个新的函数作为 prop 传递给子组件，即使这个函数具有相同的逻辑，由于它是一个新的引用，子组件可能会被重新渲染，从而可能引起性能问题。</font>
+useCallback 的主要目的是性能优化 用于缓存回调函数，以便在依赖项变化时避免不必要的函数重新创建。在 React 中，每当函数组件重新渲染时，函数组件的所有局部变量都会重新初始化。如果将一个新的函数作为 prop 传递给子组件，即使这个函数具有相同的逻辑，由于它是一个新的引用，子组件可能会被重新渲染，从而可能引起性能问题。
 
 ```jsx
 function CountUseCallback() {
@@ -212,9 +212,9 @@ function CountUseCallback() {
 export default CountUseCallback;
 ```
 
-#### <font style="color:rgb(53, 179, 120);">useMemo</font>
+#### useMemo
 
-<font style="color:black;">用于在渲染过程中缓存和重用计算昂贵的值。它类似于 useCallback，但是主要用于缓存计算结果，而不是缓存回调函数。</font>
+用于在渲染过程中缓存和重用计算昂贵的值。它类似于 useCallback，但是主要用于缓存计算结果，而不是缓存回调函数。
 
 ```jsx
 function CountMemo({size}) {
@@ -244,8 +244,8 @@ function CountMemo({size}) {
 export default CountMemo;
 ```
 
-### <font style="color:rgb(53, 179, 120);">总结</font>
+### 总结
 
-<font style="color:black;">上述的钩子里 useState，useEffect，useReducer，useRef 本人用的较为多些，useContext ，useMemo 和 useCallback 用的少些。除了上述钩子之外，还有 useImperativeHandle、useLayoutEffect、自定义钩子等其他用途的钩子。通过深入了解和熟练使用这些钩子，我们可以更有效地构建强大而灵活的 React 应用程序。在使用钩子时，选择适当的钩子来解决您的问题，并根据需要组合使用它们，以获得最佳性能和可维护性。</font>
+上述的钩子里 useState，useEffect，useReducer，useRef 本人用的较为多些，useContext ，useMemo 和 useCallback 用的少些。除了上述钩子之外，还有 useImperativeHandle、useLayoutEffect、自定义钩子等其他用途的钩子。通过深入了解和熟练使用这些钩子，我们可以更有效地构建强大而灵活的 React 应用程序。在使用钩子时，选择适当的钩子来解决您的问题，并根据需要组合使用它们，以获得最佳性能和可维护性。
 
 

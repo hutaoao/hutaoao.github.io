@@ -18,7 +18,7 @@ categories: [MacBookPro(M1)]
 * rbenv install 3.0.4 	# 安装 3.0.4
 * rbenv versions 		# 列出安装的版本
 * rbenv version 		# 列出正在使用的版本
-* **<font style="color:#DF2A3F;">rbenv global</font>** 3.0.4 	# 默认使用 3.0.4
+* **rbenv global** 3.0.4 	# 默认使用 3.0.4
 * rbenv shell 3.0.4 	# 当前的 shell 使用 3.0.4, 会设置一个 `RBENV_VERSION` 环境变量
 * rbenv local 3.0.4 	# 当前目录使用 3.0.4, 会生成一个 `.rbenv-version` 文件
 

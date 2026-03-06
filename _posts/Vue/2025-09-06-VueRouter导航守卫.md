@@ -7,7 +7,7 @@ categories: [Vue]
 ---
 # VueRouter导航守卫
 
-正如其名，`vue-router` 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。有多种机会植入路由导航过程中：<font style="color:#F5222D;">全局的, 单个路由独享的, 或者组件级的</font>。
+正如其名，`vue-router` 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。有多种机会植入路由导航过程中：全局的, 单个路由独享的, 或者组件级的。
 
 记住**参数或查询的改变并不会触发进入/离开的导航守卫**。你可以通过[观察 ](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)`[$route](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)`[ 对象](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)来应对这些变化，或使用 `beforeRouteUpdate` 的组件内守卫。
 
@@ -22,7 +22,7 @@ router.beforeEach((to, from, next) => {
 })
 ```
 
-当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是<font style="color:#F5222D;">异步解析</font>执行，此时导航在所有守卫 resolve 完之前一直处于 **等待中**。
+当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 **等待中**。
 
 每个守卫方法接收三个参数：
 

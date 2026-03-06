@@ -9,13 +9,13 @@ categories: [React]
 
 `useMemo` 和 `useCallback` 都是 `React` 进行性能优化的手段，
 
-<font style="color:rgb(77, 77, 77);">这两个 hooks 的作用就是进行</font>**<font style="color:rgb(77, 77, 77);">数据缓存，</font>\*\*\*\*<font style="color:#DF2A3F;">避免页面重新渲染时不必要的参数重复更新</font>**<font style="color:rgb(77, 77, 77);">。</font>
+这两个 hooks 的作用就是进行**数据缓存，\*\*\*\*避免页面重新渲染时不必要的参数重复更新**。
 
-<font style="color:rgb(77, 77, 77);">它们的适用场景就是</font>**<font style="color:rgb(13, 0, 22);">对于只需要单次进行复杂计算的内容进行数据存储，从而</font>\*\*\*\*<font style="color:rgb(77, 77, 77);">减少页面性能开销。</font>**
+它们的适用场景就是**对于只需要单次进行复杂计算的内容进行数据存储，从而\*\*\*\*减少页面性能开销。**
 
-**<font style="color:rgb(77, 77, 77);"></font>**
+****
 
-**<font style="color:rgb(77, 77, 77);">useMemo</font>**
+**useMemo**
 
 ```tsx
 import {useEffect, useMemo, useState} from "react";

@@ -18,7 +18,7 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 
 
 
-**<font style="color:#DF2A3F;">重启设备</font>**<font style="color:#DF2A3F;">或</font>**<font style="color:#DF2A3F;">桌面切换</font>**下就能显示正常了 😓
+**重启设备**或**桌面切换**下就能显示正常了 😓
 
 
 

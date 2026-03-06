@@ -7,7 +7,7 @@ categories: [ReactNative]
 ---
 # 问题：Unknown argument type ‘__attribute__‘ in method -[RCTAppState getCurrentAppState:error:].
 
-<font style="color:#F5222D;">遇到的问题：</font>
+遇到的问题：
 
 Xcode版本升级后，在Xcode上点击build时遇到以下问题：
 
@@ -21,7 +21,7 @@ Unknown argument type '__attribute__' in method -[RCTAppState getCurrentAppState
 
 ![1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a.png](/assets/img/posts/ReactNative/1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a-864271.png)
 
-**<font style="color:#F5222D;">解决的方法：</font>**
+**解决的方法：**
 
 1.在Xcode中打开：Xcode打开RCTModuleMethod.mm文件：路径Libraries->React.xcodeproj->React->Base ->RCTModuleMethod.mm
 

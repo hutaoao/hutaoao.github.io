@@ -30,17 +30,17 @@ Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <https:
 
 ### rbenv
 
-<font style="color:rgb(28, 30, 33);">Ruby的版本管理工具：管理Ruby的版本，ReactNative所需ruby版本都不一样，所以需要管理一下ruby的版本。</font>
+Ruby的版本管理工具：管理Ruby的版本，ReactNative所需ruby版本都不一样，所以需要管理一下ruby的版本。
 
-<font style="color:rgb(28, 30, 33);"></font>
 
-#### <font style="color:rgb(28, 30, 33);">安装</font>
 
-<code><font style="color:rgb(28, 30, 33);">brew install rbenv</font></code>
+#### 安装
 
-<font style="color:rgb(28, 30, 33);"></font>
+<code>brew install rbenv</code>
 
-#### <font style="color:rgb(28, 30, 33);">常用命令</font>
+
+
+#### 常用命令
 
 * `rbenv install x.x.x`  	安装指定ruby版本
 * `rbenv uninstall x.x.x` 	卸载指定ruby版本
@@ -50,6 +50,6 @@ Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <https:
 * `rbenv local x.x.x`		设置该目录的 Ruby 版本
 *
 * `rbenv version`			显示当前活动的 Ruby 版本，以及有关其设置方式的信息
-* `rbenv versions`			<font style="color:rgb(51, 51, 51);">列出 rbenv 已知的所有 Ruby 版本，并在当前活动版本旁边显示一个星号</font>
+* `rbenv versions`			列出 rbenv 已知的所有 Ruby 版本，并在当前活动版本旁边显示一个星号
 
 

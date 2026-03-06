@@ -11,14 +11,14 @@ categories: [代码规范]
 
 在单行代码块中使用空格
 
-*<font style="color:#F5222D;">不推荐</font>\_\_<font style="color:#52C41A;"></font>*
+*不推荐\_\_*
 
 ```javascript
 function foo () {return true}
 if (foo) {bar = 0}
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 function foo () { return true }
@@ -92,7 +92,7 @@ const foo = {
 
 逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const foo = 1,bar = 2
@@ -100,7 +100,7 @@ const foo = 1 , bar = 2
 const foo = 1 ,bar = 2
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const foo = 1, bar = 2
@@ -115,7 +115,7 @@ const foo = 1, bar = 2
 
 > 团队约定使用标准风格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const foo = 1
@@ -129,7 +129,7 @@ const foo = ['name'
           , 'age']
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const foo = 1,
@@ -143,7 +143,7 @@ const foo = ['name',
 
 团队约定在对象的计算属性内，禁止使用空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 obj['foo' ]
@@ -151,7 +151,7 @@ obj[ 'foo']
 obj[ 'foo' ]
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 obj['foo']
@@ -161,7 +161,7 @@ obj['foo']
 
 在非空文件中，存在拖尾换行是一个常见的 `UNIX` 风格，它的好处是可以方便在串联和追加文件时不会打断 `Shell` 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 function func () {
@@ -169,7 +169,7 @@ function func () {
 }
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 function func () {
@@ -184,7 +184,7 @@ function func () {
 
 为了避免语法错误，团队约定在函数调用时，禁止使用空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 fn ()
@@ -192,7 +192,7 @@ fn
 ()
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 fn()
@@ -208,13 +208,13 @@ fn()
 
 团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const obj = { 'foo' : 'haha' }
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const obj = { 'foo': 'haha' }
@@ -224,13 +224,13 @@ const obj = { 'foo': 'haha' }
 
 在 JavaScript 中 `new` 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 `new` 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const fooItem = new foo()
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const fooItem = new Foo()
@@ -240,13 +240,13 @@ const fooItem = new Foo()
 
 在 JavaScript 中，通过 `new` 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const person = new Person
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const person = new Person()
@@ -260,7 +260,7 @@ const person = new Person()
 
 空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const a = 1
@@ -270,7 +270,7 @@ const a = 1
 const b = 2
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const a = 1
@@ -283,13 +283,13 @@ const b = 2
 
 链式赋值容易造成代码的可读性差，所以团队约定禁止使用链式赋值
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const a = b = c = 1
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const a = 1
@@ -301,13 +301,13 @@ const c = 1
 
 JavaScript 允许在一个声明中，声明多个变量。团队约定在声明变量时，一个声明只能有一个变量
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const a, b, c
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const a
@@ -329,7 +329,7 @@ JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语
 
 > 团队约定代码块前要添加空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 if (a){
@@ -339,7 +339,7 @@ if (a){
 function a (){}
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 if (a) {
@@ -355,7 +355,7 @@ function a () {}
 
 > 团队约定函数括号前要加空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 function func(x) {
@@ -363,7 +363,7 @@ function func(x) {
 }
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 function func (x) {
@@ -375,13 +375,13 @@ function func (x) {
 
 团队约定操作符前后都需要添加空格
 
-*<font style="color:#F5222D;">不推荐</font>*
+*不推荐*
 
 ```javascript
 const sum = 1+2
 ```
 
-*<font style="color:#52C41A;">推荐</font>*
+*推荐*
 
 ```javascript
 const sum = 1 + 2

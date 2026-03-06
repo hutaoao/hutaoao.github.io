@@ -13,7 +13,7 @@ categories: [Dart&Flutter, Flutter]
 
 实现token过期的时候拦截跳转到登录页
 
-### 方式一：<font style="color:rgb(79, 79, 79);">使用事件总线</font>
+### 方式一：使用事件总线
 
 #### 创建事件总线
 
@@ -56,7 +56,7 @@ class EventKeys {
 
 #### 监听登出事件
 
-<font style="color:rgb(77, 77, 77);">登录成功后，在主页面设置登出事件监听，事件响应后立即移除监听。</font>
+登录成功后，在主页面设置登出事件监听，事件响应后立即移除监听。
 
 ```dart
 class TabPage extends StatefulWidget {
@@ -92,7 +92,7 @@ class _TabPageState extends State<TabPage> {
 }
 ```
 
-#### <font style="color:rgb(79, 79, 79);">网络请求拦截器中触发登出事件</font>
+#### 网络请求拦截器中触发登出事件
 
 ```dart
 class DioInterceptors extends Interceptor {

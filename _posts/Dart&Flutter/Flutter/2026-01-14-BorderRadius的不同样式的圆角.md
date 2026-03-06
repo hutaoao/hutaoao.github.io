@@ -7,9 +7,9 @@ categories: [Dart&Flutter, Flutter]
 ---
 # BorderRadius 的不同样式的圆角
 
-<font style="color:rgb(15, 17, 21);">在 Flutter 中，</font><code><font style="color:rgb(15, 17, 21);">BorderRadius</font></code><font style="color:rgb(15, 17, 21);"> 的不同构造函数用于创建不同样式的圆角。以下是它们的区别：</font>
+在 Flutter 中，<code>BorderRadius</code> 的不同构造函数用于创建不同样式的圆角。以下是它们的区别：
 
-## <font style="color:rgb(15, 17, 21);">1.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.zero</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 无圆角</font>
+## 1. <code>BorderRadius.zero</code> - 无圆角
 
 dart
 
@@ -19,9 +19,9 @@ BorderRadius.zero
 // 所有角都没有圆角，直角
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">四个角都是直角</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">不需要圆角时</font>
+**效果：** 四个角都是直角\ **使用场景：** 不需要圆角时
 
-## <font style="color:rgb(15, 17, 21);">2.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.circular()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 统一圆角</font>
+## 2. <code>BorderRadius.circular()</code> - 统一圆角
 
 dart
 
@@ -31,9 +31,9 @@ BorderRadius.circular(10.0)
 // 所有角都有相同的圆角半径
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">四个角都是相同的圆角</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">需要统一圆角时</font>
+**效果：** 四个角都是相同的圆角\ **使用场景：** 需要统一圆角时
 
-## <font style="color:rgb(15, 17, 21);">3.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.all()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 统一圆角（更灵活）</font>
+## 3. <code>BorderRadius.all()</code> - 统一圆角（更灵活）
 
 dart
 
@@ -42,9 +42,9 @@ BorderRadius.all(Radius.circular(10.0))  // 圆形圆角
 BorderRadius.all(Radius.elliptical(20.0, 10.0))  // 椭圆圆角
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">四个角都有相同的圆角（可以是圆形或椭圆形）</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">需要统一但更复杂的圆角时</font>
+**效果：** 四个角都有相同的圆角（可以是圆形或椭圆形）\ **使用场景：** 需要统一但更复杂的圆角时
 
-## <font style="color:rgb(15, 17, 21);">4.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.only()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 指定角圆角</font>
+## 4. <code>BorderRadius.only()</code> - 指定角圆角
 
 dart
 
@@ -57,9 +57,9 @@ BorderRadius.only(
 )
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">可以单独设置每个角的圆角</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">需要不同角有不同圆角时</font>
+**效果：** 可以单独设置每个角的圆角\ **使用场景：** 需要不同角有不同圆角时
 
-## <font style="color:rgb(15, 17, 21);">5.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.vertical()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 垂直方向圆角</font>
+## 5. <code>BorderRadius.vertical()</code> - 垂直方向圆角
 
 dart
 
@@ -70,9 +70,9 @@ BorderRadius.vertical(
 )
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">顶部两个角相同，底部两个角相同</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">列表项、卡片等需要顶部和底部不同圆角时</font>
+**效果：** 顶部两个角相同，底部两个角相同\ **使用场景：** 列表项、卡片等需要顶部和底部不同圆角时
 
-## <font style="color:rgb(15, 17, 21);">6.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.horizontal()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 水平方向圆角</font>
+## 6. <code>BorderRadius.horizontal()</code> - 水平方向圆角
 
 dart
 
@@ -83,9 +83,9 @@ BorderRadius.horizontal(
 )
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">左边两个角相同，右边两个角相同</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">侧边栏、菜单等需要左右不同圆角时</font>
+**效果：** 左边两个角相同，右边两个角相同\ **使用场景：** 侧边栏、菜单等需要左右不同圆角时
 
-## <font style="color:rgb(15, 17, 21);">7.</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">BorderRadius.lerp()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">- 插值动画</font>
+## 7. <code>BorderRadius.lerp()</code> - 插值动画
 
 dart
 
@@ -94,9 +94,9 @@ BorderRadius.lerp(start, end, t)
 // 在两个BorderRadius之间进行插值，用于动画
 ```
 
-**<font style="color:rgb(15, 17, 21);">效果：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">根据时间因子 t 在 start 和 end 之间平滑过渡</font><font style="color:rgb(15, 17, 21);">\ </font>**<font style="color:rgb(15, 17, 21);">使用场景：</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">圆角动画效果</font>
+**效果：** 根据时间因子 t 在 start 和 end 之间平滑过渡\ **使用场景：** 圆角动画效果
 
-## <font style="color:rgb(15, 17, 21);">示例对比</font>
+## 示例对比
 
 dart
 
@@ -149,7 +149,7 @@ Container(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">实际应用场景</font>
+## 实际应用场景
 
 dart
 
@@ -196,14 +196,14 @@ ElevatedButton(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">总结</font>
+## 总结
 
-* <code>**<font style="color:rgb(15, 17, 21);">zero</font>**</code><font style="color:rgb(15, 17, 21);">: 无圆角</font>
-* <code>**<font style="color:rgb(15, 17, 21);">circular</font>**</code><font style="color:rgb(15, 17, 21);">: 统一圆形圆角</font>
-* <code>**<font style="color:rgb(15, 17, 21);">all</font>**</code><font style="color:rgb(15, 17, 21);">: 统一圆角（支持椭圆）</font>
-* <code>**<font style="color:rgb(15, 17, 21);">only</font>**</code><font style="color:rgb(15, 17, 21);">: 自定义每个角</font>
-* <code>**<font style="color:rgb(15, 17, 21);">vertical</font>**</code><font style="color:rgb(15, 17, 21);">: 垂直方向控制</font>
-* <code>**<font style="color:rgb(15, 17, 21);">horizontal</font>**</code><font style="color:rgb(15, 17, 21);">: 水平方向控制</font>
-* <code>**<font style="color:rgb(15, 17, 21);">lerp</font>**</code><font style="color:rgb(15, 17, 21);">: 动画插值</font>
+* <code>**zero**</code>: 无圆角
+* <code>**circular**</code>: 统一圆形圆角
+* <code>**all**</code>: 统一圆角（支持椭圆）
+* <code>**only**</code>: 自定义每个角
+* <code>**vertical**</code>: 垂直方向控制
+* <code>**horizontal**</code>: 水平方向控制
+* <code>**lerp**</code>: 动画插值
 
 

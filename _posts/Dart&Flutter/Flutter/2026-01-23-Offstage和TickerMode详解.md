@@ -7,15 +7,15 @@ categories: [Dart&Flutter, Flutter]
 ---
 # Offstage 和 TickerMode 详解
 
-## <font style="color:rgb(15, 17, 21);">Offstage</font>
+## Offstage
 
-### <font style="color:rgb(15, 17, 21);">什么是 Offstage？</font>
+### 什么是 Offstage？
 
-<code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">Offstage</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">是一个布局 widget，它可以控制子 widget 是否在视觉上显示，但</font>**<font style="color:rgb(15, 17, 21);">子 widget 仍然存在于 widget 树中</font>**<font style="color:rgb(15, 17, 21);">。</font>
+<code>Offstage</code> 是一个布局 widget，它可以控制子 widget 是否在视觉上显示，但**子 widget 仍然存在于 widget 树中**。
 
-### <font style="color:rgb(15, 17, 21);">核心属性</font>
+### 核心属性
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 Offstage({
@@ -25,14 +25,14 @@ Offstage({
 })
 ```
 
-### <font style="color:rgb(15, 17, 21);">工作原理</font>
+### 工作原理
 
-* <code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">offstage = true</font>**</code><font style="color:rgb(15, 17, 21);">：子 widget 不会被渲染到屏幕上，但仍然存在于 widget 树中，保持其状态</font>
-* <code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">offstage = false</font>**</code><font style="color:rgb(15, 17, 21);">：子 widget 正常显示</font>
+* <code>**offstage = true**</code>：子 widget 不会被渲染到屏幕上，但仍然存在于 widget 树中，保持其状态
+* <code>**offstage = false**</code>：子 widget 正常显示
 
-### <font style="color:rgb(15, 17, 21);">实际效果</font>
+### 实际效果
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 这个 Text 不会显示，但它的状态被保持
@@ -48,9 +48,9 @@ Offstage(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">在 Tab 切换中的应用</font>
+### 在 Tab 切换中的应用
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 Stack(
@@ -67,15 +67,15 @@ Stack(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">TickerMode</font>
+## TickerMode
 
-### <font style="color:rgb(15, 17, 21);">什么是 TickerMode？</font>
+### 什么是 TickerMode？
 
-<code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">TickerMode</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">控制子 widget 中的动画是否运行。它可以启用或禁用子 widget 树中的所有动画。</font>
+<code>TickerMode</code> 控制子 widget 中的动画是否运行。它可以启用或禁用子 widget 树中的所有动画。
 
-### <font style="color:rgb(15, 17, 21);">核心属性</font>
+### 核心属性
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 TickerMode({
@@ -85,14 +85,14 @@ TickerMode({
 })
 ```
 
-### <font style="color:rgb(15, 17, 21);">工作原理</font>
+### 工作原理
 
-* <code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">enabled = true</font>**</code><font style="color:rgb(15, 17, 21);">：子 widget 中的动画正常运行</font>
-* <code>**<font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">enabled = false</font>**</code><font style="color:rgb(15, 17, 21);">：子 widget 中的动画暂停，但动画状态被保持</font>
+* <code>**enabled = true**</code>：子 widget 中的动画正常运行
+* <code>**enabled = false**</code>：子 widget 中的动画暂停，但动画状态被保持
 
-### <font style="color:rgb(15, 17, 21);">实际效果</font>
+### 实际效果
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 这个动画会运行
@@ -114,17 +114,17 @@ TickerMode(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">Offstage + TickerMode 组合使用</font>
+## Offstage + TickerMode 组合使用
 
-### <font style="color:rgb(15, 17, 21);">为什么需要组合？</font>
+### 为什么需要组合？
 
-* **<font style="color:rgb(15, 17, 21);">Offstage 单独使用</font>**<font style="color:rgb(15, 17, 21);">：隐藏页面但动画仍在后台运行，消耗资源</font>
-* **<font style="color:rgb(15, 17, 21);">TickerMode 单独使用</font>**<font style="color:rgb(15, 17, 21);">：暂停动画但页面仍然可见</font>
-* **<font style="color:rgb(15, 17, 21);">组合使用</font>**<font style="color:rgb(15, 17, 21);">：既隐藏页面又暂停动画，完美优化</font>
+* **Offstage 单独使用**：隐藏页面但动画仍在后台运行，消耗资源
+* **TickerMode 单独使用**：暂停动画但页面仍然可见
+* **组合使用**：既隐藏页面又暂停动画，完美优化
 
-### <font style="color:rgb(15, 17, 21);">典型用法</font>
+### 典型用法
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 Offstage(
@@ -136,11 +136,11 @@ Offstage(
 )
 ```
 
-## <font style="color:rgb(15, 17, 21);">在 Tab 应用中的完整示例</font>
+## 在 Tab 应用中的完整示例
 
-### <font style="color:rgb(15, 17, 21);">优化后的 Tab 控制器</font>
+### 优化后的 Tab 控制器
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class TabController extends StatefulWidget {
@@ -199,38 +199,38 @@ class _TabControllerState extends State<TabController> {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">性能优势</font>
+## 性能优势
 
-### <font style="color:rgb(15, 17, 21);">内存优化</font>
+### 内存优化
 
-* **<font style="color:rgb(15, 17, 21);">未访问的页面</font>**<font style="color:rgb(15, 17, 21);">：不初始化，不占用内存</font>
-* **<font style="color:rgb(15, 17, 21);">访问过的页面</font>**<font style="color:rgb(15, 17, 21);">：状态被保持，但动画暂停</font>
+* **未访问的页面**：不初始化，不占用内存
+* **访问过的页面**：状态被保持，但动画暂停
 
-### <font style="color:rgb(15, 17, 21);">CPU 优化</font>
+### CPU 优化
 
-* **<font style="color:rgb(15, 17, 21);">隐藏的页面</font>**<font style="color:rgb(15, 17, 21);">：不参与渲染，节省 CPU</font>
-* **<font style="color:rgb(15, 17, 21);">暂停的动画</font>**<font style="color:rgb(15, 17, 21);">：不消耗动画计算资源</font>
+* **隐藏的页面**：不参与渲染，节省 CPU
+* **暂停的动画**：不消耗动画计算资源
 
-### <font style="color:rgb(15, 17, 21);">用户体验</font>
+### 用户体验
 
-* **<font style="color:rgb(15, 17, 21);">快速切换</font>**<font style="color:rgb(15, 17, 21);">：已访问过的页面立即显示，无需重新加载</font>
-* **<font style="color:rgb(15, 17, 21);">状态保持</font>**<font style="color:rgb(15, 17, 21);">：滚动位置、表单数据等都被保持</font>
+* **快速切换**：已访问过的页面立即显示，无需重新加载
+* **状态保持**：滚动位置、表单数据等都被保持
 
-## <font style="color:rgb(15, 17, 21);">注意事项</font>
+## 注意事项
 
-1. **<font style="color:rgb(15, 17, 21);">内存使用</font>**<font style="color:rgb(15, 17, 21);">：虽然优化了，但多个页面的状态仍然占用内存</font>
-2. **<font style="color:rgb(15, 17, 21);">初始化时机</font>**<font style="color:rgb(15, 17, 21);">：根据需要决定何时初始化页面（首次访问或预加载）</font>
-3. **<font style="color:rgb(15, 17, 21);">复杂页面</font>**<font style="color:rgb(15, 17, 21);">：对于特别复杂的页面，考虑手动管理资源释放</font>
+1. **内存使用**：虽然优化了，但多个页面的状态仍然占用内存
+2. **初始化时机**：根据需要决定何时初始化页面（首次访问或预加载）
+3. **复杂页面**：对于特别复杂的页面，考虑手动管理资源释放
 
-## <font style="color:rgb(15, 17, 21);">替代方案比较</font>
+## 替代方案比较
 
-| <font style="color:rgb(15, 17, 21);">方案</font> | <font style="color:rgb(15, 17, 21);">状态保持</font> | <font style="color:rgb(15, 17, 21);">内存使用</font> | <font style="color:rgb(15, 17, 21);">CPU 使用</font> | <font style="color:rgb(15, 17, 21);">实现复杂度</font> |
+| 方案 | 状态保持 | 内存使用 | CPU 使用 | 实现复杂度 |
 | --- | --- | --- | --- | --- |
-| <font style="color:rgb(15, 17, 21);">IndexedStack</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 很好</font> | <font style="color:rgb(15, 17, 21);">⚠️</font><font style="color:rgb(15, 17, 21);"> 较高</font> | <font style="color:rgb(15, 17, 21);">⚠️</font><font style="color:rgb(15, 17, 21);"> 较高</font> | <font style="color:rgb(15, 17, 21);">简单</font> |
-| <font style="color:rgb(15, 17, 21);">Offstage + TickerMode</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 很好</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 较低</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 较低</font> | <font style="color:rgb(15, 17, 21);">中等</font> |
-| <font style="color:rgb(15, 17, 21);">PageView</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 很好</font> | <font style="color:rgb(15, 17, 21);">⚠️</font><font style="color:rgb(15, 17, 21);"> 中等</font> | <font style="color:rgb(15, 17, 21);">⚠️</font><font style="color:rgb(15, 17, 21);"> 中等</font> | <font style="color:rgb(15, 17, 21);">简单</font> |
-| <font style="color:rgb(15, 17, 21);">手动销毁重建</font> | <font style="color:rgb(15, 17, 21);">❌</font><font style="color:rgb(15, 17, 21);"> 无</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 最低</font> | <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 最低</font> | <font style="color:rgb(15, 17, 21);">复杂</font> |
+| IndexedStack | ✅ 很好 | ⚠️ 较高 | ⚠️ 较高 | 简单 |
+| Offstage + TickerMode | ✅ 很好 | ✅ 较低 | ✅ 较低 | 中等 |
+| PageView | ✅ 很好 | ⚠️ 中等 | ⚠️ 中等 | 简单 |
+| 手动销毁重建 | ❌ 无 | ✅ 最低 | ✅ 最低 | 复杂 |
 
-**<font style="color:rgb(15, 17, 21);">Offstage + TickerMode</font>**<font style="color:rgb(15, 17, 21);"> 在状态保持和性能之间提供了最佳平衡。</font>
+**Offstage + TickerMode** 在状态保持和性能之间提供了最佳平衡。
 
 

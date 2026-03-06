@@ -9,12 +9,12 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 
 ![1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8.png](/assets/img/posts/ReactNative/1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8-542178.png)
 
-**<font style="color:#DF2A3F;">！！！最新处理方案：</font>**
+**！！！最新处理方案：**
 
-由于M1 xcode 架构变化导致，需要软链一下 <code><font style="color:rgb(0, 0, 0);">watchman</font></code>
+由于M1 xcode 架构变化导致，需要软链一下 <code>watchman</code>
 
-> <font style="color:rgb(0, 0, 0);">cd /opt/homebrew/bin</font>
-> <font style="color:rgb(0, 0, 0);">sudo ln -s  /opt/homebrew/bin/watchman /usr/local/bin/watchman</font>
+> cd /opt/homebrew/bin
+> sudo ln -s  /opt/homebrew/bin/watchman /usr/local/bin/watchman
 
 ***
 

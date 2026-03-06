@@ -36,8 +36,8 @@ export default class EquipmentListIndex extends Vue {
 }
 ```
 
-### <font style="color:rgb(79, 79, 79);">Methods 属性</font>
-<font style="color:rgb(77, 77, 77);">组件方法可以直接声明为类的原型方法：</font>
+### Methods 属性
+组件方法可以直接声明为类的原型方法：
 
 ```vue
 <template>
@@ -57,7 +57,7 @@ export default class HelloWorld extends Vue {
 
 ```
 
-### <font style="color:rgb(79, 79, 79);">Computed (计算属性)</font>
+### Computed (计算属性)
 ```vue
 <template>
   <input v-model="name">
@@ -102,7 +102,7 @@ import {Options} from 'vue-class-component';
 })
 ```
 
-### <font style="color:rgb(79, 79, 79);">hooks</font>
+### hooks
 ```vue
 import {Vue} from 'vue-class-component';
   
@@ -115,7 +115,7 @@ export default class HelloWorld extends Vue {
 }
 ```
 
-### <font style="color:rgb(79, 79, 79);">注册钩子</font>
+### 注册钩子
 ```vue
 import {Vue} from 'vue-class-component';
 

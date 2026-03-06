@@ -19,13 +19,13 @@ categories: [Dart&Flutter, Flutter]
 
 然后打开Xcode：
 
-<font style="color:rgb(64, 64, 64);">点击屏幕右下角的约束编辑器：</font>
+点击屏幕右下角的约束编辑器：
 
-<font style="color:rgb(64, 64, 64);">将上面填空处都填 0，然后点击 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Add 4 Constraints</font><font style="color:rgb(64, 64, 64);">。</font>
+将上面填空处都填 0，然后点击 Add 4 Constraints。
 
 ![1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6.png](/assets/img/posts/Dart&Flutter/1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6-824699.png)
 
-打开LaunchScreen，<font style="color:rgb(64, 64, 64);">将 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Content Mode</font><font style="color:rgb(64, 64, 64);"> 修改为 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Scale To Fill</font><font style="color:rgb(64, 64, 64);">：</font>
+打开LaunchScreen，将 Content Mode 修改为 Scale To Fill：
 
 ![1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e.png](/assets/img/posts/Dart&Flutter/1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e-587679.png)
 
@@ -41,29 +41,29 @@ categories: [Dart&Flutter, Flutter]
 
 注释掉蓝色部分，放开红色部分；然后每个dpi文件夹下放入对应分辨率的启动页图片就可以了。
 
-> android:gravity="**<font style="color:#DF2A3F;">fill</font>**" 这个是全屏覆盖的关键（图片可能会被拉伸）
+> android:gravity="**fill**" 这个是全屏覆盖的关键（图片可能会被拉伸）
 
 ![1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d.png](/assets/img/posts/Dart&Flutter/1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d-953967.png)
 
-#### <font style="color:rgb(0, 0, 0);">扩展：res目录下的 drawable/drawable-v21</font>
+#### 扩展：res目录下的 drawable/drawable-v21
 
-:::warning <font style="color:rgb(0, 0, 0);">💁💁💁</font>
+:::warning 💁💁💁
 
-**<font style="color:rgb(0, 0, 0);"></font>**
+****
 
-<font style="color:rgb(0, 0, 0);">安卓项目的res目录中有多个drawable文件夹</font>\ <font style="color:rgb(0, 0, 0);">在Android项目的res目录中，可以有多个drawable文件夹，每个文件夹用于存放不同类型的可绘制资源。下面是常见的几个drawable文件夹及其区别：</font>
+安卓项目的res目录中有多个drawable文件夹\ 在Android项目的res目录中，可以有多个drawable文件夹，每个文件夹用于存放不同类型的可绘制资源。下面是常见的几个drawable文件夹及其区别：
 
-**<font style="color:rgb(0, 0, 0);">drawable</font>**<font style="color:rgb(0, 0, 0);">: 这是默认的drawable文件夹，用于存放通用的可绘制资源，例如图片、形状定义等。这些资源在所有屏幕密度下都会被使用。</font>
+**drawable**: 这是默认的drawable文件夹，用于存放通用的可绘制资源，例如图片、形状定义等。这些资源在所有屏幕密度下都会被使用。
 
-<font style="color:rgb(0, 0, 0);">drawable-hdpi, drawable-mdpi, drawable-xhdpi, drawable-xxhdpi, drawable-xxxhdpi: 这些文件夹分别用于存放不同屏幕密度下的可绘制资源。Android设备根据屏幕密度的不同选择合适的文件夹来加载资源，以确保在不同设备上显示效果一致。</font>
+drawable-hdpi, drawable-mdpi, drawable-xhdpi, drawable-xxhdpi, drawable-xxxhdpi: 这些文件夹分别用于存放不同屏幕密度下的可绘制资源。Android设备根据屏幕密度的不同选择合适的文件夹来加载资源，以确保在不同设备上显示效果一致。
 
-**<font style="color:rgb(0, 0, 0);">drawable-v21</font>**<font style="color:rgb(0, 0, 0);">: 这个文件夹用于存放针对Android 5.0（API级别21）及更高版本的特定版本的可绘制资源。当应用运行在 Android 5.0 及更高版本时，系统会优先加载这个文件夹下的资源。</font>
+**drawable-v21**: 这个文件夹用于存放针对Android 5.0（API级别21）及更高版本的特定版本的可绘制资源。当应用运行在 Android 5.0 及更高版本时，系统会优先加载这个文件夹下的资源。
 
-<font style="color:rgb(0, 0, 0);">drawable-land和drawable-port: 这两个文件夹用于存放横屏和竖屏模式下的可绘制资源。你可以将相应方向下的资源放置在这些文件夹中，系统会根据屏幕方向自动加载合适的资源。</font>
+drawable-land和drawable-port: 这两个文件夹用于存放横屏和竖屏模式下的可绘制资源。你可以将相应方向下的资源放置在这些文件夹中，系统会根据屏幕方向自动加载合适的资源。
 
-<font style="color:rgb(0, 0, 0);">除了上述常见的drawable文件夹外，你也可以根据需要创建其他命名格式的文件夹，例如drawable-en, drawable-fr等，用于存放不同语言下的可绘制资源。系统会根据设备当前的语言设置来加载相应的资源。</font>
+除了上述常见的drawable文件夹外，你也可以根据需要创建其他命名格式的文件夹，例如drawable-en, drawable-fr等，用于存放不同语言下的可绘制资源。系统会根据设备当前的语言设置来加载相应的资源。
 
-<font style="color:rgb(0, 0, 0);">通过使用不同的drawable文件夹，可以为不同的屏幕密度、版本和方向提供适配的可绘制资源，以实现最佳的用户体验。</font>
+通过使用不同的drawable文件夹，可以为不同的屏幕密度、版本和方向提供适配的可绘制资源，以实现最佳的用户体验。
 
 :::
 

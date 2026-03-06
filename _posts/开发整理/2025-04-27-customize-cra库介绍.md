@@ -7,13 +7,13 @@ categories: [开发整理]
 ---
 # customize-cra库介绍
 
-<code><font style="color:#F5222D;">customize-cra</font></code><font style="color:rgb(89, 97, 114);"> 是依赖于 </font><code><font style="color:#F5222D;">react-app-rewired</font></code><font style="color:rgb(89, 97, 114);"> 的库，通过 </font><code><font style="color:#F5222D;">config-overrides.js</font></code><font style="color:rgb(89, 97, 114);"> 来修改底层的 webpack，babel配置。</font>
+<code>customize-cra</code> 是依赖于 <code>react-app-rewired</code> 的库，通过 <code>config-overrides.js</code> 来修改底层的 webpack，babel配置。
 
-<font style="color:rgb(89, 97, 114);"></font>
 
-<code><font style="color:#F5222D;">config-overrides.js</font></code><font style="color:rgb(89, 97, 114);"> 创建在项目根目录下，是 </font><code><font style="color:#F5222D;">react-app-rewird</font></code><font style="color:rgb(89, 97, 114);"> 包所利用的文件，结合</font><code><font style="color:#F5222D;">customize-cra</font></code><font style="color:rgb(89, 97, 114);"> 可以轻松修改底层配置，而不用运行 npm run eject 来暴露 webpack.config.js 来修改配置。</font>
 
-<font style="color:rgb(89, 97, 114);">示例如下：</font>
+<code>config-overrides.js</code> 创建在项目根目录下，是 <code>react-app-rewird</code> 包所利用的文件，结合<code>customize-cra</code> 可以轻松修改底层配置，而不用运行 npm run eject 来暴露 webpack.config.js 来修改配置。
+
+示例如下：
 
 ```javascript
 const { override } = require('customize-cra');
@@ -24,7 +24,7 @@ module.exports = override({
 
 ### addWebpackAlias
 
-<font style="color:rgba(0, 0, 0, 0.75);">添加别名，设置相对路径。\ </font><font style="color:rgba(0, 0, 0, 0.75);">创建 import 或 require 的别名，来确保模块引入变得更简单。例如，一些位于 src/ 文件夹下的常用模块。使用 customize-cra 中的 </font><code><font style="color:rgba(0, 0, 0, 0.75);">addWebpackAlias</font></code><font style="color:rgba(0, 0, 0, 0.75);"> 模块来实现该功能。</font>
+添加别名，设置相对路径。\ 创建 import 或 require 的别名，来确保模块引入变得更简单。例如，一些位于 src/ 文件夹下的常用模块。使用 customize-cra 中的 <code>addWebpackAlias</code> 模块来实现该功能。
 
 ```javascript
 const { override, addWebpackAlias} = require('customize-cra');

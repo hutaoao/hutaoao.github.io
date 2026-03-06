@@ -7,33 +7,33 @@ categories: [Dart&Flutter, Dart]
 ---
 # Dart/Flutter 下划线使用完全指南
 
-## <font style="color:rgb(15, 17, 21);">一、概述</font>
+## 一、概述
 
-<font style="color:rgb(15, 17, 21);">在 Dart 语言中，下划线 (</font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">_</font></code><font style="color:rgb(15, 17, 21);">) 是实现</font>**<font style="color:rgb(15, 17, 21);">访问控制</font>**<font style="color:rgb(15, 17, 21);">和</font>**<font style="color:rgb(15, 17, 21);">封装性</font>**<font style="color:rgb(15, 17, 21);">的核心机制。本指南将全面介绍 Dart 和 Flutter 中下划线的各种用法、含义和最佳实践。</font>
+在 Dart 语言中，下划线 (<code>_</code>) 是实现**访问控制**和**封装性**的核心机制。本指南将全面介绍 Dart 和 Flutter 中下划线的各种用法、含义和最佳实践。
 
-## <font style="color:rgb(15, 17, 21);">二、基本规则</font>
+## 二、基本规则
 
-### <font style="color:rgb(15, 17, 21);">1. 核心原则</font>
+### 1. 核心原则
 
-* <font style="color:rgb(15, 17, 21);">单下划线前缀：使标识符在当前库（文件）中</font>**<font style="color:rgb(15, 17, 21);">私有化</font>**
-* <font style="color:rgb(15, 17, 21);">没有下划线：标识符是</font>**<font style="color:rgb(15, 17, 21);">公开的</font>**<font style="color:rgb(15, 17, 21);">，可以被其他库导入使用</font>
-* <font style="color:rgb(15, 17, 21);">双下划线：</font>**<font style="color:rgb(15, 17, 21);">命名约定</font>**<font style="color:rgb(15, 17, 21);">，没有额外语言含义，但常用于表示更深层的内部实现</font>
+* 单下划线前缀：使标识符在当前库（文件）中**私有化**
+* 没有下划线：标识符是**公开的**，可以被其他库导入使用
+* 双下划线：**命名约定**，没有额外语言含义，但常用于表示更深层的内部实现
 
-### <font style="color:rgb(15, 17, 21);">2. 可见性范围</font>
+### 2. 可见性范围
 
-| <font style="color:rgb(15, 17, 21);">位置</font> | <font style="color:rgb(15, 17, 21);">无下划线</font> | <font style="color:rgb(15, 17, 21);">单下划线</font> | <font style="color:rgb(15, 17, 21);">双下划线</font> |
+| 位置 | 无下划线 | 单下划线 | 双下划线 |
 | --- | --- | --- | --- |
-| <font style="color:rgb(15, 17, 21);">类定义</font> | <font style="color:rgb(15, 17, 21);">跨文件可见</font> | <font style="color:rgb(15, 17, 21);">仅当前文件</font> | <font style="color:rgb(15, 17, 21);">仅当前文件（约定）</font> |
-| <font style="color:rgb(15, 17, 21);">类成员</font> | <font style="color:rgb(15, 17, 21);">公开访问</font> | <font style="color:rgb(15, 17, 21);">仅当前类</font> | <font style="color:rgb(15, 17, 21);">仅当前类（约定）</font> |
-| <font style="color:rgb(15, 17, 21);">顶层定义</font> | <font style="color:rgb(15, 17, 21);">公开导入</font> | <font style="color:rgb(15, 17, 21);">文件私有</font> | <font style="color:rgb(15, 17, 21);">文件私有（约定）</font> |
+| 类定义 | 跨文件可见 | 仅当前文件 | 仅当前文件（约定） |
+| 类成员 | 公开访问 | 仅当前类 | 仅当前类（约定） |
+| 顶层定义 | 公开导入 | 文件私有 | 文件私有（约定） |
 
-## <font style="color:rgb(15, 17, 21);">三、详细用法解析</font>
+## 三、详细用法解析
 
-### <font style="color:rgb(15, 17, 21);">1. 类定义中的下划线</font>
+### 1. 类定义中的下划线
 
-#### <font style="color:rgb(15, 17, 21);">公开类（可被其他文件导入）</font>
+#### 公开类（可被其他文件导入）
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 其他文件可以：import 'xxx.dart' 然后使用 MyClass
@@ -42,9 +42,9 @@ class MyClass {
 }
 ```
 
-#### <font style="color:rgb(15, 17, 21);">私有类（文件内部使用）</font>
+#### 私有类（文件内部使用）
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 只能在当前 .dart 文件中使用
@@ -63,11 +63,11 @@ class InfoDialog extends StatelessWidget {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 类成员中的下划线</font>
+### 2. 类成员中的下划线
 
-#### <font style="color:rgb(15, 17, 21);">公开成员</font>
+#### 公开成员
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class Counter {
@@ -81,9 +81,9 @@ class Counter {
 }
 ```
 
-#### <font style="color:rgb(15, 17, 21);">私有成员</font>
+#### 私有成员
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class Counter {
@@ -106,9 +106,9 @@ class Counter {
 }
 ```
 
-**<font style="color:rgb(15, 17, 21);">重要限制</font>**<font style="color:rgb(15, 17, 21);">：</font>
+**重要限制**：
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 同一文件中的不同类不能互相访问私有成员
@@ -124,11 +124,11 @@ class ClassB {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 顶层定义中的下划线</font>
+### 3. 顶层定义中的下划线
 
-#### <font style="color:rgb(15, 17, 21);">公开顶层定义</font>
+#### 公开顶层定义
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // constants.dart
@@ -138,9 +138,9 @@ const Color PRIMARY_COLOR = Colors.blue;
 // 其他文件可以：import 'constants.dart';
 ```
 
-#### <font style="color:rgb(15, 17, 21);">私有顶层定义</font>
+#### 私有顶层定义
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // utils.dart
@@ -154,13 +154,13 @@ int publicCalculate(int a, int b) {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">四、Flutter 特殊用法</font>
+## 四、Flutter 特殊用法
 
-### <font style="color:rgb(15, 17, 21);">1. StatefulWidget 模式</font>
+### 1. StatefulWidget 模式
 
-#### <font style="color:rgb(15, 17, 21);">标准写法（单下划线）</font>
+#### 标准写法（单下划线）
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class MyWidget extends StatefulWidget {
@@ -188,9 +188,9 @@ class _MyWidgetState extends State<MyWidget> {
 }
 ```
 
-#### <font style="color:rgb(15, 17, 21);">双下划线写法（强调关联性）</font>
+#### 双下划线写法（强调关联性）
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class MapDialog extends StatefulWidget {
@@ -205,11 +205,11 @@ class __MapDialogState extends State<MapDialog> {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 私有构造函数模式</font>
+### 2. 私有构造函数模式
 
-#### <font style="color:rgb(15, 17, 21);">单例模式</font>
+#### 单例模式
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class AppPreferences {
@@ -225,9 +225,9 @@ class AppPreferences {
 }
 ```
 
-#### <font style="color:rgb(15, 17, 21);">Builder 模式</font>
+#### Builder 模式
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class ApiClient {
@@ -251,9 +251,9 @@ class ApiClient {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 混入（Mixin）中的下划线</font>
+### 3. 混入（Mixin）中的下划线
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 公开的混入
@@ -270,11 +270,11 @@ mixin ValidationMixin {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">五、双下划线的具体使用场景</font>
+## 五、双下划线的具体使用场景
 
-### <font style="color:rgb(15, 17, 21);">1. 表示层级关系</font>
+### 1. 表示层级关系
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class ComplexComponent {
@@ -295,9 +295,9 @@ class ComplexComponent {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 避免命名冲突</font>
+### 2. 避免命名冲突
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 文件内有多个相关类时
@@ -319,9 +319,9 @@ class __MyDialogState extends State<MyDialog> {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 临时或实验性代码标记</font>
+### 3. 临时或实验性代码标记
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class ExperimentalFeature {
@@ -336,11 +336,11 @@ class ExperimentalFeature {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">六、最佳实践指南</font>
+## 六、最佳实践指南
 
-### <font style="color:rgb(15, 17, 21);">1. 默认使用私有（推荐）</font>
+### 1. 默认使用私有（推荐）
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class UserRepository {
@@ -362,9 +362,9 @@ class UserRepository {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 使用 Getter/Setter 控制访问</font>
+### 2. 使用 Getter/Setter 控制访问
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class Counter {
@@ -386,9 +386,9 @@ class Counter {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. Widget 开发规范</font>
+### 3. Widget 开发规范
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // ✅ 推荐：标准的 Flutter Widget 写法
@@ -418,9 +418,9 @@ class CustomButton extends StatelessWidget {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">4. 状态管理组件</font>
+### 4. 状态管理组件
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class AuthProvider extends ChangeNotifier {
@@ -459,11 +459,11 @@ class AuthProvider extends ChangeNotifier {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">七、常见错误与注意事项</font>
+## 七、常见错误与注意事项
 
-### <font style="color:rgb(15, 17, 21);">1. 错误用法</font>
+### 1. 错误用法
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // ❌ 错误：尝试跨类访问私有成员
@@ -487,9 +487,9 @@ void main() {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 测试中的处理</font>
+### 2. 测试中的处理
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 在测试中，如果需要访问私有成员进行测试
@@ -512,9 +512,9 @@ class TestableCounter extends Counter {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 序列化注意事项</font>
+### 3. 序列化注意事项
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 class UserModel {
@@ -532,11 +532,11 @@ class UserModel {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">八、团队规范建议</font>
+## 八、团队规范建议
 
-### <font style="color:rgb(15, 17, 21);">1. 基础规范</font>
+### 1. 基础规范
 
-<font style="color:rgb(15, 17, 21);">text</font>
+text
 
 ```dart
 项目下划线使用规范：
@@ -546,16 +546,16 @@ class UserModel {
   4. 避免使用双下划线，除非有明确理由
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 代码审查要点</font>
+### 2. 代码审查要点
 
-* <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 检查是否有不必要的公开成员</font>
-* <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 确保私有成员不会被外部误用</font>
-* <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> Widget 的 State 类是否适当私有化</font>
-* <font style="color:rgb(15, 17, 21);">✅</font><font style="color:rgb(15, 17, 21);"> 常量是否适当暴露（公开或私有）</font>
+* ✅ 检查是否有不必要的公开成员
+* ✅ 确保私有成员不会被外部误用
+* ✅ Widget 的 State 类是否适当私有化
+* ✅ 常量是否适当暴露（公开或私有）
 
-### <font style="color:rgb(15, 17, 21);">3. 文档注释规范</font>
+### 3. 文档注释规范
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 /// 用户数据模型
@@ -572,25 +572,25 @@ class UserModel {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">九、总结</font>
+## 九、总结
 
-### <font style="color:rgb(15, 17, 21);">核心要点</font>
+### 核心要点
 
-1. **<font style="color:rgb(15, 17, 21);">单下划线是语言特性</font>**<font style="color:rgb(15, 17, 21);">：实现真正的私有化</font>
-2. **<font style="color:rgb(15, 17, 21);">双下划线是约定</font>**<font style="color:rgb(15, 17, 21);">：没有额外语言支持，但可传达设计意图</font>
-3. **<font style="color:rgb(15, 17, 21);">默认私有原则</font>**<font style="color:rgb(15, 17, 21);">：除非需要公开，否则使用下划线</font>
-4. **<font style="color:rgb(15, 17, 21);">Widget 模式</font>**<font style="color:rgb(15, 17, 21);">：State 类通常私有化，使用</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);background-color:rgb(235, 238, 242);">_WidgetNameState</font></code>
+1. **单下划线是语言特性**：实现真正的私有化
+2. **双下划线是约定**：没有额外语言支持，但可传达设计意图
+3. **默认私有原则**：除非需要公开，否则使用下划线
+4. **Widget 模式**：State 类通常私有化，使用 <code>_WidgetNameState</code>
 
-### <font style="color:rgb(15, 17, 21);">选择建议</font>
+### 选择建议
 
-* **<font style="color:rgb(15, 17, 21);">新项目</font>**<font style="color:rgb(15, 17, 21);">：坚持使用单下划线标准</font>
-* **<font style="color:rgb(15, 17, 21);">现有项目</font>**<font style="color:rgb(15, 17, 21);">：遵循现有约定，保持一致性</font>
-* **<font style="color:rgb(15, 17, 21);">团队协作</font>**<font style="color:rgb(15, 17, 21);">：制定明确规范并文档化</font>
-* **<font style="color:rgb(15, 17, 21);">开源库</font>**<font style="color:rgb(15, 17, 21);">：仔细设计公开 API，内部实现充分封装</font>
+* **新项目**：坚持使用单下划线标准
+* **现有项目**：遵循现有约定，保持一致性
+* **团队协作**：制定明确规范并文档化
+* **开源库**：仔细设计公开 API，内部实现充分封装
 
-### <font style="color:rgb(15, 17, 21);">最终建议代码模板</font>
+### 最终建议代码模板
 
-<font style="color:rgb(15, 17, 21);">dart</font>
+dart
 
 ```dart
 // 文件：my_widget.dart
@@ -633,6 +633,6 @@ class _MyWidgetState extends State<MyWidget> {
 }
 ```
 
-<font style="color:rgb(15, 17, 21);">通过合理使用下划线，可以创建出封装良好、易于维护、API 清晰的 Flutter 应用。记住：</font>**<font style="color:rgb(15, 17, 21);">好的封装是良好软件设计的基石</font>**<font style="color:rgb(15, 17, 21);">。</font>
+通过合理使用下划线，可以创建出封装良好、易于维护、API 清晰的 Flutter 应用。记住：**好的封装是良好软件设计的基石**。
 
 

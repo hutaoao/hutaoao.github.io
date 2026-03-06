@@ -7,11 +7,11 @@ categories: [iOS]
 ---
 # ITMS-91061: Missing privacy manifest for third-party SDKs
 
-### <font style="color:rgb(79, 79, 79);">一、问题起因：</font>
+### 一、问题起因：
 
-<font style="color:rgb(77, 77, 77);">新TF包在上传至苹果后台以后，相关的包出现了“</font>[<font style="color:rgb(252, 85, 49);">二进制文件</font>](https://so.csdn.net/so/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6\&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">无效”的情况！</font>
+新TF包在上传至苹果后台以后，相关的包出现了“[二进制文件](https://so.csdn.net/so/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6\&spm=1001.2101.3001.7020)无效”的情况！
 
-<font style="color:rgb(77, 77, 77);">首先排查一下邮箱，发现收到邮件提示：</font>
+首先排查一下邮箱，发现收到邮件提示：
 
 ![1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4.png](/assets/img/posts/iOS/1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4-335507.png)
 
@@ -78,6 +78,6 @@ $WORKSPACE_DIR：当前目录包含.xcworkspace的目录
 $PROJECT_DIR：当前包含.xcodeproj文件的目录
 ```
 
-<font style="color:rgb(77, 77, 77);">6、编译打包后验证结果：可以直接解开打包产物IPA包，在Frameworks文件夹中找到对应的三方SDK文件夹，其中就包含对应的隐私清单文件。</font>
+6、编译打包后验证结果：可以直接解开打包产物IPA包，在Frameworks文件夹中找到对应的三方SDK文件夹，其中就包含对应的隐私清单文件。
 
 

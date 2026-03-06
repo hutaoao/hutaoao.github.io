@@ -7,27 +7,27 @@ categories: [React]
 ---
 # 前端接口神器之 Json Server 详细指南
 
-## <font style="color:rgb(35, 38, 59);">简介</font>
+## 简介
 
-**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">json-server</font>**<font style="color:rgb(35, 38, 59);"> 是一款小巧的接口模拟工具，一分钟内就能搭建一套 Restful 风格的 api，尤其适合前端接口测试使用。</font><font style="color:rgb(35, 38, 59);">🔥🔥🔥</font><font style="color:rgb(35, 38, 59);">\ </font><font style="color:rgb(35, 38, 59);">只需指定一个 </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">json</font>**<font style="color:rgb(35, 38, 59);"> 文件作为 </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">api</font>**<font style="color:rgb(35, 38, 59);"> 的数据源即可，使用起来非常方便，基本上有手就行。</font><font style="color:rgb(35, 38, 59);">👍</font>
+**json-server** 是一款小巧的接口模拟工具，一分钟内就能搭建一套 Restful 风格的 api，尤其适合前端接口测试使用。🔥🔥🔥\ 只需指定一个 **json** 文件作为 **api** 的数据源即可，使用起来非常方便，基本上有手就行。👍
 
-### <font style="color:rgb(35, 38, 59);">开源地址</font>
+### 开源地址
 
-<font style="color:rgb(35, 38, 59);">主页地址：</font><https://www.npmjs.com/package/json-server><font style="color:rgb(35, 38, 59);">\ </font><font style="color:rgb(35, 38, 59);">Github项目地址：</font><https://github.com/typicode/json-server>
+主页地址：<https://www.npmjs.com/package/json-server>\ Github项目地址：<https://github.com/typicode/json-server>
 
-## <font style="color:rgb(35, 38, 59);">入门</font>
+## 入门
 
-### <font style="color:rgb(35, 38, 59);">环境依赖</font>
+### 环境依赖
 
-* <font style="color:rgb(35, 38, 59);">安装 Node.js 环境即可</font>
+* 安装 Node.js 环境即可
 
-### <font style="color:rgb(35, 38, 59);">操作步骤</font>
+### 操作步骤
 
-1. <font style="color:rgb(35, 38, 59);">安装 JSON 服务器</font>
+1. 安装 JSON 服务器
 
-<code><font style="color:rgb(35, 38, 59);">npm install -g json-server </font></code>
+<code>npm install -g json-server </code>
 
-2. <font style="color:rgb(35, 38, 59);">创建一个</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">db.json</font>**<font style="color:rgb(35, 38, 59);">包含一些数据的文件</font>
+2. 创建一个**db.json**包含一些数据的文件
 
 ```json
 {
@@ -41,24 +41,24 @@ categories: [React]
 }
 ```
 
-3. <font style="color:rgb(35, 38, 59);">启动 </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">json-server</font>**<font style="color:rgb(35, 38, 59);"> 接口服务器</font>
+3. 启动 **json-server** 接口服务器
 
-<code><font style="color:rgb(35, 38, 59);">json-server --watch db.json </font></code>
+<code>json-server --watch db.json </code>
 
 4. 浏览器访问 `http://localhost:3000/posts/1`，你会得到
 
-<code><font style="color:rgb(35, 38, 59);">{ </font><font style="color:rgb(255, 0, 0);">"id"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(136, 0, 0);">1</font><font style="color:rgb(35, 38, 59);">, </font><font style="color:rgb(255, 0, 0);">"title"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(163, 21, 21);">"json-server"</font><font style="color:rgb(35, 38, 59);">, </font><font style="color:rgb(255, 0, 0);">"author"</font><font style="color:rgb(35, 38, 59);">: </font><font style="color:rgb(163, 21, 21);">"typicode"</font><font style="color:rgb(35, 38, 59);"> } </font></code>
+<code>{ "id": 1, "title": "json-server", "author": "typicode" } </code>
 
-### <font style="color:rgb(35, 38, 59);">补充</font>
+### 补充
 
-* <font style="color:rgb(35, 38, 59);">如果您发出 POST、PUT、PATCH 或 DELETE 请求，更改将自动安全地保存到</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">db.json</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">文件中。</font>
-* <font style="color:rgb(35, 38, 59);">注意 Id 值是不可变的。</font>
+* 如果您发出 POST、PUT、PATCH 或 DELETE 请求，更改将自动安全地保存到 **db.json** 文件中。
+* 注意 Id 值是不可变的。
 
-## <font style="color:rgb(35, 38, 59);">路由</font>
+## 路由
 
-<font style="color:rgb(35, 38, 59);">根据之前的</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">db.json</font>**<font style="color:rgb(35, 38, 59);">文件，这里是所有的默认路由。</font>
+根据之前的**db.json**文件，这里是所有的默认路由。
 
-### <font style="color:rgb(35, 38, 59);">路由形式一</font>
+### 路由形式一
 
 ```bash
 GET    /posts
@@ -69,7 +69,7 @@ PATCH  /posts/1
 DELETE /posts/1
 ```
 
-### <font style="color:rgb(35, 38, 59);">路由形式二</font>
+### 路由形式二
 
 ```bash
 GET    /profile
@@ -78,9 +78,9 @@ PUT    /profile
 PATCH  /profile
 ```
 
-### <font style="color:rgb(35, 38, 59);">筛选</font>
+### 筛选
 
-<font style="color:rgb(35, 38, 59);">使用</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">.</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">访问筛选</font>
+使用 **.** 访问筛选
 
 ```bash
 GET /posts?title=json-server&author=typicode
@@ -88,37 +88,37 @@ GET /posts?id=1&id=2
 GET /comments?author.name=typicode
 ```
 
-### <font style="color:rgb(35, 38, 59);">分页</font>
+### 分页
 
-<font style="color:rgb(35, 38, 59);">使用</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_page</font>**<font style="color:rgb(35, 38, 59);">和可选地</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_limit</font>**<font style="color:rgb(35, 38, 59);">对返回的数据进行分页。</font>
+使用**\_page**和可选地**\_limit**对返回的数据进行分页。
 
-<font style="color:rgb(35, 38, 59);">在</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">Link</font>**<font style="color:rgb(35, 38, 59);">标题，你会得到</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">first</font>**<font style="color:rgb(35, 38, 59);">，</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">prev</font>**<font style="color:rgb(35, 38, 59);">，</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">next</font>**<font style="color:rgb(35, 38, 59);">和</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">last</font>**<font style="color:rgb(35, 38, 59);">链接。</font>
+在**Link**标题，你会得到**first**，**prev**，**next**和**last**链接。
 
 ```bash
 GET /posts?_page=7
 GET /posts?_page=7&_limit=20
 ```
 
-*<font style="color:rgb(35, 38, 59);">默认返回10项</font>*
+*默认返回10项*
 
-### <font style="color:rgb(35, 38, 59);">排序</font>
+### 排序
 
-<font style="color:rgb(35, 38, 59);">添加</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_sort</font>**<font style="color:rgb(35, 38, 59);">和</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_order</font>**<font style="color:rgb(35, 38, 59);">（默认升序）</font>
+添加**\_sort**和**\_order**（默认升序）
 
 ```bash
 GET /posts?_sort=views&_order=asc
 GET /posts/1/comments?_sort=votes&_order=asc
 ```
 
-<font style="color:rgb(35, 38, 59);">对于多个字段，请使用以下格式：</font>
+对于多个字段，请使用以下格式：
 
 ```bash
 GET /posts?_sort=user,views&_order=desc,asc
 ```
 
-### <font style="color:rgb(35, 38, 59);">切片(分页)</font>
+### 切片(分页)
 
-<font style="color:rgb(35, 38, 59);">添加</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_start</font>**<font style="color:rgb(35, 38, 59);">和</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_end</font>**<font style="color:rgb(35, 38, 59);">或</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_limit</font>**
+添加**\_start**和**\_end**或**\_limit**
 
 ```bash
 GET /posts?_start=20&_end=30
@@ -126,78 +126,78 @@ GET /posts/1/comments?_start=20&_end=30
 GET /posts/1/comments?_start=20&_limit=10
 ```
 
-*<font style="color:rgb(35, 38, 59);">与</font>*[Array.slice](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)*<font style="color:rgb(35, 38, 59);">完全一样</font>*[工作](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)*<font style="color:rgb(35, 38, 59);">（即</font>****<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_start</font>****<font style="color:rgb(35, 38, 59);">开始</font>****<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_end</font>****<font style="color:rgb(35, 38, 59);">结束）</font>*
+*与*[Array.slice](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)*完全一样*[工作](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)*（即****\_start****开始****\_end****结束）*
 
-### <font style="color:rgb(35, 38, 59);">特殊符号</font>
+### 特殊符号
 
-<font style="color:rgb(35, 38, 59);">添加</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_gte</font>**<font style="color:rgb(35, 38, 59);">或</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_lte</font>**<font style="color:rgb(35, 38, 59);">获取范围</font>
+添加**\_gte**或**\_lte**获取范围
 
 ```bash
 GET /posts?views_gte=10&views_lte=20
 ```
 
-<font style="color:rgb(35, 38, 59);">添加</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_ne</font>**<font style="color:rgb(35, 38, 59);">以排除值</font>
+添加**\_ne**以排除值
 
 ```bash
 GET /posts?id_ne=1
 ```
 
-<font style="color:rgb(35, 38, 59);">添加</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_like</font>**<font style="color:rgb(35, 38, 59);">到过滤器（支持正则表达式）</font>
+添加**\_like**到过滤器（支持正则表达式）
 
 ```bash
 GET /posts?title_like=server 
 ```
 
-### <font style="color:rgb(35, 38, 59);">全文搜索</font>
+### 全文搜索
 
-<font style="color:rgb(35, 38, 59);">添加</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">q</font>**
+添加 **q**
 
 ```bash
 GET /posts?q=internet 
 ```
 
-### <font style="color:rgb(35, 38, 59);">关系</font>
+### 关系
 
-<font style="color:rgb(35, 38, 59);">要包含子资源，请添加</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_embed</font>**
+要包含子资源，请添加 **\_embed**
 
 ```bash
 GET /posts?_embed=comments
 GET /posts/1?_embed=comments
 ```
 
-<font style="color:rgb(35, 38, 59);">要包含父资源，请添加</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">\_expand</font>**
+要包含父资源，请添加 **\_expand**
 
 ```bash
 GET /comments?_expand=post
 GET /comments/1?_expand=post
 ```
 
-<font style="color:rgb(35, 38, 59);">获取或创建嵌套资源（默认为一级）</font>
+获取或创建嵌套资源（默认为一级）
 
 ```bash
 GET  /posts/1/comments
 POST /posts/1/comments
 ```
 
-### <font style="color:rgb(35, 38, 59);">数据库</font>
+### 数据库
 
 ```bash
 GET /db 
 ```
 
-### <font style="color:rgb(35, 38, 59);">主页</font>
+### 主页
 
-<font style="color:rgb(35, 38, 59);">返回默认索引文件或服务</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">./public</font>**<font style="color:rgb(35, 38, 59);">目录</font>
+返回默认索引文件或服务**./public**目录
 
 ```sql
 GET / 
 ```
 
-## <font style="color:rgb(35, 38, 59);">附加功能</font>
+## 附加功能
 
-### <font style="color:rgb(35, 38, 59);">静态文件服务器</font>
+### 静态文件服务器
 
-<font style="color:rgb(35, 38, 59);">您可以使用 JSON Server 为您的 HTML、JS 和 CSS 提供服务，只需创建一个</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">./public</font>**<font style="color:rgb(35, 38, 59);">目录或用于</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">--static</font>**<font style="color:rgb(35, 38, 59);">设置不同的静态文件目录。</font>
+您可以使用 JSON Server 为您的 HTML、JS 和 CSS 提供服务，只需创建一个**./public**目录或用于**--static**设置不同的静态文件目录。
 
 ```bash
 mkdir public
@@ -209,30 +209,30 @@ json-server db.json
 json-server db.json --static ./some-other-dir
 ```
 
-### <font style="color:rgb(35, 38, 59);">替换端口</font>
+### 替换端口
 
-<font style="color:rgb(35, 38, 59);">您可以使用以下</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">--port</font>**<font style="color:rgb(35, 38, 59);">标志在其他端口上启动</font><font style="color:rgb(35, 38, 59);"> </font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">JSON Server</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">：</font>
+您可以使用以下**--port**标志在其他端口上启动 **JSON Server** ：
 
 ```bash
 $ json-server --watch db.json --port 3004
 ```
 
-### <font style="color:rgb(35, 38, 59);">支持跨域</font>
+### 支持跨域
 
-<font style="color:rgb(35, 38, 59);">您可以使用 CORS 和 JSONP 从任何地方访问您模拟的 API 接口。</font>
+您可以使用 CORS 和 JSONP 从任何地方访问您模拟的 API 接口。
 
-### <font style="color:rgb(35, 38, 59);">远程模式</font>
+### 远程模式
 
-<font style="color:rgb(35, 38, 59);">您可以加载远程模式。</font>
+您可以加载远程模式。
 
 ```bash
 $ json-server http://example.com/file.json
 $ json-server http://jsonplaceholder.typicode.com/db
 ```
 
-### <font style="color:rgb(35, 38, 59);">生成随机数据</font>
+### 生成随机数据
 
-<font style="color:rgb(35, 38, 59);">使用 JS 而不是 JSON 文件，您可以通过编程方式创建数据。</font>
+使用 JS 而不是 JSON 文件，您可以通过编程方式创建数据。
 
 ```javascript
 // index.js
@@ -250,13 +250,13 @@ module.exports = () => {
 $ json-server index.js 
 ```
 
-<font style="color:rgb(35, 38, 59);"></font>
 
-**<font style="color:rgb(35, 38, 59);">提示</font>**<font style="color:rgb(35, 38, 59);">：使用</font>[Faker](https://github.com/Marak/faker.js)<font style="color:rgb(35, 38, 59);">、</font>[Casual](https://github.com/boo1ean/casual)<font style="color:rgb(35, 38, 59);">、</font>[Chance](https://github.com/victorquinn/chancejs)<font style="color:rgb(35, 38, 59);">或</font>[JSON Schema Faker 等模块](https://github.com/json-schema-faker/json-schema-faker)<font style="color:rgb(35, 38, 59);">。</font>
 
-### <font style="color:rgb(35, 38, 59);">添加自定义路由</font>
+**提示**：使用[Faker](https://github.com/Marak/faker.js)、[Casual](https://github.com/boo1ean/casual)、[Chance](https://github.com/victorquinn/chancejs)或[JSON Schema Faker 等模块](https://github.com/json-schema-faker/json-schema-faker)。
 
-<font style="color:rgb(35, 38, 59);">创建一个</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">routes.json</font>**<font style="color:rgb(35, 38, 59);">文件。注意每条路线都以</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">/</font>**<font style="color:rgb(35, 38, 59);">.</font>
+### 添加自定义路由
+
+创建一个**routes.json**文件。注意每条路线都以**/**.
 
 ```json
 {
@@ -267,13 +267,13 @@ $ json-server index.js
 }
 ```
 
-<font style="color:rgb(35, 38, 59);">使用</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">--routes</font>**<font style="color:rgb(35, 38, 59);">选项启动 JSON 服务器。</font>
+使用**--routes**选项启动 JSON 服务器。
 
 ```bash
 json-server db.json --routes routes.json 
 ```
 
-<font style="color:rgb(35, 38, 59);">现在您可以使用其他路线访问资源。</font>
+现在您可以使用其他路线访问资源。
 
 ```bash
 /api/posts # → /posts
@@ -283,9 +283,9 @@ json-server db.json --routes routes.json
 /articles?id=1 # → /posts/1
 ```
 
-### <font style="color:rgb(35, 38, 59);">添加中间件</font>
+### 添加中间件
 
-<font style="color:rgb(35, 38, 59);">您可以使用以下</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">--middlewares</font>**<font style="color:rgb(35, 38, 59);">选项从 CLI 添加中间件：</font>
+您可以使用以下**--middlewares**选项从 CLI 添加中间件：
 
 ```javascript
 // hello.js
@@ -300,7 +300,7 @@ json-server db.json --middlewares ./hello.js
 json-server db.json --middlewares ./first.js ./second.js
 ```
 
-### <font style="color:rgb(35, 38, 59);">命令行使用</font>
+### 命令行使用
 
 ```javascript
 json-server [options] <source>
@@ -333,7 +333,7 @@ Examples:
 https://github.com/typicode/json-server
 ```
 
-<font style="color:rgb(35, 38, 59);">您还可以在</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">json-server.json</font>**<font style="color:rgb(35, 38, 59);">配置文件中设置选项。</font>
+您还可以在**json-server.json**配置文件中设置选项。
 
 ```json
 {
@@ -341,11 +341,11 @@ https://github.com/typicode/json-server
 }
 ```
 
-### <font style="color:rgb(35, 38, 59);">模块</font>
+### 模块
 
-<font style="color:rgb(35, 38, 59);">如果您需要添加身份验证、验证或</font>**<font style="color:rgb(35, 38, 59);">任何行为</font>**<font style="color:rgb(35, 38, 59);">，您可以将项目作为模块与其他 Express 中间件结合使用。</font>
+如果您需要添加身份验证、验证或**任何行为**，您可以将项目作为模块与其他 Express 中间件结合使用。
 
-#### <font style="color:rgb(35, 38, 59);">简单的例子</font>
+#### 简单的例子
 
 ```bash
 $ npm install json-server --save-dev
@@ -369,20 +369,20 @@ server.listen(3000, () => {
 $ node server.js 
 ```
 
-<font style="color:rgb(35, 38, 59);">您提供给</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.router</font>**<font style="color:rgb(35, 38, 59);">函数的路径是相对于您启动节点进程的目录的。如果从另一个目录运行上述代码，最好使用绝对路径：</font>
+您提供给**jsonServer.router**函数的路径是相对于您启动节点进程的目录的。如果从另一个目录运行上述代码，最好使用绝对路径：
 
 ```javascript
 const path = require('path')
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
 ```
 
-<font style="color:rgb(35, 38, 59);">对于内存数据库，只需将对象传递给</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.router()</font>**<font style="color:rgb(35, 38, 59);">.</font>
+对于内存数据库，只需将对象传递给**jsonServer.router()**.
 
-<font style="color:rgb(35, 38, 59);">另请注意，</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.router()</font>**<font style="color:rgb(35, 38, 59);">它可用于现有的 Express 项目。</font>
+另请注意，**jsonServer.router()**它可用于现有的 Express 项目。
 
-#### <font style="color:rgb(35, 38, 59);">自定义路由示例</font>
+#### 自定义路由示例
 
-<font style="color:rgb(35, 38, 59);">假设您想要一个回显查询参数的路由和另一个在创建的每个资源上设置时间戳的路由。</font>
+假设您想要一个回显查询参数的路由和另一个在创建的每个资源上设置时间戳的路由。
 
 ```javascript
 const jsonServer = require('json-server')
@@ -416,7 +416,7 @@ server.listen(3000, () => {
 })
 ```
 
-#### <font style="color:rgb(35, 38, 59);">访问控制示例</font>
+#### 访问控制示例
 
 ```javascript
 const jsonServer = require('json-server')
@@ -438,9 +438,9 @@ server.listen(3000, () => {
 })
 ```
 
-#### <font style="color:rgb(35, 38, 59);">自定义输出示例</font>
+#### 自定义输出示例
 
-<font style="color:rgb(35, 38, 59);">要修改响应，请覆盖</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">router.render</font>**<font style="color:rgb(35, 38, 59);">方法：</font>
+要修改响应，请覆盖**router.render**方法：
 
 ```javascript
 // 在这个例子中，返回的资源将被包装在一个 body 属性
@@ -451,7 +451,7 @@ router.render = (req, res) => {
 }
 ```
 
-<font style="color:rgb(35, 38, 59);">您可以为响应设置自己的状态代码：</font>
+您可以为响应设置自己的状态代码：
 
 ```javascript
 // 在这个例子中，我们模拟了一个服务器端错误响应
@@ -462,9 +462,9 @@ router.render = (req, res) => {
 }
 ```
 
-#### <font style="color:rgb(35, 38, 59);">重写器示例</font>
+#### 重写器示例
 
-<font style="color:rgb(35, 38, 59);">要添加重写规则，请使用</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.rewriter()</font>**<font style="color:rgb(35, 38, 59);">：</font>
+要添加重写规则，请使用**jsonServer.rewriter()**：
 
 ```javascript
 // 写在 server.use(router) 之前
@@ -474,33 +474,33 @@ server.use(jsonServer.rewriter({
 }))
 ```
 
-#### <font style="color:rgb(35, 38, 59);">在另一个端点上挂载 JSON 服务器示例</font>
+#### 在另一个端点上挂载 JSON 服务器示例
 
-<font style="color:rgb(35, 38, 59);">或者，您也可以将路由器安装在</font>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">/api</font>**<font style="color:rgb(35, 38, 59);">.</font>
+或者，您也可以将路由器安装在**/api**.
 
 ```javascript
 server.use('/api', router)
 ```
 
-#### <font style="color:rgb(35, 38, 59);">API</font>
+#### API
 
-<code>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.create()</font>**</code>
+<code>**jsonServer.create()**</code>
 
-<font style="color:rgb(35, 38, 59);">返回一个 Express 服务器。</font>
+返回一个 Express 服务器。
 
-<code>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.defaults([options])</font>**</code>
+<code>**jsonServer.defaults([options])**</code>
 
-<font style="color:rgb(35, 38, 59);">返回 JSON 服务器使用的中间件。</font>
+返回 JSON 服务器使用的中间件。
 
-* <font style="color:rgb(35, 38, 59);">选项</font>
-  * **<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">static</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">静态文件的路径</font>
-  * **<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">logger</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">启用记录器中间件（默认值：true）</font>
-  * **<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">bodyParser</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">启用 body-parser 中间件（默认值：true）</font>
-  * **<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">noCors</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">禁用 CORS（默认值：false）</font>
-  * **<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">readOnly</font>**<font style="color:rgb(35, 38, 59);"> </font><font style="color:rgb(35, 38, 59);">只接受 GET 请求（默认值：false）</font>
+* 选项
+  * **static** 静态文件的路径
+  * **logger** 启用记录器中间件（默认值：true）
+  * **bodyParser** 启用 body-parser 中间件（默认值：true）
+  * **noCors** 禁用 CORS（默认值：false）
+  * **readOnly** 只接受 GET 请求（默认值：false）
 
-<code>**<font style="color:rgb(216, 59, 100);background-color:rgb(249, 242, 244);">jsonServer.router([path|object])</font>**</code>
+<code>**jsonServer.router([path|object])**</code>
 
-<font style="color:rgb(35, 38, 59);">返回 JSON 服务器路由器。</font>
+返回 JSON 服务器路由器。
 
 

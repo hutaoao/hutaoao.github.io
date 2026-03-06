@@ -105,7 +105,7 @@ ES6 借鉴 C++、Java、C# 和 Python 语言，引入了for...of循环，作为*
 
 一个数据结构只要部署了Symbol.iterator属性，就被视为具有iterator接口，就可以用for...of循环遍历它的成员。也就是说，for...of循环内部调用的是数据结构的Symbol.iterator方法。
 
-for...of循环可以使用的范围包括\*\*<font style="color:#DF2A3F;">数组、Set 和 Map 结构、某些类似数组的对象</font>\*\*（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。
+for...of循环可以使用的范围包括\*\*数组、Set 和 Map 结构、某些类似数组的对象\*\*（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。
 
 JavaScript 原有的for...in循环，只能获得对象的键名，不能直接获取键值。ES6 提供for...of循环，允许遍历获得键值。
 

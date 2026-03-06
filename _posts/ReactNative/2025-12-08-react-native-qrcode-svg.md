@@ -7,7 +7,7 @@ categories: [ReactNative]
 ---
 # react-native-qrcode-svg
 
-<font style="color:rgb(51, 51, 51);">基于 react-native-svg 和 javascript-qrcode 的 React Native 二维码生成器。</font>
+基于 react-native-svg 和 javascript-qrcode 的 React Native 二维码生成器。
 
 ###
 

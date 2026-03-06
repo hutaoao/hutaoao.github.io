@@ -34,7 +34,7 @@ class 组件的生命周期方法 getDerivedStateFromProps
 
 
 **总结**  
-在 React.StrictMode 下，React 通过重复调用组件的一些钩子，从而使副作用更容易暴露出来；同时，<font style="color:#E8323C;">它仅在开发环境中运行，不会影响生产构建</font>。
+在 React.StrictMode 下，React 通过重复调用组件的一些钩子，从而使副作用更容易暴露出来；同时，它仅在开发环境中运行，不会影响生产构建。
 
 
 

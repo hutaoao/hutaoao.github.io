@@ -7,7 +7,7 @@ categories: [React]
 ---
 # 函数组件获取子组件实例（forwardRef）
 
-<font style="color:rgb(51, 51, 51);">基本用法</font>
+基本用法
 
 const Input = forwardRef((props, ref) => {
   const inputRef = useRef(null)
@@ -30,17 +30,17 @@ export default function Index() {
 
 ### useImperativeHandle
 
-<code><font style="color:rgb(51, 51, 51);">useImperativeHandle</font></code><font style="color:rgb(51, 51, 51);"> 和 </font><code><font style="color:rgb(51, 51, 51);">React.forwardRef</font></code><font style="color:rgb(51, 51, 51);"> 必须是配合使用的。</font><code><font style="color:rgb(51, 51, 51);">useImperativeHandle</font></code><font style="color:rgb(51, 51, 51);"> 可以让你在使用 </font><code><font style="color:rgb(51, 51, 51);">ref</font></code><font style="color:rgb(51, 51, 51);"> 时自定义暴露给父组件的实例值</font>
+<code>useImperativeHandle</code> 和 <code>React.forwardRef</code> 必须是配合使用的。<code>useImperativeHandle</code> 可以让你在使用 <code>ref</code> 时自定义暴露给父组件的实例值
 
-<code><font style="color:rgb(51, 51, 51);">useImperativeHandle(ref, createHandle, [deps])</font></code>
+<code>useImperativeHandle(ref, createHandle, [deps])</code>
 
-* <font style="color:rgb(51, 51, 51);">ref：定义 current 对象的 ref </font>
-* <font style="color:rgb(51, 51, 51);">createHandle：一个函数，返回值是一个对象，即这个 ref 的 current对象 </font>
-* <font style="color:rgb(51, 51, 51);">\[deps]：即依赖列表，当监听的依赖发生变化，useImperativeHandle 才会重新将子组件的实例属性输出到父组件\ </font><font style="color:rgb(51, 51, 51);">ref 的 current 属性上，如果为空数组，则不会重新输出。</font>
+* ref：定义 current 对象的 ref 
+* createHandle：一个函数，返回值是一个对象，即这个 ref 的 current对象 
+* \[deps]：即依赖列表，当监听的依赖发生变化，useImperativeHandle 才会重新将子组件的实例属性输出到父组件\ ref 的 current 属性上，如果为空数组，则不会重新输出。
 
-<font style="color:rgb(51, 51, 51);"></font>
 
-<font style="color:rgb(51, 51, 51);">一个关于 ref 转发的例子</font>
+
+一个关于 ref 转发的例子
 
 import React, {
   useState,

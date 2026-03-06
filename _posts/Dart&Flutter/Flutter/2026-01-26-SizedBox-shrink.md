@@ -7,19 +7,19 @@ categories: [Dart&Flutter, Flutter]
 ---
 # SizedBox.shrink()
 
-<code><font style="color:rgb(15, 17, 21);">SizedBox.shrink()</font></code><font style="color:rgb(15, 17, 21);"> 是 Flutter 中一个非常实用的组件，下面详细介绍它的作用和日常用法：</font>
+<code>SizedBox.shrink()</code> 是 Flutter 中一个非常实用的组件，下面详细介绍它的作用和日常用法：
 
-## <font style="color:rgb(15, 17, 21);">作用</font>
+## 作用
 
-<code><font style="color:rgb(15, 17, 21);">SizedBox.shrink()</font></code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">创建一个</font>**<font style="color:rgb(15, 17, 21);">尺寸为 0×0 的空盒子</font>**<font style="color:rgb(15, 17, 21);">，它：</font>
+<code>SizedBox.shrink()</code> 创建一个**尺寸为 0×0 的空盒子**，它：
 
-* <font style="color:rgb(15, 17, 21);">不占用任何布局空间</font>
-* <font style="color:rgb(15, 17, 21);">不渲染任何内容</font>
-* <font style="color:rgb(15, 17, 21);">是最轻量级的空组件</font>
+* 不占用任何布局空间
+* 不渲染任何内容
+* 是最轻量级的空组件
 
-## <font style="color:rgb(15, 17, 21);">日常用法</font>
+## 日常用法
 
-### <font style="color:rgb(15, 17, 21);">1. 条件渲染的空状态（最常用）</font>
+### 1. 条件渲染的空状态（最常用）
 
 dart
 
@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">2. 替代老的</font><font style="color:rgb(15, 17, 21);"> </font><code><font style="color:rgb(15, 17, 21);">Container()</font></code>
+### 2. 替代老的 <code>Container()</code>
 
 dart
 
@@ -43,7 +43,7 @@ condition ? MyWidget() : Container()
 condition ? MyWidget() : SizedBox.shrink()
 ```
 
-### <font style="color:rgb(15, 17, 21);">3. 作为默认值或占位符</font>
+### 3. 作为默认值或占位符
 
 dart
 
@@ -65,7 +65,7 @@ class MyWidget extends StatelessWidget {
 }
 ```
 
-### <font style="color:rgb(15, 17, 21);">4. 在 Row/Column 中条件渲染子项</font>
+### 4. 在 Row/Column 中条件渲染子项
 
 dart
 
@@ -79,7 +79,7 @@ Column(
 )
 ```
 
-### <font style="color:rgb(15, 17, 21);">5. 替代空的 Center 或 Padding</font>
+### 5. 替代空的 Center 或 Padding
 
 dart
 
@@ -91,17 +91,17 @@ condition ? MyWidget() : Center()
 condition ? MyWidget() : SizedBox.shrink()
 ```
 
-## <font style="color:rgb(15, 17, 21);">与其他空组件的对比</font>
+## 与其他空组件的对比
 
-| <font style="color:rgb(15, 17, 21);">组件</font> | <font style="color:rgb(15, 17, 21);">尺寸</font> | <font style="color:rgb(15, 17, 21);">渲染开销</font> | <font style="color:rgb(15, 17, 21);">适用场景</font> |
+| 组件 | 尺寸 | 渲染开销 | 适用场景 |
 | --- | --- | --- | --- |
-| <code><font style="color:rgb(15, 17, 21);">SizedBox.shrink()</font></code> | <font style="color:rgb(15, 17, 21);">0×0</font> | <font style="color:rgb(15, 17, 21);">最小</font> | **<font style="color:rgb(15, 17, 21);">推荐</font>**<font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">条件渲染的空状态</font> |
-| <code><font style="color:rgb(15, 17, 21);">Container()</font></code> | <font style="color:rgb(15, 17, 21);">父级约束</font> | <font style="color:rgb(15, 17, 21);">中等</font> | <font style="color:rgb(15, 17, 21);">需要装饰效果时</font> |
-| <code><font style="color:rgb(15, 17, 21);">SizedBox()</font></code> | <font style="color:rgb(15, 17, 21);">0×0</font> | <font style="color:rgb(15, 17, 21);">小</font> | <font style="color:rgb(15, 17, 21);">同 shrink()，但代码更长</font> |
-| <code><font style="color:rgb(15, 17, 21);">Offstage()</font></code> | <font style="color:rgb(15, 17, 21);">保持布局</font> | <font style="color:rgb(15, 17, 21);">中等</font> | <font style="color:rgb(15, 17, 21);">需要保留组件状态时</font> |
-| <code><font style="color:rgb(15, 17, 21);">Visibility(visible: false)</font></code> | <font style="color:rgb(15, 17, 21);">保持布局</font> | <font style="color:rgb(15, 17, 21);">中等</font> | <font style="color:rgb(15, 17, 21);">需要动画或保留状态时</font> |
+| <code>SizedBox.shrink()</code> | 0×0 | 最小 | **推荐** 条件渲染的空状态 |
+| <code>Container()</code> | 父级约束 | 中等 | 需要装饰效果时 |
+| <code>SizedBox()</code> | 0×0 | 小 | 同 shrink()，但代码更长 |
+| <code>Offstage()</code> | 保持布局 | 中等 | 需要保留组件状态时 |
+| <code>Visibility(visible: false)</code> | 保持布局 | 中等 | 需要动画或保留状态时 |
 
-## <font style="color:rgb(15, 17, 21);">实际示例</font>
+## 实际示例
 
 dart
 
@@ -131,14 +131,14 @@ Widget buildList() {
 }
 ```
 
-## <font style="color:rgb(15, 17, 21);">总结</font>
+## 总结
 
-**<font style="color:rgb(15, 17, 21);">优先使用</font>\*\*\*\*<font style="color:rgb(15, 17, 21);"> </font>**<code>**<font style="color:rgb(15, 17, 21);">SizedBox.shrink()</font>**</code><font style="color:rgb(15, 17, 21);"> </font><font style="color:rgb(15, 17, 21);">当你需要：</font>
+**优先使用\*\*\*\* **<code>**SizedBox.shrink()**</code> 当你需要：
 
-* <font style="color:rgb(15, 17, 21);">条件渲染的空状态</font>
-* <font style="color:rgb(15, 17, 21);">轻量级的占位符</font>
-* <font style="color:rgb(15, 17, 21);">避免不必要的布局计算</font>
+* 条件渲染的空状态
+* 轻量级的占位符
+* 避免不必要的布局计算
 
-<font style="color:rgb(15, 17, 21);">它的简洁性和高性能使其成为 Flutter 开发中最常用的空组件。</font>
+它的简洁性和高性能使其成为 Flutter 开发中最常用的空组件。
 
 

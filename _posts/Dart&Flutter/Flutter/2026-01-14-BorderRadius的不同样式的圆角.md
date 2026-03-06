@@ -11,8 +11,6 @@ categories: [Dart&Flutter, Flutter]
 
 ## 1. <code>BorderRadius.zero</code> - 无圆角
 
-dart
-
 ```dart
 BorderRadius.zero
 // 等同于：BorderRadius.all(Radius.zero)
@@ -22,8 +20,6 @@ BorderRadius.zero
 **效果：** 四个角都是直角\ **使用场景：** 不需要圆角时
 
 ## 2. <code>BorderRadius.circular()</code> - 统一圆角
-
-dart
 
 ```dart
 BorderRadius.circular(10.0)
@@ -35,8 +31,6 @@ BorderRadius.circular(10.0)
 
 ## 3. <code>BorderRadius.all()</code> - 统一圆角（更灵活）
 
-dart
-
 ```dart
 BorderRadius.all(Radius.circular(10.0))  // 圆形圆角
 BorderRadius.all(Radius.elliptical(20.0, 10.0))  // 椭圆圆角
@@ -45,8 +39,6 @@ BorderRadius.all(Radius.elliptical(20.0, 10.0))  // 椭圆圆角
 **效果：** 四个角都有相同的圆角（可以是圆形或椭圆形）\ **使用场景：** 需要统一但更复杂的圆角时
 
 ## 4. <code>BorderRadius.only()</code> - 指定角圆角
-
-dart
 
 ```dart
 BorderRadius.only(
@@ -61,8 +53,6 @@ BorderRadius.only(
 
 ## 5. <code>BorderRadius.vertical()</code> - 垂直方向圆角
 
-dart
-
 ```dart
 BorderRadius.vertical(
   top: Radius.circular(20.0),    // 顶部两个角
@@ -73,8 +63,6 @@ BorderRadius.vertical(
 **效果：** 顶部两个角相同，底部两个角相同\ **使用场景：** 列表项、卡片等需要顶部和底部不同圆角时
 
 ## 6. <code>BorderRadius.horizontal()</code> - 水平方向圆角
-
-dart
 
 ```dart
 BorderRadius.horizontal(
@@ -87,8 +75,6 @@ BorderRadius.horizontal(
 
 ## 7. <code>BorderRadius.lerp()</code> - 插值动画
 
-dart
-
 ```dart
 BorderRadius.lerp(start, end, t)
 // 在两个BorderRadius之间进行插值，用于动画
@@ -97,8 +83,6 @@ BorderRadius.lerp(start, end, t)
 **效果：** 根据时间因子 t 在 start 和 end 之间平滑过渡\ **使用场景：** 圆角动画效果
 
 ## 示例对比
-
-dart
 
 ```dart
 // 1. 无圆角
@@ -150,8 +134,6 @@ Container(
 ```
 
 ## 实际应用场景
-
-dart
 
 ```dart
 // 按钮 - 统一圆角

@@ -308,8 +308,6 @@ package com.xiaota.xtbp;
 
 ### 2. 导入语句（Import Statements）
 
-java
-
 ```plain
 import android.app.Activity;
 import android.util.Log;
@@ -332,8 +330,6 @@ public class AlicomCaptchaModule extends ReactContextBaseJavaModule
 
 ### 4. 常量定义
 
-java
-
 ```plain
 private static final String MODULE_NAME = "AlicomCaptchaModule";
 private static final String EVENT_VERIFY_RESULT = "onVerifyResult";
@@ -343,8 +339,6 @@ private static final String EVENT_VERIFY_RESULT = "onVerifyResult";
 * 命名规范：全大写，下划线分隔
 
 ### 5. 成员变量（Instance Variables）
-
-java
 
 ```plain
 private final ReactApplicationContext reactContext;
@@ -362,8 +356,6 @@ private boolean isInitialized = false;
 
 ### 1. 模块命名
 
-java
-
 ```plain
 @Override
 public String getName() {
@@ -374,8 +366,6 @@ public String getName() {
 * 必须重写的方法，返回模块名（JS端调用的名称）
 
 ### 2. 导出方法给 JS 调用
-
-java
 
 ```plain
 @ReactMethod
@@ -390,8 +380,6 @@ public void init(ReadableMap config, Promise promise) {
 
 ### 3. 向 JS 端发送事件
 
-java
-
 ```plain
 private void sendEvent(String eventName, WritableMap params) {
     reactContext
@@ -404,8 +392,6 @@ private void sendEvent(String eventName, WritableMap params) {
 * <code>**WritableMap**</code>：可写入的Map，用于构造要传递的数据
 
 ### 4. 数据类型转换
-
-java
 
 ```plain
 // JS对象 → Java
@@ -427,8 +413,6 @@ resultParams.putString("message", "成功");
 
 ### 1. Activity 相关
 
-java
-
 ```plain
 Activity currentActivity = getCurrentActivity();
 if (currentActivity == null) {
@@ -441,8 +425,6 @@ if (currentActivity == null) {
 * 所有UI操作必须在有Activity的情况下进行
 
 ### 2. 主线程UI操作
-
-java
 
 ```plain
 currentActivity.runOnUiThread(new Runnable() {
@@ -459,8 +441,6 @@ currentActivity.runOnUiThread(new Runnable() {
 
 ### 3. 日志打印
 
-java
-
 ```plain
 Log.d(TAG, "调试信息");    // Debug
 Log.i(TAG, "普通信息");    // Info  
@@ -471,8 +451,6 @@ Log.e(TAG, "错误信息");    // Error
 * 不同级别：VERBOSE, DEBUG, INFO, WARN, ERROR
 
 ### 4. 异常处理
-
-java
 
 ```plain
 try {
@@ -500,8 +478,6 @@ public class AlicomCaptchaPackage implements ReactPackage
 
 ### 2. 注册Native模块
 
-java
-
 ```plain
 @Override
 public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -515,8 +491,6 @@ public List<NativeModule> createNativeModules(ReactApplicationContext reactConte
 * React Native启动时会自动扫描并注册这些模块
 
 ### 3. 空视图管理器
-
-java
 
 ```plain
 @Override
@@ -533,8 +507,6 @@ public List<ViewManager> createViewManagers(ReactApplicationContext reactContext
 
 ### 1. JSON 处理
 
-java
-
 ```plain
 import org.json.JSONObject;
 // 解析JSON字符串
@@ -543,8 +515,6 @@ String token = responseJson.getString("token");
 ```
 
 ### 2. 集合类
-
-java
 
 ```plain
 import java.util.ArrayList;

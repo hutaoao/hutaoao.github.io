@@ -48,8 +48,6 @@ Padding(
 
 <code>**Container**</code>** \*\*\*\*代码：**
 
-dart
-
 ```dart
 Container(
   padding: const EdgeInsets.all(16.0),
@@ -70,8 +68,6 @@ Container(
 **当你需要同时设置多个属性时，使用\*\*\*\* **<code>**Container**</code>** \*\*\*\*更简洁、更高效。**
 
 例如，你需要一个同时拥有**外边距(Margin)、内边距(Padding)、背景色(Background Color)** 和**圆角(Border Radius)** 的盒子：
-
-dart
 
 ```dart
 // 使用 Container (推荐：代码简洁，组合成一个Widget)

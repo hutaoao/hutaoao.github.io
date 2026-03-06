@@ -15,8 +15,6 @@ categories: [Dart&Flutter, Flutter]
 
 ### 核心属性
 
-dart
-
 ```dart
 Offstage({
   Key? key,
@@ -31,8 +29,6 @@ Offstage({
 * <code>**offstage = false**</code>：子 widget 正常显示
 
 ### 实际效果
-
-dart
 
 ```dart
 // 这个 Text 不会显示，但它的状态被保持
@@ -49,8 +45,6 @@ Offstage(
 ```
 
 ### 在 Tab 切换中的应用
-
-dart
 
 ```dart
 Stack(
@@ -75,8 +69,6 @@ Stack(
 
 ### 核心属性
 
-dart
-
 ```dart
 TickerMode({
   Key? key,
@@ -91,8 +83,6 @@ TickerMode({
 * <code>**enabled = false**</code>：子 widget 中的动画暂停，但动画状态被保持
 
 ### 实际效果
-
-dart
 
 ```dart
 // 这个动画会运行
@@ -124,8 +114,6 @@ TickerMode(
 
 ### 典型用法
 
-dart
-
 ```dart
 Offstage(
   offstage: !isVisible,  // 控制显示/隐藏
@@ -139,8 +127,6 @@ Offstage(
 ## 在 Tab 应用中的完整示例
 
 ### 优化后的 Tab 控制器
-
-dart
 
 ```dart
 class TabController extends StatefulWidget {

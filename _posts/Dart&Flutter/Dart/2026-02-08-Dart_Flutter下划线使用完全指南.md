@@ -33,8 +33,6 @@ categories: [Dart&Flutter, Dart]
 
 #### 公开类（可被其他文件导入）
 
-dart
-
 ```dart
 // 其他文件可以：import 'xxx.dart' 然后使用 MyClass
 class MyClass {
@@ -43,8 +41,6 @@ class MyClass {
 ```
 
 #### 私有类（文件内部使用）
-
-dart
 
 ```dart
 // 只能在当前 .dart 文件中使用
@@ -67,8 +63,6 @@ class InfoDialog extends StatelessWidget {
 
 #### 公开成员
 
-dart
-
 ```dart
 class Counter {
   // 公开变量（通常不推荐，应通过getter暴露）
@@ -82,8 +76,6 @@ class Counter {
 ```
 
 #### 私有成员
-
-dart
 
 ```dart
 class Counter {
@@ -108,8 +100,6 @@ class Counter {
 
 **重要限制**：
 
-dart
-
 ```dart
 // 同一文件中的不同类不能互相访问私有成员
 class ClassA {
@@ -128,8 +118,6 @@ class ClassB {
 
 #### 公开顶层定义
 
-dart
-
 ```dart
 // constants.dart
 const String APP_NAME = 'MyApp';
@@ -139,8 +127,6 @@ const Color PRIMARY_COLOR = Colors.blue;
 ```
 
 #### 私有顶层定义
-
-dart
 
 ```dart
 // utils.dart
@@ -159,8 +145,6 @@ int publicCalculate(int a, int b) {
 ### 1. StatefulWidget 模式
 
 #### 标准写法（单下划线）
-
-dart
 
 ```dart
 class MyWidget extends StatefulWidget {
@@ -190,8 +174,6 @@ class _MyWidgetState extends State<MyWidget> {
 
 #### 双下划线写法（强调关联性）
 
-dart
-
 ```dart
 class MapDialog extends StatefulWidget {
   @override
@@ -209,8 +191,6 @@ class __MapDialogState extends State<MapDialog> {
 
 #### 单例模式
 
-dart
-
 ```dart
 class AppPreferences {
   static final AppPreferences _instance = AppPreferences._internal();
@@ -226,8 +206,6 @@ class AppPreferences {
 ```
 
 #### Builder 模式
-
-dart
 
 ```dart
 class ApiClient {
@@ -253,8 +231,6 @@ class ApiClient {
 
 ### 3. 混入（Mixin）中的下划线
 
-dart
-
 ```dart
 // 公开的混入
 mixin ValidationMixin {
@@ -273,8 +249,6 @@ mixin ValidationMixin {
 ## 五、双下划线的具体使用场景
 
 ### 1. 表示层级关系
-
-dart
 
 ```dart
 class ComplexComponent {
@@ -296,8 +270,6 @@ class ComplexComponent {
 ```
 
 ### 2. 避免命名冲突
-
-dart
 
 ```dart
 // 文件内有多个相关类时
@@ -321,8 +293,6 @@ class __MyDialogState extends State<MyDialog> {
 
 ### 3. 临时或实验性代码标记
 
-dart
-
 ```dart
 class ExperimentalFeature {
   void stableMethod() {
@@ -339,8 +309,6 @@ class ExperimentalFeature {
 ## 六、最佳实践指南
 
 ### 1. 默认使用私有（推荐）
-
-dart
 
 ```dart
 class UserRepository {
@@ -364,8 +332,6 @@ class UserRepository {
 
 ### 2. 使用 Getter/Setter 控制访问
 
-dart
-
 ```dart
 class Counter {
   // 私有变量
@@ -387,8 +353,6 @@ class Counter {
 ```
 
 ### 3. Widget 开发规范
-
-dart
 
 ```dart
 // ✅ 推荐：标准的 Flutter Widget 写法
@@ -419,8 +383,6 @@ class CustomButton extends StatelessWidget {
 ```
 
 ### 4. 状态管理组件
-
-dart
 
 ```dart
 class AuthProvider extends ChangeNotifier {
@@ -463,8 +425,6 @@ class AuthProvider extends ChangeNotifier {
 
 ### 1. 错误用法
 
-dart
-
 ```dart
 // ❌ 错误：尝试跨类访问私有成员
 class ClassA {
@@ -489,8 +449,6 @@ void main() {
 
 ### 2. 测试中的处理
 
-dart
-
 ```dart
 // 在测试中，如果需要访问私有成员进行测试
 // 考虑以下几种方案：
@@ -513,8 +471,6 @@ class TestableCounter extends Counter {
 ```
 
 ### 3. 序列化注意事项
-
-dart
 
 ```dart
 class UserModel {
@@ -555,8 +511,6 @@ text
 
 ### 3. 文档注释规范
 
-dart
-
 ```dart
 /// 用户数据模型
 class UserModel {
@@ -589,8 +543,6 @@ class UserModel {
 * **开源库**：仔细设计公开 API，内部实现充分封装
 
 ### 最终建议代码模板
-
-dart
 
 ```dart
 // 文件：my_widget.dart

@@ -11,8 +11,6 @@ categories: [Dart&Flutter, Dart]
 
 ## 1. for 循环 - 最基础的方式
 
-dart
-
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
 
@@ -24,8 +22,6 @@ for (int i = 0; i < fruits.length; i++) {
 
 ## 2. for-in 循环 - 简洁的遍历
 
-dart
-
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
 
@@ -36,8 +32,6 @@ for (String fruit in fruits) {
 ```
 
 ## 3. forEach 方法 - 函数式编程风格
-
-dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -52,8 +46,6 @@ fruits.forEach((fruit) => print('Fruit: $fruit'));
 ```
 
 ## 4. map 方法 - 转换数组元素
-
-dart
 
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
@@ -71,8 +63,6 @@ print(capitalizedFruits); // [APPLE, BANANA, ORANGE]
 
 ## 5. where 方法 - 过滤数组元素
 
-dart
-
 ```dart
 List<int> numbers = [1, 2, 3, 4, 5, 6];
 
@@ -82,8 +72,6 @@ print(evenNumbers); // [2, 4, 6]
 ```
 
 ## 6. expand 方法 - 展开嵌套数组
-
-dart
 
 ```dart
 List<List<int>> nestedList = [
@@ -99,8 +87,6 @@ print(flatList); // [1, 2, 3, 4, 5, 6]
 
 ## 7. 使用索引的 forEach
 
-dart
-
 ```dart
 List<String> fruits = ['apple', 'banana', 'orange'];
 
@@ -111,8 +97,6 @@ fruits.asMap().forEach((index, fruit) {
 ```
 
 ## 8. 在 Flutter Widget 中的实际应用
-
-dart
 
 ```dart
 class FruitList extends StatelessWidget {
@@ -146,8 +130,6 @@ class FruitList extends StatelessWidget {
 ```
 
 ## 9. 其他有用的遍历方法
-
-dart
 
 ```dart
 List<int> numbers = [1, 2, 3, 4, 5];

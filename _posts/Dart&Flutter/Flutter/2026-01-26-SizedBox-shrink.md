@@ -21,8 +21,6 @@ categories: [Dart&Flutter, Flutter]
 
 ### 1. 条件渲染的空状态（最常用）
 
-dart
-
 ```dart
 Widget build(BuildContext context) {
   return isLoading 
@@ -33,8 +31,6 @@ Widget build(BuildContext context) {
 
 ### 2. 替代老的 <code>Container()</code>
 
-dart
-
 ```dart
 // 不推荐 - Container() 有额外的绘制开销
 condition ? MyWidget() : Container()
@@ -44,8 +40,6 @@ condition ? MyWidget() : SizedBox.shrink()
 ```
 
 ### 3. 作为默认值或占位符
-
-dart
 
 ```dart
 class MyWidget extends StatelessWidget {
@@ -67,8 +61,6 @@ class MyWidget extends StatelessWidget {
 
 ### 4. 在 Row/Column 中条件渲染子项
 
-dart
-
 ```dart
 Column(
   children: [
@@ -80,8 +72,6 @@ Column(
 ```
 
 ### 5. 替代空的 Center 或 Padding
-
-dart
 
 ```dart
 // 不推荐
@@ -102,8 +92,6 @@ condition ? MyWidget() : SizedBox.shrink()
 | <code>Visibility(visible: false)</code> | 保持布局 | 中等 | 需要动画或保留状态时 |
 
 ## 实际示例
-
-dart
 
 ```dart
 // 用户头像条件渲染

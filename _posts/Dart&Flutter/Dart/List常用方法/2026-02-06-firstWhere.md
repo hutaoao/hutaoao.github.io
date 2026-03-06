@@ -11,8 +11,6 @@ categories: [Dart&Flutter, Dart, List常用方法]
 
 ## 方法定义
 
-dart
-
 ```dart
 E firstWhere(
   bool test(E element), 
@@ -29,8 +27,6 @@ E firstWhere(
 
 ### 1. 基本查找
 
-dart
-
 ```dart
 List<String> names = ['Alice', 'Bob', 'Charlie', 'David'];
 
@@ -45,8 +41,6 @@ print(result2); // 输出: Charlie
 
 ### 2. 使用 orElse（推荐）
 
-dart
-
 ```dart
 List<int> numbers = [1, 2, 3];
 
@@ -59,8 +53,6 @@ print(result); // 输出: -1
 ```
 
 ### 3. 不使用 orElse 的风险
-
-dart
 
 ```dart
 List<int> numbers = [1, 2, 3];
@@ -77,8 +69,6 @@ try {
 
 ### 1. 您的用例
 
-dart
-
 ```dart
 setState(() {
   currentOrgName = [
@@ -89,8 +79,6 @@ setState(() {
 ```
 
 ### 2. 用户角色权限查找
-
-dart
 
 ```dart
 class User {
@@ -114,8 +102,6 @@ User admin = users.firstWhere(
 ```
 
 ### 3. 产品库存查找
-
-dart
 
 ```dart
 class Product {
@@ -142,8 +128,6 @@ Product availableProduct = products.firstWhere(
 
 ### 1. 复杂条件查找
 
-dart
-
 ```dart
 class Person {
   final String name;
@@ -168,8 +152,6 @@ Person result = people.firstWhere(
 
 ### 2. 链式调用
 
-dart
-
 ```dart
 List<String> data = ['', 'hello', '', 'world', ''];
 
@@ -183,8 +165,6 @@ String result = data
 ```
 
 ### 3. 与其他方法结合
-
-dart
 
 ```dart
 List<Map<String, dynamic>> users = [
@@ -206,8 +186,6 @@ String userName = users
 
 <code>firstWhere</code> 在找到第一个匹配元素后会立即返回，不会遍历整个列表，因此性能很好。
 
-dart
-
 ```dart
 List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -219,8 +197,6 @@ print(result); // 输出: 3
 ## 错误处理最佳实践
 
 **推荐总是使用\*\*\*\* **<code>**orElse**</code>：
-
-dart
 
 ```dart
 // ✅ 推荐 - 安全

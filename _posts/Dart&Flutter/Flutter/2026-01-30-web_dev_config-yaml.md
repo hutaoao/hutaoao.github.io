@@ -35,8 +35,6 @@ Flutter 3.38 为 Web 端开发引入了一个非常实用的新功能：<code>we
 
 一个基础的配置文件，用于配置服务器和启用HTTPS，看起来是这样的：
 
-yaml
-
 ```yaml
 # web_dev_config.yaml
 server:
@@ -55,8 +53,6 @@ server:
 
 假设你的后端API运行在 <code>http://localhost:5000</code>，并且所有接口都以 <code>/api</code> 开头，可以这样配置：
 
-yaml
-
 ```yaml
 server:
   proxy:
@@ -69,8 +65,6 @@ server:
 #### 路径重写
 
 如果你的后端路径结构不同，可以使用 <code>replace</code> 选项进行重写。例如，将请求到 <code>/auth/</code> 的路径代理到后端并替换为 <code>/oauth/</code>：
-
-yaml
 
 ```yaml
 server:

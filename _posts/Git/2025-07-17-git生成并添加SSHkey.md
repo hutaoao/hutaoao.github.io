@@ -25,7 +25,7 @@ categories: [Git]
 
 ④  ssh-keygen -t rsa -C "1234@qq.com"
 
-![](http://note.youdao.com/yws/res/895/FE6569B73A54400594E2422057FD1072?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_aHV0YW9hbw%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+![FE6569B73A54400594E2422057FD1072](http://note.youdao.com/yws/res/895/FE6569B73A54400594E2422057FD1072?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_aHV0YW9hbw%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
 
 
 

@@ -305,9 +305,9 @@ categories: [Html、Css]
       <div id="dialogContainer" class="dialog-container">
           <div class="dialog-box">
               <div class="dialog-title">居中弹出框</div>
-              <a onclick="$('#dialogContainer').hide();" class="dialog-close">关闭</a>
+              关闭
               <div class="dialog-body">
-                <img src="logo.png" class="demo-image" />
+                <img src="logo.png" alt="logo" class="demo-image" />
               </div>
           </div>
       </div>
@@ -420,9 +420,9 @@ categories: [Html、Css]
       <div id="dialogContainer" class="dialog-container">
           <div class="dialog-box">
               <div class="dialog-title">居中弹出框</div>
-              <a onclick="$('#dialogContainer').hide();" class="dialog-close">关闭</a>
+              关闭
               <div class="dialog-body">
-                <img src="logo.png" class="demo-image" />
+                <img src="logo.png" alt="logo" class="demo-image" />
               </div>
           </div>
       </div>
@@ -519,7 +519,7 @@ categories: [Html、Css]
       <button onclick="$('#dialogContainer').show();">点击显示大图</button>
       <div id="dialogContainer" class="dialog-container" onclick="$('#dialogContainer').hide();">
           <div class="dialog-box">
-              <img src="image.jpg" class="demo-image" />
+              <img src="image.jpg" alt="image" class="demo-image" />
           </div>
       </div>
   </body>

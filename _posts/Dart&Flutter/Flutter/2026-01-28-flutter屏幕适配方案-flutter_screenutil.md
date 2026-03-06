@@ -326,9 +326,9 @@ MediaQuery(
 
 <font style="color:rgb(31, 35, 40);">效果:</font>
 
-![](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_zh.png)
+![demo zh png](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_zh.png)
 
-<font style="color:rgb(31, 35, 40);"> </font>![](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_tablet_zh.png)
+<font style="color:rgb(31, 35, 40);"> </font>![demo tablet zh png](https://github.com/OpenFlutter/flutter_screenutil/raw/master/demo_tablet_zh.png)
 
 
 

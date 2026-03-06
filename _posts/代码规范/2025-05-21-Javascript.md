@@ -321,7 +321,7 @@ JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语
 
 团队中对于是否应该使用分号，也有许多争论，本规范推荐不使用分号，因为我们认为好的工程师应该知道什么时候该加，什么时候不该加。
 
-相关参考 ：[semi](http://eslint.org/docs/rules/semi)
+相关参考 ：[semi](https://eslint.org/docs/rules/semi)
 
 ### 代码块空格
 

@@ -11,7 +11,7 @@ categories: [MacBookPro(M1)]
 
 #### 什么是gem
 
-Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <http://rubygems.org/> ）源来查找、安装、升级和卸载软件包，非常的便捷。
+Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <https://rubygems.org/> ）源来查找、安装、升级和卸载软件包，非常的便捷。
 
 > 类似于node的npm
 

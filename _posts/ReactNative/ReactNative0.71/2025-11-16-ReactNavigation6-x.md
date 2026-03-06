@@ -30,7 +30,7 @@ categories: [ReactNative, ReactNative0.71]
 >
 > 过程中编译可能还会报错，可以尝试 `npm start --reset-cache`
 
-<details class="lake-collapse"><summary id="u2bf75247"><span class="ne-text" style="font-size: 16px">具体参考下面截图</span></summary><p id="udcaf3813" class="ne-p"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797203778-42e68bb3-a414-4dab-bf3e-2995b861dbbf.png" width="824" id="u89b5e636" class="ne-image" style="font-size: 16px"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797271782-71528f37-7a1b-41f8-9b59-5b99fa5a3fce.png" width="1972" id="u9cb16874" class="ne-image" style="font-size: 16px"></p></details>
+<details class="lake-collapse"><summary id="u2bf75247"><span class="ne-text" style="font-size: 16px">具体参考下面截图</span></summary><p id="udcaf3813" class="ne-p"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797203778-42e68bb3-a414-4dab-bf3e-2995b861dbbf.png" alt="1683797203778 42e68bb3 a414 4dab bf3e 2995b861dbbf" width="824" id="u89b5e636" class="ne-image" style="font-size: 16px"><img src="https://cdn.nlark.com/yuque/0/2023/png/256708/1683797271782-71528f37-7a1b-41f8-9b59-5b99fa5a3fce.png" alt="1683797203778 42e68bb3 a414 4dab bf3e 2995b861dbbf" width="1972" id="u9cb16874" class="ne-image" style="font-size: 16px"></p></details>
 ## 基础用法
 ### 路由跳转
 1. `navigation.navigate('RouterName')�` 跳转到指定路由（当前路由不做跳转）

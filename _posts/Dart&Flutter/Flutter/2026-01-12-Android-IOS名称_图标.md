@@ -37,7 +37,7 @@ categories: [Dart&Flutter, Flutter]
 
 使用 [图标工厂](https://icon.wuruihong.com/) 自动生成各尺寸图标
 
-![1728702151540-92fd2b59-3abd-4e80-a707-1ef79fe415af.png](./img/JWl_kmd8l60f4qCu/1728702151540-92fd2b59-3abd-4e80-a707-1ef79fe415af-352538.png)
+![1728702151540-92fd2b59-3abd-4e80-a707-1ef79fe415af.png](/assets/img/posts/Dart&Flutter/1728702151540-92fd2b59-3abd-4e80-a707-1ef79fe415af-352538.png)
 
 把生成好的图标替换掉 ios/Runner/Assets.xcassets/AppIcon.appiconset 即可：
 

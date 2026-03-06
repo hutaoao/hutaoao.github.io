@@ -370,7 +370,7 @@ Symbol.keyFor(s2) // undefined
 
 
 
-> 有11个方法，具体可以查看 [http://es6.ruanyifeng.com/#docs/symbol](http://es6.ruanyifeng.com/#docs/symbol)
+> 有11个方法，具体可以查看 [https://es6.ruanyifeng.com/#docs/symbol](https://es6.ruanyifeng.com/#docs/symbol)
 >
 
 

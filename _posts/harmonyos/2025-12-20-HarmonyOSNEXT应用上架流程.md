@@ -7,7 +7,7 @@ categories: [HarmonyOS]
 ---
 # HarmonyOS NEXT应用上架流程
 
-![1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888.png](./img/_Mm2LCAuJI2Q77GI/1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888-257284.png)
+![1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888.png](/assets/img/posts/harmonyos/1736734764939-42143fb1-2ac5-45b2-9e33-515a6c350888-257284.png)
 
 ### <font style="color:rgb(51, 51, 51);">生成密钥和证书请求文件（p12）</font>
 
@@ -21,27 +21,27 @@ categories: [HarmonyOS]
 * Password：设置密钥库密码，必须由大写字母、小写字母、数字和特殊符号中的两种以上字符的组合，长度至少为8位。请记住该密码，后续签名配置需要使用。
 * Confirm Password：再次输入密钥库密码。
 
-![1736734893118-d1baeb99-074a-4795-a207-392128975175.png](./img/_Mm2LCAuJI2Q77GI/1736734893118-d1baeb99-074a-4795-a207-392128975175-789747.png)
+![1736734893118-d1baeb99-074a-4795-a207-392128975175.png](/assets/img/posts/harmonyos/1736734893118-d1baeb99-074a-4795-a207-392128975175-789747.png)
 
-![1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae.png](./img/_Mm2LCAuJI2Q77GI/1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae-655807.png)
+![1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae.png](/assets/img/posts/harmonyos/1736734915046-5c0ec4d3-7af1-4bed-a2d3-90fd45a8b0ae-655807.png)
 
 <font style="color:rgba(0, 0, 0, 0.75);">在Generate Key and CSR界面中，继续填写密钥信息后，单击Next。</font>
 
 * <font style="color:rgba(0, 0, 0, 0.75);">Alias：密钥的别名信息，用于标识密钥名称。请记住该别名，后续签名配置需要使用。</font>
 * <font style="color:rgba(0, 0, 0, 0.75);">Password：密钥对应的密码，与密钥库密码保持一致，无需手动输入。</font>
 
-![1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92.png](./img/_Mm2LCAuJI2Q77GI/1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92-679849.png)
+![1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92.png](/assets/img/posts/harmonyos/1736734989563-aece6040-4ca2-4ceb-88c3-261e81b75f92-679849.png)
 
-<font style="color:rgb(77, 77, 77);">在Generate Key and CSR界面，设置CSR文件存储路径和CSR文件名。</font>![1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d.png](./img/_Mm2LCAuJI2Q77GI/1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d-241512.png)
+<font style="color:rgb(77, 77, 77);">在Generate Key and CSR界面，设置CSR文件存储路径和CSR文件名。</font>![1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d.png](/assets/img/posts/harmonyos/1736735022463-b5457ad0-28d4-48be-a308-232bb5857e6d-241512.png)
 
 <font style="color:rgb(77, 77, 77);">单击OK按钮，创建CSR文件成功，可以在存储路径下获取生成的密钥库文件（.p12）和证书请求文件（.csr）。</font>
 
-![1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56.png](./img/_Mm2LCAuJI2Q77GI/1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56-182405.png)
+![1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56.png](/assets/img/posts/harmonyos/1736735047270-71e153fb-4540-4166-a5ca-22bc23bb4a56-182405.png)
 
 ### <font style="color:rgb(79, 79, 79);">申请发布证书（.cer）</font>
 
 <font style="color:rgb(77, 77, 77);">登录AppGallery Connect，选择“证书、APP ID和Profile”</font>\ <font style="color:rgb(77, 77, 77);">在左侧导航栏选择“证书、APP ID和Profile > 证书”，进入“证书”页面，点击“新增证书”</font>\
-![1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f.png](./img/_Mm2LCAuJI2Q77GI/1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f-691562.png)
+![1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f.png](/assets/img/posts/harmonyos/1736735317806-6a14788a-8e84-4e82-bfb6-a8c755407d8f-691562.png)
 
 <font style="color:rgb(77, 77, 77);"></font>
 
@@ -51,7 +51,7 @@ categories: [HarmonyOS]
 2. <font style="color:rgb(51, 51, 51);">找到对应项目，点击项目卡片中需要发布的元服务。</font>
 3. <font style="color:rgb(51, 51, 51);">导航选择“HarmonyOS应用 > HAP Provision Profile管理”，进入“管理HAP Provision Profile”页面，点击“添加”。</font>
 
-![1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6.png](./img/_Mm2LCAuJI2Q77GI/1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6-572930.png)
+![1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6.png](/assets/img/posts/harmonyos/1736735397421-9dd3746a-9b90-45bb-aba0-8d6627f843f6-572930.png)
 
 <font style="color:rgb(77, 77, 77);"></font>
 
@@ -65,7 +65,7 @@ categories: [HarmonyOS]
 
 ### <font style="color:rgb(79, 79, 79);">配置项目</font>
 
-![1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d.png](./img/_Mm2LCAuJI2Q77GI/1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d-471167.png)
+![1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d.png](/assets/img/posts/harmonyos/1736735157972-db08429c-1d3a-410e-bbd2-edc0f072567d-471167.png)
 
 ### 使用真机调试
 
@@ -73,7 +73,7 @@ categories: [HarmonyOS]
 
 ### 打生产包
 
-![1736735440240-39247552-2271-4524-921e-676340bd3aed.png](./img/_Mm2LCAuJI2Q77GI/1736735440240-39247552-2271-4524-921e-676340bd3aed-618416.png)
+![1736735440240-39247552-2271-4524-921e-676340bd3aed.png](/assets/img/posts/harmonyos/1736735440240-39247552-2271-4524-921e-676340bd3aed-618416.png)
 
 > 真机调试
 >
@@ -81,7 +81,7 @@ categories: [HarmonyOS]
 
 ### 软件包上传
 
-![1736735524993-990892eb-ef77-4935-a895-77701f00d057.png](./img/_Mm2LCAuJI2Q77GI/1736735524993-990892eb-ef77-4935-a895-77701f00d057-585535.png)
+![1736735524993-990892eb-ef77-4935-a895-77701f00d057.png](/assets/img/posts/harmonyos/1736735524993-990892eb-ef77-4935-a895-77701f00d057-585535.png)
 
 
 > 更新: 2025-01-17 11:10:11  

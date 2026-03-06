@@ -27,7 +27,7 @@ categories: [Javascript]
 
 大家可以亲自测试一下，手动打开的新标签和点A标签打开的新标签效果完全不一样。
 
-![1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf.gif](./img/571858_xioi0iu7lqe9gyyh/1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf-048708.gif)
+![1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf.gif](/assets/img/posts/Javascript/1584608752458-e6e9f43b-ac2c-44a2-86df-363c6a3bfaaf-048708.gif)
 
 # <font style="background-color:#3199E4;">20180522更新</font>
 

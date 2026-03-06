@@ -84,7 +84,7 @@ function ChildScreen({ navigation, route }) {
 
 此方案会有警告：
 
-![1726797833196-a9c43173-4459-4b0c-a1e2-ad4f7c2cb176.png](./img/zDG1SHbMtB8VcELT/1726797833196-a9c43173-4459-4b0c-a1e2-ad4f7c2cb176-245678.png)
+![1726797833196-a9c43173-4459-4b0c-a1e2-ad4f7c2cb176.png](/assets/img/posts/ReactNative/1726797833196-a9c43173-4459-4b0c-a1e2-ad4f7c2cb176-245678.png)
 
 可以使用以下方法忽略警告
 

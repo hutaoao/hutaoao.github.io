@@ -209,7 +209,7 @@ function test() {
 test()
 ```
 
-![1704939804278-6847dc27-8764-46ac-927b-661bf537282f.png](./img/k_tftlCwWFPmAXEB/1704939804278-6847dc27-8764-46ac-927b-661bf537282f-723563.png)
+![1704939804278-6847dc27-8764-46ac-927b-661bf537282f.png](/assets/img/posts/Javascript/1704939804278-6847dc27-8764-46ac-927b-661bf537282f-723563.png)
 
 <font style="color:rgb(64, 64, 64);">解析：setTimeout的第一个参数是字符串时，JS内部将会调用 </font><code>**<font style="color:rgb(64, 64, 64);">eval()</font>**</code><font style="color:rgb(64, 64, 64);"> 函数将字符串转换为JS可执行代码，但是为什么找不到 fun 函数？</font>
 
@@ -225,7 +225,7 @@ function test() {
 test()
 ```
 
-![1704939853541-988686be-3cea-4065-a9c3-fc74c1ef1f35.png](./img/k_tftlCwWFPmAXEB/1704939853541-988686be-3cea-4065-a9c3-fc74c1ef1f35-862387.png)
+![1704939853541-988686be-3cea-4065-a9c3-fc74c1ef1f35.png](/assets/img/posts/Javascript/1704939853541-988686be-3cea-4065-a9c3-fc74c1ef1f35-862387.png)
 
 解析：从执行结果可以看出this绑定window全局对象，因此 <code>**eval()**</code> 执行动态脚本的时，在全局作用域并没有找到定义在函数test内部的 fun函数，所以会报错。
 

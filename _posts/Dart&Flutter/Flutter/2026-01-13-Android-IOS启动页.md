@@ -11,11 +11,11 @@ categories: [Dart&Flutter, Flutter]
 
 替换以下文件
 
-![1712472617100-1ecb18d2-021e-4652-b292-49dd306a543f.png](./img/OZDtVHdQXSr3Xz8f/1712472617100-1ecb18d2-021e-4652-b292-49dd306a543f-115325.png)
+![1712472617100-1ecb18d2-021e-4652-b292-49dd306a543f.png](/assets/img/posts/Dart&Flutter/1712472617100-1ecb18d2-021e-4652-b292-49dd306a543f-115325.png)
 
 或者直接修改：
 
-![1713854099811-77e5d3dd-fbad-474f-bfe1-a5fae6ad2a94.png](./img/OZDtVHdQXSr3Xz8f/1713854099811-77e5d3dd-fbad-474f-bfe1-a5fae6ad2a94-733417.png)
+![1713854099811-77e5d3dd-fbad-474f-bfe1-a5fae6ad2a94.png](/assets/img/posts/Dart&Flutter/1713854099811-77e5d3dd-fbad-474f-bfe1-a5fae6ad2a94-733417.png)
 
 然后打开Xcode：
 
@@ -23,15 +23,15 @@ categories: [Dart&Flutter, Flutter]
 
 <font style="color:rgb(64, 64, 64);">将上面填空处都填 0，然后点击 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Add 4 Constraints</font><font style="color:rgb(64, 64, 64);">。</font>
 
-![1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6.png](./img/OZDtVHdQXSr3Xz8f/1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6-824699.png)
+![1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6.png](/assets/img/posts/Dart&Flutter/1712472811748-07c857b1-3820-4943-83eb-d7a41ae1e6f6-824699.png)
 
 打开LaunchScreen，<font style="color:rgb(64, 64, 64);">将 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Content Mode</font><font style="color:rgb(64, 64, 64);"> 修改为 </font><font style="color:rgb(199, 37, 78);background-color:rgb(242, 242, 242);">Scale To Fill</font><font style="color:rgb(64, 64, 64);">：</font>
 
-![1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e.png](./img/OZDtVHdQXSr3Xz8f/1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e-587679.png)
+![1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e.png](/assets/img/posts/Dart&Flutter/1712472713865-08f41054-0d06-4a72-bd1b-0d8d0a528a0e-587679.png)
 
 保证这里都是`Superview`
 
-![1713853996701-7f2f4db7-7030-4d34-bad7-bfe695755baa.png](./img/OZDtVHdQXSr3Xz8f/1713853996701-7f2f4db7-7030-4d34-bad7-bfe695755baa-508123.png)
+![1713853996701-7f2f4db7-7030-4d34-bad7-bfe695755baa.png](/assets/img/posts/Dart&Flutter/1713853996701-7f2f4db7-7030-4d34-bad7-bfe695755baa-508123.png)
 
 重新运行就可以了。
 
@@ -43,7 +43,7 @@ categories: [Dart&Flutter, Flutter]
 
 > android:gravity="**<font style="color:#DF2A3F;">fill</font>**" 这个是全屏覆盖的关键（图片可能会被拉伸）
 
-![1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d.png](./img/OZDtVHdQXSr3Xz8f/1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d-953967.png)
+![1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d.png](/assets/img/posts/Dart&Flutter/1712719552587-adc994f6-11f7-47df-bd4e-e14537dc7c3d-953967.png)
 
 #### <font style="color:rgb(0, 0, 0);">扩展：res目录下的 drawable/drawable-v21</font>
 

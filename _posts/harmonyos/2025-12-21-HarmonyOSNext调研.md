@@ -24,12 +24,12 @@ categories: [HarmonyOS]
 ### HAP安装方式
 来自官网截图
 
-![1730341718517-df6d220e-1cef-49be-828d-6df3e11810f1.png](./img/W0tu91HT8AisWzp7/1730341718517-df6d220e-1cef-49be-828d-6df3e11810f1-930550.png)
+![1730341718517-df6d220e-1cef-49be-828d-6df3e11810f1.png](/assets/img/posts/harmonyos/1730341718517-df6d220e-1cef-49be-828d-6df3e11810f1-930550.png)
 
-![1730342077120-41d33aaf-deab-41be-9a38-9d21e4160eaa.png](./img/W0tu91HT8AisWzp7/1730342077120-41d33aaf-deab-41be-9a38-9d21e4160eaa-738068.png)
+![1730342077120-41d33aaf-deab-41be-9a38-9d21e4160eaa.png](/assets/img/posts/harmonyos/1730342077120-41d33aaf-deab-41be-9a38-9d21e4160eaa-738068.png)
 
 ### 应用资质审核
-![1730343608450-117f862f-7bd9-4188-bc4c-ac2eb92f8637.png](./img/W0tu91HT8AisWzp7/1730343608450-117f862f-7bd9-4188-bc4c-ac2eb92f8637-791961.png)
+![1730343608450-117f862f-7bd9-4188-bc4c-ac2eb92f8637.png](/assets/img/posts/harmonyos/1730343608450-117f862f-7bd9-4188-bc4c-ac2eb92f8637-791961.png)
 
 
 
@@ -84,7 +84,7 @@ categories: [HarmonyOS]
 ### <font style="color:rgb(0, 0, 0);">隐私政策链接提交及内容规范</font>
 具体参考：[https://developer.huawei.com/consumer/cn/doc/app/50128](https://developer.huawei.com/consumer/cn/doc/app/50128)
 
-![1730346924693-984624fb-310e-4934-aa85-9f1f3852e975.png](./img/W0tu91HT8AisWzp7/1730346924693-984624fb-310e-4934-aa85-9f1f3852e975-260966.png)
+![1730346924693-984624fb-310e-4934-aa85-9f1f3852e975.png](/assets/img/posts/harmonyos/1730346924693-984624fb-310e-4934-aa85-9f1f3852e975-260966.png)
 
 ### APP备案
 <font style="color:rgba(0, 0, 0, 0.9);">根据</font>[《工业和信息化部关于开展移动互联网应用程序备案工作的通知》](https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2023/art_920db564162e4312916a01bed6540ad8.html)<font style="color:rgba(0, 0, 0, 0.9);">要求，APP主办者应当依照</font>[《中华人民共和国反电信网络诈骗法》](https://www.miit.gov.cn/jgsj/zfs/fl/art/2022/art_d30139b442a141f48f05775d8c0b3cee.html)<font style="color:rgba(0, 0, 0, 0.9);">第二十三条“设立移动互联网应用程序应当按照国家有关规定向电信主管部门办理许可或者备案手续”相关规定履行备案手续。未履行备案手续的，不得从事APP互联网信息服务。</font>

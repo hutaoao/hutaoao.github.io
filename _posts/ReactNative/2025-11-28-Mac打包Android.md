@@ -13,7 +13,7 @@ categories: [ReactNative]
 $ keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 1000
 ```
 
-![1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed.png](./img/hfbWNf3TC4GbTlvx/1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed-722697.png)
+![1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed.png](/assets/img/posts/ReactNative/1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed-722697.png)
 
 > 密钥库文件位置：用户主目录（即 cd）
 >
@@ -73,7 +73,7 @@ $ ./gradlew assembleRelease
 
 ### 碰到的问题：
 
-![1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec.png](./img/hfbWNf3TC4GbTlvx/1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec-653004.png)
+![1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec.png](/assets/img/posts/ReactNative/1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec-653004.png)
 
 找不大SDK 位置：
 

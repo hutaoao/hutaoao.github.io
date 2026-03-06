@@ -83,7 +83,7 @@ export default withRouter(Result)
 
 控制台输出：
 
-![1662621214643-9a8496c1-01f3-4713-ac68-8c92b3ba0a90.png](./img/BiE2KVskWOIPgBUh/1662621214643-9a8496c1-01f3-4713-ac68-8c92b3ba0a90-600797.png)
+![1662621214643-9a8496c1-01f3-4713-ac68-8c92b3ba0a90.png](/assets/img/posts/React/1662621214643-9a8496c1-01f3-4713-ac68-8c92b3ba0a90-600797.png)
 
 
 

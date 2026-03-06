@@ -11,7 +11,7 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 
 从network中发现`formdata`格式的file变为了` [object object]`
 
-![1723599795375-6256b61d-621c-4444-aef2-79e341227e8c.png](./img/xftePiniQTBSItBr/1723599795375-6256b61d-621c-4444-aef2-79e341227e8c-140024.png)
+![1723599795375-6256b61d-621c-4444-aef2-79e341227e8c.png](/assets/img/posts/ReactNative/1723599795375-6256b61d-621c-4444-aef2-79e341227e8c-140024.png)
 
 就导致上传失败 接口500，服务端没有接受到文件。
 

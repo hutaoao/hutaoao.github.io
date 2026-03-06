@@ -13,7 +13,7 @@ categories: [React]
 
 如下图：该项目中请求了 Java、Php 等不同的接口，每个服务端接口配置可能不同
 
-![1605766549400-632e5f63-5b3b-458f-98de-bc038dca126c.jpeg](./img/5IAE1f6wM-WX9RhC/1605766549400-632e5f63-5b3b-458f-98de-bc038dca126c-110916.jpeg)
+![1605766549400-632e5f63-5b3b-458f-98de-bc038dca126c.jpeg](/assets/img/posts/React/1605766549400-632e5f63-5b3b-458f-98de-bc038dca126c-110916.jpeg)
 
 ### 使用
 

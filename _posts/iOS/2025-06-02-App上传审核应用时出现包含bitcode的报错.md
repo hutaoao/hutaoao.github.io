@@ -57,7 +57,7 @@ shotool -l NIMSDK | grep __LLVM | wc -l
 shxcrun bitcode_strip -r NIMSDK -o NIMSDK
 ```
 
-![1730339559764-ef4138fa-bcb0-475d-8b9c-b4017fe31059.png](./img/h2R5VfOHHq3auQBK/1730339559764-ef4138fa-bcb0-475d-8b9c-b4017fe31059-833688.png)
+![1730339559764-ef4138fa-bcb0-475d-8b9c-b4017fe31059.png](/assets/img/posts/iOS/1730339559764-ef4138fa-bcb0-475d-8b9c-b4017fe31059-833688.png)
 
 
 > 更新: 2024-11-15 09:51:04  

@@ -11,7 +11,7 @@ categories: [Linux]
 
 
 
-![1646898704438-b862ce6d-6459-4f75-936f-08c2402966b4.png](./img/vE1w3ru-LHqiHU4S/1646898704438-b862ce6d-6459-4f75-936f-08c2402966b4-559516.png)
+![1646898704438-b862ce6d-6459-4f75-936f-08c2402966b4.png](/assets/img/posts/Linux/1646898704438-b862ce6d-6459-4f75-936f-08c2402966b4-559516.png)
 
 
 
@@ -56,7 +56,7 @@ vi /etc/yum.repos.d/epel.repo
 
 <font style="color:rgb(68, 68, 68);"></font>
 
-![1646899313434-6d8426b9-1afc-4c1b-9fe1-6a9aa091f302.png](./img/vE1w3ru-LHqiHU4S/1646899313434-6d8426b9-1afc-4c1b-9fe1-6a9aa091f302-894211.png)
+![1646899313434-6d8426b9-1afc-4c1b-9fe1-6a9aa091f302.png](/assets/img/posts/Linux/1646899313434-6d8426b9-1afc-4c1b-9fe1-6a9aa091f302-894211.png)
 
 <font style="color:rgb(68, 68, 68);">3、再次使用yum命令即正常！</font>
 

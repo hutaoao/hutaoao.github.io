@@ -13,7 +13,7 @@ categories: [iOS]
 
 <font style="color:rgb(77, 77, 77);">首先排查一下邮箱，发现收到邮件提示：</font>
 
-![1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4.png](./img/ea5oUt_GKOVl9Yld/1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4-335507.png)
+![1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4.png](/assets/img/posts/iOS/1748398351393-ea04035e-38f0-4cd9-a5dc-b99cbbb1b6d4-335507.png)
 
 我们先分析一下：
 

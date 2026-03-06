@@ -61,19 +61,19 @@ categories: [HarmonyOS]
 
 ## <font style="color:rgba(0, 0, 0, 0.9);">操作步骤</font>
 1. <font style="color:rgb(36, 39, 40);">通过USB连接真机设备。</font>
-2. <font style="color:rgb(36, 39, 40);">在下拉菜单中，将运行/调试配置切换为Hot Reload的配置</font>![1731467215618-86fde43a-aa8e-4f97-9b23-72186e928266.png](./img/Hu5KrtNDcvClgCLq/1731467215618-86fde43a-aa8e-4f97-9b23-72186e928266-108488.png)<font style="color:rgb(36, 39, 40);">。</font>
+2. <font style="color:rgb(36, 39, 40);">在下拉菜单中，将运行/调试配置切换为Hot Reload的配置</font>![1731467215618-86fde43a-aa8e-4f97-9b23-72186e928266.png](/assets/img/posts/harmonyos/1731467215618-86fde43a-aa8e-4f97-9b23-72186e928266-108488.png)<font style="color:rgb(36, 39, 40);">。</font>
 
-![1731467274916-b1b1fb59-223c-4468-8f6a-ef1c9a0c9788.png](./img/Hu5KrtNDcvClgCLq/1731467274916-b1b1fb59-223c-4468-8f6a-ef1c9a0c9788-902542.png)
+![1731467274916-b1b1fb59-223c-4468-8f6a-ef1c9a0c9788.png](/assets/img/posts/harmonyos/1731467274916-b1b1fb59-223c-4468-8f6a-ef1c9a0c9788-902542.png)
 
 3. <font style="color:rgb(36, 39, 40);">运行/调试应用，将代码编译打包运行/调试到真机上，请参考</font>[<font style="color:rgb(36, 39, 40);">使用本地真机运行应用/服务</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-run-device-V5)<font style="color:rgb(36, 39, 40);">或</font>[<font style="color:rgb(36, 39, 40);">调试概述</font>](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-debug-device-V5)<font style="color:rgb(36, 39, 40);">。</font>
 4. <font style="color:rgb(36, 39, 40);">修改代码后，可以通过如下操作，查看真机上修改后的显示效果。</font>
-    - <font style="color:rgb(36, 39, 40);">点击Hot Reload</font>![1731467215680-d47b9174-f61d-425c-9968-21ac34510edf.png](./img/Hu5KrtNDcvClgCLq/1731467215680-d47b9174-f61d-425c-9968-21ac34510edf-374316.png)<font style="color:rgb(36, 39, 40);">按钮：</font>
+    - <font style="color:rgb(36, 39, 40);">点击Hot Reload</font>![1731467215680-d47b9174-f61d-425c-9968-21ac34510edf.png](/assets/img/posts/harmonyos/1731467215680-d47b9174-f61d-425c-9968-21ac34510edf-374316.png)<font style="color:rgb(36, 39, 40);">按钮：</font>
 
-![1731467295814-e995e630-4d4c-4a01-98a3-cc3a101fb853.png](./img/Hu5KrtNDcvClgCLq/1731467295814-e995e630-4d4c-4a01-98a3-cc3a101fb853-452022.png)
+![1731467295814-e995e630-4d4c-4a01-98a3-cc3a101fb853.png](/assets/img/posts/harmonyos/1731467295814-e995e630-4d4c-4a01-98a3-cc3a101fb853-452022.png)
 
     - <font style="color:rgb(36, 39, 40);">通过快捷键方式触发Hot Reload：需要先在菜单栏点击</font>**<font style="color:rgb(36, 39, 40);">File > Settings</font>**<font style="color:rgb(36, 39, 40);">，选择</font>**<font style="color:rgb(36, 39, 40);">Tools > Actions on Save</font>**<font style="color:rgb(36, 39, 40);">，勾选</font>**<font style="color:rgb(36, 39, 40);">Perform hot reload</font>**<font style="color:rgb(36, 39, 40);">，点击</font>**<font style="color:rgb(36, 39, 40);">OK</font>**<font style="color:rgb(36, 39, 40);">完成设置。修改代码后通过快捷键</font>**<font style="color:rgb(36, 39, 40);">Ctrl + S</font>**<font style="color:rgb(36, 39, 40);">即可触发Hot Reload。</font>
 
-![1731467348285-aee25a35-1d8d-46db-b8af-04fb96475187.png](./img/Hu5KrtNDcvClgCLq/1731467348285-aee25a35-1d8d-46db-b8af-04fb96475187-502497.png)
+![1731467348285-aee25a35-1d8d-46db-b8af-04fb96475187.png](/assets/img/posts/harmonyos/1731467348285-aee25a35-1d8d-46db-b8af-04fb96475187-502497.png)
 
 5. <font style="color:rgb(36, 39, 40);">点击停止按钮终止运行/调试运行，退出Hot Reload模式。</font>
 

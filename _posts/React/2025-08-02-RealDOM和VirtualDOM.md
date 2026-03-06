@@ -32,7 +32,7 @@ Virtual DOM 工作过程有三个简单的步骤。
 
 <font style="color:#4D4D4D;"></font>
 
-![1614652249493-e1ffe070-e945-4db7-bf1f-7ba8b21a9821.png](./img/ldtWcXbRaKZqpMlH/1614652249493-e1ffe070-e945-4db7-bf1f-7ba8b21a9821-786596.png)
+![1614652249493-e1ffe070-e945-4db7-bf1f-7ba8b21a9821.png](/assets/img/posts/React/1614652249493-e1ffe070-e945-4db7-bf1f-7ba8b21a9821-786596.png)
 
 
 
@@ -40,7 +40,7 @@ Virtual DOM 工作过程有三个简单的步骤。
 
 <font style="color:#4D4D4D;"></font>
 
-![1614652258693-ae01aaf2-d6df-4182-b8f0-3abb450112c6.png](./img/ldtWcXbRaKZqpMlH/1614652258693-ae01aaf2-d6df-4182-b8f0-3abb450112c6-214538.png)
+![1614652258693-ae01aaf2-d6df-4182-b8f0-3abb450112c6.png](/assets/img/posts/React/1614652258693-ae01aaf2-d6df-4182-b8f0-3abb450112c6-214538.png)
 
 
 
@@ -50,7 +50,7 @@ Virtual DOM 工作过程有三个简单的步骤。
 
 <font style="color:#4D4D4D;"></font>
 
-![1614652266012-ced9369c-84f2-42db-b2d6-b482e541703c.png](./img/ldtWcXbRaKZqpMlH/1614652266012-ced9369c-84f2-42db-b2d6-b482e541703c-414590.png)
+![1614652266012-ced9369c-84f2-42db-b2d6-b482e541703c.png](/assets/img/posts/React/1614652266012-ced9369c-84f2-42db-b2d6-b482e541703c-414590.png)
 
 
 

@@ -19,7 +19,7 @@ categories: [Html、Css]
 
 具体表现是这样：
 
-![1616577648138-2fd66e22-630e-4bff-a79b-cb65d9ffc072.gif](./img/M1TgO6uBxW4Ex7z8/1616577648138-2fd66e22-630e-4bff-a79b-cb65d9ffc072-014210.gif)
+![1616577648138-2fd66e22-630e-4bff-a79b-cb65d9ffc072.gif](/assets/img/posts/Html、Css/1616577648138-2fd66e22-630e-4bff-a79b-cb65d9ffc072-014210.gif)
 
 代码如下：
 
@@ -40,7 +40,7 @@ categories: [Html、Css]
 
 我们可以通过给 `<details>` 添加 **open** 属性来控制默认状态，例如：
 
-![1616577648195-8735b5fe-1bcc-45f1-826f-b1403e5cfc6b.webp](./img/M1TgO6uBxW4Ex7z8/1616577648195-8735b5fe-1bcc-45f1-826f-b1403e5cfc6b-700603.webp)
+![1616577648195-8735b5fe-1bcc-45f1-826f-b1403e5cfc6b.webp](/assets/img/posts/Html、Css/1616577648195-8735b5fe-1bcc-45f1-826f-b1403e5cfc6b-700603.webp)
 
 代码如下：
 
@@ -54,7 +54,7 @@ categories: [Html、Css]
 
 我们可以通过 **toggle** 事件来进行控制，例子如下：
 
-![1616577648262-58416e0f-ccd4-4c4a-8001-ac2a77583c96.gif](./img/M1TgO6uBxW4Ex7z8/1616577648262-58416e0f-ccd4-4c4a-8001-ac2a77583c96-751955.gif)
+![1616577648262-58416e0f-ccd4-4c4a-8001-ac2a77583c96.gif](/assets/img/posts/Html、Css/1616577648262-58416e0f-ccd4-4c4a-8001-ac2a77583c96-751955.gif)
 
 代码如下：
 
@@ -72,7 +72,7 @@ details.addEventListener("toggle", event => {
 
 效果如下：
 
-![1616577648300-69b9bf20-06db-49b7-a885-1013bbb66793.gif](./img/M1TgO6uBxW4Ex7z8/1616577648300-69b9bf20-06db-49b7-a885-1013bbb66793-052067.gif)
+![1616577648300-69b9bf20-06db-49b7-a885-1013bbb66793.gif](/assets/img/posts/Html、Css/1616577648300-69b9bf20-06db-49b7-a885-1013bbb66793-052067.gif)
 
 体验地址如下：
 
@@ -165,7 +165,7 @@ details.addEventListener("toggle", event => {
 
 ## 兼容性
 
-![1616577648292-1c98a989-8cdf-47f6-a314-74681634988e.png](./img/M1TgO6uBxW4Ex7z8/1616577648292-1c98a989-8cdf-47f6-a314-74681634988e-280132.png)
+![1616577648292-1c98a989-8cdf-47f6-a314-74681634988e.png](/assets/img/posts/Html、Css/1616577648292-1c98a989-8cdf-47f6-a314-74681634988e-280132.png)
 
 还行，虽然 IE 还是全军覆没，但是在移动端还是可以很香地使用的
 

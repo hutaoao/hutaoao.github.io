@@ -11,7 +11,7 @@ categories: [ReactNative]
 
 <font style="color:rgb(77, 77, 77);">最基础的一步，先在android的AndroidManifest.xml文件中添加权限声明</font>\ <font style="color:rgb(77, 77, 77);">就像这样。</font>
 
-![1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d.png](./img/kRNKHRyG3VkxpMYy/1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d-380597.png)
+![1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d.png](/assets/img/posts/ReactNative/1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d-380597.png)
 
 <font style="color:rgb(77, 77, 77);">然后使用reactNative自带的权限管理API，使用比较简单。</font>
 
@@ -65,7 +65,7 @@ async requestCameraPermissions() {
 
 <font style="color:rgb(77, 77, 77);">因为是请求权限是个异步过程，所以需要async和await关键字，然后判断granted是否等于PermissionsAndroid.RESULTS.GRANTED来判断是否请求成功，</font>\ <font style="color:rgb(77, 77, 77);">然后再我的小米上运行：</font>
 
-![1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556.png](./img/kRNKHRyG3VkxpMYy/1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556-693816.png)
+![1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556.png](/assets/img/posts/ReactNative/1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556-693816.png)
 
 <font style="color:rgb(77, 77, 77);">然后就获取成功了</font>
 
@@ -132,7 +132,7 @@ async requestAllPermissions() {
 
 效果如下
 
-![1692842899980-059793ab-b575-457d-90a6-eed23f377bee.png](./img/kRNKHRyG3VkxpMYy/1692842899980-059793ab-b575-457d-90a6-eed23f377bee-733716.png)
+![1692842899980-059793ab-b575-457d-90a6-eed23f377bee.png](/assets/img/posts/ReactNative/1692842899980-059793ab-b575-457d-90a6-eed23f377bee-733716.png)
 
 <font style="color:rgb(77, 77, 77);">可以看到，确实获取了多个权限。</font>\ <font style="color:rgb(77, 77, 77);">可以把请求权限的方法放在项目初次进入或者放在需要使用权限的地方</font>
 

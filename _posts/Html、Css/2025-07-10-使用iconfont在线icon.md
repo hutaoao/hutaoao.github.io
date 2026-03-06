@@ -13,7 +13,7 @@ categories: [Html、Css]
 
 <font style="color:rgb(51, 51, 51);"></font>
 
-![1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc.png](./img/3EJBabqSc4Hbky7y/1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc-621712.png)
+![1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc.png](/assets/img/posts/Html、Css/1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc-621712.png)
 
 
 

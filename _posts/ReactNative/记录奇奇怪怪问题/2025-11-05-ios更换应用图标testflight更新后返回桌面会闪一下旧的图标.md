@@ -27,7 +27,7 @@ categories: [ReactNative, 记录奇奇怪怪问题]
 
 上传的启动页图片换个命名
 
-![1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1.png](./img/E-eswprtYxEDR7vF/1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1-685356.png)
+![1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1.png](/assets/img/posts/ReactNative/1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1-685356.png)
 
 
 

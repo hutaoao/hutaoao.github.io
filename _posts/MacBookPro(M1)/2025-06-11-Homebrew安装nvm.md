@@ -31,7 +31,7 @@ brew info nvm
 
 vi ~/.zshrc 进入编辑，最后 source ~/.zshrc 即可
 
-![1625899942147-7122acd1-d8bd-4b85-a6b5-42f1366b006d.png](./img/4MjgF1WDAUKtky3_/1625899942147-7122acd1-d8bd-4b85-a6b5-42f1366b006d-232620.png)
+![1625899942147-7122acd1-d8bd-4b85-a6b5-42f1366b006d.png](/assets/img/posts/MacBookPro(M1)/1625899942147-7122acd1-d8bd-4b85-a6b5-42f1366b006d-232620.png)
 
 
 

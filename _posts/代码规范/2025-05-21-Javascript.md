@@ -1,5 +1,5 @@
 ---
-title: Javascript
+title: Javascript 代码规范
 date: 2025-05-21
 description: Javascript
 tags: [代码规范, javascript]

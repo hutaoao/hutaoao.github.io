@@ -11,7 +11,7 @@ categories: [React]
 
 <font style="color:rgb(102, 102, 102);background-color:rgb(250, 250, 251);">点击下载按钮，可以选择下载图标。</font>
 
-![1747642775335-b985b07e-c18b-4b2f-894b-ae0bdfad8f02.png](./img/sCX3C7O5eiCdobiQ/1747642775335-b985b07e-c18b-4b2f-894b-ae0bdfad8f02-833882.png)
+![1747642775335-b985b07e-c18b-4b2f-894b-ae0bdfad8f02.png](/assets/img/posts/React/1747642775335-b985b07e-c18b-4b2f-894b-ae0bdfad8f02-833882.png)
 
 <font style="color:rgb(102, 102, 102);background-color:rgb(250, 250, 251);">此种方式适合用在图标引用特别少，以后也不需要特别维护的场景。</font>
 

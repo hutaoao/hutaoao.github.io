@@ -10,7 +10,7 @@ categories: [HarmonyOS]
 ## <font style="color:rgb(25, 27, 31);">架构差异</font>
 <font style="color:rgb(25, 27, 31);">从ArkUI组件树层级上来看，原先由Router管理的page在页面栈管理节点stage的下面。Navigation作为导航容器组件，可以挂载在单个page节点下，也可以叠加、嵌套。Navigation管理了标题栏、内容区和工具栏，内容区用于显示用户自定义页面的内容，并支持页面的路由能力。Navigation的这种设计上有如下优势：</font>
 
-![1730964060900-2a7f9019-72eb-4737-ac62-5b45fc0234cc.png](./img/7oaJiwodyoZcCs9T/1730964060900-2a7f9019-72eb-4737-ac62-5b45fc0234cc-698998.png)
+![1730964060900-2a7f9019-72eb-4737-ac62-5b45fc0234cc.png](/assets/img/posts/harmonyos/1730964060900-2a7f9019-72eb-4737-ac62-5b45fc0234cc-698998.png)
 
 1. <font style="color:rgb(25, 27, 31);">接口上显式区分标题栏、内容区和工具栏，实现更加灵活的管理和UX动效能力；</font>
 2. <font style="color:rgb(25, 27, 31);">显式提供路由容器概念，由开发者决定路由容器的位置，支持在全模态、半模态、弹窗中显示；</font>
@@ -392,7 +392,7 @@ onPageHide(): void {
 
 <font style="color:rgb(25, 27, 31);">其生命周期时序如下图所示：</font>
 
-![1730964060830-885c7fe9-fe88-404b-9339-95d1217f5e17.png](./img/7oaJiwodyoZcCs9T/1730964060830-885c7fe9-fe88-404b-9339-95d1217f5e17-399259.png)
+![1730964060830-885c7fe9-fe88-404b-9339-95d1217f5e17.png](/assets/img/posts/harmonyos/1730964060830-885c7fe9-fe88-404b-9339-95d1217f5e17-399259.png)
 
 <font style="color:rgb(25, 27, 31);">Navigation作为路由容器，其生命周期承载在NavDestination组件上，以组件事件的形式开放。</font>
 

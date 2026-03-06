@@ -256,7 +256,7 @@ export default createStore({
 
 <font style="color:black;">一般来说，vuex中的流程是首先actions一般放异步函数，拿请求后端接口为例，当后端接口返回值的时候，actions中会提交一个mutations中的函数，然后这个函数对vuex中的状态（state）进行一个修改，组件中再渲染这个状态，从而实现整个数据流程都在vuex内部进行便于检测。直接看图，一目了然</font>
 
-![1668132250604-0e0ac4aa-248d-4e4a-ab39-3f811ab9443d.jpeg](./img/HS4MmDMhz5CxAU91/1668132250604-0e0ac4aa-248d-4e4a-ab39-3f811ab9443d-938514.jpeg)
+![1668132250604-0e0ac4aa-248d-4e4a-ab39-3f811ab9443d.jpeg](/assets/img/posts/Vue/1668132250604-0e0ac4aa-248d-4e4a-ab39-3f811ab9443d-938514.jpeg)
 
 <font style="color:rgb(136, 136, 136);">1f0c7f44205b2a793829d22509fac74.png</font>
 
@@ -389,7 +389,7 @@ piniaStoreA.$reset()
 
 <font style="color:black;">浏览器展示如下</font>
 
-![1668132250855-c14f02ba-9282-4bfb-91c4-c6e9a3efe7e2.jpeg](./img/HS4MmDMhz5CxAU91/1668132250855-c14f02ba-9282-4bfb-91c4-c6e9a3efe7e2-205111.jpeg)
+![1668132250855-c14f02ba-9282-4bfb-91c4-c6e9a3efe7e2.jpeg](/assets/img/posts/Vue/1668132250855-c14f02ba-9282-4bfb-91c4-c6e9a3efe7e2-205111.jpeg)
 
 <font style="color:rgb(136, 136, 136);">1657813193335.jpg</font>
 
@@ -472,7 +472,7 @@ piniaStoreA.count1 = 2
 console.log(piniaStoreA.sum)
 
 
-![1668132250684-c6d149a2-45e2-4d6a-ab5c-de1bf41bfae8.jpeg](./img/HS4MmDMhz5CxAU91/1668132250684-c6d149a2-45e2-4d6a-ab5c-de1bf41bfae8-196785.jpeg)
+![1668132250684-c6d149a2-45e2-4d6a-ab5c-de1bf41bfae8.jpeg](/assets/img/posts/Vue/1668132250684-c6d149a2-45e2-4d6a-ab5c-de1bf41bfae8-196785.jpeg)
 
 <font style="color:rgb(136, 136, 136);">1657814372565.jpg</font>
 

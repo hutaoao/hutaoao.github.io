@@ -27,13 +27,13 @@ categories: [Vue]
 
 <code>**<font style="color:rgb(51, 51, 51);">window.history.length</font>**</code><font style="color:rgb(51, 51, 51);"> 返回当前会话浏览过的页面数量。\ </font><code>**<font style="color:rgb(51, 51, 51);">window.history.go(?delta)</font>**</code>**<font style="color:rgb(51, 51, 51);"> </font>**<font style="color:rgb(51, 51, 51);">接收一个整数作为参数，按照当前页面在会话浏览历史记录中的位置进行移动。如果参数为0、undefined、null、false 将刷新页面，相当于执行window.location.reload()方法。如果参数大于浏览器浏览的数量，或小于浏览前的数量的话，什么都不会做。\ </font><code>**<font style="color:rgb(51, 51, 51);">window.history.back()</font>**</code><font style="color:rgb(51, 51, 51);"> 移动到上一页。相当于点击浏览器的后退按钮，等价于 window.history.go(-1);\ </font><code>**<font style="color:rgb(51, 51, 51);">window.history.forward()</font>**</code><font style="color:rgb(51, 51, 51);"> 移动到下一页，相当于点击浏览器的前进按钮，等价于window.history.go(1).</font>
 
-![1638238596953-6d3b3149-e15f-49e5-b64a-bd7551ee1399.png](./img/3fUWNZV1MpF4aHWH/1638238596953-6d3b3149-e15f-49e5-b64a-bd7551ee1399-324426.png)
+![1638238596953-6d3b3149-e15f-49e5-b64a-bd7551ee1399.png](/assets/img/posts/Vue/1638238596953-6d3b3149-e15f-49e5-b64a-bd7551ee1399-324426.png)
 
 <font style="color:rgb(51, 51, 51);"></font>
 
 <font style="color:rgb(51, 51, 51);">在html5中，History API 新增了操作会话浏览历史记录的功能。如下新增的几个方法：\ </font><font style="color:rgb(51, 51, 51);">window.history.state. 该参数是只读的，表示与会话浏览历史的当前记录相关联的状态对象。如下图所示：</font>
 
-![1638238596882-fb815388-20c4-4c20-9996-b055995e359a.png](./img/3fUWNZV1MpF4aHWH/1638238596882-fb815388-20c4-4c20-9996-b055995e359a-078853.png)
+![1638238596882-fb815388-20c4-4c20-9996-b055995e359a.png](/assets/img/posts/Vue/1638238596882-fb815388-20c4-4c20-9996-b055995e359a-078853.png)
 
 **<font style="color:rgb(51, 51, 51);">window.history.pushState(data, title, ?url):</font>**<font style="color:rgb(51, 51, 51);"> </font><font style="color:rgb(51, 51, 51);">在会话浏览历史记录中添加一条记录。</font>
 
@@ -93,7 +93,7 @@ location.hash
 
 <font style="color:rgb(51, 51, 51);">我们通过改变location.href来改变对应的url，看看是否会刷新页面，我们做如下测试可以看到，使用location.href 改变url后并不会刷新页面，如下代码在控制台中演示：</font>
 
-![1638238596909-007d3bce-7a76-4fcf-b63c-e5e908086fcf.png](./img/3fUWNZV1MpF4aHWH/1638238596909-007d3bce-7a76-4fcf-b63c-e5e908086fcf-403251.png)
+![1638238596909-007d3bce-7a76-4fcf-b63c-e5e908086fcf.png](/assets/img/posts/Vue/1638238596909-007d3bce-7a76-4fcf-b63c-e5e908086fcf-403251.png)
 
 **<font style="color:rgb(51, 51, 51);"></font>**
 
@@ -101,7 +101,7 @@ location.hash
 
 **<font style="color:rgb(51, 51, 51);"></font>**
 
-<font style="color:rgb(51, 51, 51);">改变hash不会触发页面跳转，因为hash链接是当前页面中的某个片段，所以如果hash有变化，那么页面将会滚动到hash所连接的位置。但是页面中如果不存在hash对应的片段，则没有任何效果。比如 a链接。这和 window.history.pushState方法类似，都是不刷新页面的情况下更改url。如下也可以看到操作并没有刷新url，如下演示：\ </font>![1638238597216-bf707079-71b5-4d7d-acc7-721d19b8efa3.png](./img/3fUWNZV1MpF4aHWH/1638238597216-bf707079-71b5-4d7d-acc7-721d19b8efa3-494932.png)
+<font style="color:rgb(51, 51, 51);">改变hash不会触发页面跳转，因为hash链接是当前页面中的某个片段，所以如果hash有变化，那么页面将会滚动到hash所连接的位置。但是页面中如果不存在hash对应的片段，则没有任何效果。比如 a链接。这和 window.history.pushState方法类似，都是不刷新页面的情况下更改url。如下也可以看到操作并没有刷新url，如下演示：\ </font>![1638238597216-bf707079-71b5-4d7d-acc7-721d19b8efa3.png](/assets/img/posts/Vue/1638238597216-bf707079-71b5-4d7d-acc7-721d19b8efa3-494932.png)
 
 **<font style="color:rgb(51, 51, 51);">hash 和 pushState 对比有如下缺点：</font>**
 
@@ -109,7 +109,7 @@ location.hash
 
 <font style="color:rgb(51, 51, 51);">2. hash必须和原先的值不同，才能新增会话浏览历史的记录，但是pushState可以新增相同的url的记录，如下所示：</font>
 
-![1638238597229-f6e21618-44b4-461c-a03f-a0232ec7a568.png](./img/3fUWNZV1MpF4aHWH/1638238597229-f6e21618-44b4-461c-a03f-a0232ec7a568-523996.png)
+![1638238597229-f6e21618-44b4-461c-a03f-a0232ec7a568.png](/assets/img/posts/Vue/1638238597229-f6e21618-44b4-461c-a03f-a0232ec7a568-523996.png)
 
 **<font style="color:rgb(51, 51, 51);"></font>**
 
@@ -125,7 +125,7 @@ window.addEventListener('hashchange', function(e) {
 
 <font style="color:rgb(51, 51, 51);">如上代码就是监听hash值发生变化的事件，然后我们访问该index.html页面后，然后在控制台中，做如下操作，如下图演示：</font>
 
-![1638238597421-bc289bad-97a8-4b03-96ba-1831c1adf99f.png](./img/3fUWNZV1MpF4aHWH/1638238597421-bc289bad-97a8-4b03-96ba-1831c1adf99f-228663.png)
+![1638238597421-bc289bad-97a8-4b03-96ba-1831c1adf99f.png](/assets/img/posts/Vue/1638238597421-bc289bad-97a8-4b03-96ba-1831c1adf99f-228663.png)
 
 <font style="color:rgb(51, 51, 51);">如上可以看到；不管我们是通过location接口直接改变hash值，还是我们通过history直接前进或后退操作(改变hash变化)，我们都可以看到都能通过 hashchange该事件进行监听到url hash的改变。并且不会刷新页面。</font>
 
@@ -157,7 +157,7 @@ window.addEventListener('popstate', function(e) {
 
 <font style="color:rgb(51, 51, 51);">然后我们访问页面，如下所示：</font>
 
-![1638238597390-f461cf4d-2cb2-43e2-9203-a87cceb8cbf3.png](./img/3fUWNZV1MpF4aHWH/1638238597390-f461cf4d-2cb2-43e2-9203-a87cceb8cbf3-130039.png)
+![1638238597390-f461cf4d-2cb2-43e2-9203-a87cceb8cbf3.png](/assets/img/posts/Vue/1638238597390-f461cf4d-2cb2-43e2-9203-a87cceb8cbf3-130039.png)
 
 <font style="color:rgb(51, 51, 51);">如上图所示，我们使用location.hash, history.go(-1), history.pushState 等方法操作都会触发 popstate 事件，并且浏览器的url地址也会跟着改变。只会改变url地址，且不会重新刷新页面。</font>
 

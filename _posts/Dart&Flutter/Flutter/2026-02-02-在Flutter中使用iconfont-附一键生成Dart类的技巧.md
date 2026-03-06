@@ -19,17 +19,17 @@ categories: [Dart&Flutter, Flutter]
 
 然后选择添加至项目
 
-![1757578102439-b33932dc-72d9-4215-bcf0-6d7ad4e176d2.png](./img/2cG4mmN_CWd0gn34/1757578102439-b33932dc-72d9-4215-bcf0-6d7ad4e176d2-355946.png)
+![1757578102439-b33932dc-72d9-4215-bcf0-6d7ad4e176d2.png](/assets/img/posts/Dart&Flutter/1757578102439-b33932dc-72d9-4215-bcf0-6d7ad4e176d2-355946.png)
 
 从我的项目中进入该项目，并选择下载至本地
 
-![1757578102627-6a19ca73-beaf-4a3a-904d-574bdf0ad4b1.png](./img/2cG4mmN_CWd0gn34/1757578102627-6a19ca73-beaf-4a3a-904d-574bdf0ad4b1-795838.png)
+![1757578102627-6a19ca73-beaf-4a3a-904d-574bdf0ad4b1.png](/assets/img/posts/Dart&Flutter/1757578102627-6a19ca73-beaf-4a3a-904d-574bdf0ad4b1-795838.png)
 
 将下载好的zip包解压缩，复制其中的iconfont.ttf文件至你的flutter项目中，比如`flutter项目名称/assets/fonts/`内
 
-![1757578102413-3b5daa6b-72d9-4c35-81d0-a1a4d6848d74.png](./img/2cG4mmN_CWd0gn34/1757578102413-3b5daa6b-72d9-4c35-81d0-a1a4d6848d74-016608.png)
+![1757578102413-3b5daa6b-72d9-4c35-81d0-a1a4d6848d74.png](/assets/img/posts/Dart&Flutter/1757578102413-3b5daa6b-72d9-4c35-81d0-a1a4d6848d74-016608.png)
 
-![1757578102441-32715b11-00a6-4218-9708-9a019913ab03.png](./img/2cG4mmN_CWd0gn34/1757578102441-32715b11-00a6-4218-9708-9a019913ab03-496581.png)
+![1757578102441-32715b11-00a6-4218-9708-9a019913ab03.png](/assets/img/posts/Dart&Flutter/1757578102441-32715b11-00a6-4218-9708-9a019913ab03-496581.png)
 
 在Flutter中要使用自定义字体，我们需要在`pubspec.yaml`文件中添加以下内容
 
@@ -56,7 +56,7 @@ Icon(
 
 其中fontFamily的值'IconFont'就是我们刚才在`pubspec.yaml`中声明的新字体，但是代码中的0xe7b4是指什么呢？回到之前下载解压zip包的文件夹，双击demo\_index.html文件在浏览器中打开后，我们可以看到下面的画面
 
-![1757578102452-574e2544-faef-4313-9847-d86c9500d69a.png](./img/2cG4mmN_CWd0gn34/1757578102452-574e2544-faef-4313-9847-d86c9500d69a-794681.png)
+![1757578102452-574e2544-faef-4313-9847-d86c9500d69a.png](/assets/img/posts/Dart&Flutter/1757578102452-574e2544-faef-4313-9847-d86c9500d69a-794681.png)
 
 每个图标下面都标记出了这个图标对应的unicode编码，所以我们想用哪个图标，只要copy它的unicode编码到代码里就行了
 
@@ -100,25 +100,25 @@ javascript:function download(filename, text) {  var element = document.createEle
 
 > Chrome浏览器：在收藏栏点击鼠标右键，选择添加网页
 
-![1757578102878-bba25475-53e3-4ea1-8d26-d7b82b373319.png](./img/2cG4mmN_CWd0gn34/1757578102878-bba25475-53e3-4ea1-8d26-d7b82b373319-791496.png)
+![1757578102878-bba25475-53e3-4ea1-8d26-d7b82b373319.png](/assets/img/posts/Dart&Flutter/1757578102878-bba25475-53e3-4ea1-8d26-d7b82b373319-791496.png)
 
 > 将名称改为“生成IconFont.dart”，复制上面的代码并粘贴在网址里
 
-![1757578102919-166ada69-0bfb-40c2-8bb1-b6ddd727f3e3.png](./img/2cG4mmN_CWd0gn34/1757578102919-166ada69-0bfb-40c2-8bb1-b6ddd727f3e3-220346.png)
+![1757578102919-166ada69-0bfb-40c2-8bb1-b6ddd727f3e3.png](/assets/img/posts/Dart&Flutter/1757578102919-166ada69-0bfb-40c2-8bb1-b6ddd727f3e3-220346.png)
 
 ### 2、打开 [www.iconfont.cn/](https://link.juejin.cn?target=https%3A%2F%2Fwww.iconfont.cn%2F)
 
 ### 3、进入到要生成IconFont类的项目
 
-![1757578102974-27ae8086-17fa-4563-a615-ae1bc823ce08.png](./img/2cG4mmN_CWd0gn34/1757578102974-27ae8086-17fa-4563-a615-ae1bc823ce08-185371.png)
+![1757578102974-27ae8086-17fa-4563-a615-ae1bc823ce08.png](/assets/img/posts/Dart&Flutter/1757578102974-27ae8086-17fa-4563-a615-ae1bc823ce08-185371.png)
 
 ### 4、点击第1步在收藏夹中添加的网址
 
-![1757578102932-555aa98a-f235-4f58-ad6b-8e099b55b7ea.png](./img/2cG4mmN_CWd0gn34/1757578102932-555aa98a-f235-4f58-ad6b-8e099b55b7ea-677826.png)
+![1757578102932-555aa98a-f235-4f58-ad6b-8e099b55b7ea.png](/assets/img/posts/Dart&Flutter/1757578102932-555aa98a-f235-4f58-ad6b-8e099b55b7ea-677826.png)
 
 > 点击后就会自动生成并下载一个IconFont.dart类啦
 
-![1757578103568-e36e0e35-6a7b-4663-85db-b51aa779365b.png](./img/2cG4mmN_CWd0gn34/1757578103568-e36e0e35-6a7b-4663-85db-b51aa779365b-165686.png)
+![1757578103568-e36e0e35-6a7b-4663-85db-b51aa779365b.png](/assets/img/posts/Dart&Flutter/1757578103568-e36e0e35-6a7b-4663-85db-b51aa779365b-165686.png)
 
 
 > 更新: 2025-09-11 16:11:09  

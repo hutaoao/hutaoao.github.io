@@ -11,7 +11,7 @@ categories: [ReactNative]
 
 如下图：`pod install` 时报错
 
-![1654566928989-91d59268-4d85-404b-88b6-00754b571d2d.png](./img/IoJXzSsslHOZ06-k/1654566928989-91d59268-4d85-404b-88b6-00754b571d2d-530473.png)
+![1654566928989-91d59268-4d85-404b-88b6-00754b571d2d.png](/assets/img/posts/ReactNative/1654566928989-91d59268-4d85-404b-88b6-00754b571d2d-530473.png)
 
 ### 分析
 
@@ -94,7 +94,7 @@ git config --global https.proxy '10.12.1.16:3128'
 
 我这里获取终端代理命令，直接在工具上面复制即可。
 
-![1654567546282-af98a402-689c-4125-a648-e370f56df7fd.png](./img/IoJXzSsslHOZ06-k/1654567546282-af98a402-689c-4125-a648-e370f56df7fd-113551.png)
+![1654567546282-af98a402-689c-4125-a648-e370f56df7fd.png](/assets/img/posts/ReactNative/1654567546282-af98a402-689c-4125-a648-e370f56df7fd-113551.png)
 
 
 > 更新: 2026-03-06 11:42:14  

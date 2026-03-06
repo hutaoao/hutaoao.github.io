@@ -7,7 +7,7 @@ categories: [开发整理]
 ---
 # Javascript禁止前端调试页面
 
-![1712049548053-2739faae-bdc3-4158-a65b-244d68dfa8da.png](./img/I9M1BXst8cQ3J1GR/1712049548053-2739faae-bdc3-4158-a65b-244d68dfa8da-172688.png)
+![1712049548053-2739faae-bdc3-4158-a65b-244d68dfa8da.png](/assets/img/posts/开发整理/1712049548053-2739faae-bdc3-4158-a65b-244d68dfa8da-172688.png)
 
 ## <font style="color:rgb(25, 27, 31);">一、为什么要禁止？</font>
 <font style="color:rgb(25, 27, 31);">由于前端页面会调用很多接口，有些接口会被别人爬虫分析，破解后获取数据，为了杜绝这种情况，最简单的方法就是禁止人家调试自己的前端代码。</font>**<font style="color:rgb(25, 27, 31);">特别是作为个人站长，不仅要掌握爬别人的网站，更要掌握如何防止被别人爬</font>**<font style="color:rgb(25, 27, 31);">。</font>
@@ -46,13 +46,13 @@ document.oncontextmenu = function() {
 
 <font style="color:rgb(25, 27, 31);">前端页面防止调试的方法主要是通过不断 debugger 来疯狂输出断点，因为 debugger 在控制台被打开的时候就会执行由于程序被 debugger 阻止，所以无法进行断点调试，所以网页的请求也是看不到的。</font>
 
-![1712049547890-d04416d7-8d5d-4d7d-91bb-805b75368411.png](./img/I9M1BXst8cQ3J1GR/1712049547890-d04416d7-8d5d-4d7d-91bb-805b75368411-224720.png)
+![1712049547890-d04416d7-8d5d-4d7d-91bb-805b75368411.png](/assets/img/posts/开发整理/1712049547890-d04416d7-8d5d-4d7d-91bb-805b75368411-224720.png)
 
 + <font style="color:rgb(25, 27, 31);">基础禁止调试的对策</font>
 
 <font style="color:rgb(25, 27, 31);">如果仅仅是加上面那么简单的代码，对于一些技术人员而言作用不大,可以通过控制台中的 Deactivate breakpoints 按钮或者使用快捷键 Ctrl + F8 关闭无限 debugger，这种方式虽然能去掉碍眼的 debugger，但是无法通过左侧的行号添加 breakpoint取消禁止对策。</font>
 
-![1712049548325-9fd730bc-a992-49c8-ad71-886bf0e5f86f.png](./img/I9M1BXst8cQ3J1GR/1712049548325-9fd730bc-a992-49c8-ad71-886bf0e5f86f-098025.png)
+![1712049548325-9fd730bc-a992-49c8-ad71-886bf0e5f86f.png](/assets/img/posts/开发整理/1712049548325-9fd730bc-a992-49c8-ad71-886bf0e5f86f-098025.png)
 
 + <font style="color:rgb(25, 27, 31);">禁止断点的对策</font>
 
@@ -60,13 +60,13 @@ document.oncontextmenu = function() {
 
 
 
-![1712049548315-f96a9f9b-2cbf-471c-b097-4bc6c9fe4855.png](./img/I9M1BXst8cQ3J1GR/1712049548315-f96a9f9b-2cbf-471c-b097-4bc6c9fe4855-701477.png)
+![1712049548315-f96a9f9b-2cbf-471c-b097-4bc6c9fe4855.png](/assets/img/posts/开发整理/1712049548315-f96a9f9b-2cbf-471c-b097-4bc6c9fe4855-701477.png)
 
 + <font style="color:rgb(25, 27, 31);">忽略执行的代码</font>
 
 <font style="color:rgb(25, 27, 31);">通过添加 add script ignore list 需要忽略执行代码行或文件，也可以达到禁止无限 debugger，忽略执行的代码。</font>
 
-![1712049548316-a9a8e285-92f6-4117-818b-99aacb0a9f76.png](./img/I9M1BXst8cQ3J1GR/1712049548316-a9a8e285-92f6-4117-818b-99aacb0a9f76-281874.png)
+![1712049548316-a9a8e285-92f6-4117-818b-99aacb0a9f76.png](/assets/img/posts/开发整理/1712049548316-a9a8e285-92f6-4117-818b-99aacb0a9f76-281874.png)
 
 + <font style="color:rgb(25, 27, 31);">忽略执行代码的对策</font>
 
@@ -80,7 +80,7 @@ document.oncontextmenu = function() {
 
 
 
-![1712049549030-aa32b166-206d-4580-abf4-9f11c01202e1.png](./img/I9M1BXst8cQ3J1GR/1712049549030-aa32b166-206d-4580-abf4-9f11c01202e1-122199.png)
+![1712049549030-aa32b166-206d-4580-abf4-9f11c01202e1.png](/assets/img/posts/开发整理/1712049549030-aa32b166-206d-4580-abf4-9f11c01202e1-122199.png)
 
 ## <font style="color:rgb(25, 27, 31);">三、总结</font>
 <font style="color:rgb(25, 27, 31);">其实上面的各种方式并不能100%防止，毕竟javascript是客户端语言，就说别人把你的网站页面全部下载下来，然后把里面的js拦截代码一删，在本地一样嘎嘎跑，想咋调试就咋调试，所以说到底还是得从服务端想办法。</font>

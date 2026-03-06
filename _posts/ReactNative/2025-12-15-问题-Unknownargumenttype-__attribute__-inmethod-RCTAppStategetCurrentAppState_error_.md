@@ -19,17 +19,17 @@ Unknown argument type '__attribute__' in method -[RCTAppState getCurrentAppState
 
 如图：
 
-![1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a.png](./img/MMLB4GfTdYFiKkFL/1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a-864271.png)
+![1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a.png](/assets/img/posts/ReactNative/1626069499588-84d85c09-67f0-429f-b2d0-9ad43a752a7a-864271.png)
 
 **<font style="color:#F5222D;">解决的方法：</font>**
 
 1.在Xcode中打开：Xcode打开RCTModuleMethod.mm文件：路径Libraries->React.xcodeproj->React->Base ->RCTModuleMethod.mm
 
-![1626069518608-e307acb1-76d4-49a5-a52a-5b3c0545fdc6.png](./img/MMLB4GfTdYFiKkFL/1626069518608-e307acb1-76d4-49a5-a52a-5b3c0545fdc6-128022.png)
+![1626069518608-e307acb1-76d4-49a5-a52a-5b3c0545fdc6.png](/assets/img/posts/ReactNative/1626069518608-e307acb1-76d4-49a5-a52a-5b3c0545fdc6-128022.png)
 
 2.更改代码：
 
-![1626069532103-62886f3b-b6f2-4274-9b8c-697430b5f1e2.png](./img/MMLB4GfTdYFiKkFL/1626069532103-62886f3b-b6f2-4274-9b8c-697430b5f1e2-924248.png)
+![1626069532103-62886f3b-b6f2-4274-9b8c-697430b5f1e2.png](/assets/img/posts/ReactNative/1626069532103-62886f3b-b6f2-4274-9b8c-697430b5f1e2-924248.png)
 
 ```plain
 static BOOL RCTParseUnused(const char **input)

@@ -2,7 +2,7 @@
 title: JavaScript的本地对象-内置对象和宿主对象
 date: 2025-10-05
 description: JavaScript的本地对象，内置对象和宿主对象
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript的本地对象，内置对象和宿主对象

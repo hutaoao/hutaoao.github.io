@@ -2,7 +2,7 @@
 title: VueRouter导航守卫
 date: 2025-09-06
 description: VueRouter导航守卫
-tags: [Vue, vue]
+tags: [vue]
 categories: [Web前端, Vue]
 ---
 # VueRouter导航守卫

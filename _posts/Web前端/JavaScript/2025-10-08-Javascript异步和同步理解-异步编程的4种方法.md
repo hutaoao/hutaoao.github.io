@@ -2,7 +2,7 @@
 title: Javascript异步和同步理解-异步编程的4种方法
 date: 2025-10-08
 description: Javascript异步和同步理解 + 异步编程的4种方法
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # Javascript异步和同步理解 + 异步编程的4种方法

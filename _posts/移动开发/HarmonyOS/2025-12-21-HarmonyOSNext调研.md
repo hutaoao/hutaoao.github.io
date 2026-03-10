@@ -2,7 +2,7 @@
 title: HarmonyOSNext调研
 date: 2025-12-21
 description: HarmonyOS Next调研
-tags: [HarmonyOS, harmonyos]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # HarmonyOS Next调研

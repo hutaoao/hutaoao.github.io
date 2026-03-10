@@ -1,9 +1,9 @@
 ---
-title: 记录使用-ReactNativeDebugger-调试时图片上传问题
+title: 记录使用-reactnativeDebugger-调试时图片上传问题
 date: 2025-11-08
 description: 记录使用“React Native Debugger”调试时图片上传问题
-tags: [移动开发, ReactNative, 记录奇奇怪怪问题, reactnative, react, native]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, 记录奇奇怪怪问题, reactnative, react, native]
+categories: [移动开发, reactnative]
 ---
 # 记录使用“React Native Debugger”调试时图片上传问题
 
@@ -11,7 +11,7 @@ categories: [移动开发, ReactNative]
 
 从network中发现`formdata`格式的file变为了` [object object]`
 
-![1723599795375-6256b61d-621c-4444-aef2-79e341227e8c.png](/assets/img/posts/移动开发/ReactNative/1723599795375-6256b61d-621c-4444-aef2-79e341227e8c-140024.png)
+![1723599795375-6256b61d-621c-4444-aef2-79e341227e8c.png](/assets/img/posts/移动开发/reactnative/1723599795375-6256b61d-621c-4444-aef2-79e341227e8c-140024.png)
 
 就导致上传失败 接口500，服务端没有接受到文件。
 

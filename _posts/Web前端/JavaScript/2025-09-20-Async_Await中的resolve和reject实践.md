@@ -2,7 +2,7 @@
 title: Async_Await中的resolve和reject实践
 date: 2025-09-20
 description: Async/Await中的resolve和reject实践
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # Async/Await中的resolve和reject实践

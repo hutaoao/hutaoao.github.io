@@ -2,7 +2,7 @@
 title: JS对象原型方法hasOwnProperty
 date: 2025-09-28
 description: JS对象原型方法 hasOwnProperty()
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JS对象原型方法 hasOwnProperty()

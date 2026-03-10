@@ -2,8 +2,8 @@
 title: InstallingCocoaPodsdependencies很久-或各种网络超时重置报错
 date: 2025-11-26
 description: Installing CocoaPods dependencies 很久，或各种网络超时重置报错
-tags: [ReactNative]
-categories: [移动开发, ReactNative]
+tags: [reactnative]
+categories: [移动开发, reactnative]
 ---
 # Installing CocoaPods dependencies 很久，或各种网络超时重置报错
 
@@ -11,7 +11,7 @@ categories: [移动开发, ReactNative]
 
 如下图：`pod install` 时报错
 
-![1654566928989-91d59268-4d85-404b-88b6-00754b571d2d.png](/assets/img/posts/移动开发/ReactNative/1654566928989-91d59268-4d85-404b-88b6-00754b571d2d-530473.png)
+![1654566928989-91d59268-4d85-404b-88b6-00754b571d2d.png](/assets/img/posts/移动开发/reactnative/1654566928989-91d59268-4d85-404b-88b6-00754b571d2d-530473.png)
 
 ### 分析
 
@@ -94,6 +94,6 @@ git config --global https.proxy '10.12.1.16:3128'
 
 我这里获取终端代理命令，直接在工具上面复制即可。
 
-![1654567546282-af98a402-689c-4125-a648-e370f56df7fd.png](/assets/img/posts/移动开发/ReactNative/1654567546282-af98a402-689c-4125-a648-e370f56df7fd-113551.png)
+![1654567546282-af98a402-689c-4125-a648-e370f56df7fd.png](/assets/img/posts/移动开发/reactnative/1654567546282-af98a402-689c-4125-a648-e370f56df7fd-113551.png)
 
 

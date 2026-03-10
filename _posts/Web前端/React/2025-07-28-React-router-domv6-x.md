@@ -2,7 +2,7 @@
 title: React-router-domv6-x
 date: 2025-07-28
 description: React-router-dom v6.x
-tags: [React, react]
+tags: [react]
 categories: [Web前端, React]
 ---
 # React-router-dom v6.x

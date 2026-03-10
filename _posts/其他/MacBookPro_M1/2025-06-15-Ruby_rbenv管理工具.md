@@ -2,8 +2,8 @@
 title: Ruby_rbenv管理工具
 date: 2025-06-15
 description: Ruby/rbenv管理工具
-tags: [MacBookPro(M1)]
-categories: [其他, MacBookPro_M1]
+tags: [macbookpro-m1]
+categories: [其他, macbookpro-m1]
 ---
 # Ruby/rbenv管理工具
 
@@ -30,7 +30,7 @@ Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 <https:
 
 ### rbenv
 
-Ruby的版本管理工具：管理Ruby的版本，ReactNative所需ruby版本都不一样，所以需要管理一下ruby的版本。
+Ruby的版本管理工具：管理Ruby的版本，reactnative所需ruby版本都不一样，所以需要管理一下ruby的版本。
 
 
 

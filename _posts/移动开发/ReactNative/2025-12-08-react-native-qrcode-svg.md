@@ -2,8 +2,8 @@
 title: react-native-qrcode-svg
 date: 2025-12-08
 description: react-native-qrcode-svg
-tags: [移动开发, ReactNative, react, native]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, react, native]
+categories: [移动开发, reactnative]
 ---
 # react-native-qrcode-svg
 

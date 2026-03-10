@@ -2,7 +2,7 @@
 title: 前端接口神器之JsonServer详细指南
 date: 2025-08-17
 description: 前端接口神器之 Json Server 详细指南
-tags: [React]
+tags: [react]
 categories: [Web前端, React]
 ---
 # 前端接口神器之 Json Server 详细指南

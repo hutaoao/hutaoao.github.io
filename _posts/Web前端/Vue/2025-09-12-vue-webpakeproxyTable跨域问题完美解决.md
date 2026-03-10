@@ -2,7 +2,7 @@
 title: vue-webpakeproxyTable跨域问题完美解决
 date: 2025-09-12
 description: vue+webpake proxyTable跨域问题完美解决
-tags: [Vue, web, vue]
+tags: [vue, web]
 categories: [Web前端, Vue]
 ---
 # vue+webpake proxyTable跨域问题完美解决

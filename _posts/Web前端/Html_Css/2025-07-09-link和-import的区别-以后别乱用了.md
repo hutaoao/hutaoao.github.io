@@ -2,8 +2,8 @@
 title: link和-import的区别-以后别乱用了
 date: 2025-07-09
 description: link和@import的区别，以后别乱用了！
-tags: [Html、Css]
-categories: [Web前端, Html_Css]
+tags: [html-css]
+categories: [Web前端, html-css]
 ---
 # link和@import的区别，以后别乱用了！
 

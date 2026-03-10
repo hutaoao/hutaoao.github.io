@@ -2,7 +2,7 @@
 title: call-apply-bind-的区别
 date: 2025-10-11
 description: call()、apply()、bind() 的区别
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # call()、apply()、bind() 的区别

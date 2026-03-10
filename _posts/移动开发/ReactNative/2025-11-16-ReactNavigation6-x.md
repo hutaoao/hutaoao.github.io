@@ -2,8 +2,8 @@
 title: ReactNavigation6-x
 date: 2025-11-16
 description: ReactNavigation 6.x
-tags: [移动开发, ReactNative, ReactNative0.71, react]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, reactnative0.71, react]
+categories: [移动开发, reactnative]
 ---
 # ReactNavigation 6.x
 **npm install @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/drawer� @react-navigation/native-stack� @react-navigation/bottom-tabs**

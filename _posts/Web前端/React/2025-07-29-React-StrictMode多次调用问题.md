@@ -2,7 +2,7 @@
 title: React-StrictMode多次调用问题
 date: 2025-07-29
 description: React.StrictMode 多次调用问题
-tags: [React, react]
+tags: [react]
 categories: [Web前端, React]
 ---
 # React.StrictMode 多次调用问题

@@ -2,7 +2,7 @@
 title: Vue3封装全局通用提示弹窗-结合el-dialog
 date: 2025-08-21
 description: Vue3封装全局通用提示弹窗(结合el-dialog)
-tags: [Vue, Vue3, vue]
+tags: [vue, Vue3]
 categories: [Web前端, Vue]
 ---
 # Vue3封装全局通用提示弹窗(结合el-dialog)

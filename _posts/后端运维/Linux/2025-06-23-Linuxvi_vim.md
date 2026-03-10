@@ -2,7 +2,7 @@
 title: Linuxvi_vim
 date: 2025-06-23
 description: Linux vi/vim
-tags: [Linux, linux]
+tags: [linux]
 categories: [后端运维, Linux]
 ---
 # Linux vi/vim

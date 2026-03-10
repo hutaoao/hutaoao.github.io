@@ -2,18 +2,18 @@
 title: Task_react-native-video_generateDebugRFileFAILED
 date: 2025-11-04
 description: Task :react-native-video:generateDebugRFile FAILED
-tags: [移动开发, ReactNative, 记录奇奇怪怪问题, react, native]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, 记录奇奇怪怪问题, react, native]
+categories: [移动开发, reactnative]
 ---
 # Task :react-native-video:generateDebugRFile FAILED
 
 具体截图：
 
-![1728886022560-c7c71ebc-2f4f-4176-afea-ec0ab83d55b6.png](/assets/img/posts/移动开发/ReactNative/1728886022560-c7c71ebc-2f4f-4176-afea-ec0ab83d55b6-353351.png)
+![1728886022560-c7c71ebc-2f4f-4176-afea-ec0ab83d55b6.png](/assets/img/posts/移动开发/reactnative/1728886022560-c7c71ebc-2f4f-4176-afea-ec0ab83d55b6-353351.png)
 
 `react-native-video`版本：
 
-![1728886335446-83b9d4e3-caf1-4b2d-85f0-1712f57be9f6.png](/assets/img/posts/移动开发/ReactNative/1728886335446-83b9d4e3-caf1-4b2d-85f0-1712f57be9f6-210719.png)
+![1728886335446-83b9d4e3-caf1-4b2d-85f0-1712f57be9f6.png](/assets/img/posts/移动开发/reactnative/1728886335446-83b9d4e3-caf1-4b2d-85f0-1712f57be9f6-210719.png)
 
 有一天莫名其妙就抱这个错
 
@@ -30,7 +30,7 @@ dependencies {
  }
 ```
 
-![1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200.png](/assets/img/posts/移动开发/ReactNative/1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200-331525.png)
+![1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200.png](/assets/img/posts/移动开发/reactnative/1728886543265-414fc04d-8b47-46b8-8f88-dc703de99200-331525.png)
 
 > 据说应该是我这个\*\*版本\*\*的问题，更新版本就能解决问题
 

@@ -2,7 +2,7 @@
 title: Observed和ObjectLink基本使用
 date: 2025-12-18
 description: "@Observed和@ObjectLink基本使用"
-tags: [HarmonyOS]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # @Observed和@ObjectLink基本使用

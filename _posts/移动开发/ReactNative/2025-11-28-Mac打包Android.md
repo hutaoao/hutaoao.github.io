@@ -2,8 +2,8 @@
 title: Mac打包Android
 date: 2025-11-28
 description: Mac 打包 Android
-tags: [移动开发, ReactNative, android, mac]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, android, mac]
+categories: [移动开发, reactnative]
 ---
 # Mac 打包 Android
 
@@ -13,7 +13,7 @@ categories: [移动开发, ReactNative]
 $ keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 1000
 ```
 
-![1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed.png](/assets/img/posts/移动开发/ReactNative/1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed-722697.png)
+![1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed.png](/assets/img/posts/移动开发/reactnative/1631687056733-f17fe56f-82c3-4ada-aeee-7c33cceb50ed-722697.png)
 
 > 密钥库文件位置：用户主目录（即 cd）
 > 密钥库口令：至少六位数
@@ -72,7 +72,7 @@ $ ./gradlew assembleRelease
 
 ### 碰到的问题：
 
-![1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec.png](/assets/img/posts/移动开发/ReactNative/1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec-653004.png)
+![1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec.png](/assets/img/posts/移动开发/reactnative/1631755772904-567a4d95-cbca-4773-8e5d-c2ffed03d6ec-653004.png)
 
 找不大SDK 位置：
 

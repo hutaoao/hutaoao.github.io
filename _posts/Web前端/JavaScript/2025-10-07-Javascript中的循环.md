@@ -2,7 +2,7 @@
 title: Javascript中的循环
 date: 2025-10-07
 description: Javascript 中的循环
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # Javascript 中的循环

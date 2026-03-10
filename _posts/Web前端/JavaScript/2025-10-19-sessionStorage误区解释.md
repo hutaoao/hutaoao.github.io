@@ -2,7 +2,7 @@
 title: sessionStorage误区解释
 date: 2025-10-19
 description: sessionStorage误区解释
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # sessionStorage误区解释

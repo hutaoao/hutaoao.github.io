@@ -2,7 +2,7 @@
 title: Offstage和TickerMode详解
 date: 2026-01-23
 description: Offstage 和 TickerMode 详解
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # Offstage 和 TickerMode 详解

@@ -2,7 +2,7 @@
 title: shorebird-热更新
 date: 2026-01-29
 description: shorebird（热更新）
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # shorebird（热更新）

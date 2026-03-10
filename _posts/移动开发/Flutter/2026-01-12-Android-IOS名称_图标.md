@@ -2,7 +2,7 @@
 title: Android-IOS名称_图标
 date: 2026-01-12
 description: Android & IOS 名称/图标
-tags: [移动开发, Flutter, Flutter, android, ios]
+tags: [移动开发, flutter, android, ios]
 categories: [移动开发, Flutter]
 ---
 # Android & IOS 名称/图标

@@ -2,7 +2,7 @@
 title: cookies-sessionStorage和localStorage解释及区别
 date: 2025-10-12
 description: cookies、sessionStorage和localStorage解释及区别
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # cookies、sessionStorage和localStorage解释及区别

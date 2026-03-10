@@ -2,7 +2,7 @@
 title: vue-class-component8-0
 date: 2025-08-26
 description: vue-class-component 8.0
-tags: [Vue, Vue3, vue]
+tags: [vue, Vue3]
 categories: [Web前端, Vue]
 ---
 # vue-class-component 8.0

@@ -2,7 +2,7 @@
 title: flutter屏幕适配方案-flutter_screenutil
 date: 2026-01-28
 description: flutter 屏幕适配方案-flutterscreenutil
-tags: [移动开发, Flutter, Flutter, flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # flutter 屏幕适配方案-flutter_screenutil

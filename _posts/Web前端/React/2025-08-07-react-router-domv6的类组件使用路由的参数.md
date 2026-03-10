@@ -2,7 +2,7 @@
 title: react-router-domv6的类组件使用路由的参数
 date: 2025-08-07
 description: react-router-dom v6 的类组件使用路由的参数
-tags: [React, react]
+tags: [react]
 categories: [Web前端, React]
 ---
 # react-router-dom v6 的类组件使用路由的参数

@@ -2,8 +2,8 @@
 title: Android权限申请-PermissionsAndroid
 date: 2025-11-22
 description: Android权限申请-PermissionsAndroid
-tags: [移动开发, ReactNative, android]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, android]
+categories: [移动开发, reactnative]
 ---
 # Android权限申请-PermissionsAndroid
 
@@ -11,7 +11,7 @@ categories: [移动开发, ReactNative]
 
 最基础的一步，先在android的AndroidManifest.xml文件中添加权限声明\ 就像这样。
 
-![1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d.png](/assets/img/posts/移动开发/ReactNative/1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d-380597.png)
+![1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d.png](/assets/img/posts/移动开发/reactnative/1692842640132-a57d5c3d-9d98-464b-963f-cd6adda0760d-380597.png)
 
 然后使用reactNative自带的权限管理API，使用比较简单。
 
@@ -65,7 +65,7 @@ async requestCameraPermissions() {
 
 因为是请求权限是个异步过程，所以需要async和await关键字，然后判断granted是否等于PermissionsAndroid.RESULTS.GRANTED来判断是否请求成功，\ 然后再我的小米上运行：
 
-![1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556.png](/assets/img/posts/移动开发/ReactNative/1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556-693816.png)
+![1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556.png](/assets/img/posts/移动开发/reactnative/1692842844150-7fba0b62-ed90-46a7-82af-90cfa452f556-693816.png)
 
 然后就获取成功了
 
@@ -132,7 +132,7 @@ async requestAllPermissions() {
 
 效果如下
 
-![1692842899980-059793ab-b575-457d-90a6-eed23f377bee.png](/assets/img/posts/移动开发/ReactNative/1692842899980-059793ab-b575-457d-90a6-eed23f377bee-733716.png)
+![1692842899980-059793ab-b575-457d-90a6-eed23f377bee.png](/assets/img/posts/移动开发/reactnative/1692842899980-059793ab-b575-457d-90a6-eed23f377bee-733716.png)
 
 可以看到，确实获取了多个权限。\ 可以把请求权限的方法放在项目初次进入或者放在需要使用权限的地方
 

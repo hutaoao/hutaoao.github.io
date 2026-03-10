@@ -2,7 +2,7 @@
 title: BorderRadius的不同样式的圆角
 date: 2026-01-14
 description: BorderRadius 的不同样式的圆角
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # BorderRadius 的不同样式的圆角

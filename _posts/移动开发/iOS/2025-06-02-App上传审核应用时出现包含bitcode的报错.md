@@ -2,7 +2,7 @@
 title: App上传审核应用时出现包含bitcode的报错
 date: 2025-06-02
 description: App 上传审核应用时出现包含 bitcode 的报错
-tags: [iOS]
+tags: [ios]
 categories: [移动开发, iOS]
 ---
 # App 上传审核应用时出现包含 bitcode 的报错

@@ -2,8 +2,8 @@
 title: 使用iconfont在线icon
 date: 2025-07-10
 description: 使用iconfont在线icon
-tags: [Html、Css]
-categories: [Web前端, Html_Css]
+tags: [html-css]
+categories: [Web前端, html-css]
 ---
 # 使用iconfont在线icon
 
@@ -13,7 +13,7 @@ categories: [Web前端, Html_Css]
 
 
 
-![1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc.png](/assets/img/posts/Web前端/Html_Css/1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc-621712.png)
+![1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc.png](/assets/img/posts/Web前端/html-css/1667266642314-d0f37a57-1fc4-422c-abaf-668a09d6efdc-621712.png)
 
 
 

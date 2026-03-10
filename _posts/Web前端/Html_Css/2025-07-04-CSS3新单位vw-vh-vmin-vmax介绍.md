@@ -2,8 +2,8 @@
 title: CSS3新单位vw-vh-vmin-vmax介绍
 date: 2025-07-04
 description: CSS3新单位vw、vh、vmin、vmax介绍
-tags: [Web前端, Html_Css, css]
-categories: [Web前端, Html_Css]
+tags: [Web前端, html-css, css]
+categories: [Web前端, html-css]
 ---
 # CSS3新单位vw、vh、vmin、vmax介绍
 
@@ -133,7 +133,7 @@ categories: [Web前端, Html_Css]
 #### 2，效果图
 
 
-![1574645467339-70c0063c-32ce-420f-af41-6e2e0fd74b00.png](/assets/img/posts/Web前端/Html_Css/1574645467339-70c0063c-32ce-420f-af41-6e2e0fd74b00-090712.png)
+![1574645467339-70c0063c-32ce-420f-af41-6e2e0fd74b00.png](/assets/img/posts/Web前端/html-css/1574645467339-70c0063c-32ce-420f-af41-6e2e0fd74b00-090712.png)
 
 
 
@@ -193,11 +193,11 @@ categories: [Web前端, Html_Css]
 #### 2，效果图
 
 
-![1574645492938-d6671de9-9a43-4677-897c-f0cf986812b7.png](/assets/img/posts/Web前端/Html_Css/1574645492938-d6671de9-9a43-4677-897c-f0cf986812b7-423982.png)
+![1574645492938-d6671de9-9a43-4677-897c-f0cf986812b7.png](/assets/img/posts/Web前端/html-css/1574645492938-d6671de9-9a43-4677-897c-f0cf986812b7-423982.png)
 
 
 
-![1574645499284-40c2af8e-119d-483b-bbb9-ddcb3735ecf0.png](/assets/img/posts/Web前端/Html_Css/1574645499284-40c2af8e-119d-483b-bbb9-ddcb3735ecf0-715386.png)
+![1574645499284-40c2af8e-119d-483b-bbb9-ddcb3735ecf0.png](/assets/img/posts/Web前端/html-css/1574645499284-40c2af8e-119d-483b-bbb9-ddcb3735ecf0-715386.png)
 
 
 
@@ -216,7 +216,7 @@ categories: [Web前端, Html_Css]
 
 
 
-![1574645515887-c77a00cb-b35d-4988-b7a8-659a31561389.png](/assets/img/posts/Web前端/Html_Css/1574645515887-c77a00cb-b35d-4988-b7a8-659a31561389-663153.png)
+![1574645515887-c77a00cb-b35d-4988-b7a8-659a31561389.png](/assets/img/posts/Web前端/html-css/1574645515887-c77a00cb-b35d-4988-b7a8-659a31561389-663153.png)
 
 
 
@@ -329,11 +329,11 @@ categories: [Web前端, Html_Css]
 
 
 
-![1574645535218-e05f04ab-74dc-4635-897b-d7500749bc5a.png](/assets/img/posts/Web前端/Html_Css/1574645535218-e05f04ab-74dc-4635-897b-d7500749bc5a-666435.png)
+![1574645535218-e05f04ab-74dc-4635-897b-d7500749bc5a.png](/assets/img/posts/Web前端/html-css/1574645535218-e05f04ab-74dc-4635-897b-d7500749bc5a-666435.png)
 
 
 
-![1574645540803-57f75b30-2111-4066-a1fe-6a3dd433b564.png](/assets/img/posts/Web前端/Html_Css/1574645540803-57f75b30-2111-4066-a1fe-6a3dd433b564-784299.png)
+![1574645540803-57f75b30-2111-4066-a1fe-6a3dd433b564.png](/assets/img/posts/Web前端/html-css/1574645540803-57f75b30-2111-4066-a1fe-6a3dd433b564-784299.png)
 
 
 
@@ -448,11 +448,11 @@ categories: [Web前端, Html_Css]
 
 
 
-![1574645558295-64aa7ae6-cd46-4eb7-9416-d76237600a66.png](/assets/img/posts/Web前端/Html_Css/1574645558295-64aa7ae6-cd46-4eb7-9416-d76237600a66-411935.png)
+![1574645558295-64aa7ae6-cd46-4eb7-9416-d76237600a66.png](/assets/img/posts/Web前端/html-css/1574645558295-64aa7ae6-cd46-4eb7-9416-d76237600a66-411935.png)
 
 
 
-![1574645564198-b4261a71-f3e9-4930-b3e7-cc967b5e5192.png](/assets/img/posts/Web前端/Html_Css/1574645564198-b4261a71-f3e9-4930-b3e7-cc967b5e5192-334254.png)
+![1574645564198-b4261a71-f3e9-4930-b3e7-cc967b5e5192.png](/assets/img/posts/Web前端/html-css/1574645564198-b4261a71-f3e9-4930-b3e7-cc967b5e5192-334254.png)
 
 
 
@@ -539,11 +539,11 @@ categories: [Web前端, Html_Css]
 
 
 
-![1574645579689-e1945654-515b-4d86-b9a7-84f6dea74145.png](/assets/img/posts/Web前端/Html_Css/1574645579689-e1945654-515b-4d86-b9a7-84f6dea74145-070122.png)
+![1574645579689-e1945654-515b-4d86-b9a7-84f6dea74145.png](/assets/img/posts/Web前端/html-css/1574645579689-e1945654-515b-4d86-b9a7-84f6dea74145-070122.png)
 
 
 
-![1574645584882-768c44c1-9a71-467b-b751-a5c25c9cf4c5.png](/assets/img/posts/Web前端/Html_Css/1574645584882-768c44c1-9a71-467b-b751-a5c25c9cf4c5-120206.png)
+![1574645584882-768c44c1-9a71-467b-b751-a5c25c9cf4c5.png](/assets/img/posts/Web前端/html-css/1574645584882-768c44c1-9a71-467b-b751-a5c25c9cf4c5-120206.png)
 
 
 

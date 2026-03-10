@@ -2,7 +2,7 @@
 title: Container还是Padding
 date: 2026-01-15
 description: Container还是Padding
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # Container还是Padding

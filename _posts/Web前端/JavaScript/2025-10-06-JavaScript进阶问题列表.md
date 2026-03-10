@@ -2,7 +2,7 @@
 title: JavaScript进阶问题列表
 date: 2025-10-06
 description: JavaScript 进阶问题列表
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript 进阶问题列表

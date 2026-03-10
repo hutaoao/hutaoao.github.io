@@ -2,7 +2,7 @@
 title: 函数组件获取子组件实例-forwardRef
 date: 2025-08-14
 description: 函数组件获取子组件实例（forwardRef）
-tags: [React]
+tags: [react]
 categories: [Web前端, React]
 ---
 # 函数组件获取子组件实例（forwardRef）

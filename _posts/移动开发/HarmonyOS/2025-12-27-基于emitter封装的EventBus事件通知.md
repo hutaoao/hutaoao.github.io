@@ -2,7 +2,7 @@
 title: 基于emitter封装的EventBus事件通知
 date: 2025-12-27
 description: 基于 emitter 封装的 EventBus 事件通知
-tags: [HarmonyOS]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # 基于 emitter 封装的 EventBus 事件通知

@@ -2,8 +2,8 @@
 title: rbenv-ruby版本管理
 date: 2025-06-17
 description: rbenv - ruby版本管理
-tags: [MacBookPro(M1)]
-categories: [其他, MacBookPro_M1]
+tags: [macbookpro-m1]
+categories: [其他, macbookpro-m1]
 ---
 # rbenv - ruby版本管理
 

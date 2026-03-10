@@ -2,7 +2,7 @@
 title: module-exports和export
 date: 2025-05-26
 description: module.exports 和 export
-tags: [后端运维, Node, node, npm]
+tags: [后端运维, node, npm]
 categories: [后端运维, Node]
 ---
 # module.exports 和 export

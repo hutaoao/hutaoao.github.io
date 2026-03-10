@@ -2,7 +2,7 @@
 title: ES6之Array-from-方法
 date: 2025-09-22
 description: ES6之Array.from()方法
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # ES6之Array.from()方法

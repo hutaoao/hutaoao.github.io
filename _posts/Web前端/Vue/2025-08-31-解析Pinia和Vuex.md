@@ -2,7 +2,7 @@
 title: 解析Pinia和Vuex
 date: 2025-08-31
 description: 解析 Pinia 和 Vuex
-tags: [Vue, Vue3, vue]
+tags: [vue, Vue3]
 categories: [Web前端, Vue]
 ---
 # 解析 Pinia 和 Vuex

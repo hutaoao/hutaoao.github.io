@@ -2,7 +2,7 @@
 title: JavaScript的事件委托
 date: 2025-10-04
 description: JavaScript的事件委托
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript的事件委托

@@ -2,7 +2,7 @@
 title: React使用iconfont
 date: 2025-07-31
 description: React使用iconfont
-tags: [React, react]
+tags: [react]
 categories: [Web前端, React]
 ---
 # React使用iconfont

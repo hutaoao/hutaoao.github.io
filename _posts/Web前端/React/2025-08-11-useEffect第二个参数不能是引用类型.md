@@ -2,7 +2,7 @@
 title: useEffect第二个参数不能是引用类型
 date: 2025-08-11
 description: useEffect第二个参数不能是引用类型
-tags: [React]
+tags: [react]
 categories: [Web前端, React]
 ---
 # useEffect第二个参数不能是引用类型

@@ -2,8 +2,8 @@
 title: ios更换应用图标testflight更新后返回桌面会闪一下旧的图标
 date: 2025-11-05
 description: ios更换应用图标testflight更新后返回桌面会闪一下旧的图标
-tags: [移动开发, ReactNative, 记录奇奇怪怪问题, ios]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, 记录奇奇怪怪问题, ios]
+categories: [移动开发, reactnative]
 ---
 # ios更换应用图标testflight更新后返回桌面会闪一下旧的图标
 
@@ -27,7 +27,7 @@ categories: [移动开发, ReactNative]
 
 上传的启动页图片换个命名
 
-![1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1.png](/assets/img/posts/移动开发/ReactNative/1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1-685356.png)
+![1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1.png](/assets/img/posts/移动开发/reactnative/1732009698133-2b522c75-6a2f-405c-9504-199622b72ed1-685356.png)
 
 
 

@@ -2,7 +2,7 @@
 title: Let-sEncrypt免费SSL证书
 date: 2025-06-22
 description: Let’s Encrypt 免费SSL证书
-tags: [Linux]
+tags: [linux]
 categories: [后端运维, Linux]
 ---
 # Let’s Encrypt 免费SSL证书

@@ -2,8 +2,8 @@
 title: react-native-share
 date: 2025-12-09
 description: react-native-share
-tags: [移动开发, ReactNative, react, native]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, react, native]
+categories: [移动开发, reactnative]
 ---
 # react-native-share
 
@@ -85,7 +85,7 @@ RN 0.61.1版本已经修复。若您的版本低于此（也就是本人的 0.59
 
 修复差异图：
 
-![1658462202111-cbe91bde-84fe-4d32-9549-55adc3081881.png](/assets/img/posts/移动开发/ReactNative/1658462202111-cbe91bde-84fe-4d32-9549-55adc3081881-107574.png)
+![1658462202111-cbe91bde-84fe-4d32-9549-55adc3081881.png](/assets/img/posts/移动开发/reactnative/1658462202111-cbe91bde-84fe-4d32-9549-55adc3081881-107574.png)
 
 3. **xcode11及以上ios运行报错解决方法**
 

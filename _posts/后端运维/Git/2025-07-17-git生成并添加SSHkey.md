@@ -2,7 +2,7 @@
 title: git生成并添加SSHkey
 date: 2025-07-17
 description: git生成并添加SSH key
-tags: [Git, git]
+tags: [git]
 categories: [后端运维, Git]
 ---
 # git生成并添加SSH key

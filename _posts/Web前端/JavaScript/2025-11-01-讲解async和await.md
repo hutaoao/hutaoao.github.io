@@ -2,7 +2,7 @@
 title: 讲解async和await
 date: 2025-11-01
 description: 讲解async和await
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # 讲解async和await

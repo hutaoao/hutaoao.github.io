@@ -2,7 +2,7 @@
 title: JavaScriptData对象方法整理
 date: 2025-09-29
 description: JavaScript Data对象方法整理
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript Data对象方法整理

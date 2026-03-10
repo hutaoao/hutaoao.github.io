@@ -2,7 +2,7 @@
 title: Vue3-VueRouter4多布局实现方案
 date: 2025-08-19
 description: Vue3+Vue Router4多布局实现方案
-tags: [Vue, Vue3, vue]
+tags: [vue, Vue3]
 categories: [Web前端, Vue]
 ---
 # Vue3+Vue Router4多布局实现方案

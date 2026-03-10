@@ -2,12 +2,12 @@
 title: main-jsbundledoesnotexist-Thismustbeabugwith
 date: 2025-11-06
 description: main.jsbundle does not exist. This must be a bug with
-tags: [移动开发, ReactNative, 记录奇奇怪怪问题]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, 记录奇奇怪怪问题]
+categories: [移动开发, reactnative]
 ---
 # main.jsbundle does not exist. This must be a bug with
 
-![1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8.png](/assets/img/posts/移动开发/ReactNative/1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8-542178.png)
+![1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8.png](/assets/img/posts/移动开发/reactnative/1669967132118-343d9610-9d96-4b24-8f7f-725b4280b9e8-542178.png)
 
 **！！！最新处理方案：**
 
@@ -32,10 +32,10 @@ categories: [移动开发, ReactNative]
 
 3）然后如下图 引入 该文件 `main.jsbundle`
 
-![1669966142156-20a6d6f0-ab35-4378-865a-41dce0a83f61.png](/assets/img/posts/移动开发/ReactNative/1669966142156-20a6d6f0-ab35-4378-865a-41dce0a83f61-705556.png)
+![1669966142156-20a6d6f0-ab35-4378-865a-41dce0a83f61.png](/assets/img/posts/移动开发/reactnative/1669966142156-20a6d6f0-ab35-4378-865a-41dce0a83f61-705556.png)
 
 或：
 
-![1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df.png](/assets/img/posts/移动开发/ReactNative/1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df-736490.png)
+![1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df.png](/assets/img/posts/移动开发/reactnative/1669968094626-fd2cf7cd-6718-4c26-a3fd-141b17eb40df-736490.png)
 
 

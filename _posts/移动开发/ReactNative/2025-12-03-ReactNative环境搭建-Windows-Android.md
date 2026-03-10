@@ -1,9 +1,9 @@
 ---
-title: ReactNative环境搭建-Windows-Android
+title: reactnative环境搭建-Windows-Android
 date: 2025-12-03
 description: React Native环境搭建（Windows+Android）
-tags: [移动开发, ReactNative, reactnative, react, native, android]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, reactnative, react, native, android]
+categories: [移动开发, reactnative]
 ---
 # React Native环境搭建（Windows+Android）
 
@@ -83,7 +83,7 @@ Android Studio 默认会安装最新版本的 Android SDK。目前编译 React N
 
 你可以在 Android Studio 的欢迎界面中找到 SDK Manager。点击"Configure"，然后就能看到"SDK Manager"。
 
-![1606898120038-f1ee977c-09db-4b74-ba7b-0c7e3916a127.png](/assets/img/posts/移动开发/ReactNative/1606898120038-f1ee977c-09db-4b74-ba7b-0c7e3916a127-552235.png)
+![1606898120038-f1ee977c-09db-4b74-ba7b-0c7e3916a127.png](/assets/img/posts/移动开发/reactnative/1606898120038-f1ee977c-09db-4b74-ba7b-0c7e3916a127-552235.png)
 
 > SDK Manager 还可以在 Android Studio 的"Preferences"菜单中找到。具体路径是**Appearance & Behavior** → **System Settings** → **Android SDK**。
 
@@ -102,7 +102,7 @@ Android Studio 默认会安装最新版本的 Android SDK。目前编译 React N
 
 创建一个名为`ANDROID_HOME`的环境变量（系统或用户变量均可），指向你的 Android SDK 所在的目录（具体的路径可能和下图不一致，请自行确认）：
 
-![1606899026781-b1656866-ac7a-4f3a-a6db-91c3dca57665.png](/assets/img/posts/移动开发/ReactNative/1606899026781-b1656866-ac7a-4f3a-a6db-91c3dca57665-931998.png)
+![1606899026781-b1656866-ac7a-4f3a-a6db-91c3dca57665.png](/assets/img/posts/移动开发/reactnative/1606899026781-b1656866-ac7a-4f3a-a6db-91c3dca57665-931998.png)
 
 SDK 默认是安装在下面的目录：
 

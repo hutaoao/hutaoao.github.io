@@ -2,7 +2,7 @@
 title: onbeforeunload
 date: 2025-10-18
 description: onbeforeunload
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # onbeforeunload

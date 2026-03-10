@@ -2,7 +2,7 @@
 title: MVVM和Vue-js
 date: 2025-09-02
 description: MVVM和Vue.js
-tags: [Vue, vue]
+tags: [vue]
 categories: [Web前端, Vue]
 ---
 # MVVM和Vue.js

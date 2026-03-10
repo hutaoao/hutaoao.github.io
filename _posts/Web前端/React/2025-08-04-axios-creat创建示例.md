@@ -2,7 +2,7 @@
 title: axios-creat创建示例
 date: 2025-08-04
 description: axios-creat 创建示例
-tags: [React, ios]
+tags: [react, ios]
 categories: [Web前端, React]
 ---
 # axios-creat 创建示例

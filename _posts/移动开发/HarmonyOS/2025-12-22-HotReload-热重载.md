@@ -2,12 +2,12 @@
 title: HotReload-热重载
 date: 2025-12-22
 description: Hot Reload（热重载）
-tags: [HarmonyOS]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # Hot Reload（热重载）
 
-> ‼️这里的热重载限制很多，不像ReactNative、Flutter那样，切记注意，不然调试半天还以为是自己的BUG😂😂😂
+> ‼️这里的热重载限制很多，不像reactnative、Flutter那样，切记注意，不然调试半天还以为是自己的BUG😂😂😂
 
 
 

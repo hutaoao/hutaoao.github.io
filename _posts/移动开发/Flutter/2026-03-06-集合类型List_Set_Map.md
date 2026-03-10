@@ -2,7 +2,7 @@
 title: 集合类型List_Set_Map
 date: 2026-03-06
 description: 集合类型List/Set/Map
-tags: [移动开发, Flutter, Dart]
+tags: [移动开发, flutter, dart]
 categories: [移动开发, Flutter]
 ---
 # 集合类型List/Set/Map

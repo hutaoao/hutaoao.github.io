@@ -2,7 +2,7 @@
 title: setTimeout详解
 date: 2025-10-20
 description: setTimeout 详解
-tags: [Javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # setTimeout 详解

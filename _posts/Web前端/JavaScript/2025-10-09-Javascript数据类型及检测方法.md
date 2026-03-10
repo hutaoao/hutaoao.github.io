@@ -2,7 +2,7 @@
 title: Javascript数据类型及检测方法
 date: 2025-10-09
 description: Javascript数据类型及检测方法
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # Javascript数据类型及检测方法

@@ -2,7 +2,7 @@
 title: history和hash路由模式
 date: 2025-09-11
 description: history和hash路由模式
-tags: [Vue]
+tags: [vue]
 categories: [Web前端, Vue]
 ---
 # history和hash路由模式

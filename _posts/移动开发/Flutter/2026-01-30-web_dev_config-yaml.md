@@ -2,7 +2,7 @@
 title: web_dev_config-yaml
 date: 2026-01-30
 description: webdevconfig.yaml
-tags: [移动开发, Flutter, Flutter, web]
+tags: [移动开发, flutter, web]
 categories: [移动开发, Flutter]
 ---
 # web_dev_config.yaml

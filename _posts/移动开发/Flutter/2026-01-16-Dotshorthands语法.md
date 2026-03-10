@@ -2,7 +2,7 @@
 title: Dotshorthands语法
 date: 2026-01-16
 description: Dot shorthands 语法
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # Dot shorthands 语法

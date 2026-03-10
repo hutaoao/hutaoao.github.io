@@ -2,7 +2,7 @@
 title: getCurrentInstance
 date: 2025-08-22
 description: getCurrentInstance
-tags: [Vue, Vue3]
+tags: [vue, Vue3]
 categories: [Web前端, Vue]
 ---
 # getCurrentInstance

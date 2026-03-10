@@ -2,8 +2,8 @@
 title: armeabi-v7a-arm64-v8a-armeabi-x86-x86_64的区别
 date: 2025-12-07
 description: armeabi-v7a、arm64-v8a、armeabi、x86、x8664的区别
-tags: [ReactNative]
-categories: [移动开发, ReactNative]
+tags: [reactnative]
+categories: [移动开发, reactnative]
 ---
 # armeabi-v7a、arm64-v8a、armeabi、x86、x86_64的区别
 

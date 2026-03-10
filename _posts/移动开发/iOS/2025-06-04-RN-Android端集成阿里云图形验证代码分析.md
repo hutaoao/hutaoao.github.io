@@ -2,7 +2,7 @@
 title: RN-Android端集成阿里云图形验证代码分析
 date: 2025-06-04
 description: RN-Android端集成阿里云图形验证代码分析
-tags: [iOS, android]
+tags: [ios, android]
 categories: [移动开发, iOS]
 ---
 # RN-Android端集成阿里云图形验证代码分析

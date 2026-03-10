@@ -2,7 +2,7 @@
 title: firstWhere
 date: 2026-02-06
 description: firstWhere
-tags: [移动开发, Flutter, Dart, List常用方法]
+tags: [移动开发, flutter, dart, List常用方法]
 categories: [移动开发, Flutter]
 ---
 # firstWhere

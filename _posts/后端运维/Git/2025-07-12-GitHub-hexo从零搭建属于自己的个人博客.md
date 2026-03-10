@@ -2,7 +2,7 @@
 title: GitHub-hexo从零搭建属于自己的个人博客
 date: 2025-07-12
 description: GitHub + hexo从零搭建属于自己的个人博客
-tags: [Git, git]
+tags: [git]
 categories: [后端运维, Git]
 ---
 # GitHub + hexo从零搭建属于自己的个人博客

@@ -2,7 +2,7 @@
 title: JavaScript中RegExp对象整理
 date: 2025-09-30
 description: JavaScript中RegExp对象整理
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript中RegExp对象整理

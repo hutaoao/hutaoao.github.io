@@ -2,7 +2,7 @@
 title: JavaScript中的____和____有啥不同
 date: 2025-10-02
 description: JavaScript 中的"??"和"||" 有啥不同
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript 中的"??"和"||" 有啥不同

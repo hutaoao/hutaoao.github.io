@@ -2,7 +2,7 @@
 title: RealDOM和VirtualDOM
 date: 2025-08-02
 description: Real DOM和Virtual DOM
-tags: [React]
+tags: [react]
 categories: [Web前端, React]
 ---
 # Real DOM和Virtual DOM

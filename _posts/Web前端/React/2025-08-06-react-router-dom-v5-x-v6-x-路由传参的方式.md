@@ -2,7 +2,7 @@
 title: react-router-dom-v5-x-v6-x-路由传参的方式
 date: 2025-08-06
 description: react-router-dom(v5.x & v6.x)路由传参的方式
-tags: [React, react]
+tags: [react]
 categories: [Web前端, React]
 ---
 # react-router-dom(v5.x & v6.x)路由传参的方式

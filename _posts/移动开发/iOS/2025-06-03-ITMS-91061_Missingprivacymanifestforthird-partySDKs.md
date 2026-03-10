@@ -2,7 +2,7 @@
 title: ITMS-91061_Missingprivacymanifestforthird-partySDKs
 date: 2025-06-03
 description: "ITMS-91061: Missing privacy manifest for third-party SDKs"
-tags: [iOS]
+tags: [ios]
 categories: [移动开发, iOS]
 ---
 # ITMS-91061: Missing privacy manifest for third-party SDKs

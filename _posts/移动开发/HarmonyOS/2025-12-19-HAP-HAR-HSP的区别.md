@@ -2,7 +2,7 @@
 title: HAP-HAR-HSP的区别
 date: 2025-12-19
 description: HAP、HAR、HSP的区别
-tags: [HarmonyOS]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # HAP、HAR、HSP的区别

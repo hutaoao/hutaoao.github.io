@@ -2,7 +2,7 @@
 title: yum提示-Cannotretrievemetalinkforrepository_epel_x86_64-解决方法
 date: 2025-06-28
 description: "yum提示\"Cannot retrieve metalink for repository: epel/x86_64\" 解决方法"
-tags: [Linux]
+tags: [linux]
 categories: [后端运维, Linux]
 ---
 # yum提示"Cannot retrieve metalink for repository: epel/x86_64" 解决方法

@@ -2,7 +2,7 @@
 title: attrs和-listeners
 date: 2025-09-01
 description: $attrs 和 $listeners
-tags: [Vue]
+tags: [vue]
 categories: [Web前端, Vue]
 ---
 # $attrs 和 $listeners

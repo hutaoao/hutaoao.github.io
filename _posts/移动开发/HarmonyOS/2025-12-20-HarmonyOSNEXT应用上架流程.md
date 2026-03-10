@@ -2,7 +2,7 @@
 title: HarmonyOSNEXT应用上架流程
 date: 2025-12-20
 description: HarmonyOS NEXT应用上架流程
-tags: [HarmonyOS, harmonyos]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # HarmonyOS NEXT应用上架流程

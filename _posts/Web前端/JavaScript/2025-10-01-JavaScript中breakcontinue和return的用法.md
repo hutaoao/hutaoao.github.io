@@ -2,7 +2,7 @@
 title: JavaScript中breakcontinue和return的用法
 date: 2025-10-01
 description: JavaScript中break continue和return的用法
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript中break continue和return的用法

@@ -2,7 +2,7 @@
 title: Android-IOS启动页
 date: 2026-01-13
 description: Android & IOS 启动页
-tags: [移动开发, Flutter, Flutter, android, ios]
+tags: [移动开发, flutter, android, ios]
 categories: [移动开发, Flutter]
 ---
 # Android & IOS 启动页

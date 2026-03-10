@@ -2,7 +2,7 @@
 title: Xcode14_15_16设置DisplayName不生效问题
 date: 2025-06-06
 description: Xcode14/15/16 设置Display Name不生效问题
-tags: [iOS]
+tags: [ios]
 categories: [移动开发, iOS]
 ---
 # Xcode14/15/16 设置Display Name不生效问题

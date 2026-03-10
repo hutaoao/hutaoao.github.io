@@ -2,7 +2,7 @@
 title: JavaScript字符串方法整理-最齐全的
 date: 2025-10-03
 description: JavaScript字符串方法整理 - 最齐全的
-tags: [Javascript, javascript]
+tags: [javascript]
 categories: [Web前端, JavaScript]
 ---
 # JavaScript字符串方法整理 - 最齐全的

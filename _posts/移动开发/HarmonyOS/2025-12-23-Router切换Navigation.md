@@ -2,7 +2,7 @@
 title: Router切换Navigation
 date: 2025-12-23
 description: Router切换Navigation
-tags: [HarmonyOS]
+tags: [harmonyos]
 categories: [移动开发, HarmonyOS]
 ---
 # Router切换Navigation

@@ -2,7 +2,7 @@
 title: SizedBox-shrink
 date: 2026-01-26
 description: SizedBox.shrink()
-tags: [移动开发, Flutter, Flutter]
+tags: [移动开发, flutter]
 categories: [移动开发, Flutter]
 ---
 # SizedBox.shrink()

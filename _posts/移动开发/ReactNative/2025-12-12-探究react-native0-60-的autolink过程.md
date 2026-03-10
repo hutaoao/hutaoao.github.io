@@ -2,8 +2,8 @@
 title: 探究react-native0-60-的autolink过程
 date: 2025-12-12
 description: 探究react-native 0.60+ 的autolink过程
-tags: [移动开发, ReactNative, react, native]
-categories: [移动开发, ReactNative]
+tags: [移动开发, reactnative, react, native]
+categories: [移动开发, reactnative]
 ---
 # 探究react-native 0.60+ 的autolink过程
 ├─ lib
@@ -88,7 +88,7 @@ protected List<ReactPackage> getPackages() {
     @SuppressWarnings("UnnecessaryLocalVariable")
     List<ReactPackage> packages = new PackageList(this).getPackages();
     // Packages that cannot be autolinked yet can be added manually here, for example:
-    // packages.add(new MyReactNativePackage());
+    // packages.add(new MyreactnativePackage());
     return packages;
 }
 ```
@@ -111,35 +111,35 @@ include ':app'
 
 ```dart
 ...
-def autoModules = new ReactNativeModules(logger, projectRoot)
+def autoModules = new reactnativeModules(logger, projectRoot)
 
 ext.applyNativeModulesSettingsGradle = { DefaultSettings defaultSettings, String root = null ->
   if (root != null) {
-    logger.warn("${ReactNativeModules.LOG_PREFIX}Passing custom root is deprecated. CLI detects root automatically now.");
-    logger.warn("${ReactNativeModules.LOG_PREFIX}Please remove second argument to `applyNativeModulesSettingsGradle`.");
+    logger.warn("${reactnativeModules.LOG_PREFIX}Passing custom root is deprecated. CLI detects root automatically now.");
+    logger.warn("${reactnativeModules.LOG_PREFIX}Please remove second argument to `applyNativeModulesSettingsGradle`.");
   }
-  autoModules.addReactNativeModuleProjects(defaultSettings) 
+  autoModules.addreactnativeModuleProjects(defaultSettings) 
 }
 ...
 ```
 
-可以看到，`applyNativeModulesSettingsGradle`会去调用`ReactNativeModules`类的实例`autoModules`的`addReactNativeModuleProjects`方法\
-我们来看下ReactNativeModlules这个类
+可以看到，`applyNativeModulesSettingsGradle`会去调用`reactnativeModules`类的实例`autoModules`的`addreactnativeModuleProjects`方法\
+我们来看下reactnativeModlules这个类
 
 ```tsx
-class ReactNativeModules {
+class reactnativeModules {
   private Logger logger
   private String packageName
   private File root
   private ArrayList<HashMap<String, String>> reactNativeModules
 
-  private static String LOG_PREFIX = ":ReactNative:"
+  private static String LOG_PREFIX = ":reactnative:"
 
-  ReactNativeModules(Logger logger, File root) {
+  reactnativeModules(Logger logger, File root) {
     this.logger = logger
     this.root = root
 
-    def (nativeModules, packageName) = this.getReactNativeConfig()
+    def (nativeModules, packageName) = this.getreactnativeConfig()
     this.reactNativeModules = nativeModules
     this.packageName = packageName
   }
@@ -147,7 +147,7 @@ class ReactNativeModules {
   /**
    * Include the react native modules android projects and specify their project directory
    */
-  void addReactNativeModuleProjects(DefaultSettings defaultSettings) {
+  void addreactnativeModuleProjects(DefaultSettings defaultSettings) {
     reactNativeModules.forEach { reactNativeModule ->
       String nameCleansed = reactNativeModule["nameCleansed"]
       String androidSourceDir = reactNativeModule["androidSourceDir"]
@@ -159,9 +159,9 @@ class ReactNativeModules {
 }
 ```
 
-可以看到`addReactNativeModuleProjects`做了一件事，就是把`reactNativeModules`数组的每一个项提取出来，取每个项的`nameCleansed`和`androidSourceDir`属性赋给`defaultSettings`
+可以看到`addreactnativeModuleProjects`做了一件事，就是把`reactNativeModules`数组的每一个项提取出来，取每个项的`nameCleansed`和`androidSourceDir`属性赋给`defaultSettings`
 
-* 由构造函数可知，`reactNativeModules`是一个由`getReactNativeConfig`方法返回的数组，我们暂且不去管`getReactNativeConfig`的具体内容，只需要知道它返回了项目的包名`packageName`以及包含所有的依赖对象的数组`reactNativeModules`,每个对象包含了对应依赖的若干信息，包括路径，名称等等，`nameCleansed`是依赖的名称，`androidSouceDir`是依赖包的android路径。
+* 由构造函数可知，`reactNativeModules`是一个由`getreactnativeConfig`方法返回的数组，我们暂且不去管`getreactnativeConfig`的具体内容，只需要知道它返回了项目的包名`packageName`以及包含所有的依赖对象的数组`reactNativeModules`,每个对象包含了对应依赖的若干信息，包括路径，名称等等，`nameCleansed`是依赖的名称，`androidSouceDir`是依赖包的android路径。
 * 那作为参数传过来的`defaultSettings`是什么呢?其实它是在`setting.gradle`里作为`applyNativeModulesSettingsGradle`的参数传进来，本质是`setting.gradle`文件的内置隐含对象`settings`
 
 ```python
@@ -205,10 +205,10 @@ apply from: file("../../node_modules/@react-native-community/cli-platform-androi
 ```dart
 ext.applyNativeModulesAppBuildGradle = { Project project, String root = null ->
   if (root != null) {
-    logger.warn("${ReactNativeModules.LOG_PREFIX}Passing custom root is deprecated. CLI detects root automatically now");
-    logger.warn("${ReactNativeModules.LOG_PREFIX}Please remove second argument to `applyNativeModulesAppBuildGradle`.");
+    logger.warn("${reactnativeModules.LOG_PREFIX}Passing custom root is deprecated. CLI detects root automatically now");
+    logger.warn("${reactnativeModules.LOG_PREFIX}Please remove second argument to `applyNativeModulesAppBuildGradle`.");
   }
-  autoModules.addReactNativeModuleDependencies(project)
+  autoModules.addreactnativeModuleDependencies(project)
 
   def generatedSrcDir = new File(buildDir, "generated/rncli/src/main/java")
   def generatedCodeDir = new File(generatedSrcDir, generatedFilePackage.replace('.', '/'))
@@ -235,15 +235,15 @@ ext.applyNativeModulesAppBuildGradle = { Project project, String root = null ->
 
 `applyNativeModulesAppBuildGradle`方法做了2件事：
 
-* 1、调用`ReactNativeModules`类的实例`autoModules`的`addReactNativeModuleDependencies`方法,添加react-native依赖
+* 1、调用`reactnativeModules`类的实例`autoModules`的`addreactnativeModuleDependencies`方法,添加react-native依赖
 * 2、创建一个生成一个package列表文件的task，并使其在构建之前执行，同时将文件路径配置到sourceSets（值得注意的是，这里的android指的是加载此gradle的project里的android，这里因为是app/bulid.gradle加载的此gradle，所以对应的是bulid.gradle的android，注意不要把android{}这种形式看成是配置，而应该看成是函数的调用）
 
 ##### 2.1 添加react-native依赖
 
-看一下`addReactNativeModuleDependencies`方法
+看一下`addreactnativeModuleDependencies`方法
 
 ```cpp
-void addReactNativeModuleDependencies(Project appProject) {
+void addreactnativeModuleDependencies(Project appProject) {
     reactNativeModules.forEach { reactNativeModule ->
       def nameCleansed = reactNativeModule["nameCleansed"]
       appProject.dependencies {
@@ -329,10 +329,10 @@ import xx.xxPackage;
 
 public class PackageList {
     private Application application;
-    private ReactNativeHost reactNativeHost;
+    private reactnativeHost reactNativeHost;
     private MainPackageConfig mConfig;
 
-    public PackageList(ReactNativeHost reactNativeHost) {
+    public PackageList(reactnativeHost reactNativeHost) {
         this(reactNativeHost, null);
     }
 
@@ -340,7 +340,7 @@ public class PackageList {
         this(application, null);
     }
 
-    public PackageList(ReactNativeHost reactNativeHost, MainPackageConfig config) {
+    public PackageList(reactnativeHost reactNativeHost, MainPackageConfig config) {
         this.reactNativeHost = reactNativeHost;
         mConfig = config;
     }
@@ -351,7 +351,7 @@ public class PackageList {
         mConfig = config;
     }
 
-    private ReactNativeHost getReactNativeHost() {
+    private reactnativeHost getreactnativeHost() {
         return this.reactNativeHost;
     }
 
@@ -392,7 +392,7 @@ protected List<ReactPackage> getPackages() {
     @SuppressWarnings("UnnecessaryLocalVariable")
     List<ReactPackage> packages = new PackageList(this).getPackages();
     // Packages that cannot be autolinked yet can be added manually here, for example:
-    // packages.add(new MyReactNativePackage());
+    // packages.add(new MyreactnativePackage());
     return packages;
 }
 ...
@@ -432,11 +432,11 @@ protected List<ReactPackage> getPackages() {
 
 可以发现，这个数组只包含了`@react-native-community/async-storage`库，而没有`react-native-amap-geolocation`,从而导致通过此数组做的各种配置少了这个库，这就是autolink失败的原因了。\
 我们再继续探究下去，看看更详细的原因\
-`reactNativeModules`的值是由`getReactNativeConfig()`方法返回的
+`reactNativeModules`的值是由`getreactnativeConfig()`方法返回的
 
 ```java
 ...
-ArrayList<HashMap<String, String>> getReactNativeConfig() {
+ArrayList<HashMap<String, String>> getreactnativeConfig() {
     if (this.reactNativeModules != null) return this.reactNativeModules
 
         ArrayList<HashMap<String, String>> reactNativeModules = new ArrayList<HashMap<String, String>>()
@@ -650,7 +650,7 @@ function loadConfig(projectRoot = (0, _findProjectRoot.default)()) {
     root: projectRoot,
 
     get reactNativePath() {
-      return userConfig.reactNativePath ? _path().default.resolve(projectRoot, userConfig.reactNativePath) : (0, _resolveReactNativePath.default)(projectRoot);
+      return userConfig.reactNativePath ? _path().default.resolve(projectRoot, userConfig.reactNativePath) : (0, _resolvereactnativePath.default)(projectRoot);
     },
 
     dependencies: userConfig.dependencies,

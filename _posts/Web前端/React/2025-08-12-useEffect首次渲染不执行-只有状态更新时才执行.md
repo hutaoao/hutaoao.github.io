@@ -2,7 +2,7 @@
 title: useEffect首次渲染不执行-只有状态更新时才执行
 date: 2025-08-12
 description: useEffect 首次渲染不执行，只有状态更新时才执行
-tags: [React]
+tags: [react]
 categories: [Web前端, React]
 ---
 # useEffect 首次渲染不执行，只有状态更新时才执行

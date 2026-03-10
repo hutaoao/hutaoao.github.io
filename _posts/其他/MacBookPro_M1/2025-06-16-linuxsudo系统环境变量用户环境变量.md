@@ -2,8 +2,8 @@
 title: linuxsudo系统环境变量用户环境变量
 date: 2025-06-16
 description: linux sudo 系统环境变量 用户环境变量
-tags: [其他, MacBookPro_M1, linux]
-categories: [其他, MacBookPro_M1]
+tags: [其他, macbookpro-m1, linux]
+categories: [其他, macbookpro-m1]
 ---
 # linux sudo 系统环境变量 用户环境变量
 

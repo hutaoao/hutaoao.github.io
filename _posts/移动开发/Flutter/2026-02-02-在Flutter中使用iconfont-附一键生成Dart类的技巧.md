@@ -2,7 +2,7 @@
 title: 在Flutter中使用iconfont-附一键生成Dart类的技巧
 date: 2026-02-02
 description: 在 Flutter 中使用iconfont...附一键生成Dart类的技巧
-tags: [移动开发, Flutter, Flutter, dart, flutter]
+tags: [移动开发, flutter, dart]
 categories: [移动开发, Flutter]
 ---
 # 在 Flutter 中使用iconfont...附一键生成Dart类的技巧

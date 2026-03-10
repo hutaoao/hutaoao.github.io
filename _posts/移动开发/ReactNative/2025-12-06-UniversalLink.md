@@ -2,8 +2,8 @@
 title: UniversalLink
 date: 2025-12-06
 description: Universal Link
-tags: [ReactNative]
-categories: [移动开发, ReactNative]
+tags: [reactnative]
+categories: [移动开发, reactnative]
 ---
 # Universal Link
 

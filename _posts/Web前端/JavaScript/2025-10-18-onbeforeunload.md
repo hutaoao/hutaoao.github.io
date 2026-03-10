@@ -1,0 +1,35 @@
+---
+title: onbeforeunload
+date: 2025-10-18
+description: onbeforeunload
+tags: [Javascript]
+categories: [Web前端, JavaScript]
+---
+# onbeforeunload
+
+
+
+浏览器自身机制问题，必须用户点击或者有操作该页面，才会触发该事件，否则无效！
+
+
+
+/* 捕获浏览器关闭start */
+
+
+
+**window.onbeforeunload = function (event) {**
+
+**       return "是否关闭？";**
+
+**}**
+
+
+
+body标签上加上事件，当用户关闭浏览器执行该事件，处理一些事务！
+
+
+
+** onunload="removeKey()" onbeforeunload="removeKey()"**
+
+
+

@@ -19,7 +19,7 @@ title: 独行的风 # the main title
 tagline: 独行的风 · 踩坑与填坑 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  前端深度进阶博客：系统记录JavaScript、TypeScript、Vue、React、Flutter、HarmonyOS等大前端技术原理与实战。每周深入一个核心主题，涵盖闭包、V8引擎、框架源码、跨端架构、性能优化等高阶知识点。适合中高级开发者构建系统化知识体系，准备技术面试。
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -29,13 +29,13 @@ github:
   username: hutaoao # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: hutaoao # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 独行的风
-  email: example@domain.com # change to your email address
+  email: hutaoao@qq.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
